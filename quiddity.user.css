@@ -9,21 +9,18 @@
 ==/UserStyle== */
 @-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org")
 {
-  .toctogglespan
-  {
-    display: none;
-  } /* hide the ToC's annoying "[hide]" links */
+.toctogglespan {display: none;} /* hide the ToC's annoying "[hide]" links */
 .mw-editsection  {float: right;} /* float the section-header links "[edit] [edit source]" at right */
 .navpopup          {font-size: 0.875em !important;}    /* bigger text in Navpopups gadget */
 span.ais523hmn {background-color: #98FB98 !important;} /* Change the color of the highlightmyname script */
 /* test the minimal look */
 #mw-page-base {background-image: none;}
-div#content        {border: 1px solid #fff;}
-div.vectorTabs ul li                       {background-image: none; background-color: #fff;}
+div#content  {border: 1px solid #fff;}
+div.vectorTabs ul li  {background-image: none; background-color: #fff;}
 #p-views, #p-views *, #p-namespaces, #p-namespaces * {background-image: none;}
-div.vectorTabs ul li.selected         {border-bottom: 2px solid #347bff;}
+div.vectorTabs ul li.selected {border-bottom: 2px solid #347bff;}
 div.vectorTabs ul li span a:hover {text-decoration: none;}
-#catlinks             {border: none; padding: 10px;}
+#catlinks {border: none; padding: 10px;}
 .mw-headline-anchor {display: none;}
 .oo-ui-menuOptionWidget {padding: 0 1em;} /* Test ooui tweaks, smaller menu rows */
 #mw-panel {padding: 0; left: -10px;} 
