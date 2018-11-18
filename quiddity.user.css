@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia style tweaks
 @namespace   StylishThemes
-@version     1.3.2
+@version     1.3.3
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -29,11 +29,13 @@
   div.vectorTabs ul li span a:hover {text-decoration: none;}
   #catlinks {border: none; padding: 10px;}
   .mw-headline-anchor {display: none;}
+  #mw-panel .portal .body {background-image: none;}
+  #mw-panel .portal h3 {color: #333;}
 /* Test ooui tweaks, smaller menu rows */
   .oo-ui-menuOptionWidget {padding: 0 1em;} 
   #mw-panel {padding: 0; left: -10px;} 
 /* thinner sidebar */  
-  .mw-body {margin-left: 10em; padding-left: 1px;} 
+  .mw-body {margin-left: 9em; padding-left: 1px;} 
   .mw-body-content p {padding-left: 0.5em;} 
   /* shrink sidebar in RC/Watchlist */
   .mw-enhanced-rc {margin-left: 10px !important;} 
