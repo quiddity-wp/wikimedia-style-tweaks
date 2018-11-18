@@ -29,16 +29,15 @@
   div.vectorTabs ul li span a:hover {text-decoration: none;}
   #catlinks {border: none; padding: 10px;}
   .mw-headline-anchor {display: none;}
-  #mw-panel .portal .body {background-image: none;}
   #mw-panel .portal h3 {color: #333;}
-/* Test ooui tweaks, smaller menu rows */
-  .oo-ui-menuOptionWidget {padding: 0 1em;} 
-  #mw-panel {padding: 0; left: -10px;} 
 /* thinner sidebar */  
+  #mw-panel {padding: 0; left: -10px;} 
+  #mw-panel .portal .body {background-image: none;}
   .mw-body {margin-left: 9em; padding-left: 1px;} 
-  .mw-body-content p {padding-left: 0.5em;} 
-  /* shrink sidebar in RC/Watchlist */
+  .mw-body-content #siteSub {padding-left:35px;}
+  .mw-body-content #xtools {padding-left:35px;}
+  .mw-body .firstHeading {margin-left:35px;}
   .mw-enhanced-rc {margin-left: 10px !important;} 
-  /* REMOVED: @media only screen and (min-width:600px) {.mw-body {margin-left: 0 !important;} */
-  /* REMOVED: @media only screen and (max-width: 600px) and (orientation: portrait) {div#mw-navigation div#mw-panel {width:10em;}} */
+/* Test ooui tweaks, smaller menu rows */
+  .oo-ui-menuOptionWidget {padding: 0.2em;} 
 }
