@@ -8,6 +8,8 @@ Install thinner-sidebar.user.css
 Install quiddity.user.css
 [![Install quiddity.user.css directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css)
 
+See Stylus info at https://github.com/openstyles/stylus/wiki/Usercss
+
 ## Before / After
 
 ![Before](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss1.png)
