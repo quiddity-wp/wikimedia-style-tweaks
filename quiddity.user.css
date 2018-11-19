@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name        wikimedia style tweaks
+@name        wikimedia various style tweaks
 @namespace   StylishThemes
 @version     1.3.4
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
@@ -19,26 +19,6 @@
   span.ais523hmn {background-color: #98FB98 !important;} 
 /* Opacity in RC/Watchlist for users with 500+ edits */
   .mw-changeslist-user-experienced {opacity: 0.6;}
-/* test the minimal look */
-  body {background-color: #fff;}
-  #mw-page-base {background-image: none;}
-  div#content  {border: 1px solid #fff;}
-  div.vectorTabs ul li  {background-image: none; background-color: #fff;}
-  #p-views, #p-views *, #p-namespaces, #p-namespaces * {background-image: none;}
-  div.vectorTabs ul li.selected {border-bottom: 2px solid #347bff;}
-  div.vectorTabs ul li span a:hover {text-decoration: none;}
-  #catlinks {border: none; padding: 10px;}
-  .mw-headline-anchor {display: none;}
-  #mw-panel .portal h3 {color: #333;}
-/* thinner sidebar */  
-  #mw-panel {padding: 0; left: -10px;} 
-  #mw-panel .portal .body {background-image: none;}
-  .mw-body {margin-left: 9em; padding-left: 1px;} 
-  .mw-body-content #siteSub {padding-left:35px;}
-  .mw-body-content #xtools {padding-left:35px;}
-  .mw-body .firstHeading {margin-left:35px;}
-  .mw-body .mw-specialpage-summary {margin-left:35px;}
-  .mw-enhanced-rc {margin-left: 10px !important;} 
 /* Test ooui tweaks, smaller menu rows */
   .oo-ui-menuOptionWidget {padding: 0.2em;} 
 }
