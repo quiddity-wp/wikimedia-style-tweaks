@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name        wikimedia minimal-vector style
+@namespace   StylishThemes
+@version     1.0
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css
+@license     CC-BY-SA-4.0
+@author      quiddity-wp
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org")
+{ /* NOTE: VECTOR SKIN is assumed. */
+/* test the minimal look */
+  body {background-color: #fff;}
+  #mw-page-base {background-image: none;}
+  div#content  {border: 1px solid #fff;}
+  div.vectorTabs ul li  {background-image: none; background-color: #fff;}
+  #p-views, #p-views *, #p-namespaces, #p-namespaces * {background-image: none;}
+  div.vectorTabs ul li.selected {border-bottom: 2px solid #347bff;}
+  div.vectorTabs ul li span a:hover {text-decoration: none;}
+  #catlinks {border: none; padding: 10px;}
+  .mw-headline-anchor {display: none;}
+  #mw-panel .portal h3 {color: #333;}
+}
