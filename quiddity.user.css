@@ -14,7 +14,8 @@
 /* float the section-header links "[edit] [edit source]" to right, where they're less distracting */
   .mw-editsection  {float: right;} 
 /* bigger text in NavPopups gadget */
-  .navpopup          {font-size: 0.875em !important;}
+  .navpopup {font-size: 0.875em;}
+  .popup_menu {margin-top: 1.0em;}
 /* Change the color of the highlightmyname script */
   span.ais523hmn {background-color: #98FB98 !important;} 
 /* Opacity in RC/Watchlist for users with 500+ edits */
