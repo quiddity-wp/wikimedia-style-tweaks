@@ -22,4 +22,6 @@
   .mw-changeslist-user-experienced {opacity: 0.6;}
 /* Test ooui tweaks, smaller menu rows */
   .oo-ui-menuOptionWidget {padding: 0.2em;} 
+/* Hide the Legend box on RC pages */
+  .mw-changeslist-legend {display: none;}
 }
