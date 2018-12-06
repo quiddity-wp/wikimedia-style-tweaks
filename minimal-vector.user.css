@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name        wikimedia minimal-vector style
 @namespace   StylishThemes
-@version     1.0.1
+@version     1.0.2
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain ("beta.wmflabs.org")
-{ /* NOTE: VECTOR SKIN is assumed. */
+@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
+/* NOTE: VECTOR SKIN is assumed. */
 /* test the minimal look */
   body {background-color: #fff;}
   #mw-page-base {background-image: none;}
