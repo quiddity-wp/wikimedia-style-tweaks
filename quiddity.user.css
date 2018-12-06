@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name        wikimedia various style tweaks
 @namespace   StylishThemes
-@version     1.0.8
+@version     1.0.9
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org") domain ("beta.wmflabs.org")
-{ /* NOTE: VECTOR SKIN is assumed. */
+@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
+/* NOTE: VECTOR SKIN is assumed. */
 /* hide the ToC's annoying "[hide]" links */
   .toctogglespan {display: none;} 
 /* float the section-header links "[edit] [edit source]" to right, where they're less distracting */
