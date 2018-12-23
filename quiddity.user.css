@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia various style tweaks
 @namespace   StylishThemes
-@version     1.0.10
+@version     1.0.11
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -24,4 +24,6 @@
   .oo-ui-menuOptionWidget {padding: 0.2em;} 
 /* Hide the Legend box on RC pages */
   .mw-changeslist-legend {display: none;}
+/* Opacity for revert-edits in history pages */
+  .mw-tag-mw-undo, .mw-tag-mw-rollback {opacity: 0.5;}
 }
