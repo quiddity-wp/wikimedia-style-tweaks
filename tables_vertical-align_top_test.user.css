@@ -1,0 +1,19 @@
+/* ==UserStyle==
+@name        wikimedia various style tweaks
+@namespace   StylishThemes
+@version     1.0.01
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/tables_vertical-align_top_test.user.css
+@license     CC-BY-SA-4.0
+@author      quiddity-wp
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
+/* NOTE: VECTOR SKIN is assumed. */
+/* test for discussion at https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Tables */
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
+    vertical-align: top;
+}
+}
