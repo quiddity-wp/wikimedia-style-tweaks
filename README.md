@@ -1,4 +1,5 @@
 # wikimedia-style-tweaks
+
 Install **minimal-vector**.user.css (remove design-cruft)
 
 [![Install minimal-vector.user.css directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css)
@@ -7,7 +8,7 @@ Install **thinner-sidebar**.user.css (for half-width browser windows on a laptop
 
 [![Install thinner-sidebar.user.css directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/thinner-sidebar.user.css)
 
-Install **quiddity**.user.css (many powereditor tweaks)
+Install **quiddity**.user.css (many powereditor tweaks - see code comments for details)
 
 [![Install quiddity.user.css directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css)
 
@@ -20,7 +21,7 @@ at https://github.com/openstyles/stylus/wiki/Usercss
 
 ## Before / After
 
-showing "minimal-vector" and "thinner-sidebar"
+showing "minimal-vector" and "thinner-sidebar" and bits of "quiddity"
 
 ![Before](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss1.png)
 ![After](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss2.png)
