@@ -20,5 +20,7 @@ at https://github.com/openstyles/stylus/wiki/Usercss
 
 ## Before / After
 
+showing "minimal-vector" and "thinner-sidebar"
+
 ![Before](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss1.png)
 ![After](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss2.png)
