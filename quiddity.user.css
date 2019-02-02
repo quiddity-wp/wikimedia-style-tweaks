@@ -26,4 +26,9 @@
   .mw-changeslist-legend {display: none;}
 /* Opacity for revert-edits in history pages */
   .mw-tag-mw-undo, .mw-tag-mw-rollback {opacity: 0.5;}
+/* Make redirects green */
+  a.mw-redirect {color:#006600;}
+/* Make disambigs orange */  
+  a.mw-disambig { color: #ff8921; }
+
 }
