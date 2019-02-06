@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name        wikimedia various style tweaks
+@name        wikimedia quiddity's various style tweaks
 @namespace   StylishThemes
-@version     1.0.12
+@version     1.0.13
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -26,8 +26,8 @@
   .mw-changeslist-legend {display: none;}
 /* Opacity for revert-edits in history pages */
   .mw-tag-mw-undo, .mw-tag-mw-rollback {opacity: 0.5;}
-/* Make redirects green */
-  a.mw-redirect {color:#006600;}
+/* Make redirects green - REDACTED
+  a.mw-redirect {color:#006600;} */
 /* Make disambigs orange */  
   a.mw-disambig { color: #ff8921; }
 
