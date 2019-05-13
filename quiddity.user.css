@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various style tweaks
 @namespace   StylishThemes
-@version     1.0.13
+@version     1.0.14
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -21,7 +21,7 @@
 /* Opacity in RC/Watchlist for users with 500+ edits */
   .mw-changeslist-user-experienced {opacity: 0.6;}
 /* Test ooui tweaks, smaller menu rows */
-  .oo-ui-menuOptionWidget {padding: 0.2em;} 
+  .oo-ui-menuOptionWidget {padding: 0.3em 1em;}
 /* Hide the Legend box on RC pages */
   .mw-changeslist-legend {display: none;}
 /* Opacity for revert-edits in history pages */
@@ -30,5 +30,13 @@
   a.mw-redirect {color:#006600;} */
 /* Make disambigs orange */  
   a.mw-disambig { color: #ff8921; }
-
+/* Bold the sidebar interwiki links to Enwiki/Simple, and interproject links to Commons/WikiVoyage */
+  .interwiki-en, .interwiki-simple, .wb-otherproject-commons, .wb-otherproject-wikivoyage {font-weight: bold;}
+/* Force reduced rows in editing window */
+  #wpTextbox1 { height: 30em; }
+/* Global Font tweaks */
+  #content {color: black !important;}
+  h4 {font-size: 116% !important;}
+  h5 {font-size: 100% !important;}
+  h6 {font-size: 80% !important;}
 }
