@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name        wikimedia staff account reminder
 @namespace   StylishThemes
-@version     1.0.1
+@version     1.0.2
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/staff.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
+@-moz-document domain("wikipedia.org"), domain("meta.wikimedia.org"), domain("commons.wikimedia.org"), domain("species.wikimedia.org"), domain("outreach.wikimedia.org"), domain("wikimania.wikimedia.org"), domain("foundation.wikimedia.org"), domain("wikitech.wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
 /* NOTE: VECTOR SKIN is assumed. */
 /* Staff account, pink sidebar */
 body {background-color: #F7D7D7}
