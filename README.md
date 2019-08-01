@@ -27,3 +27,6 @@ Default -- vs -- showing "minimal-vector" and "thinner-sidebar" and bits of "qui
 
 ![Before](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss1.png)
 ![After](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss2.png)
+
+# see also
+https://github.com/quiddity-wp/style-tweaks
