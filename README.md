@@ -12,7 +12,7 @@
   * [Install directly with GreaseMonkey (etc)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/linkify-header-script.user.js) 
   
 (and still in testing...
-* **tables_vertical-align_top_test**.user.css (for testing a [proposed change](https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Tables))
+* **tables_vertical-align_top_test**.user.css (for testing a [proposed change](https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Tables#Vertical_alignment))
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/tables_vertical-align_top_test.user.css)
 * **thinner-sidebar**.user.css (for half-width browser windows on a laptop)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/thinner-sidebar.user.css)
