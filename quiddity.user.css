@@ -7,36 +7,93 @@
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
-/* NOTE: VECTOR SKIN is assumed. */
-/* hide the ToC's annoying "[hide]" links */
-  .toctogglespan {display: none;} 
-/* float the section-header links "[edit] [edit source]" to right, where they're less distracting */
-  .mw-editsection  {float: right;} 
-/* bigger text in NavPopups gadget */
-  .navpopup {font-size: 0.875em; line-height: 140%;}
-  .popup_menu {margin-top: 1.1em;}
-/* Change the color of the highlightmyname script */
-  span.ais523hmn {background-color: #98FB98 !important;} 
-/* Opacity in RC/Watchlist for users with 500+ edits */
-  .mw-changeslist-user-experienced {opacity: 0.6;}
-/* Test ooui tweaks, smaller menu rows */
-  .oo-ui-menuOptionWidget {padding: 0.3em 1em;}
-/* Hide the Legend box on RC pages */
-  .mw-changeslist-legend {display: none;}
-/* Opacity for revert-edits in history pages */
-  .mw-tag-mw-undo, .mw-tag-mw-rollback {opacity: 0.5;}
-/* Make redirects green - REDACTED
+/* ==UserStyle==
+@name        wikimedia quiddity's various style tweaks
+@namespace   StylishThemes
+@version     1.0.14
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
+@license     CC-BY-SA-4.0
+@author      quiddity-wp
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"),
+domain("wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org") {
+    /* NOTE: VECTOR SKIN is assumed. */
+    /* hide the ToC's annoying "[hide]" links */
+    .toctogglespan {
+        display: none;
+    }
+    /* float the section-header links "[edit] [edit source]" to right, where they're less distracting */
+    .mw-editsection {
+        float: right;
+    }
+    /* bigger text in NavPopups gadget */
+    .navpopup {
+        font-size: 0.875em;
+        line-height: 140%;
+    }
+    .popup_menu {
+        margin-top: 1.1em;
+    }
+    /* Change the color of the highlightmyname script */
+    span.ais523hmn {
+        background-color: #98FB98 !important;
+    }
+    /* Opacity in RC/Watchlist for users with 500+ edits */
+    .mw-changeslist-user-experienced {
+        opacity: 0.6;
+    }
+    /* Test ooui tweaks, smaller menu rows */
+    .oo-ui-menuOptionWidget {
+        padding: 0.3em 1em;
+    }
+    /* Hide the Legend box on RC pages */
+    .mw-changeslist-legend {
+        display: none;
+    }
+    /* Opacity for revert-edits in history pages */
+    .mw-tag-mw-undo,
+    .mw-tag-mw-rollback {
+        opacity: 0.5;
+    }
+    /* Make redirects green - REDACTED
   a.mw-redirect {color:#006600;} */
-/* Make disambigs orange */  
-  a.mw-disambig { color: #ff8921; }
-/* Bold the sidebar interwiki links to Enwiki/Simple, and interproject links to Commons/WikiVoyage */
-  .interwiki-en, .interwiki-simple, .wb-otherproject-commons, .wb-otherproject-wikivoyage {font-weight: bold;}
-/* Force reduced rows in editing window */
-  #wpTextbox1 { height: 30em; }
-/* Global Font tweaks */
-  #content {color: black !important;}
-  h4 {font-size: 116% !important;}
-  h5 {font-size: 100% !important;}
-  h6 {font-size: 80% !important;}
+    /* Make disambigs orange */
+    a.mw-disambig {
+        color: #ff8921;
+    }
+    /* Bold the sidebar interwiki links to Enwiki/Simple, and interproject links to Commons/WikiVoyage */
+    .interwiki-en,
+    .interwiki-simple,
+    .wb-otherproject-commons,
+    .wb-otherproject-wikivoyage {
+        font-weight: bold;
+    }
+    /* Force reduced rows in editing window */
+    #wpTextbox1 {
+        height: 30em;
+    }
+    /* Global Font tweaks */
+    #content {
+        color: black !important;
+    }
+    h4 {
+        font-size: 116% !important;
+    }
+    h5 {
+        font-size: 100% !important;
+    }
+    h6 {
+        font-size: 80% !important;
+    }
 }
