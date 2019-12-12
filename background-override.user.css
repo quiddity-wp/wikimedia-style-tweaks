@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM background reset for screenshots
 @namespace   StylishThemes
-@version     1.0.1
+@version     1.0.2
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/background-override.user.css
 @license     CC-BY-SA-4.0
@@ -19,5 +19,5 @@ domain("wikiversity.org"),
 domain("wikiquote.org"),
 domain("wikidata.org"),
 domain("beta.wmflabs.org") {
-    .body {background-color: #FFFFFF !important}
+    body {background-color: #FFFFFF !important}
 }
