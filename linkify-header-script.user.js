@@ -14,6 +14,7 @@
 // @include *.wikinews.org/*
 // @include *.wikiversity.org/*
 // @include *.wikidata.org/*
+// @include *.wikifunctions.org/*
 // @grant		GM_addStyle
 // @compatible  firefox
 // @compatible  chrome
