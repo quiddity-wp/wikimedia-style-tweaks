@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.18
+@version     1.0.19
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -19,7 +19,7 @@ domain("wikiversity.org"),
 domain("wikiquote.org"),
 domain("wikidata.org"),
 domain("beta.wmflabs.org"),
-domain("beta.wmflabs.org") {
+domain("wikifunctions.org") {
 /* hide the ToC's annoying "[hide]" links */
     .toctogglespan {
         display: none;
