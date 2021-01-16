@@ -1,13 +1,32 @@
 /* ==UserStyle==
 @name        Wikimedia Gadget-responsiveContentBase 1900+ tweak
 @namespace   StylishThemes
-@version     1.0.1
+@version     1.0.2
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/responsiveoverride.user.css
 @license     CC-0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), domain("meta.wikimedia.org"), domain("office.wikimedia.org"), domain("commons.wikimedia.org"), domain("species.wikimedia.org"), domain("outreach.wikimedia.org"), domain("wikimania.wikimedia.org"), domain("foundation.wikimedia.org"), domain("wikitech.wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
+@-moz-document domain("wikipedia.org"), 
+domain("meta.wikimedia.org"), 
+domain("office.wikimedia.org"), 
+domain("commons.wikimedia.org"), 
+domain("species.wikimedia.org"), 
+domain("outreach.wikimedia.org"), 
+domain("wikimania.wikimedia.org"), 
+domain("foundation.wikimedia.org"), 
+domain("wikitech.wikimedia.org"), 
+domain("wiktionary.org"), 
+domain("mediawiki.org"), 
+domain("wikisource.org"), 
+domain("wikivoyage.org"), 
+domain("wikibooks.org"), 
+domain("wikinews.org"), 
+domain("wikiversity.org"), 
+domain("wikiquote.org"), 
+domain("wikidata.org"), 
+domain("beta.wmflabs.org"), 
+domain("wikifunctions.org") { 
 @media (min-width:1900px) {
     .ns-0 .mw-body-content .mw-parser-output > * {
         margin-left: 0 !important;
