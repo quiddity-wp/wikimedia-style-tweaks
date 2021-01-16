@@ -7,8 +7,27 @@
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), domain("wikimedia.org"), domain("wiktionary.org"), domain("mediawiki.org"), domain("wikisource.org"), domain("wikivoyage.org"), domain("wikibooks.org"), domain("wikinews.org"), domain("wikiversity.org"), domain("wikiquote.org"), domain("wikidata.org"), domain("beta.wmflabs.org") { 
-/* NOTE: VECTOR SKIN is assumed. */
+@-moz-document domain("wikipedia.org"), 
+domain("meta.wikimedia.org"), 
+domain("office.wikimedia.org"), 
+domain("commons.wikimedia.org"), 
+domain("species.wikimedia.org"), 
+domain("outreach.wikimedia.org"), 
+domain("wikimania.wikimedia.org"), 
+domain("foundation.wikimedia.org"), 
+domain("wikitech.wikimedia.org"), 
+domain("wiktionary.org"), 
+domain("mediawiki.org"), 
+domain("wikisource.org"), 
+domain("wikivoyage.org"), 
+domain("wikibooks.org"), 
+domain("wikinews.org"), 
+domain("wikiversity.org"), 
+domain("wikiquote.org"), 
+domain("wikidata.org"), 
+domain("beta.wmflabs.org"), 
+domain("wikifunctions.org") { 
+    /* NOTE: VECTOR SKIN is assumed. */
 /* test for discussion at https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Tables */
 table.wikitable > tr > th,
 table.wikitable > tr > td,
