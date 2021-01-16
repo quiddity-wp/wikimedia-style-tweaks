@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name        wikimedia quiddity's various style tweaks
+@name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.17
+@version     1.0.18
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -18,17 +18,17 @@ domain("wikinews.org"),
 domain("wikiversity.org"),
 domain("wikiquote.org"),
 domain("wikidata.org"),
+domain("beta.wmflabs.org"),
 domain("beta.wmflabs.org") {
-    /* NOTE: VECTOR SKIN is assumed. */
-    /* hide the ToC's annoying "[hide]" links */
+/* hide the ToC's annoying "[hide]" links */
     .toctogglespan {
         display: none;
     }
-    /* float the section-header links "[edit] [edit source]" to right, where they're less distracting
+/* float the section-header links "[edit] [edit source]" to right, where they're less distracting - TEMP. OFF
     .mw-editsection {
         float: right;
     } */
-    /* bigger text in NavPopups gadget */
+/* bigger text in NavPopups gadget */
     .navpopup {
         font-size: 0.875em;
         line-height: 140%;
@@ -36,45 +36,47 @@ domain("beta.wmflabs.org") {
     .popup_menu {
         margin-top: 1.1em;
     }
-    /* Change the color of the highlightmyname script */
+/* Change the color of the highlightmyname script */
     span.ais523hmn {
         background-color: #98FB98 !important;
     }
-    /* Opacity in RC/Watchlist for users with 500+ edits */
+/* Opacity in RC/Watchlist for users with 500+ edits */
     .mw-changeslist-user-experienced {
-        opacity: 0.6;
+        opacity: 0.7;
     }
-    /* Test ooui tweaks, smaller menu rows */
+/* Test ooui tweaks, smaller menu rows */
     .oo-ui-menuOptionWidget {
         padding: 0.3em 1em;
     }
-    /* Hide the Legend box on RC pages */
+/* Hide the Legend box on RC pages */
     .mw-changeslist-legend {
         display: none;
     }
-    /* Opacity for revert-edits in history pages */
+/* Opacity for revert-edits in history pages */
     .mw-tag-mw-undo,
     .mw-tag-mw-rollback {
-        opacity: 0.5;
+        opacity: 0.4;
     }
-    /* Make redirects green - REDACTED
-  a.mw-redirect {color:#006600;} */
-    /* Make disambigs orange */
+/* Make redirect links green - TEMP. OFF
+  a.mw-redirect {color:#006600;
+    } */
+/* Make disambig link orange */
     a.mw-disambig {
         color: #ff8921;
     }
-    /* Bold the sidebar interwiki links to Enwiki/Simple, and interproject links to Commons/WikiVoyage */
+/* Bold the sidebar's interwiki links to Enwiki/Simple, and interproject links to Commons/WikiVoyage/Wikisource */
     .interwiki-en,
     .interwiki-simple,
     .wb-otherproject-commons,
-    .wb-otherproject-wikivoyage {
+    .wb-otherproject-wikivoyage,
+    .wb-otherproject-wikisource {
         font-weight: bold;
     }
-    /* Force reduced rows in editing window */
+/* Force reduced # of rows in editing window */
     #wpTextbox1 {
         height: 30em;
     }
-    /* Global Font tweaks */
+/* Global Font tweaks, better typography */
     #content {
         color: black !important;
     }
@@ -87,9 +89,9 @@ domain("beta.wmflabs.org") {
     h6 {
         font-size: 80% !important;
     }
-    /* Fix new vector stuff */
+/* Fix new-vector stuff */
     .skin-vector-max-width .mw-page-container 
         {
-         min-width:0; 
+         min-width: 0; 
     }
 }
