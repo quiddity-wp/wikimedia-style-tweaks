@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.19
+@version     1.0.20
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -90,8 +90,11 @@ domain("wikifunctions.org") {
         font-size: 80% !important;
     }
 /* Fix new-vector stuff */
-    .skin-vector-max-width .mw-page-container 
-        {
-         min-width: 0; 
+    .skin-vector-max-width .mw-page-container {
+        min-width: 0; 
+    }
+/* Hide "Retrieved [date]" in references */
+    .reference-accessdate {
+        display: none;
     }
 }
