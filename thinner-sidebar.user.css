@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia thinner sidebar
 @namespace   StylishThemes
-@version     1.0.7
+@version     1.0.8
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/thinner-sidebar.user.css
 @license     CC-BY-SA-4.0
@@ -37,5 +37,6 @@ domain("wikifunctions.org") { /* NOTE: VECTOR SKIN and MINIMAL-VECTOR.user.css a
   .mw-body .mw-specialpage-summary {margin-left:35px;}
   .mw-enhanced-rc {margin-left: 10px !important;} 
 /* remove sidebar with New Vector */
-  .mw-content-container {margin-left:unset;}
+  .mw-content-container {margin-left:0;}
+  .mw-body {margin-left:0;}
 }
