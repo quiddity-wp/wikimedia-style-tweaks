@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia thinner sidebar
 @namespace   StylishThemes
-@version     1.0.6
+@version     1.0.7
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/thinner-sidebar.user.css
 @license     CC-BY-SA-4.0
@@ -28,12 +28,14 @@ domain("wikidata.org"),
 domain("beta.wmflabs.org"), 
 domain("wikifunctions.org") { /* NOTE: VECTOR SKIN and MINIMAL-VECTOR.user.css are assumed. */
 /* thinner sidebar */  
-  #mw-panel {padding: 0; left: -10px;} 
-  #mw-panel .portal .body {background-image: none;}
-  .mw-body {margin-left: 9em; padding-left: 1px;} 
+  #mw-panel {padding:0; left:-10px;} 
+  #mw-panel .portal .body {background-image:none;}
+  .mw-body {margin-left:9em; padding-left:1px;} 
   .mw-body-content #siteSub {padding-left:35px;}
   .mw-body-content #xtools {padding-left:35px;}
   .mw-body .firstHeading {margin-left:35px;}
   .mw-body .mw-specialpage-summary {margin-left:35px;}
   .mw-enhanced-rc {margin-left: 10px !important;} 
+/* remove sidebar with New Vector */
+  .mw-content-container {margin-left:unset;}
 }
