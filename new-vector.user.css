@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia new vector tweaks
 @namespace   StylishThemes
-@version     1.0.2
+@version     1.0.3
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector.user.css
 @license     CC-BY-SA-4.0
@@ -26,8 +26,17 @@ domain("wikiversity.org"),
 domain("wikiquote.org"), 
 domain("wikidata.org"), 
 domain("beta.wmflabs.org"), 
-domain("wikifunctions.org") { /* NOTE: VECTOR SKIN and MINIMAL-VECTOR.user.css are assumed. */
-/* remove sidebar with New Vector */
+domain("wikifunctions.org") { 
+/* NOTE: VECTOR SKIN and my MINIMAL-VECTOR.user.css are assumed. */
+/* remove sidebar empty-margin with New Vector */
   .mw-content-container {margin-left:0;}
   .mw-body {margin-left:0;}
+/* remove language-name from ULS item */
+  #ca-uls > a {visibility:hidden;}
+  #ca-uls {padding:0; width:20px}
+/* remove max-width limit */
+  .mw-content-container {max-width: none;}
+  .mw-page-container {max-width:none;}
+  .mw-workspace-container {max-width:none;}
+  .mw-article-toolbar-container {max-width:none;}
 }
