@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia new vector tweaks
 @namespace   StylishThemes
-@version     1.0.4
+@version     1.0.5
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector.user.css
 @license     CC-BY-SA-4.0
@@ -36,7 +36,7 @@ domain("wikifunctions.org") {
   #ca-uls {padding: 0; width: 20px}
 /* remove max-width limit */
   .mw-content-container {max-width: none;}
-  .mw-page-container {max-width: none; padding: none;}
+  .mw-page-container {max-width: none; padding: 0;}
   .mw-workspace-container {max-width: none;}
   .mw-article-toolbar-container {max-width: none;}
 }
