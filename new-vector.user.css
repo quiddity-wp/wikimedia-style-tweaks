@@ -36,7 +36,7 @@ domain("wikifunctions.org") {
   #ca-uls {padding: 0; width: 20px}
 /* remove max-width limit */
   .mw-content-container {max-width: none;}
-  .mw-page-container {max-width: none; padding: 0;}
+  .mw-page-container {max-width: 99%; padding: 0;}
   .mw-workspace-container {max-width: none;}
   .mw-article-toolbar-container {max-width: none;}
 }
