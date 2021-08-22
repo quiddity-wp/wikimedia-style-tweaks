@@ -19,8 +19,6 @@
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css)
 * **new-vector-max-width**.user.css (remove the max-width)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css)
-* **new-vector-sidebar**.user.css (testing collapsible-sidebar tweaks)
-  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-sidebar.user.css)
 
 ## See Stylus info
 at https://github.com/openstyles/stylus/wiki/Usercss
