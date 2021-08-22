@@ -1,9 +1,9 @@
 /* ==UserStyle==
-@name        wikimedia new vector tweaks
+@name        wikimedia new vector whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.8
+@version     1.0.9
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
-@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector.user.css
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
@@ -35,14 +35,4 @@ domain("wikifunctions.org") {
     
 /* remove header whitespace */
   .mw-header {margin:0; padding-top:2px;}
-    
-/* remove sidebar empty-margin */
-  .mw-content-container {margin-left: 0;}
-    
-/* remove max-width limit */
-  .mw-content-container {max-width: none;}
-  .mw-page-container {max-width: 99%; padding: 0;}
-  .mw-workspace-container {max-width: none;}
-  .mw-article-toolbar-container {max-width: none;}
-
 }
