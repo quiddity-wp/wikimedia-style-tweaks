@@ -7,15 +7,20 @@
 * **linkify-header-script**.user.js (adds links that float next to subheadings. Only needed until [phab:T18691](https://phabricator.wikimedia.org/T18691) is implemented!)
   * [Install directly with GreaseMonkey (etc)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/linkify-header-script.user.js) 
   
-(and still in testing...
+(and still in testing...)
 
 * **tables_vertical-align_top_test**.user.css (for testing a [proposed change](https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Tables#Vertical_alignment))
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/tables_vertical-align_top_test.user.css)
 * **thinner-sidebar**.user.css (for half-width browser windows on a laptop)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/thinner-sidebar.user.css)
-* **new-vector**.user.css (tweaks to the [Desktop Improvements](https://www.mediawiki.org/wiki/Reading/Web/Desktop_Improvements) - remove whitespace, full-width content, remove language name in ULS)
-  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector.user.css)
-)
+
+(and tweaks to the [Desktop Improvements](https://www.mediawiki.org/wiki/Reading/Web/Desktop_Improvements))
+* **new-vector-whitespace**.user.css (remove whitespace in top-bar, remove language name in ULS)
+  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css)
+* **new-vector-max-width**.user.css (remove the max-width)
+  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css)
+* **new-vector-sidebar**.user.css (testing collapsible-sidebar tweaks)
+  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-sidebar.user.css)
 
 ## See Stylus info
 at https://github.com/openstyles/stylus/wiki/Usercss
