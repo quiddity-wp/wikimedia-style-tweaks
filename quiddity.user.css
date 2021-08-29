@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.21
+@version     1.0.22
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -24,10 +24,10 @@ domain("wikifunctions.org") {
     .toctogglespan {
         display: none;
     }
-/* float the section-header links "[edit] [edit source]" to right, where they're less distracting - TEMP. OFF
+/* float the section-header links "[edit] [edit source]" to right, where they're less distracting  */
     .mw-editsection {
         float: right;
-    } */
+    }
 /* bigger text in NavPopups gadget */
     .navpopup {
         font-size: 0.875em;
