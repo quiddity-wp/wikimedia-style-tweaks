@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.20
+@version     1.0.21
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -95,6 +95,10 @@ domain("wikifunctions.org") {
     }
 /* Hide "Retrieved [date]" in references */
     .reference-accessdate {
+        display: none;
+    }
+/* Hide the New Vector "switch back" link in sidebar */
+    .mw-sidebar-action-link {
         display: none;
     }
 }
