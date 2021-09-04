@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.22
+@version     1.0.23
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -52,10 +52,11 @@ domain("wikifunctions.org") {
     .mw-changeslist-legend {
         display: none;
     }
-/* Opacity for revert-edits in history pages */
+/* Opacity for revert/ed-edits in history pages */
     .mw-tag-mw-undo,
-    .mw-tag-mw-rollback {
-        opacity: 0.4;
+    .mw-tag-mw-rollback,
+    .mw-tag-mw-reverted {
+        opacity: 0.2;
     }
 /* Make redirect links green - TEMP. OFF
   a.mw-redirect {color:#006600;
