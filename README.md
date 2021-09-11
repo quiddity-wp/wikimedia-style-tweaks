@@ -8,8 +8,6 @@
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css)
 * **quiddity** (many powereditor tweaks - see code comments for details)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css)
-* **linkify-header-script** (adds links that float next to subheadings. Only needed until [phab:T18691](https://phabricator.wikimedia.org/T18691) is implemented!)
-  * [Install directly with GreaseMonkey (etc)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/linkify-header-script.user.js) 
   
 (and still in testing...)
 
@@ -21,9 +19,13 @@
 (and tweaks to the [Desktop Improvements](https://www.mediawiki.org/wiki/Reading/Web/Desktop_Improvements))
 * **new-vector-whitespace** (remove whitespace in top-bar, remove language name in ULS)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css)
-* **new-vector-max-width** (remove the max-width)
+* **new-vector-max-width** (remove the max-width - NOTE: slightly buggy still (jumping-content), when changing window-widths)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css)
 
+# Wikimedia javascript tweaks
+
+* **linkify-header-script** (adds links that float next to subheadings. Only needed until [phab:T18691](https://phabricator.wikimedia.org/T18691) is implemented!)
+  * [Install directly with GreaseMonkey (etc)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/linkify-header-script.user.js) (Get [ViolentMonkey](https://violentmonkey.github.io/) for your browser)
 
 ## Before / After
 
