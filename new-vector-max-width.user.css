@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia new vector max width tweaks
 @namespace   StylishThemes
-@version     1.0.4
+@version     1.0.5
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -30,15 +30,15 @@ domain("wikifunctions.org") {
 /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
     
 /* remove max-width limit */
-  .mw-page-container {max-width: 99%;}
+  .mw-page-container {max-width: 99%; padding-left: 10px;}
   .mw-workspace-container {max-width: none;}
   .mw-article-toolbar-container {max-width: none;}
-  .mw-content-container {max-width: none;}
+  .mw-content-container {max-width: none; margin-left: 0 !important}
 
   
 /* Attempt to fix overlap of content and sidebar at large and small window-sizes */
   @media screen and (min-width: 1389px) {
-    .mw-workspace-container {padding-left: 184px;}
+    .mw-content-container {padding-left: 184px;}
     }
   @media screen and (max-width:720px) {
     #mw-panel {max-width:200px !important; position: absolute !important}
