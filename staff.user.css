@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia staff account reminder
 @namespace   StylishThemes
-@version     1.0.4
+@version     1.0.5
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/staff.user.css
 @license     CC-BY-SA-4.0
@@ -29,5 +29,5 @@
   domain("wikifunctions.org") { 
 /* NOTE: VECTOR SKIN is assumed. */
 /* Staff account, pink sidebar */
-body {background-color: #F7D7D7}
+body, .mw-portlet {background-color: #F7D7D7}
 }
