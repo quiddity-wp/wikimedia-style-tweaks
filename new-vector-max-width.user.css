@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia new vector max width tweaks
 @namespace   StylishThemes
-@version     1.0.6
+@version     1.0.7
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -36,11 +36,9 @@ domain("wikifunctions.org") {
   .mw-content-container {max-width: none; margin-left: 0;}
   #mw-panel {padding-left: 10px;}
 
-/* Attempt to fix overlap of content and sidebar at large and small window-sizes */
-  @media screen and (min-width: 86.75em) {
-    .mw-content-container, #mw-navigation {margin-left: 184px;}
-    }
-  @media screen and (max-width:720px) {
-    #mw-panel {max-width:11em !important; position: absolute !important}
-    }
+/* Fix overlap of content and sidebar at large and small window-sizes */
+  .mw-workspace-container {max-width: none;}
+  .mw-content-container {max-width: none; margin-left: 180px;}
+  #mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {margin-left: 0px;}
+
 }
