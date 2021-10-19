@@ -19,7 +19,7 @@
 (and tweaks to the [Desktop Improvements](https://www.mediawiki.org/wiki/Reading/Web/Desktop_Improvements))
 * **new-vector-whitespace** (remove whitespace in top-bar, remove language name in ULS)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css)
-* **new-vector-max-width** (remove the max-width - NOTE: slightly buggy still (jumping-content), when changing window-widths)
+* **new-vector-max-width** (remove the max-width)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css)
 
 # Wikimedia javascript tweaks
