@@ -1,14 +1,21 @@
 /* ==UserStyle==
 @name        wikimedia minimal-vector style
 @namespace   StylishThemes
-@version     1.0.7
+@version     1.0.8
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
 @-moz-document domain("wikipedia.org"), 
-domain("wikimedia.org"), 
+domain("meta.wikimedia.org"), 
+domain("office.wikimedia.org"), 
+domain("commons.wikimedia.org"), 
+domain("species.wikimedia.org"), 
+domain("outreach.wikimedia.org"), 
+domain("wikimania.wikimedia.org"), 
+domain("foundation.wikimedia.org"), 
+domain("wikitech.wikimedia.org"), 
 domain("wiktionary.org"), 
 domain("mediawiki.org"), 
 domain("wikisource.org"), 
