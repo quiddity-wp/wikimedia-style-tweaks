@@ -26,19 +26,27 @@ domain("wikiversity.org"),
 domain("wikiquote.org"), 
 domain("wikidata.org"), 
 domain("beta.wmflabs.org"), 
-domain("wikifunctions.org") { 
-/* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
+domain("wikifunctions.org")
+{ 
+/* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
 
-/* remove max-width limit */
-  .mw-page-container {max-width: 99%; padding-left: 10px;}
-  .mw-workspace-container {max-width: none;}
-  .mw-article-toolbar-container {max-width: none;}
-  .mw-content-container {max-width: none; margin-left: 0;}
-  #mw-panel {padding-left: 10px;}
+/* Remove max-width */
+.mw-workspace-container {max-width: none;}
+.mw-content-container {max-width: none;	margin-left: 184px;}
+#mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {margin-left: 0px;}
 
-/* Fix overlap of content and sidebar at large and small window-sizes */
-  .mw-workspace-container {max-width: none;}
-  .mw-content-container {max-width: none; margin-left: 180px;}
-  #mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {margin-left: 0px;}
+  /* Refine further */
+.mw-page-container {max-width: none; padding-left: 10px;}
+.mw-article-toolbar-container {max-width: none;}
+#mw-panel {padding-left: 10px; max-width: 184px; position: absolute !important}
 
+/* Fixes for small windows - otherwise the sidebar jumps out */
+@media screen and (max-width: 720px) {
+  #mw-panel {margin-left: -30px; margin-right:-30px}
+  }
+/* Fixes for large windows - otherwise the "page/discussion" tabs slide under the sidebar */
+@media screen and (min-width: 1389px) {
+  #mw-head {margin-left: 184px;}
+  }
+  
 }
