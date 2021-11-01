@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.24
+@version     1.0.25
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -45,7 +45,7 @@ domain("wikifunctions.org") {
     }
 /* Change the color of the highlightmyname script */
     span.ais523hmn {
-        background-color: #98FB98 !important;
+        background-color: #fbe498 !important;
     }
 /* Opacity in RC/Watchlist for users with 500+ edits */
     .mw-changeslist-user-experienced {
