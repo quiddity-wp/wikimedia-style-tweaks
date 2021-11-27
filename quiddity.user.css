@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.25
+@version     1.0.26
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -77,7 +77,8 @@ domain("wikifunctions.org") {
     .interwiki-simple,
     .wb-otherproject-commons,
     .wb-otherproject-wikivoyage,
-    .wb-otherproject-wikisource {
+    .wb-otherproject-wikisource,
+    .wikibase-sitelinkview-enwiki {
         font-weight: bold;
     }
 /* Force reduced # of rows in editing window */
