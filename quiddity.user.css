@@ -98,10 +98,6 @@ domain("wikifunctions.org") {
     h6 {
         font-size: 80% !important;
     }
-/* Fix new-vector stuff */
-    .skin-vector-max-width .mw-page-container {
-        min-width: 0; 
-    }
 /* Hide "Retrieved [date]" in references */
     .reference-accessdate {
         display: none;
