@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.27
+@version     1.0.28
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -103,7 +103,7 @@ domain("wikifunctions.org") {
         display: none;
     }
 /* Hide the New Vector "switch back" link in sidebar */
-    .mw-sidebar-action-link {
+    .mw-sidebar-action {
         display: none;
     }
 }
