@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.28
+@version     1.0.29
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -105,5 +105,9 @@ domain("wikifunctions.org") {
 /* Hide the New Vector "switch back" link in sidebar */
     .mw-sidebar-action {
         display: none;
+    }    
+/* Add gap above "log out" */
+    #pt-logout {
+        margin-top: 32px;
     }
 }
