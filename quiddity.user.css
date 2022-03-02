@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.31
+@version     1.0.32
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -86,9 +86,11 @@ domain("wikifunctions.org") {
         height: 30em;
     }
 /* Global Font tweaks, better typography */
+    /* REMOVE FOR NOW
     #content {
         color: black !important;
-    }
+    } 
+    */
     h4 {
         font-size: 116% !important;
     }
@@ -106,8 +108,4 @@ domain("wikifunctions.org") {
     .mw-sidebar-action {
         display: none;
     }    
- /* Indent subheads */
-    .vector-body h3 {padding-left: 10px;}
-    .vector-body h4 {padding-left: 30px;}
-    .vector-body h5 {padding-left: 50px;}
 }
