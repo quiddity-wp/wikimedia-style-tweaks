@@ -10,6 +10,9 @@
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css)
 * **quiddity** (many powereditor tweaks - see code comments for details)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css)
+* **dark** (dark mode)
+  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css)
+
 
 ### Tweaks to the [Desktop Improvements](https://www.mediawiki.org/wiki/Reading/Web/Desktop_Improvements)
 * **new-vector-max-width** (remove the max-width)
