@@ -1,0 +1,222 @@
+/* ==UserStyle==
+@name        wikimedia DARK
+@namespace   StylishThemes
+@version     1.0.1
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css
+@license     CC-BY-SA-4.0
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"), 
+domain("meta.wikimedia.org"), 
+domain("office.wikimedia.org"), 
+domain("commons.wikimedia.org"), 
+domain("species.wikimedia.org"), 
+domain("outreach.wikimedia.org"), 
+domain("wikimania.wikimedia.org"), 
+domain("foundation.wikimedia.org"), 
+domain("wikitech.wikimedia.org"), 
+domain("wiktionary.org"), 
+domain("mediawiki.org"), 
+domain("wikisource.org"), 
+domain("wikivoyage.org"), 
+domain("wikibooks.org"), 
+domain("wikinews.org"), 
+domain("wikiversity.org"), 
+domain("wikiquote.org"), 
+domain("wikidata.org"), 
+domain("beta.wmflabs.org"), 
+domain("wikifunctions.org") { 
+/* COPIED from https://en.wikipedia.org/wiki/MediaWiki:Gadget-dark-mode.css
+    
+ /* WikimediaUI Dark Mode
+ *
+ * Wikimedia Design Team 2019-2021
+ * Original authors:
+ * - Volker E. – [[User:Volker_E._(WMF)]]
+ * - Alex Hollender
+ * - MusikAnimal
+ * - Carolyn Li-Madeo
+ * - Jdlrobson
+ *
+ * Original at https://en.wikipedia.org/wiki/User:Volker_E._(WMF)/dark-mode.css
+ * Version for Gadget CSS skin override usage only.
+ * Basically removed of all interaction element styles and
+ * set to `html` instead of JS injected `.client-dark-mode` class.
+ *
+ * Last updated: 2021-04-20
+ *
+ */
+
+/** To prevent 'jumping' effect within #p-personal in Vector/Monobook. Overrides [[MediaWiki:Gadget-dark-mode-toggle-pagestyles.css]] **/
+body.skin-vector-legacy :not(#pt-darkmode) + #pt-watchlist::before,
+body.skin-monobook :not(#pt-darkmode) + #pt-watchlist::before {
+	content: "Light mode";
+}
+
+@media screen {
+	
+/* set height for monobook and timeless, because the filter in FF needs dimensions to get it to apply */
+html {
+    height: 100%;
+}
+
+/* Filter needs to reside on `html`, see https://phabricator.wikimedia.org/T221425#5153917 */
+html,
+/* All other selectors have `filter` double-applied to turn back to “normal” by inheritance */
+html img,
+html video,
+html ogvjs,
+html svg,
+html iframe,
+html .mw-no-invert,
+html td .diffchange,
+html .mwe-math-element,
+html .wvui-typeahead-suggestion__thumbnail,
+html .skin-minerva .mw-notification-visible .mw-notification-content,
+/* Extensions */
+html .cx-slitem__image,
+html .mw-mmv-overlay,
+html .mw-mmv-pre-image,
+html .mw-kartographer-map,
+html .mw-kartographer-mapDialog-map,
+html .ext-related-articles-card-list .ext-related-articles-card-thumb {
+	filter: invert( 1 ) hue-rotate( 180deg );
+}
+
+/* Reset overrides, needed where double application above isn't working. */
+/* Vector modern */
+html .skin-vector .mw-logo-wordmark,
+html .skin-vector .mw-logo-tagline,
+html .skin-timeless .mw-wiki-title > img,
+html .wvui-icon svg {
+	filter: none;
+}
+
+/* Backgrounds */
+html table,
+html table.ambox-content,
+html table.toccolours,
+html .mw-notification,
+html .mwe-popups,
+html .infobox,
+html .toc,
+html .thumbinner,
+html .wikitable,
+html .cbnnr-main,
+html .cx-callout,
+html #simpleSearch,
+html #simpleSearch #searchInput,
+html #siteNotice #centralNotice .cnotice {
+	background-color: #ddd;
+}
+
+/* Borders */
+html body,
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6,
+html table.ambox-content,
+html table.toccolours,
+html .mw-notification,
+html .infobox,
+html .toc,
+html .thumbinner,
+html #mw-head,
+html #mw-panel,
+html #content.mw-body,
+html #simpleSearch,
+html #simpleSearch #searchInput,
+html #siteNotice #centralNotice .cnotice {
+	border-color: #cdcbc8;
+}
+
+/* Links */
+/* Links: normal */
+html a,
+html .vector-menu-tabs li a,
+/* Backwards compatible VectorTabs, deprecated in MW v1.35. */
+html .vectorTabs li a,
+html .toctogglelabel,
+html .mw-parser-output a.external,
+html .mw-parser-output a.extiw,
+html .mw-parser-output a.extiw:active,
+html #mw-panel .portal .body li a {
+	/* color: #69f; Proposal below for level AA conformance, see also https://phabricator.wikimedia.org/T233266
+	   `#36c` is transformed by :root `filter` to be closer to chosen `#69f`. */
+	color: #36c;
+}
+
+/* Links: visited */
+html a:visited,
+html .mw-parser-output a.extiw:visited,
+html #mw-panel .portal .body li a:visited {
+	/* color: #709bbd; Proposal below uses to-be-standardized color from https://phabricator.wikimedia.org/T213778 */
+	color: #6b4ba1;
+}
+
+/* Links: red */
+html a.new,
+html .vector-menu-tabs li.new a,
+html .vectorTabs li.new a {
+	color: #ff6e6e;
+}
+
+/* ::: Special Element Treatments ::: */
+/* Image thumbnails */
+html .thumbimage {
+	border: 0;
+}
+
+/* Content image (thumbnail) SVGs */
+/* `*not( .mbox-image )` exception doesn't work for unclear reasons */
+html .image img[ src*='svg' ],
+html img[ src*='Wiktionary-logo'] {
+	background-color: #fff;
+	border-radius: 1px;
+}
+
+/* Dealing with false positives from selector above */
+html .mw-echo-ui-notificationItemWidget-icon img[ src*='svg' ],
+html .mbox-image .image img[ src*='svg' ],
+/* Emoji generated by [[Template:Emoji]] */
+html .emoji .image img,
+/* Vote symbols on Talk pages */
+html .image img[ alt^="Symbol" ] {
+	background-color: transparent;
+}
+
+/* Page previews */
+html .mwe-popups {
+    box-shadow: 0 30px 90px -20px rgba( 0, 0, 0, 0.3 ), 0 0 1px #000;
+}
+
+html .mwe-popups.flipped-y:after,
+html .mwe-popups.flipped-x-y:after {
+	border-top: 11px solid #ddd;
+}
+
+html .mwe-popups.mwe-popups-no-image-pointer:after {
+	border-bottom: 11px solid #ddd;
+}
+
+/* Contributions menu */
+html .cx-callout-1:after {
+	border-bottom-color: #ddd;
+}
+
+/* Mobile Wikipedia logo mobile header */
+html .branding-box img {
+	filter: brightness( 0 );
+}
+
+}
+
+@-moz-document url-prefix() {
+    body {
+        background: #000;
+    }
+}
+}
