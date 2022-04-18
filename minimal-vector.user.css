@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia minimal-vector style
 @namespace   StylishThemes
-@version     1.0.9
+@version     1.0.10
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css
 @license     CC-BY-SA-4.0
@@ -34,8 +34,6 @@ domain("wikifunctions.org") {
   body {background-color: #fff;} 
   /* override grey */
   #mw-page-base {background-image: none; background-color: #fff;} 
-  /* remove blue border */
-  div#content  {border: 1px solid #fff;} 
   /* whiten the tabs-bar */
   #p-views, #p-views *, #p-namespaces, #p-namespaces * {background-image: none;}
   /* fix sidebar-header text color */
