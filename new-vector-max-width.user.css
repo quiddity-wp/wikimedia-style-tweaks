@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.9
+@version     1.0.10
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -38,11 +38,11 @@ domain("wikifunctions.org")
   /* Refine further */
 .mw-page-container {max-width: none; padding-left: 10px;}
 .mw-article-toolbar-container {max-width: none;}
-#mw-panel {padding-left: 10px; max-width: 184px; position: absolute !important}
+#mw-panel {padding-left: 20px; max-width: 184px; position: absolute !important}
 
 /* Fixes for small windows - otherwise the sidebar jumps out */
 @media screen and (max-width: 720px) {
-  #mw-panel {margin-left: -30px; margin-right:-30px}
+  #mw-panel {margin-left: -30px; margin-right:-30px; padding-left:10px}
   }
 /* Fixes for large windows - otherwise the "page/discussion" tabs slide under the sidebar */
 @media screen and (min-width: 1389px) {
