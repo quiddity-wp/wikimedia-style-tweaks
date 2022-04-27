@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.12
+@version     1.0.13
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -32,17 +32,21 @@ domain("wikifunctions.org")
 
 /* Remove max-width */
 .mw-workspace-container {max-width: none;}
-.mw-content-container {max-width: none;	margin-left: 184px;}
-#mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {margin-left: 0px;}
+.mw-content-container {max-width: none;	margin-left: 0 !important;}
+#mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {margin-left: 0 !important;}
+#mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {margin-left: 184px !important;}
 
   /* Refine further */
-.mw-page-container {max-width: none; padding-left: 10px;}
+.mw-page-container {max-width: none; padding: 0;}
 .mw-article-toolbar-container {max-width: none;}
-#mw-panel {padding-left: 15px; max-width: 184px; margin-top:-5px; position: absolute !important}
+#mw-panel {padding-left: 25px; max-width: 184px; margin-top:-5px;}
+  
+  /* ToC */
+.sidebar-toc {margin: 0 !important; padding-left: 20px}
 
 /* Fixes for small windows - otherwise the sidebar jumps out */
 @media screen and (max-width: 720px) {
-  #mw-panel {margin-left: -30px; margin-right:-30px; padding-left:10px}
+  #mw-panel {margin-left: -30px; margin-right:-30px; padding-left:10px;  position: absolute !important}
   }
 /* Fixes for large windows - otherwise the "page/discussion" tabs slide under the sidebar */
 @media screen and (min-width: 1389px) {
