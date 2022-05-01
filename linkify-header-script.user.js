@@ -1,21 +1,29 @@
 // ==UserScript==
 // @name        Wikimedia - Linkify headers
-// @version     0.1.4
+// @version     0.1.5
 // @namespace   github.com/quiddity-wp/wikimedia-style-tweaks
 // @description A userscript helping you get the url linking to specified section - forked from https://greasyfork.org/en/scripts/15930-wikipedia-linkify-headers
+// @include meta.wikimedia.org/*
+// @include office.wikimedia.org/* 
+// @include commons.wikimedia.org/* 
+// @include species.wikimedia.org/* 
+// @include outreach.wikimedia.org/* 
+// @include wikimania.wikimedia.org/* 
+// @include foundation.wikimedia.org/* 
+// @include wikitech.wikimedia.org/*
 // @include *.mediawiki.org/*
 // @include *.wikipedia.org/*
 // @include *.wikisource.org/*
 // @include *.wikiquote.org/*
 // @include *.wiktionary.org/*
-// @include *.wikimedia.org/*
 // @include *.wikivoyage.org/*
 // @include *.wikibooks.org/*
 // @include *.wikinews.org/*
 // @include *.wikiversity.org/*
 // @include *.wikidata.org/*
+// @include *.beta.wmflabs.org/*
 // @include *.wikifunctions.org/*
-// @grant		GM_addStyle
+// @grant GM_addStyle
 // @compatible  firefox
 // @compatible  chrome
 // @compatible  opera
