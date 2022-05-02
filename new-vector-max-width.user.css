@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.23
+@version     1.0.24
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -36,7 +36,7 @@ domain("wikifunctions.org")
 
   /* Refine further */
 .mw-page-container {max-width: none; padding: 1px;}
-#mw-panel {padding-left: 25px; max-width: 184px; margin-top:-5px; padding-right: 0}
+#mw-panel {padding-left: 25px; max-width: 184px; margin-top:-5px; padding-right: 0; border-bottom: 1px solid #888;}
 .mw-sidebar {width: 184px}
     
 /* Sidebar fixes */
