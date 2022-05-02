@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.22
+@version     1.0.23
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -36,7 +36,6 @@ domain("wikifunctions.org")
 
   /* Refine further */
 .mw-page-container {max-width: none; padding: 1px;}
-.mw-article-toolbar-container {max-width: none;}
 #mw-panel {padding-left: 25px; max-width: 184px; margin-top:-5px; padding-right: 0}
 .mw-sidebar {width: 184px}
     
@@ -57,11 +56,12 @@ domain("wikifunctions.org")
   #mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {margin-left: 0 !important;} .vector-toc-enabled #mw-panel {margin-left: 0; padding-left:0 !important; position: absolute !important}
   }
 
-/* Fixes for large windows - otherwise the "page/discussion" tabs slide under the sidebar */
-@media screen and (min-width: 1389px) {
-  #mw-head {margin-left: 184px;}
-  }
-    
+@media screen and (min-width: 720px) {
+  .vector-toc-visible .mw-workspace-container .mw-content-container,  .vector-toc-visible .mw-workspace-container .mw-article-toolbar-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-content-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-article-toolbar-container {
+  margin-left: 18.5em;
+  }    
+}
+
 /* Force sticky header at smaller width */
 @media screen and (min-width: 720px) {
   .vector-sticky-header {display: flex !important}
