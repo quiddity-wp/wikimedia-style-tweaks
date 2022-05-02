@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.18
+@version     1.0.19
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -55,7 +55,7 @@ domain("wikifunctions.org")
   }
 
 @media screen and (max-width: 720px) {
-  #mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {margin-left: 0 !important;}
+  #mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {margin-left: 0 !important;} .vector-toc-enabled #mw-panel {margin-left: 0; padding-left:0 !important;}
   }
 
 /* Fixes for large windows - otherwise the "page/discussion" tabs slide under the sidebar */
