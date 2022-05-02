@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.19
+@version     1.0.20
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -61,6 +61,16 @@ domain("wikifunctions.org")
 /* Fixes for large windows - otherwise the "page/discussion" tabs slide under the sidebar */
 @media screen and (min-width: 1389px) {
   #mw-head {margin-left: 184px;}
+  }
+    
+/* Force sticky header at smaller width */
+@media screen and (min-width: 720px) {
+  .vector-sticky-header {display: flex !important}
+  }
+
+/* Force ToC at smaller width   */
+@media screen and (min-width: 720px) {
+  .sidebar-toc {display: block !important;}
   }
   
 }
