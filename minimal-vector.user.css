@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia minimal-vector style
 @namespace   StylishThemes
-@version     1.0.10
+@version     1.0.11
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css
 @license     CC-BY-SA-4.0
@@ -30,14 +30,14 @@ domain("wikifunctions.org") {
 /* NOTE: VECTOR SKIN is assumed. */
 /* test the minimal look */
   
-  /* override grey */
-  body {background-color: #fff;} 
-  /* override grey */
-  #mw-page-base {background-image: none; background-color: #fff;} 
-  /* whiten the tabs-bar */
-  #p-views, #p-views *, #p-namespaces, #p-namespaces * {background-image: none;}
-  /* fix sidebar-header text color */
-  #mw-panel .portal h3 {color: #333;}
-  /* fix sidebar background (New Vector) */
-  #mw-panel {background:#fff}
+/* override grey */
+#mw-page-base {background-image: none;} 
+
+/* whiten the tabs-bar */
+#p-views, #p-views *, #p-namespaces, #p-namespaces * {background-image: none;}
+
+/* un-blue */
+div#content {border: 1px solid #999;}
+.mw-body {border-top: 1px solid #999;}
+
 }
