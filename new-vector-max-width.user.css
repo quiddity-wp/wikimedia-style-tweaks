@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.24
+@version     1.0.25
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -28,10 +28,10 @@ domain("wikidata.org"),
 domain("beta.wmflabs.org"), 
 domain("wikifunctions.org")
 { 
-/* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
+/* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) but also tries to work in Legacy Vector */
 
 /* Remove max-width */
-.mw-workspace-container {max-width: none;}
+.mw-workspace-container {max-width: 99.9%;}
 .mw-content-container {max-width: none;}
 
   /* Refine further */
@@ -46,21 +46,21 @@ domain("wikifunctions.org")
 /* ToC */
 .sidebar-toc {margin: 0 !important; padding-left: 20px; max-height:90vh}
 
-/* Fixes for small windows - otherwise the sidebar jumps out */
+/* Fix for legacy Vector */
 @media screen and (max-width: 982px) {
-  #mw-panel {margin-left: 0; margin-right:0; padding-left:0;}
-  #mw-sidebar-checkbox:checked ~ #mw-panel {margin-left: 220px !important;}
+  #mw-panel {margin-left: 0; margin-right:0;padding-left:15px}
   }
 
+/* Fixes for small windows */
 @media screen and (max-width: 720px) {
-  #mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {margin-left: 0 !important;} .vector-toc-enabled #mw-panel {margin-left: 0; padding-left:0 !important; position: absolute !important}
+  .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {margin-left: 0 !important; position: absolute !important} 
+  #mw-panel {margin-left: 0; margin-right:0;}
   }
 
+/* Fix page-tab indent */
 @media screen and (min-width: 720px) {
-  .vector-toc-visible .mw-workspace-container .mw-content-container,  .vector-toc-visible .mw-workspace-container .mw-article-toolbar-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-content-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-article-toolbar-container {
-  margin-left: 18.5em;
-  }    
-}
+  .vector-toc-visible .mw-workspace-container .mw-content-container,  .vector-toc-visible .mw-workspace-container .mw-article-toolbar-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-content-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-article-toolbar-container {margin-left: 13.5em !important;}
+  }
 
 /* Force sticky header at smaller width */
 @media screen and (min-width: 720px) {
