@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.25
+@version     1.0.26
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -61,6 +61,9 @@ domain("wikifunctions.org")
 @media screen and (min-width: 720px) {
   .vector-toc-visible .mw-workspace-container .mw-content-container,  .vector-toc-visible .mw-workspace-container .mw-article-toolbar-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-content-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-article-toolbar-container {margin-left: 13.5em !important;}
   }
+
+/* Fix search box width at ~1000px */
+  .mw-header .vector-search-box {min-width: 10em;}
 
 /* Force sticky header at smaller width */
 @media screen and (min-width: 720px) {
