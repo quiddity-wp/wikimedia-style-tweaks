@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.26
+@version     1.0.27
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -31,8 +31,8 @@ domain("wikifunctions.org")
 /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) but also tries to work in Legacy Vector */
 
 /* Remove max-width */
-.mw-workspace-container {max-width: 99.9%;}
-.mw-content-container {max-width: none;}
+.mw-workspace-container {max-width: 99.9% !important;}
+.mw-content-container {max-width: none !important;}
 
   /* Refine further */
 .mw-page-container {max-width: none; padding: 1px;}
