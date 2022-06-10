@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.14
+@version     1.0.15
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -34,8 +34,11 @@ domain("wikifunctions.org") {
   #ca-uls {padding: 0; width: 20px}
     
 /* remove header whitespace */
-  .mw-header {margin:0; padding-top:0;}
+  .mw-header {margin:0 !important; padding-top:0;}
 
 /* nudge sidebar-button up into corner */
   #mw-sidebar-button {margin-left: 0; margin-top: -5px; border: none}
+
+/* remove empty space at bottom */
+  .mw-footer-container {padding-bottom: 0 !important}
 }
