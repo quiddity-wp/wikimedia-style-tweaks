@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.16
+@version     1.0.17
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -42,6 +42,19 @@ domain("wikifunctions.org") {
   /* Remove empty space at bottom */
   .mw-footer-container {
     padding-bottom: 0 !important
+  }
+  
+  /* Reduce left-sidebar padding */
+  #mw-panel {
+    padding-left: 0; padding-right: 0; width: 189px
+  }
+  
+  /* Fix left-gap at smaller widths */
+  .mw-page-container {
+    padding-left: 1px !important;
+  }
+  .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
+    margin-left: 5px;
   }
   
   /* Shorten the inter-languages buttons */
