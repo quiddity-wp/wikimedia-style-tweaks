@@ -1,44 +1,59 @@
 /* ==UserStyle==
 @name        wikimedia DI whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.15
+@version     1.0.16
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), 
-domain("meta.wikimedia.org"), 
-domain("office.wikimedia.org"), 
-domain("commons.wikimedia.org"), 
-domain("species.wikimedia.org"), 
-domain("outreach.wikimedia.org"), 
-domain("wikimania.wikimedia.org"), 
-domain("foundation.wikimedia.org"), 
-domain("wikitech.wikimedia.org"), 
-domain("wiktionary.org"), 
-domain("mediawiki.org"), 
-domain("wikisource.org"), 
-domain("wikivoyage.org"), 
-domain("wikibooks.org"), 
-domain("wikinews.org"), 
-domain("wikiversity.org"), 
-domain("wikiquote.org"), 
-domain("wikidata.org"), 
-domain("beta.wmflabs.org"), 
-domain("wikifunctions.org") { 
-/* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
-    
-/* remove language-name from ULS item */
-  #ca-uls > a {visibility: hidden;}
-  #ca-uls {padding: 0; width: 20px}
-    
-/* remove header whitespace */
-  .mw-header {margin:0 !important; padding-top:0;}
-
-/* nudge sidebar-button up into corner */
-  #mw-sidebar-button {margin-left: 0; margin-top: -5px; border: none}
-
-/* remove empty space at bottom */
-  .mw-footer-container {padding-bottom: 0 !important}
+@-moz-document domain("wikipedia.org"),
+domain("meta.wikimedia.org"),
+domain("office.wikimedia.org"),
+domain("commons.wikimedia.org"),
+domain("species.wikimedia.org"),
+domain("outreach.wikimedia.org"),
+domain("wikimania.wikimedia.org"),
+domain("foundation.wikimedia.org"),
+domain("wikitech.wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org"),
+domain("wikifunctions.org") {
+  /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
+  
+  /* Remove header whitespace */
+  .mw-header {
+    margin: 0 !important; padding-top: 0;
+  }
+  
+  /* Nudge sidebar-button up into corner */
+  #mw-sidebar-button {
+    margin-left: 0; margin-top: -5px; border: none
+  }
+  
+  /* Remove empty space at bottom */
+  .mw-footer-container {
+    padding-bottom: 0 !important
+  }
+  
+  /* Shorten the inter-languages buttons */
+    /* Page-top button */
+    #p-lang-btn-sticky-header {
+      max-width: 71px; overflow: clip; margin-right: 25px;
+    }
+    #p-lang-btn-sticky-header::after {
+      display: none
+    }
+    /* Sticky-header button */
+    #p-lang-btn-label {
+      max-width: 100px !important; overflow: clip
+  }
 }
