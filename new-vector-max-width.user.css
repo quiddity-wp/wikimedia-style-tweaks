@@ -1,78 +1,113 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.27
+@version     1.0.28
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), 
-domain("meta.wikimedia.org"), 
-domain("office.wikimedia.org"), 
-domain("commons.wikimedia.org"), 
-domain("species.wikimedia.org"), 
-domain("outreach.wikimedia.org"), 
-domain("wikimania.wikimedia.org"), 
-domain("foundation.wikimedia.org"), 
-domain("wikitech.wikimedia.org"), 
-domain("wiktionary.org"), 
-domain("mediawiki.org"), 
-domain("wikisource.org"), 
-domain("wikivoyage.org"), 
-domain("wikibooks.org"), 
-domain("wikinews.org"), 
-domain("wikiversity.org"), 
-domain("wikiquote.org"), 
-domain("wikidata.org"), 
-domain("beta.wmflabs.org"), 
-domain("wikifunctions.org")
-{ 
-/* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) but also tries to work in Legacy Vector */
-
-/* Remove max-width */
-.mw-workspace-container {max-width: 99.9% !important;}
-.mw-content-container {max-width: none !important;}
-
-  /* Refine further */
-.mw-page-container {max-width: none; padding: 1px;}
-#mw-panel {padding-left: 25px; max-width: 184px; margin-top:-5px; padding-right: 0; border-bottom: 1px solid #888;}
-.mw-sidebar {width: 184px}
-    
-/* Sidebar fixes */
-#mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {margin-left: 0 !important;}
-#mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {margin-left: 184px !important;}
+@-moz-document domain("wikipedia.org"),
+domain("meta.wikimedia.org"),
+domain("office.wikimedia.org"),
+domain("commons.wikimedia.org"),
+domain("species.wikimedia.org"),
+domain("outreach.wikimedia.org"),
+domain("wikimania.wikimedia.org"),
+domain("foundation.wikimedia.org"),
+domain("wikitech.wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org"),
+domain("wikifunctions.org") {
+  /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) but also tries to work in Legacy Vector */
   
-/* ToC */
-.sidebar-toc {margin: 0 !important; padding-left: 20px; max-height:90vh}
-
-/* Fix for legacy Vector */
-@media screen and (max-width: 982px) {
-  #mw-panel {margin-left: 0; margin-right:0;padding-left:15px}
+  /* Remove max-width */
+  .mw-workspace-container {
+    max-width: none !important;
   }
-
-/* Fixes for small windows */
-@media screen and (max-width: 720px) {
-  .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {margin-left: 0 !important; position: absolute !important} 
-  #mw-panel {margin-left: 0; margin-right:0;}
+  .mw-content-container {
+    max-width: none !important;
   }
-
-/* Fix page-tab indent */
-@media screen and (min-width: 720px) {
-  .vector-toc-visible .mw-workspace-container .mw-content-container,  .vector-toc-visible .mw-workspace-container .mw-article-toolbar-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-content-container, .vector-toc-enabled .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container .mw-article-toolbar-container {margin-left: 13.5em !important;}
+  
+  /* Refine further */
+  .mw-page-container {
+    max-width: none; padding: 1px;
   }
-
-/* Fix search box width at ~1000px */
-  .mw-header .vector-search-box {min-width: 10em;}
-
-/* Force sticky header at smaller width */
-@media screen and (min-width: 720px) {
-  .vector-sticky-header {display: flex !important}
+  #mw-panel {
+    padding-left: 25px; max-width: 184px; margin-top: -5px; padding-right: 0; border-bottom: 1px solid #888;
   }
-
-/* Force ToC at smaller width   */
+  .mw-sidebar {
+    width: 184px
+  }
+  
+  /* Sidebar fixes */
+  #mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {
+    margin-left: 0 !important;
+  }
+  #mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {
+    margin-left: 184px !important;
+  }
+  
+  /* ToC */
+  .sidebar-toc {
+    margin: 0 !important; padding-left: 20px; max-height: 90vh
+  }
+  
+  /* Fix for legacy Vector */
+  @media screen and (max-width: 982px) {
+    #mw-panel {
+      margin-left: 0; margin-right: 0; padding-left: 15px
+    }
+  }
+  
+  /* Fixes for small windows */
+  @media screen and (max-width: 720px) {
+    .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
+      margin-left: 0 !important; position: absolute !important
+    }
+    #mw-panel {
+      margin-left: 0; margin-right: 0;
+    }
+  }
+  
+  /* Fix page-tab indent */
+  .mw-article-toolbar-container {
+    margin: 0 !important; max-width: none !important
+  }
+  
+  /* Fix search box width at ~1000px */
+  .mw-header .vector-search-box {
+    min-width: 10em;
+  }
+  
+  /* Force sticky header in smaller windows */
+  @media screen and (min-width: 450px) {
+    .vector-sticky-header {
+      display: flex
+    }
+  }
+  
+  /* Fix sticky header width */
+  .vector-sticky-header {
+    max-width: none; 
+  }
+  
+  /* Force ToC at smaller width         -- BROKEN
 @media screen and (min-width: 720px) {
   .sidebar-toc {display: block !important;}
-  }
+  }  */
   
+  /* Move button for ToC-collapsed down */
+  .vector-below-page-title #vector-toc-collapsed-button {
+    top: 45px
+  }
+
 }
