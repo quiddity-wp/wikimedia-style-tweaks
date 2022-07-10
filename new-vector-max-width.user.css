@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.28
+@version     1.0.29
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -71,7 +71,16 @@ domain("wikifunctions.org") {
   /* Fixes for small windows */
   @media screen and (max-width: 720px) {
     .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
-      margin-left: 0 !important; position: absolute !important
+      margin-left: 12px !important; position: absolute !important
+    }
+    #mw-panel {
+      margin-left: 0; margin-right: 0;
+    }
+  }
+  
+  @media screen and (max-width: 999px) {
+    .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
+      margin-left: 12px !important; position: absolute !important
     }
     #mw-panel {
       margin-left: 0; margin-right: 0;
