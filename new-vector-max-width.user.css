@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.29
+@version     1.0.30
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -58,7 +58,7 @@ domain("wikifunctions.org") {
   
   /* ToC */
   .sidebar-toc {
-    margin: 0 !important; padding-left: 20px; max-height: 90vh
+   padding-left: 20px; max-height: 90vh
   }
   
   /* Fix for legacy Vector */
