@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.34
+@version     1.0.35
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -130,5 +130,10 @@ domain("wikifunctions.org") {
   table.wikitable > * > tr > th,
   table.wikitable > * > tr > td {
     vertical-align: top;
+  }
+  
+  /* Hide the "print/export" sidebar navbox */
+  #p-coll-print_export {
+    display: none
   }
 }
