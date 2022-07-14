@@ -1,43 +1,54 @@
 /* ==UserStyle==
 @name        wikimedia minimal-vector style
 @namespace   StylishThemes
-@version     1.0.11
+@version     1.0.12
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
 ==/UserStyle== */
-@-moz-document domain("wikipedia.org"), 
-domain("meta.wikimedia.org"), 
-domain("office.wikimedia.org"), 
-domain("commons.wikimedia.org"), 
-domain("species.wikimedia.org"), 
-domain("outreach.wikimedia.org"), 
-domain("wikimania.wikimedia.org"), 
-domain("foundation.wikimedia.org"), 
-domain("wikitech.wikimedia.org"), 
-domain("wiktionary.org"), 
-domain("mediawiki.org"), 
-domain("wikisource.org"), 
-domain("wikivoyage.org"), 
-domain("wikibooks.org"), 
-domain("wikinews.org"), 
-domain("wikiversity.org"), 
-domain("wikiquote.org"), 
-domain("wikidata.org"), 
-domain("beta.wmflabs.org"), 
-domain("wikifunctions.org") { 
-/* NOTE: VECTOR SKIN is assumed. */
-/* test the minimal look */
+@-moz-document domain("wikipedia.org"),
+domain("meta.wikimedia.org"),
+domain("office.wikimedia.org"),
+domain("commons.wikimedia.org"),
+domain("species.wikimedia.org"),
+domain("outreach.wikimedia.org"),
+domain("wikimania.wikimedia.org"),
+domain("foundation.wikimedia.org"),
+domain("wikitech.wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org"),
+domain("wikifunctions.org") {
+  /* NOTE: VECTOR SKIN is assumed. */
   
-/* override grey */
-#mw-page-base {background-image: none;} 
-
-/* whiten the tabs-bar */
-#p-views, #p-views *, #p-namespaces, #p-namespaces * {background-image: none;}
-
-/* un-blue */
-div#content {border: 1px solid #999;}
-.mw-body {border-top: 1px solid #999;}
-
+  /* test the minimal look */
+  
+  /* override grey */
+  #mw-page-base {
+    background-image: none;
+  }
+  
+  /* whiten the tabs-bar */
+  #p-views,
+  #p-views *,
+  #p-namespaces,
+  #p-namespaces * {
+    background-image: none;
+  }
+  
+  /* un-blue */
+  div#content {
+    border: 1px solid #999;
+  }
+  .mw-body {
+    border-top: 1px solid #999;
+  }
 }
