@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           irccloud.com
 @namespace      StylishThemes
-@version        1.0.1
+@version        1.0.2
 @description    Make IRCCloud easier to use
 @homepageURL    https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL      https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/irccloud.user.css
@@ -11,12 +11,12 @@
 
 @-moz-document domain("irccloud.com") {
   
-  /* Clearer dividers for 'last seen' */
+  /* Clearer dividers for 'New messages since [you tabbed out/scroll up]' */
   .divider-text {color: #fff !important; background-color: #f50 !important}
   
   /* Opacity for bots */
-  div[data-name~="logmsgbot"], div[data-name~="stashbot"],div[data-name~="wikibugs"] {
-  opacity: 0.3;
+  div[data-name~="logmsgbot"], div[data-name~="stashbot"], div[data-name~="wikibugs"], div[data-name~="rakkaus"] {
+  opacity: 0.4;
   }
  
 }
