@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           irccloud.com
 @namespace      StylishThemes
-@version        1.0.2
+@version        1.0.3
 @description    Make IRCCloud easier to use
 @homepageURL    https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL      https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/irccloud.user.css
@@ -15,8 +15,11 @@
   .divider-text {color: #fff !important; background-color: #f50 !important}
   
   /* Opacity for bots */
-  div[data-name~="logmsgbot"], div[data-name~="stashbot"], div[data-name~="wikibugs"], div[data-name~="rakkaus"] {
+  div[data-name~="logmsgbot"], div[data-name~="stashbot"], div[data-name~="wikibugs"], div[data-name~="rakkaus"], div[data-name~="jouncebot"] {
   opacity: 0.4;
+  }
+  div[data-name~="icinga-wm"], div[data-name~="jinxer-wm"] {
+  opacity: 0.7;
   }
  
 }
