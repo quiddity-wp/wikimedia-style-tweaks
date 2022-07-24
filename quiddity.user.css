@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.37
+@version     1.0.38
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -119,12 +119,12 @@ domain("wikifunctions.org") {
     display: none;
   }
   
-  /* Hide the New Vector "switch back" link in sidebar */
+  /* Hide the Vector-2022 "switch back" link in sidebar */
   .mw-sidebar-action {
     display: none;
   }
   
-  /* Tables */
+  /* Vertical-align content in Tables */
   table.wikitable > tr > th,
   table.wikitable > tr > td,
   table.wikitable > * > tr > th,
@@ -134,12 +134,12 @@ domain("wikifunctions.org") {
   
   /* Hide the "print/export" sidebar navbox */
   #p-coll-print_export {
-    display: none
+    display: none;
   }
   
   /* Change Vector 2022 ToC's "Beginning" to an Up-arrow */
   #toc-mw-content-text div{
-    visibility: hidden
+    visibility: hidden;
   }
   #toc-mw-content-text div::after {
     visibility: visible;
@@ -156,10 +156,29 @@ domain("wikifunctions.org") {
   
   /* Bold the H1s in Vector-2022's ToC */
   .sidebar-toc-level-1 {
-    font-weight: bold
+    font-weight: bold;
   }
   .sidebar-toc-level-2 {
-    font-weight: normal
+    font-weight: normal;
   }
+  
+  /* Force sticky header in smaller windows */
+  @media screen and (min-width: 450px) {
+    .vector-sticky-header {
+      display: flex;
+    }
+  }
+  
+  /* Move button for ToC-collapsed down */
+  .vector-below-page-title #vector-toc-collapsed-button {
+    top: 45px;
+  }
+  
+  /* Force ToC at smaller width         -- BROKEN
+  @media screen and (min-width: 720px) {
+    .sidebar-toc {
+      display: block !important;
+    }
+  }  */
 
 }
