@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.20
+@version     1.0.21
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -56,6 +56,9 @@ domain("wikifunctions.org") {
   }
   #mw-panel {
     padding-left: 0; padding-right: 0; width: 189px
+  }
+  .vector-toc-enabled .mw-sidebar, .vector-toc-enabled .sidebar-toc {
+    width: 13.75em
   }
   
   /* Fix page's left-gap at smaller widths */
