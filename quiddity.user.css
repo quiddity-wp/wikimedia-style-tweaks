@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.38
+@version     1.0.39
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -149,14 +149,17 @@ domain("wikifunctions.org") {
     top: 2px;
   }
   
-  /* Auto-expand Vector-2022's ToC */
+  /* Auto-expand Vector-2022's ToC and hide the arrows*/
   .client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
     display: block;
+  }
+  .sidebar-toc-toggle {
+    visibility: hidden;
   }
   
   /* Bold the H1s in Vector-2022's ToC */
   .sidebar-toc-level-1 {
-    font-weight: bold;
+    font-weight: 600;
   }
   .sidebar-toc-level-2 {
     font-weight: normal;
