@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.18
+@version     1.0.19
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -77,6 +77,13 @@ domain("wikifunctions.org") {
   
   /* Reduce gap above Page-title */
   .vector-layout-grid .mw-page-container-inner {
-    row-gap: 0
+    row-gap: 0; 
+  }
+  
+  /* Remove the grid gutter -- from https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/Vector/+/refs/heads/master/resources/skins.vector.styles/layouts/grid.less#59 */
+  @media screen and (min-width: 1000px) {}
+    .vector-layout-grid .mw-page-container-inner {
+      grid-template: 66px min-content 1fr min-content / 220px 15px minmax(0,1fr);  
+      grid-template-areas: 'header header header' 'sidebar gutter content' 'toc gutter content' 'footer footer footer';
   }
 }
