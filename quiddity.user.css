@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia quiddity's various vector style tweaks
 @namespace   StylishThemes
-@version     1.0.39
+@version     1.0.40
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -30,7 +30,7 @@ domain("wikifunctions.org") {
   /* Stop Menus jumping on page load */
   @import url('https://meta.wikimedia.org/w/index.php?title=MediaWiki:Gadget-MoreMenu-pagestyles.en.css&action=raw&ctype=text/css'); 
   
-  /* hide the ToC's annoying "[hide]" links */
+  /* hide the ToC's annoying "[hide]" links in Vector-legacy*/
   .toctogglespan {
     display: none;
   }
@@ -95,7 +95,7 @@ domain("wikifunctions.org") {
   
   /* Force reduced # of rows in editing window */
   #wpTextbox1 {
-    height: 30em;
+    height: 25em;
   }
   
   /* Global Font tweaks, better typography */
@@ -137,7 +137,8 @@ domain("wikifunctions.org") {
     display: none;
   }
   
-  /* Change Vector 2022 ToC's "Beginning" to an Up-arrow */
+  /* Vector-2022 ToC tweaks
+  /* Change "Beginning" to an Up-arrow */
   #toc-mw-content-text div{
     visibility: hidden;
   }
@@ -148,21 +149,23 @@ domain("wikifunctions.org") {
     position: absolute;
     top: 2px;
   }
-  
-  /* Auto-expand Vector-2022's ToC and hide the arrows*/
+  /* Auto-expand and hide the arrows */
   .client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
     display: block;
   }
   .sidebar-toc-toggle {
     visibility: hidden;
   }
-  
-  /* Bold the H1s in Vector-2022's ToC */
+  /* Bold the H1s */
   .sidebar-toc-level-1 {
     font-weight: 600;
   }
   .sidebar-toc-level-2 {
     font-weight: normal;
+  }
+  /* Smaller "Contents" */
+  .sidebar-toc-title {
+  font-size: 12px !important;
   }
   
   /* Force sticky header in smaller windows */
