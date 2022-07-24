@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.22
+@version     1.0.23
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -29,68 +29,71 @@ domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
   /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
   
-  /* Remove header whitespace -- BROKEN ??? */
+  /* Remove header whitespace */
   .mw-header {
-    margin: 0 !important; padding-top: 0;
+    margin: 0 !important; 
+    padding-top: 0;
   }
   
   /* Nudge sidebar-button up into corner */
   #mw-sidebar-button {
-    margin-left: 0; margin-top: -5px; border: none
-  }
-  
-  /* Remove empty space at bottom -- needed on Wikitech */
-  .mw-footer-container {
-    padding-bottom: 0 !important
+    margin-left: 0; 
+    margin-top: -20px; 
+    border: none;
   }
   
   /* ToC and Sidebar tweaks*/
   .sidebar-toc {
-    padding-left: 5px; 
-    margin-left: 5px !important; 
+    padding: 5px; 
+    margin: 5px !important; 
     max-height: 90vh;
-    background: none
-  }
-  .vector-toc-enabled .mw-sidebar {
-    background: none
   }
   #mw-panel {
-    padding-left: 0; padding-right: 0; width: 189px
+    padding: 0; 
+    width: 189px;
+    margin: 0;
   }
   .vector-toc-enabled .mw-sidebar, .vector-toc-enabled .sidebar-toc {
-    width: 13.75em
+    width: 13.75em;
   }
   
-  /* Fix page's left-gap at smaller widths */
+  /* Remove whitespace at edges */
   .mw-page-container {
-    padding-left: 1px !important;
+    padding: 1px;
   }
   .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
     margin-left: 5px;
   }  
   
-  /* Shorten the inter-languages buttons */
-    /* Page-top button */
-    #p-lang-btn-sticky-header {
-      max-width: 71px; overflow: clip; margin-right: 25px;
-    }
-    #p-lang-btn-sticky-header::after {
-      display: none
-    }
-    /* Sticky-header button */
-    #p-lang-btn-label {
-      max-width: 100px !important; overflow: clip
-  }
-  
   /* Reduce gap above Page-title */
   .vector-layout-grid .mw-page-container-inner {
-    row-gap: 0; 
+    row-gap: 0;
   }
   
-  /* Remove the grid gutter -- from https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/Vector/+/refs/heads/master/resources/skins.vector.styles/layouts/grid.less#59 */
-  @media screen and (min-width: 1000px) {}
-    .vector-layout-grid .mw-page-container-inner {
-      grid-template: 66px min-content 1fr min-content / 220px 15px minmax(0,1fr);  
-      grid-template-areas: 'header header header' 'sidebar gutter content' 'toc gutter content' 'footer footer footer';
+  /* Remove the grid gutter */
+  .vector-layout-grid .mw-page-container-inner {
+    grid-template: 66px min-content 1fr min-content / 220px 15px minmax(0,1fr);  
+    grid-template-areas: 'header header header' 'sidebar gutter content' 'toc gutter content' 'footer footer footer'
+  }
+  
+  /* Shorten the inter-languages buttons */
+  /* 1. Page-top button */
+  #p-lang-btn-sticky-header {
+    max-width: 71px; 
+    overflow: clip; 
+    margin-right: 25px;
+  }
+  #p-lang-btn-sticky-header::after {
+    display: none;
+  }
+  /* 2. Sticky-header button */
+  #p-lang-btn-label {
+    max-width: 100px !important; 
+    overflow: clip;
+  }
+  
+  /* Remove empty space at page-bottom -- needed on Wikitech */
+  .mw-footer-container {
+    padding-bottom: 0 !important;
   }
 }
