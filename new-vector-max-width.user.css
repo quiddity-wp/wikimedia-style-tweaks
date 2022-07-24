@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 min/max-widths
 @namespace   StylishThemes
-@version     1.0.32
+@version     1.0.33
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -31,7 +31,7 @@ domain("wikifunctions.org") {
   
   /* Remove sticky header max-width */
   .vector-sticky-header {
-    max-width: none; 
+    max-width: none;
   }
   
   /* Remove full page's max-width */
@@ -42,13 +42,17 @@ domain("wikifunctions.org") {
     max-width: none !important;
   }
   .mw-page-container {
-    max-width: none; padding: 1px;
+    max-width: none;
   }
   #mw-panel {
-    padding-left: 25px; max-width: 184px; margin-top: -5px; padding-right: 0; border-bottom: 1px solid #888;
+    padding-left: 25px; 
+    max-width: 184px; 
+    margin-top: -5px; 
+    padding-right: 0; 
+    border-bottom: 1px solid #888;
   }
   .mw-sidebar {
-    width: 184px
+    width: 184px;
   }
 
   /* Fix sidebar into an overlay, at small widths */
@@ -75,31 +79,38 @@ domain("wikifunctions.org") {
   /* Fix for legacy Vector -- NOT NEEDED ???
   @media screen and (max-width: 982px) {
     #mw-panel {
-      margin-left: 0; margin-right: 0; padding-left: 15px
+      margin-left: 0; 
+      margin-right: 0; 
+      padding-left: 15px
     }
   } */
   
   /* Fixes for small windows -- BROKEN ??? 
   @media screen and (max-width: 720px) {
     .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
-      margin-left: 12px !important; position: absolute !important
+      margin-left: 12px !important; 
+      position: absolute !important;
     }
     #mw-panel {
-      margin-left: 0; margin-right: 0;
+      margin-left: 0; 
+      margin-right: 0;
     }
   }
   @media screen and (max-width: 999px) {
     .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
-      margin-left: 12px !important; position: absolute !important
+      margin-left: 12px !important; 
+      position: absolute !important;
     }
     #mw-panel {
-      margin-left: 0; margin-right: 0;
+      margin-left: 0; 
+      margin-right: 0;
     }
   } */
   
   /* Fix page-tab indent -- NOT NEEDED ???
   .mw-article-toolbar-container {
-    margin: 0 !important; max-width: none !important
+    margin: 0 !important; 
+    max-width: none !important;
   } */
   
   /* Fix search box width at ~1000px -- NOT NEEDED ??? 
