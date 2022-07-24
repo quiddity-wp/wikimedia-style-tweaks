@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.42
+@version     1.0.43
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -58,6 +58,13 @@ domain("wikifunctions.org") {
     opacity: 0.7;
   }
   
+  /* Opacity for revert/ed-edits in history pages */
+  .mw-tag-mw-undo,
+  .mw-tag-mw-rollback,
+  .mw-tag-mw-reverted {
+    opacity: 0.2;
+  }
+  
   /* Test ooui tweaks, smaller menu rows */
   .oo-ui-menuOptionWidget {
     padding: 0.3em 1em;
@@ -66,13 +73,6 @@ domain("wikifunctions.org") {
   /* Hide the Legend box on RC pages */
   .mw-changeslist-legend {
     display: none;
-  }
-  
-  /* Opacity for revert/ed-edits in history pages */
-  .mw-tag-mw-undo,
-  .mw-tag-mw-rollback,
-  .mw-tag-mw-reverted {
-    opacity: 0.2;
   }
   
   /* Hide the "Mute" links in sidebar */
@@ -85,10 +85,7 @@ domain("wikifunctions.org") {
     display: none
   }
   
-  /* Make redirect links green - TEMP. OFF
-  a.mw-redirect {color:#006600;
-    } */
-  /* Make disambig link orange */
+  /* Make disambig links orange */
   a.mw-disambig {
     color: #ff8921;
   }
@@ -109,11 +106,6 @@ domain("wikifunctions.org") {
   }
   
   /* Global Font tweaks, better typography */
-  /* REMOVE FOR NOW
-    #content {
-        color: black !important;
-    } 
-    */
   h4 {
     font-size: 116% !important;
   }
@@ -173,6 +165,10 @@ domain("wikifunctions.org") {
   .sidebar-toc-level-2 {
     font-weight: normal;
   }
+  .sidebar-toc {
+    padding-left: 5px !important; /* This overrides my Whitespace.user.css */ 
+  }
+  
   /* Smaller "Contents" */
   .sidebar-toc-title {
   font-size: 12px !important;
