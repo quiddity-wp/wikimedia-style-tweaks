@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.17
+@version     1.0.18
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -29,7 +29,7 @@ domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
   /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
   
-  /* Remove header whitespace */
+  /* Remove header whitespace -- BROKEN ??? */
   .mw-header {
     margin: 0 !important; padding-top: 0;
   }
@@ -39,22 +39,27 @@ domain("wikifunctions.org") {
     margin-left: 0; margin-top: -5px; border: none
   }
   
-  /* Remove empty space at bottom */
+  /* Remove empty space at bottom -- NOT NEEDED ???
   .mw-footer-container {
     padding-bottom: 0 !important
-  }
+  } */
   
   /* Reduce left-sidebar padding */
   #mw-panel {
     padding-left: 0; padding-right: 0; width: 189px
   }
   
-  /* Fix left-gap at smaller widths */
+  /* Fix page's left-gap at smaller widths */
   .mw-page-container {
     padding-left: 1px !important;
   }
   .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
     margin-left: 5px;
+  }
+  
+  /* ToC */
+  .sidebar-toc {
+   padding-left: 20px; max-height: 90vh
   }
   
   /* Shorten the inter-languages buttons */
@@ -68,5 +73,10 @@ domain("wikifunctions.org") {
     /* Sticky-header button */
     #p-lang-btn-label {
       max-width: 100px !important; overflow: clip
+  }
+  
+  /* Reduce gap above Page-title */
+  .vector-layout-grid .mw-page-container-inner {
+    row-gap: 0
   }
 }
