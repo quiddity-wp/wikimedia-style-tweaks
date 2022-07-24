@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.41
+@version     1.0.42
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -30,17 +30,17 @@ domain("wikifunctions.org") {
   /* Stop Menus jumping on page load */
   @import url('https://meta.wikimedia.org/w/index.php?title=MediaWiki:Gadget-MoreMenu-pagestyles.en.css&action=raw&ctype=text/css'); 
   
-  /* hide the ToC's annoying "[hide]" links in Vector-legacy*/
+  /* hide the Vector-legacy ToC's annoying "[hide]" links */
   .toctogglespan {
     display: none;
   }
   
-  /* float the section-header links "[edit] [edit source]" to right, where they're less distracting  */
+  /* Float the section-header links "[edit] [edit source]" to right, where they're less distracting  */
   .mw-editsection {
     float: right;
   }
   
-  /* bigger text in NavPopups gadget */
+  /* Bigger text in NavPopups gadget */
   .navpopup {
     font-size: 0.875em; line-height: 140%;
   }
@@ -73,6 +73,16 @@ domain("wikifunctions.org") {
   .mw-tag-mw-rollback,
   .mw-tag-mw-reverted {
     opacity: 0.2;
+  }
+  
+  /* Hide the "Mute" links in sidebar */
+  #t-mute {
+    display: none;
+  }
+  
+  /* Hide the edit-icon for Wikidata sidebar link */
+  .wb-langlinks-link .wbc-editpage:before {
+    display: none
   }
   
   /* Make redirect links green - TEMP. OFF
