@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI whitespace tweaks
 @namespace   StylishThemes
-@version     1.0.19
+@version     1.0.20
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -39,12 +39,21 @@ domain("wikifunctions.org") {
     margin-left: 0; margin-top: -5px; border: none
   }
   
-  /* Remove empty space at bottom -- NOT NEEDED ???
+  /* Remove empty space at bottom -- needed on Wikitech */
   .mw-footer-container {
     padding-bottom: 0 !important
-  } */
+  }
   
-  /* Reduce left-sidebar padding */
+  /* ToC and Sidebar tweaks*/
+  .sidebar-toc {
+    padding-left: 5px; 
+    margin-left: 5px !important; 
+    max-height: 90vh;
+    background: none
+  }
+  .vector-toc-enabled .mw-sidebar {
+    background: none
+  }
   #mw-panel {
     padding-left: 0; padding-right: 0; width: 189px
   }
@@ -55,12 +64,7 @@ domain("wikifunctions.org") {
   }
   .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
     margin-left: 5px;
-  }
-  
-  /* ToC */
-  .sidebar-toc {
-   padding-left: 20px; max-height: 90vh
-  }
+  }  
   
   /* Shorten the inter-languages buttons */
     /* Page-top button */
