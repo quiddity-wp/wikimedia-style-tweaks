@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia DI max-width tweaks
 @namespace   StylishThemes
-@version     1.0.30
+@version     1.0.31
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -48,27 +48,23 @@ domain("wikifunctions.org") {
     width: 184px
   }
   
-  /* Sidebar fixes */
+  /* Sidebar fixes   -- BROKEN ??? 
   #mw-sidebar-checkbox:not(:checked) ~ .mw-workspace-container .mw-content-container {
     margin-left: 0 !important;
   }
   #mw-sidebar-checkbox:checked ~ .mw-workspace-container .mw-content-container {
     margin-left: 184px !important;
-  }
+  } */
   
-  /* ToC */
-  .sidebar-toc {
-   padding-left: 20px; max-height: 90vh
-  }
   
-  /* Fix for legacy Vector */
+  /* Fix for legacy Vector -- NOT NEEDED ???
   @media screen and (max-width: 982px) {
     #mw-panel {
       margin-left: 0; margin-right: 0; padding-left: 15px
     }
-  }
+  } */
   
-  /* Fixes for small windows */
+  /* Fixes for small windows -- BROKEN ??? 
   @media screen and (max-width: 720px) {
     .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
       margin-left: 12px !important; position: absolute !important
@@ -77,7 +73,6 @@ domain("wikifunctions.org") {
       margin-left: 0; margin-right: 0;
     }
   }
-  
   @media screen and (max-width: 999px) {
     .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
       margin-left: 12px !important; position: absolute !important
@@ -85,38 +80,21 @@ domain("wikifunctions.org") {
     #mw-panel {
       margin-left: 0; margin-right: 0;
     }
-  }
+  } */
   
-  /* Fix page-tab indent */
+  /* Fix page-tab indent -- NOT NEEDED ???
   .mw-article-toolbar-container {
     margin: 0 !important; max-width: none !important
-  }
+  } */
   
-  /* Fix search box width at ~1000px */
+  /* Fix search box width at ~1000px -- NOT NEEDED ??? 
   .mw-header .vector-search-box {
     min-width: 10em;
-  }
-  
-  /* Force sticky header in smaller windows */
-  @media screen and (min-width: 450px) {
-    .vector-sticky-header {
-      display: flex
-    }
-  }
+  } */
   
   /* Fix sticky header width */
   .vector-sticky-header {
     max-width: none; 
-  }
-  
-  /* Force ToC at smaller width         -- BROKEN
-@media screen and (min-width: 720px) {
-  .sidebar-toc {display: block !important;}
-  }  */
-  
-  /* Move button for ToC-collapsed down */
-  .vector-below-page-title #vector-toc-collapsed-button {
-    top: 45px
   }
 
 }
