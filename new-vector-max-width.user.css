@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 min/max-widths
 @namespace   StylishThemes
-@version     1.0.33
+@version     1.0.34
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -49,7 +49,6 @@ domain("wikifunctions.org") {
     max-width: 184px; 
     margin-top: -5px; 
     padding-right: 0; 
-    border-bottom: 1px solid #888;
   }
   .mw-sidebar {
     width: 184px;
