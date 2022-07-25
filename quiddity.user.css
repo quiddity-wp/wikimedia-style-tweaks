@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.44
+@version     1.0.45
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -38,11 +38,41 @@ domain("wikifunctions.org") {
   /* Float the section-header links "[edit] [edit source]" to right, where they're less distracting  */
   .mw-editsection {
     float: right;
+    padding-top: 5px
+  }
+  
+  /* Replace section-edit links with icons */
+  .mw-editsection-visualeditor {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
+    background-size: 12px;
+    display: inline-block;
+    padding:  4px 0 0 0;
+    width: 12px;
+	  font-size: 1px;
+    text-decoration: none;
+  }
+  .mw-editsection > a:not(.mw-editsection-visualeditor) {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
+    background-size: 15px;
+    display: inline-block;
+    padding: 4px;
+    width: 12px;
+	  font-size: 1px;
+    text-decoration: none;
+  }
+  .mw-editsection-bracket {
+    font-size: 10px;
+    display: none;
+  }
+  .mw-editsection-divider {
+    font-size: 10px;
+    padding-right: 2px;
   }
   
   /* Bigger text in NavPopups gadget */
   .navpopup {
-    font-size: 0.875em; line-height: 140%;
+    font-size: 0.875em; 
+    line-height: 140%;
   }
   .popup_menu {
     margin-top: 1.1em;
