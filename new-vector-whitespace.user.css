@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.27
+@version     1.0.28
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -37,8 +37,8 @@ domain("wikifunctions.org") {
   
   /* Nudge sidebar-button up into corner */
   #mw-sidebar-button {
-    margin-left: 0; 
-    margin-top: -20px; 
+    margin-left: -2px; 
+    margin-top: -10px; 
     border: none;
   }
   
@@ -76,7 +76,11 @@ domain("wikifunctions.org") {
   }
   .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
     margin-left: 5px;
-  }  
+  }
+  .vector-sticky-header {
+    padding: 0;
+  }
+
   
   /* Reduce gap above Page-title */
   .vector-layout-grid .mw-page-container-inner {
@@ -85,7 +89,7 @@ domain("wikifunctions.org") {
   
   /* Remove the grid gutter */
   .vector-layout-grid .mw-page-container-inner {
-    grid-template: 66px min-content 1fr min-content / 220px 15px minmax(0,1fr);  
+    grid-template: 50px min-content 1fr min-content / 220px 15px minmax(0,1fr);  
     grid-template-areas: 'header header header' 'sidebar gutter content' 'toc gutter content' 'footer footer footer'
   }
   
