@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.26
+@version     1.0.27
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -65,7 +65,7 @@ domain("wikifunctions.org") {
     margin: 0;
   }
   @media screen and (max-width: 999px) {
-    #mw-panel {
+    .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
       border: 1px black solid
     }
   }
