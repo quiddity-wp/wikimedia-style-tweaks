@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.25
+@version     1.0.26
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -42,16 +42,11 @@ domain("wikifunctions.org") {
     border: none;
   }
   
-  /* ToC and Sidebar tweaks*/
+  /* ToC tweaks*/
   .sidebar-toc {
     padding-left: 17px; 
     margin: 0 !important; 
     max-height: 100vh;
-  }
-  #mw-panel {
-    padding: 0; 
-    width: 189px;
-    margin: 0;
   }
   .vector-toc-enabled .mw-sidebar, .vector-toc-enabled .sidebar-toc {
     width: 13.75em;
@@ -61,6 +56,18 @@ domain("wikifunctions.org") {
   }
   .sidebar-toc-contents {
     width: 12.5em
+  }
+  
+  /* Sidebar tweaks */
+  #mw-panel {
+    padding: 0; 
+    width: 189px;
+    margin: 0;
+  }
+  @media screen and (max-width: 999px) {
+    #mw-panel {
+      border: 1px black solid
+    }
   }
   
   /* Remove whitespace at edges */
