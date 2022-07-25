@@ -112,7 +112,7 @@ domain("wikifunctions.org") {
     max-width: none !important;
   } */
   
-  /* Fix search box width at ~1000px -- NOT NEEDED ??? 
+  /* Fix search box width at ~1000px -- BROKEN ??? 
   .mw-header .vector-search-box {
     min-width: 10em;
   } */
