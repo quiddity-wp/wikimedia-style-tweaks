@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.45
+@version     1.0.46
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -169,14 +169,9 @@ domain("wikifunctions.org") {
     display: none;
   }
   
-  /* Sidebar tweaks */
-  @media screen and (max-width: 999px) {
-    #mw-panel {
-      border: 1px black solid
-    }
-  }
+  /* VECTOR 2022 STUFF BELOW */
   
-  /* Vector-2022 ToC tweaks
+  /* ToC tweaks */
   /* Change "Beginning" to an Up-arrow */
   #toc-mw-content-text div{
     visibility: hidden;
@@ -204,8 +199,7 @@ domain("wikifunctions.org") {
   }
   .sidebar-toc-level-2 {
     font-weight: normal;
-  }
-  
+  }  
   /* Smaller "Contents" */
   .sidebar-toc-title {
   font-size: 12px !important;
@@ -217,7 +211,6 @@ domain("wikifunctions.org") {
       display: flex;
     }
   }
-  
   /* Move button for ToC-collapsed down */
   .vector-below-page-title #vector-toc-collapsed-button {
     top: 45px;
