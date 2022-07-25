@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.46
+@version     1.0.47
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -137,10 +137,10 @@ domain("wikifunctions.org") {
   
   /* Global Font tweaks, better typography */
   h4 {
-    font-size: 116% !important;
+    font-size: 100% !important;
   }
   h5 {
-    font-size: 100% !important;
+    font-size: 90% !important;
   }
   h6 {
     font-size: 80% !important;
