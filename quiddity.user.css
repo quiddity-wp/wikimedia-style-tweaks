@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.43
+@version     1.0.44
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -139,6 +139,13 @@ domain("wikifunctions.org") {
     display: none;
   }
   
+  /* Sidebar tweaks */
+  @media screen and (max-width: 999px) {
+    #mw-panel {
+      border: 1px black solid
+    }
+  }
+  
   /* Vector-2022 ToC tweaks
   /* Change "Beginning" to an Up-arrow */
   #toc-mw-content-text div{
@@ -158,15 +165,15 @@ domain("wikifunctions.org") {
   .sidebar-toc-toggle {
     visibility: hidden;
   }
+  .sidebar-toc {
+    padding-left: 5px !important; /* This overrides my Whitespace.user.css */ 
+  }
   /* Bold the H1s */
   .sidebar-toc-level-1 {
     font-weight: 600;
   }
   .sidebar-toc-level-2 {
     font-weight: normal;
-  }
-  .sidebar-toc {
-    padding-left: 5px !important; /* This overrides my Whitespace.user.css */ 
   }
   
   /* Smaller "Contents" */
