@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.50
+@version     1.0.51
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -226,14 +226,16 @@ domain("wikifunctions.org") {
     top: 50px;
     border: #447ff5 1px solid;
   }
-  /* Force ToC at smaller width         -- BROKEN
+  
+  /* Force ToC at smaller width   -- BROKEN
   @media screen and (min-width: 720px) {
     .sidebar-toc {
       display: block !important;
     }
   }  */
 
-  /* Force mw-header to be sticky */
+  
+  /* Force mw-header to be sticky -- REMOVE FOR NOW - COMPLEXITIES ABOUND!
   .mw-header {
     position: fixed; 
     background: white; 
@@ -245,4 +247,16 @@ domain("wikifunctions.org") {
   .mw-table-of-contents-container.mw-sticky-header-element {
     top: 60px !important;
   }
+  */
+  /* Force Main Menu to show when scrolled  
+  @media screen and (max-width: 999px) {
+    .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
+      margin-top: 50px;
+      position: fixed;
+      z-index: 4;
+      border: 1px lightgray solid
+    }
+  } 
+  */
+  
 }
