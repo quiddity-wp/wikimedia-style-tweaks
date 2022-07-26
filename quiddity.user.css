@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.51
+@version     1.0.52
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -226,26 +226,27 @@ domain("wikifunctions.org") {
     top: 50px;
     border: #447ff5 1px solid;
   }
+
+  /* Fix the jumping TOC upon first appearance when scrolling */
+    .mw-table-of-contents-container.mw-sticky-header-element {
+    top: 50px !important;
+  }
+  
   
   /* Force ToC at smaller width   -- BROKEN
   @media screen and (min-width: 720px) {
     .sidebar-toc {
       display: block !important;
     }
-  }  */
-
+  }  
+  */
+  
   
   /* Force mw-header to be sticky -- REMOVE FOR NOW - COMPLEXITIES ABOUND!
   .mw-header {
     position: fixed; 
     background: white; 
     width: calc(100% - 40px);
-  }
-  #vector-sticky-header {
-    display: none;
-  }
-  .mw-table-of-contents-container.mw-sticky-header-element {
-    top: 60px !important;
   }
   */
   /* Force Main Menu to show when scrolled  
