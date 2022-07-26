@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.52
+@version     1.0.53
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -224,14 +224,20 @@ domain("wikifunctions.org") {
   /* Move button for ToC-collapsed down below the sticky-header, and add border */
   .vector-below-page-title #vector-toc-collapsed-button {
     top: 50px;
-    border: #447ff5 1px solid;
+    border: lightgray 1px solid;
   }
 
   /* Fix the jumping TOC upon first appearance when scrolling */
-    .mw-table-of-contents-container.mw-sticky-header-element {
+  .mw-table-of-contents-container.mw-sticky-header-element {
     top: 50px !important;
   }
-  
+  /* Hide the word "Contents" in that case */
+  @media screen and (max-width: 999px) {
+    .sidebar-toc-title {
+      visibility: hidden;
+    }
+  }
+    
   
   /* Force ToC at smaller width   -- BROKEN
   @media screen and (min-width: 720px) {
