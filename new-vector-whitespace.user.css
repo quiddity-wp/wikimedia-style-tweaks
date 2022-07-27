@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.33
+@version     1.0.34
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -63,6 +63,13 @@ domain("wikifunctions.org") {
       width: 14em;
       margin-left: 0.75em;
     }
+  }
+  /* Fix the jumping TOC upon first appearance when scrolling */
+  .mw-table-of-contents-container.mw-sticky-header-element {
+    top: 56px !important;
+  }
+  .client-js .vector-sticky-header-visible .mw-sticky-header-element {
+    top: 56px !important;
   }
   
 /* Sidebar tweaks */
