@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.54
+@version     1.0.55
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -174,9 +174,9 @@ domain("wikifunctions.org") {
     display: none;
   }
   
-  /* VECTOR 2022 STUFF BELOW */
+/* VECTOR 2022 STUFF BELOW */
   
-  /* ToC tweaks */
+/* ToC tweaks */
   /* Change "Beginning" to an Up-arrow */
   #toc-mw-content-text div{
     visibility: hidden;
@@ -188,7 +188,7 @@ domain("wikifunctions.org") {
     position: absolute;
     top: 2px;
   }
-  /* Auto-expand and hide the arrows */
+  /* Auto-expand sections, and hide the H2-arrows */
   .client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
     display: block;
   }
@@ -209,32 +209,37 @@ domain("wikifunctions.org") {
   .sidebar-toc-title {
   font-size: 12px !important;
   }
-  /* Remove background */
+  /* Add border */
   @media screen and (min-width: 1000px) {
     .sidebar-toc {
-      background: none;
-      border: 1px lightgray solid;
+      border-right: 1px lightgray solid;
+      border-bottom: 1px lightgray solid;
+      border-top: 1px lightgray solid;
     }
   }
   .sidebar-toc:after {
     display: none;
   }
   
-  /* Force sticky header in smaller windows */
+/* Force sticky header in smaller windows */
   @media screen and (min-width: 450px) {
     .vector-sticky-header {
+      height: 55px;
       display: flex;
     }
   }
   /* Move button for ToC-collapsed down below the sticky-header, and add border */
   .vector-below-page-title #vector-toc-collapsed-button {
-    top: 50px;
+    top: 55px;
     border: lightgray 1px solid;
   }
 
-  /* Fix the jumping TOC upon first appearance when scrolling */
+/* Fix the jumping TOC upon first appearance when scrolling */
   .mw-table-of-contents-container.mw-sticky-header-element {
-    top: 50px !important;
+    top: 56px !important;
+  }
+  .client-js .vector-sticky-header-visible .mw-sticky-header-element {
+    top: 56px !important;
   }
   /* Hide the word "Contents" in that case */
   @media screen and (max-width: 999px) {
@@ -244,7 +249,7 @@ domain("wikifunctions.org") {
   }
     
   
-  /* Force ToC at smaller width   -- BROKEN
+/* Force ToC at smaller width   -- BROKEN
   @media screen and (min-width: 720px) {
     .sidebar-toc {
       display: block !important;
@@ -253,7 +258,7 @@ domain("wikifunctions.org") {
   */
   
   
-  /* Force mw-header to be sticky -- REMOVE FOR NOW - COMPLEXITIES ABOUND!
+/* Force mw-header to be sticky -- REMOVE FOR NOW - COMPLEXITIES ABOUND!
   .mw-header {
     position: fixed; 
     background: white; 
@@ -270,5 +275,4 @@ domain("wikifunctions.org") {
     }
   } 
   */
-  
 }
