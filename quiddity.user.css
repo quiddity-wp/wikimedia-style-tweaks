@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.53
+@version     1.0.54
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -86,6 +86,11 @@ domain("wikifunctions.org") {
   /* Opacity in RC/Watchlist for users with 500+ edits */
   .mw-changeslist-user-experienced {
     opacity: 0.7;
+  }
+  
+  /* Smaller margin for RecentChanges pages */
+  .client-js .mw-changeslist table.mw-enhanced-rc {
+    margin-left: 15px
   }
   
   /* Opacity for revert/ed-edits in history pages */
