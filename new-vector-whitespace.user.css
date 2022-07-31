@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.37
+@version     1.0.38
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -114,10 +114,12 @@ domain("wikifunctions.org") {
 
 /* Sidebar fix at smaller widths */
   @media screen and (max-width: 999px) and (min-width:550px) {
-    .mw-checkbox-hack-checkbox:checked ~ .mw-content-container {
+    #mw-sidebar-checkbox:checked ~ .mw-content-container {
       padding-left: 150px !important;
     }
-  }
+  }  
+  
+  
 /* Shorten the inter-languages buttons -- HACKISH! */
   /* 1. Sticky-header button */
   #p-lang-btn-sticky-header > span:not(.mw-ui-icon){
