@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.35
+@version     1.0.36
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -50,7 +50,7 @@ domain("wikifunctions.org") {
     max-height: 100vh;
   }
   .vector-toc-enabled .mw-sidebar, .vector-toc-enabled .sidebar-toc {
-    width: 14em;
+    width: 14em !important;
   }
   .sidebar-toc .sidebar-toc-text {
     padding-right: 0
@@ -58,13 +58,11 @@ domain("wikifunctions.org") {
   .sidebar-toc-contents {
     width: 12.5em
   }
-  @media screen and (min-width: 1200px) {
-    .mw-sidebar, .sidebar-toc, .sidebar-toc::after {
+  .mw-sidebar, .sidebar-toc, .sidebar-toc::after {
       width: 14em;
       margin-left: 0.75em;
     }
-  }
-  /* Fix the jumping TOC upon first appearance when scrolling */
+    /* Fix the jumping TOC upon first appearance when scrolling */
   .mw-table-of-contents-container.mw-sticky-header-element {
     top: 56px !important;
   }
@@ -75,15 +73,23 @@ domain("wikifunctions.org") {
 /* Sidebar tweaks */
   #mw-panel {
     padding: 0; 
-    width: 189px;
+    width: 189px !important;
     margin: 0;
+  }
+  @media screen and (max-width: 999px) {
+    #mw-panel {
+      width: 150px !important;
+    }
   }
   @media screen and (max-width: 999px) {
     .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
       border: 1px lightgray solid
     }
   }
-  
+  .vector-menu-portal, .vector-menu-portal .vector-menu-content {
+      margin-left: 2px
+    }
+    
 /* Remove whitespace at edges */
   .mw-page-container {
     padding: 1px;
@@ -100,7 +106,7 @@ domain("wikifunctions.org") {
     row-gap: 0;
   }
   
-/* Remove the grid gutter */
+/* Reduce the grid gutter, and header height */
   .vector-layout-grid .mw-page-container-inner {
     grid-template: 55px min-content 1fr min-content / 220px 15px minmax(0,1fr);
     grid-template-areas: 'header header header' 'sidebar gutter content' 'toc gutter content' 'footer footer footer'
