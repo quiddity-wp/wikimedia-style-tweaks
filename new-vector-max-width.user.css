@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 min/max-widths
 @namespace   StylishThemes
-@version     1.0.34
+@version     1.0.35
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -62,6 +62,15 @@ domain("wikifunctions.org") {
     }
   }
   
+  /* Play with grid
+  @media ( min-width: 720px ) {
+		.vector-layout-grid .mw-page-container-inner {
+			display: grid;
+			width: 100%;
+			row-gap: 1px;
+			grid-template-columns: 284px 15px 1fr !important;
+		}
+  } */
   
   
   /* OLD STUFF */
