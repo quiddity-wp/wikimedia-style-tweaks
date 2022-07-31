@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.20
+@version     1.0.21
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -38,7 +38,8 @@ domain("wikifunctions.org") {
       border: 1px lightgray solid;
     }
   }
-  /* Force search at smaller sizes */
+  
+/* Force search in site-header at smaller sizes */
   .vector-search-box-collapses > div {
     display: block;
   }
