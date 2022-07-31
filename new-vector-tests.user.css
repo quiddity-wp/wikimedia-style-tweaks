@@ -110,22 +110,22 @@ domain("wikifunctions.org") {
     height: 40px;
   }
   }
-/* reduce padding */
+  /* reduce padding */
   .sticky-header-icon {
     padding: 8px;
     border: none;
   }
-/* remove extraneous buttons */
+  /* remove extraneous buttons */
   #p-lang-btn-sticky-header,
   #p-personal-sticky-header,
   #vector-sticky-header .vector-sticky-header-start {
     display:none;
   }
-/* Fix for VE edit toolbar */
+  /* Fix for VE edit toolbar */
   body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
     top: var(--top-bar-height);
   }
-/* Fix for anchor navi */
+  /* Fix for anchor navi */
   html {
     scroll-padding-top: 100px !important;
   }
