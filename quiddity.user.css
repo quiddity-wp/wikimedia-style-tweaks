@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.56
+@version     1.0.57
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -156,6 +156,11 @@ domain("wikifunctions.org") {
     display: none;
   }
   
+  /* smaller ULS icon on multilingual wikis */
+  .uls-trigger.mw-ui-button.mw-ui-quiet > span {
+    font-size: 0.6em;
+  }
+  
   /* Hide the Vector-2022 "switch back" link in sidebar */
   .mw-sidebar-action {
     display: none;
@@ -251,12 +256,12 @@ domain("wikifunctions.org") {
       left: 1px
     }
   }
-    
   
 /* Force ToC at smaller width   -- BROKEN
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 500px) {
     .sidebar-toc {
       display: block !important;
+      position: absolute
     }
   }  
   */
