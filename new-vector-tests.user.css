@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.21
+@version     1.0.22
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -28,118 +28,8 @@ domain("wikidata.org"),
 domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
   /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
-  
-  /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
-  @media screen and (max-width: 999px) {
-    .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
-      margin-top: 54px;
-      position: fixed;
-      z-index: 4;
-      border: 1px lightgray solid;
-    }
-  }
-  
-/* Force search in site-header at smaller sizes */
-  .vector-search-box-collapses > div {
-    display: block;
-  }
-  .vector-search-box > div {
-    max-width: none;
-  }
-  .search-toggle {
-    display: none;
-  }
-  .mw-logo {
-    min-width: 0;
-    margin-right: 10px;
-  }
-  .cdx-typeahead-search .cdx-typeahead-search--show-thumbnail .cdx-typeahead-search--auto-expand-width {
-    padding-left: 20px;
-      margin-left: 20px;
-  }
-  /* Use logo instead of wordmark at small sizes */
-  @media (min-width: 300px) {
-    .mw-logo-icon {
-      display: block;
-    }
-  }
-  .mw-logo-container {
-      display: none;
-    }
-  @media (min-width: 999px) {
-    .mw-logo-container {
-      display: block;
-    }
-  }
 
-  
-/* --------------------------------------------------------
-  BELOW CONTENT is all copied then adapted from 
-  https://userstyles.world/style/5789/wikipedia-fixed-top-and-sidebars
-*/
-  
-/* Base settings */
-:root {
-    --top-bar-height: 50px;
-}
-
-/**
-    Reduces original sticky header to article links (talk, history, watch, edit).
-*/
-
-/* Force mw-header to be sticky -- EXPERIMENTAL */
-  .mw-header {
-    position: fixed; 
-    background: white; 
-    width: 100%;
-    top: 0;
-    left:0;
-  }
-  /* Nudge content down to account for no-default gap */
-  @media screen and (max-width: 999px) {
-    .mw-content-container {
-      padding-top: 55px;
-    }
-  }
-  /* move the new sticky header down, and limit size*/
-  @media (min-width: 300px) {
-    #vector-sticky-header {
-    max-width: min-content;
-    top: var(--top-bar-height);
-    left: auto;
-    padding: 0 !important;
-    height: 40px;
-  }
-  }
-  /* reduce padding */
-  .sticky-header-icon {
-    padding: 8px;
-    border: none;
-  }
-  /* remove extraneous buttons */
-  #p-lang-btn-sticky-header,
-  #p-personal-sticky-header,
-  #vector-sticky-header .vector-sticky-header-start {
-    display:none;
-  }
-  /* Fix for VE edit toolbar */
-  body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
-    top: var(--top-bar-height);
-  }
-  /* Fix for anchor navi */
-  html {
-    scroll-padding-top: 100px !important;
-  }
-  .oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
-    top: 100px;
-  }
-  
-/* Try to fix layering of User-tools popup menu with sticky page-tools
-  .vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item {
-  
-    ??????
-  } 
-  */
+ 
    
 
 }
