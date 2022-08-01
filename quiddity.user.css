@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.58
+@version     1.0.59
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -287,6 +287,7 @@ domain("wikifunctions.org") {
     left: auto;
     padding: 0 !important;
     height: 40px;
+    transition: none;
   }
   }
   /* reduce padding for the icons*/
