@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.40
+@version     1.0.41
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -120,14 +120,20 @@ domain("wikifunctions.org") {
       padding-left: 150px
     }
   }
-  /* ToC and ToC-button nudge */
-  /* STILL BROKEN, IDK WHY ?!?!
+  /* STILL BROKEN, IDK WHY ?!?!  */
+  /* ToC-button nudge */
   @media screen and (max-width: 999px) and (min-width:550px) {
-    #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, .vector-below-page-title #mw-panel-toc, .vector-below-page-title #vector-toc-collapsed-button {
+    #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, .vector-below-page-title #vector-toc-collapsed-button {
       left: 150px;
     }
   } 
-  */
+  /* ToC nudge */
+  @media screen and (max-width: 999px) and (min-width:550px) {
+    #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, #mw-panel-toc {
+      left: 150px;
+    }
+  } 
+
   
 /* Shorten the inter-languages buttons -- HACKISH! */
   /* 1. Sticky-header button */
