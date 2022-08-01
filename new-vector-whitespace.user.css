@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.39
+@version     1.0.40
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -112,24 +112,21 @@ domain("wikifunctions.org") {
     grid-template-areas: 'header header header' 'sidebar gutter content' 'toc gutter content' 'footer footer footer'
   }
 
-/* Sidebar fix at smaller widths */
+/* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed 
+  -- ASSUMES YOU ARE ALSO USING THE "MIN/MAX WIDTH" CSS*/
+  /* Content nudge */
   @media screen and (max-width: 999px) and (min-width:550px) {
     #mw-sidebar-checkbox:checked ~ .mw-content-container {
-      padding-left: 150px !important;
-    }
-  }  
-  /* Nudge it inwards, if site-sidebar is uncollapsed ?? */
-  /* BROKEN ?!??
-  @media screen and (max-width: 999px) and (min-width:550px) {
-    #mw-sidebar-checkbox:checked ~ .vector-below-page-title .sidebar-toc {
-      left: 155px !important;
+      padding-left: 150px
     }
   }
+  /* ToC and ToC-button nudge */
+  /* STILL BROKEN, IDK WHY ?!?!
   @media screen and (max-width: 999px) and (min-width:550px) {
-    #mw-sidebar-checkbox:checked ~ #vector-toc-collapsed-button {
-      left: 155px !important;
+    #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, .vector-below-page-title #mw-panel-toc, .vector-below-page-title #vector-toc-collapsed-button {
+      left: 150px;
     }
-  }  
+  } 
   */
   
 /* Shorten the inter-languages buttons -- HACKISH! */
