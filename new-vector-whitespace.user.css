@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.41
+@version     1.0.42
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -135,6 +135,51 @@ domain("wikifunctions.org") {
   } 
 
   
+  /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
+  @media screen and (max-width: 999px) {
+    .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
+      top: 54px;
+      position: fixed;
+      z-index: 4;
+      border: 1px lightgray solid;
+      max-height: 90%;
+      overflow: auto !important;
+    }
+  }
+  
+/* Force search-bar to show in site-header at smaller sizes */
+  .vector-search-box-collapses > div {
+    display: block;
+  }
+  .vector-search-box > div {
+    max-width: none;
+  }
+  .search-toggle {
+    display: none;
+  }
+  .mw-logo {
+    min-width: 0;
+    margin-right: 10px;
+  }
+  .cdx-typeahead-search .cdx-typeahead-search--show-thumbnail .cdx-typeahead-search--auto-expand-width {
+    padding-left: 20px;
+      margin-left: 20px;
+  }
+  /* Use logo instead of wordmark at small sizes */
+  @media (min-width: 300px) {
+    .mw-logo-icon {
+      display: block;
+    }
+  }
+  .mw-logo-container {
+      display: none;
+    }
+  @media (min-width: 999px) {
+    .mw-logo-container {
+      display: block;
+    }
+  }
+
 /* Shorten the inter-languages buttons -- HACKISH! */
   /* 1. Sticky-header button */
   #p-lang-btn-sticky-header > span:not(.mw-ui-icon){
