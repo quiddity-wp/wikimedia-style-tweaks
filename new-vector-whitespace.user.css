@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.46
+@version     1.0.47
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -108,7 +108,7 @@ domain("wikifunctions.org") {
   
 /* Reduce the grid gutter, and header height */
   .vector-layout-grid .mw-page-container-inner {
-    grid-template: 55px min-content 1fr min-content / 220px 15px minmax(0,1fr);
+    grid-template: 55px min-content min-content 1fr min-content / 220px 15px minmax(0, 1fr);
     grid-template-areas: 'header header header' 
       'sitebanner sitebanner sitebanner'
       'sidebar gutter content' 
