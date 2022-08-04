@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.45
+@version     1.0.46
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -126,9 +126,6 @@ domain("wikifunctions.org") {
   }
   .mw-article-toolbar-container {
     border-bottom: none;
-  }
-  #right-navigation .vector-menu-content {
-    max-height: 25px;
   }
   .skin-vector-2022 #coordinates {
     top: -1.4em;
