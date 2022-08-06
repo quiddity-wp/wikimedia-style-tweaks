@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.59
+@version     1.0.60
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -312,7 +312,11 @@ domain("wikifunctions.org") {
   .oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
     top: 100px;
   }
-  
+    
+  /* Gap above the log-out button */
+  #pt-logout {
+    margin-top: 20px
+  }
   
 /* Try to fix layering of User-tools popup menu with sticky page-tools */
   /* BROKEN ?????
