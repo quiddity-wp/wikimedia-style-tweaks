@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.60
+@version     1.0.61
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -316,6 +316,11 @@ domain("wikifunctions.org") {
   /* Gap above the log-out button */
   #pt-logout {
     margin-top: 20px
+  }
+  
+/* Fix font-size oddities with User-tools's "translations" and "Uploaded media" */
+  .mw-ui-icon {
+    font-size: unset;
   }
   
 /* Try to fix layering of User-tools popup menu with sticky page-tools */
