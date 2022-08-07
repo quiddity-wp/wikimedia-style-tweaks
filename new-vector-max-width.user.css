@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 min/max-widths
 @namespace   StylishThemes
-@version     1.0.36
+@version     1.0.37
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -29,20 +29,12 @@ domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
   /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) but also tries to work in Legacy Vector */
   
-  /* Remove sticky header max-width */
-  .vector-sticky-header {
-    max-width: none;
-  }
-  
-  /* Remove full page's max-width */
-  .mw-workspace-container {
-    max-width: none !important;
-  }
-  .mw-content-container {
-    max-width: none !important;
-  }
+  /* Remove max-widths */
+  .vector-sticky-header,
+  .mw-workspace-container,
+  .mw-content-container,
   .mw-page-container {
-    max-width: none;
+    max-width: none !important;
   }
   #mw-panel {
     padding-left: 25px; 
