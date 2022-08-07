@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.61
+@version     1.0.62
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -322,14 +322,26 @@ domain("wikifunctions.org") {
   .mw-ui-icon {
     font-size: unset;
   }
+    
+/* Fix searchbar at small widths */
+  #cdx-typeahead-search-menu-0 {
+    min-width: 180px
+  }
+  
   
 /* Try to fix layering of User-tools popup menu with sticky page-tools */
   /* BROKEN ?????
   .vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item {
-  
+      z-index:6 !important;
+  } 
+  .vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item, a.mw-list-item {
     z-index:6 !important;
   } 
+  #vector-sticky-header, .vector-sticky-header, .vector-sticky-header-start, .vector-sticky-header-end, .vector-sticky-header-icons, .mw-ui-button .mw-ui-quiet .mw-ui-icon .mw-ui-icon-element .mw-ui-icon-wikimedia-speechBubbles .sticky-header-icon, .sticky-header-icon:before {
+    z-index:1 !important;
+}
   */
+
   
   
 /* OLDER TESTS and IDEAS BELOW */
