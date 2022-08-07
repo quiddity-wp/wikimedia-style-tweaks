@@ -65,19 +65,22 @@ domain("wikifunctions.org") {
     #mw-sidebar-checkbox:checked ~ .mw-content-container {
       padding-left: 184px;
     }
-    /* TEST STUFF 
-    #mw-panel {
-      max-height: 45%;
-      overflow: auto
-    }
-    #mw-panel-toc {
-      max-height: 45% !important;
-      bottom: 0 !important;
-      top: unset !important;
-      max-width: 184px;
-    }
-    */
   }
+  
+  
+  /* TEST STUFF 
+  #mw-panel {
+    max-height: 45%;
+    overflow: auto
+  }
+  #mw-panel-toc {
+    max-height: 45% !important;
+    bottom: 0 !important;
+    top: unset !important;
+    max-width: 184px;
+  }
+    */
+ 
   
   /* Play with grid
   @media ( min-width: 720px ) {
