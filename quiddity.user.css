@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.64
+@version     1.0.65
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -321,11 +321,6 @@ domain("wikifunctions.org") {
 /* Fix font-size oddities with User-tools's "translations" and "Uploaded media" */
   .mw-ui-icon {
     font-size: unset;
-  }
-    
-/* Fix searchbar at small widths */
-  #cdx-typeahead-search-menu-0 {
-    min-width: 250px
   }
   
 /* Personal-tools, indent the sub-items */
