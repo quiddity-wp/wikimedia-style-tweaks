@@ -158,7 +158,7 @@ domain("wikifunctions.org") {
   } 
 
   
-  /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
+/* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
   @media screen and (max-width: 999px) {
     .mw-checkbox-hack-checkbox:checked ~ .mw-workspace-container #mw-panel {
       top: 54px;
@@ -203,6 +203,11 @@ domain("wikifunctions.org") {
     }
   }
 
+/* Fix search-results flyout at small widths */
+  #cdx-typeahead-search-menu-0 {
+    min-width: 250px
+  }
+  
 /* Shorten the inter-languages buttons -- HACKISH! */
   /* 1. Sticky-header button */
   #p-lang-btn-sticky-header > span:not(.mw-ui-icon){
