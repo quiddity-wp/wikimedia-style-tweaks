@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 min/max-widths
 @namespace   StylishThemes
-@version     1.0.37
+@version     1.0.38
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -29,13 +29,23 @@ domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
   /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) but also tries to work in Legacy Vector */
   
-  /* Remove max-widths */
-  .vector-sticky-header,
-  .mw-workspace-container,
-  .mw-content-container,
-  .mw-page-container {
+/* Remove sticky header max-width */
+  .vector-sticky-header {
+    max-width: none;
+  }
+  
+/* Remove full page's max-width */
+  .mw-workspace-container {
     max-width: none !important;
   }
+  .mw-content-container {
+    max-width: none !important;
+  }
+  .mw-page-container {
+    max-width: none;
+  }
+  
+/* Reduce sidebar width */
   #mw-panel {
     padding-left: 25px; 
     max-width: 184px; 
@@ -46,7 +56,7 @@ domain("wikifunctions.org") {
     width: 184px;
   }
 
-  /* Fix sidebar into an overlay, at small widths */
+/* Fix sidebar into an overlay, at small widths */
   @media screen and (max-width: 999px) {
     .mw-workspace-container {
       position: absolute;
@@ -60,7 +70,7 @@ domain("wikifunctions.org") {
   }
   
   
-  /* TEST STUFF 
+/* TEST STUFF 
   #mw-panel {
     max-height: 45%;
     overflow: auto
