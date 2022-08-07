@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.63
+@version     1.0.64
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -327,6 +327,12 @@ domain("wikifunctions.org") {
   #cdx-typeahead-search-menu-0 {
     min-width: 250px
   }
+  
+/* Personal-tools, indent the sub-items */
+   #pt-betafeatures span:not(.mw-ui-icon-labFlask):before, #pt-darkmode span:before, #cx-language span:before, #cx-imageGallery span:before {
+     content: "↳ ";
+     color: black;
+   }  
   
   
 /* Try to fix layering of User-tools popup menu with sticky page-tools */
