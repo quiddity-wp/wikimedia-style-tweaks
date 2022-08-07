@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.62
+@version     1.0.63
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -325,7 +325,7 @@ domain("wikifunctions.org") {
     
 /* Fix searchbar at small widths */
   #cdx-typeahead-search-menu-0 {
-    min-width: 180px
+    min-width: 250px
   }
   
   
