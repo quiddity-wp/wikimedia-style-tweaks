@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.48
+@version     1.0.49
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -223,5 +223,6 @@ domain("wikifunctions.org") {
 /* Remove empty space at page-bottom */
   .mw-footer-container {
     padding-bottom: 0 !important;
+    padding-top: 0 !important;   
   }
 }
