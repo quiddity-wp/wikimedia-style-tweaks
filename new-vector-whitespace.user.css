@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.51
+@version     1.0.52
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -154,6 +154,17 @@ domain("wikifunctions.org") {
     }
   } 
 
+  /* Remove gap in larger windows, when sidebar and ToC are collapsed */
+  @media screen and (min-width:1000px) {
+    .vector-toc-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container {
+      margin-left: -200px !important;
+    }
+  }
+  @media screen and (min-width:1200px) {
+    .vector-toc-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container {
+      margin-left: -200px !important;
+    }
+  }   
   
 /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
   @media screen and (max-width: 999px) {
