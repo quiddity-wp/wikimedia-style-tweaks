@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.52
+@version     1.0.53
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -117,7 +117,7 @@ domain("wikifunctions.org") {
       'footer footer footer';
   }
   
-/* Reduce article-toolbar height */
+/* Reduce page-toolbar height */
   .vector-menu-tabs .mw-list-item > a, .mw-article-toolbar-container .vector-menu-dropdown > a, .vector-menu-tabs .mw-list-item .vector-menu-heading, .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -133,7 +133,7 @@ domain("wikifunctions.org") {
   }
 
 /* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed 
-  -- ASSUMES YOU ARE ALSO USING THE "MIN/MAX WIDTH" CSS*/
+  -- ASSUMES YOU ARE ALSO USING THE "MIN/MAX WIDTH" CSS */
   /* Content nudge */
   @media screen and (max-width: 999px) and (min-width:550px) {
     #mw-sidebar-checkbox:checked ~ .mw-content-container {
@@ -143,7 +143,7 @@ domain("wikifunctions.org") {
   /* STILL BROKEN, IDK WHY ?!?!  */
   /* ToC-button nudge */
   @media screen and (max-width: 999px) and (min-width:550px) {
-    #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, .vector-below-page-title #vector-toc-collapsed-button {
+    #mw-sidebar-checkbox:not(:checked) ~ #vector-toc-collapsed-button {
       left: 150px;
     }
   } 
@@ -216,7 +216,7 @@ domain("wikifunctions.org") {
     min-width: 250px
   }
   
-/* Shorten the inter-languages buttons -- HACKISH! */
+/* Shorten the inter-languages buttons to just show the number of languages, not the word "languages" -- HACKISH! */
   /* 1. Sticky-header button */
   #p-lang-btn-sticky-header > span:not(.mw-ui-icon){
     max-width: 30px; 
