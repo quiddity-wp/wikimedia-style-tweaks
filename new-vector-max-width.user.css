@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 min/max-widths
 @namespace   StylishThemes
-@version     1.0.38
+@version     1.0.39
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -44,8 +44,8 @@ domain("wikifunctions.org") {
   .mw-page-container {
     max-width: none;
   }
-  
-/* Reduce sidebar width */
+
+/* Reduce sidebar width
   #mw-panel {
     padding-left: 25px; 
     max-width: 184px; 
@@ -54,9 +54,9 @@ domain("wikifunctions.org") {
   }
   .mw-sidebar {
     width: 184px;
-  }
+  } */
 
-/* Fix sidebar into an overlay, at small widths */
+/* Fix sidebar into an overlay, at small widths
   @media screen and (max-width: 999px) {
     .mw-workspace-container {
       position: absolute;
@@ -67,7 +67,7 @@ domain("wikifunctions.org") {
     #mw-sidebar-checkbox:checked ~ .mw-content-container {
       padding-left: 184px;
     }
-  }
+  } */
   
   
 /* TEST STUFF 
