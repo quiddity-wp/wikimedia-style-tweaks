@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.65
+@version     1.0.66
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -41,34 +41,6 @@ domain("wikifunctions.org") {
     padding-top: 5px
   }
   
-  /* Replace section-edit links with icons */
-  .mw-editsection-visualeditor {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
-    background-size: 12px;
-    display: inline-block;
-    padding:  4px 0 0 0;
-    width: 12px;
-	  font-size: 1px;
-    text-decoration: none;
-  }
-  .mw-editsection > a:not(.mw-editsection-visualeditor) {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
-    background-size: 15px;
-    display: inline-block;
-    padding: 4px;
-    width: 12px;
-	  font-size: 1px;
-    text-decoration: none;
-  }
-  .mw-editsection-bracket {
-    font-size: 10px;
-    display: none;
-  }
-  .mw-editsection-divider {
-    font-size: 10px;
-    padding-right: 2px;
-  }
-  
   /* Bigger text in NavPopups gadget */
   .navpopup {
     font-size: 0.875em; 
@@ -86,11 +58,6 @@ domain("wikifunctions.org") {
   /* Opacity in RC/Watchlist for users with 500+ edits */
   .mw-changeslist-user-experienced {
     opacity: 0.7;
-  }
-  
-  /* Smaller margin for RecentChanges pages */
-  .client-js .mw-changeslist table.mw-enhanced-rc {
-    margin-left: 15px
   }
   
   /* Opacity for revert/ed-edits in history pages */
@@ -113,11 +80,6 @@ domain("wikifunctions.org") {
   /* Hide the "Mute" links in sidebar */
   #t-mute {
     display: none;
-  }
-  
-  /* Hide the edit-icon for Wikidata sidebar link */
-  .wb-langlinks-link .wbc-editpage:before {
-    display: none
   }
   
   /* Make disambig links orange */
@@ -156,16 +118,6 @@ domain("wikifunctions.org") {
     display: none;
   }
   
-  /* smaller ULS icon on multilingual wikis */
-  .uls-trigger.mw-ui-button.mw-ui-quiet > span {
-    font-size: 0.6em;
-  }
-  
-  /* Hide the Vector-2022 "switch back" link in sidebar */
-  .mw-sidebar-action {
-    display: none;
-  }
-  
   /* Vertical-align content in Tables */
   table.wikitable > tr > th,
   table.wikitable > tr > td,
@@ -179,7 +131,55 @@ domain("wikifunctions.org") {
     display: none;
   }
   
-/* VECTOR 2022 STUFF BELOW */
+/* Also in Gadget-version, below */
+  
+  /* Replace section-edit links with icons */
+  .mw-editsection-visualeditor {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
+    background-size: 12px;
+    display: inline-block;
+    padding:  4px 0 0 0;
+    width: 12px;
+	  font-size: 1px;
+    text-decoration: none;
+  }
+  .mw-editsection > a:not(.mw-editsection-visualeditor) {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
+    background-size: 15px;
+    display: inline-block;
+    padding: 4px;
+    width: 12px;
+	  font-size: 1px;
+    text-decoration: none;
+  }
+  .mw-editsection-bracket {
+    font-size: 10px;
+    display: none;
+  }
+  .mw-editsection-divider {
+    font-size: 10px;
+    padding-right: 2px;
+  }
+  
+/* Smaller margin for RecentChanges pages */
+  .client-js .mw-changeslist table.mw-enhanced-rc {
+    margin-left: 15px
+  }
+  
+/* Hide the edit-icon for Wikidata sidebar link */
+  .wb-langlinks-link .wbc-editpage:before {
+    display: none
+  }
+  
+/* smaller ULS icon on multilingual wikis */
+  .uls-trigger.mw-ui-button.mw-ui-quiet > span {
+    font-size: 0.6em;
+  }
+  
+/* Hide the Vector-2022 "switch back" link in sidebar */
+  .mw-sidebar-action {
+    display: none;
+  }
   
 /* ToC tweaks */
   /* Change "Beginning" to an Up-arrow */
@@ -257,15 +257,11 @@ domain("wikifunctions.org") {
     }
   }
    
-/* --------------------------------------------------------
-  BELOW CONTENT is all copied then adapted from 
-  https://userstyles.world/style/5789/wikipedia-fixed-top-and-sidebars
-*/
-/**
-    Reduces original sticky header to article links (talk, history, watch, edit).
-*/
-
-/* Force mw-header to be sticky, plus show the page-tool-sticky-buttons below */
+/* 
+Reduces original sticky header to article links (talk, history, watch, edit).
+ orce mw-header to be sticky, plus show the page-tool-sticky-buttons below */   
+/* Much of this is copied then adapted from 
+   https://userstyles.world/style/5789/wikipedia-fixed-top-and-sidebars */
   .mw-header {
     position: fixed; 
     background: white; 
@@ -317,18 +313,21 @@ domain("wikifunctions.org") {
   #pt-logout {
     margin-top: 20px
   }
-  
+
 /* Fix font-size oddities with User-tools's "translations" and "Uploaded media" */
   .mw-ui-icon {
     font-size: unset;
   }
   
 /* Personal-tools, indent the sub-items */
-   #pt-betafeatures span:not(.mw-ui-icon-labFlask):before, #pt-darkmode span:before, #cx-language span:before, #cx-imageGallery span:before {
+  #pt-betafeatures span:not(.mw-ui-icon-labFlask):before, 
+  #pt-darkmode span:before, 
+  #cx-language span:before, 
+  #cx-imageGallery span:before {
      content: "↳ ";
      color: black;
-   }  
-  
+   }
+
   
 /* Try to fix layering of User-tools popup menu with sticky page-tools */
   /* BROKEN ?????
