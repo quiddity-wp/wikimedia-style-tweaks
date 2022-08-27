@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.56
+@version     1.0.57
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -47,7 +47,7 @@ domain("wikifunctions.org") {
   .sidebar-toc {
     padding-left: 17px; 
     margin: 0 !important; 
-    max-height: 100vh;
+    max-height: 90vh;
   }
   .vector-toc-enabled .mw-sidebar, .vector-toc-enabled .sidebar-toc {
     width: 14em !important;
