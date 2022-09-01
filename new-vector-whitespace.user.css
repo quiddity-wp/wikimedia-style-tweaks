@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.61
+@version     1.0.62
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -108,13 +108,15 @@ domain("vrt-wiki.wikimedia.org") {
   }
   
 /* Reduce the grid gutter, and header height */
-  .mw-page-container-inner {
-    grid-template: 55px min-content min-content 1fr min-content / 220px 15px minmax(0, 1fr);
-    grid-template-areas: 'header header header' 
-      'sitebanner sitebanner sitebanner'
-      'sidebar gutter content' 
-      'toc gutter content' 
-      'footer footer footer';
+  @media screen and ( min-width: 1000px ) {
+    .mw-page-container-inner {
+      grid-template: 55px min-content min-content 1fr min-content / 220px 15px minmax(0, 1fr);
+      grid-template-areas: 'header header header' 
+        'sitenotice sitenotice sitenotice'
+        'sidebar gutter content' 
+        'toc gutter content' 
+        'footer footer footer';		
+    }
   }
   
 /* Reduce page-toolbar height */
@@ -134,7 +136,7 @@ domain("vrt-wiki.wikimedia.org") {
 
 /* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
   /* Content nudge */
-  @media screen and (max-width: 999px) and (min-width:550px) {
+  @media screen and (550px <= width < 999px) {
     #mw-sidebar-checkbox:checked ~ .mw-content-container {
       padding-left: 150px
     }
@@ -148,7 +150,7 @@ domain("vrt-wiki.wikimedia.org") {
     }
   } 
   /* ToC nudge */
-  @media screen and (max-width: 999px) and (min-width:550px) {
+  @media screen and (550px <= width < 999px) {
     #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, #mw-panel-toc {
       left: 150px;
     }
