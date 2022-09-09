@@ -63,12 +63,15 @@ domain("vrt-wiki.wikimedia.org") {
       width: 14em;
       margin-left: 0.75em;
     }
-    /* Fix the jumping TOC upon first appearance when scrolling */
-  .mw-table-of-contents-container.mw-sticky-header-element {
-    top: 56px !important;
+/* Fix the jumping TOC upon first appearance when scrolling */
+  .client-js .vector-feature-sticky-header-enabled .mw-sticky-header-element {
+    top: 80px !important;
   }
-  .client-js .vector-sticky-header-visible .mw-sticky-header-element {
-    top: 56px !important;
+  .vector-toc-not-collapsed, .vector-toc-not-collapsed .vector-sticky-toc-container, .vector-sticky-toc-container {
+    padding-top: 0;
+  }
+  .vector-toc-not-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container .vector-sticky-toc-container {
+    margin-top: 0;
   }
   
 /* Sidebar tweaks */
