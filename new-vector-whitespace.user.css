@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.63
+@version     1.0.64
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -31,229 +31,242 @@ domain("vrt-wiki.wikimedia.org") {
   /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
   
 /* Remove header whitespace */
-  .mw-header {
-    margin: 0 !important; 
-    padding-top: 0;
-    height: 55px !important;
-  }
+.mw-header {
+  margin: 0 !important;
+  padding-top: 0;
+  height: 55px !important;
+}
   
 /* Nudge sidebar-button up into corner */
-  #mw-sidebar-button {
-    margin-left: -1px; 
-    margin-top: -11px; 
-    border: none;
-  }
-  
+#mw-sidebar-button {
+  margin-left: -1px;
+  margin-top: -11px;
+  border: none;
+}
+
 /* ToC tweaks*/
-  .sidebar-toc {
-    padding-left: 17px; 
-    margin: 0 !important; 
-    max-height: 90vh;
-  }
-  .vector-toc-enabled .mw-sidebar, .vector-toc-enabled .sidebar-toc {
-    width: 14em !important;
-  }
-  .sidebar-toc .sidebar-toc-text {
-    padding-right: 0
-  }
-  .sidebar-toc-contents {
-    width: 12.5em
-  }
-  .mw-sidebar, .sidebar-toc, .sidebar-toc::after {
-      width: 14em;
-      margin-left: 0.75em;
-    }
-/* Fix the jumping TOC upon first appearance when scrolling */
-  .client-js .vector-feature-sticky-header-enabled .mw-sticky-header-element {
-    top: 80px !important;
-  }
-  .vector-toc-not-collapsed, .vector-toc-not-collapsed .vector-sticky-toc-container, .vector-sticky-toc-container {
-    padding-top: 0;
-  }
-  .vector-toc-not-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container .vector-sticky-toc-container {
-    margin-top: 0;
-  }
-  
+.sidebar-toc {
+  padding-left: 17px;
+  margin: 0 !important;
+  max-height: 85vh;
+}
+.vector-toc-enabled .mw-sidebar, 
+.vector-toc-enabled .sidebar-toc {
+  width: 14em !important;
+}
+.sidebar-toc .sidebar-toc-text {
+  padding-right: 0;
+}
+.sidebar-toc-contents {
+  width: 12.5em;
+}
+.mw-sidebar, 
+.sidebar-toc, 
+.sidebar-toc::after {
+  width: 14em;
+  margin-left: 0.75em;
+}
+
 /* Sidebar tweaks */
+#mw-panel {
+  padding: 0;
+  width: 189px !important;
+  margin: 0;
+}
+@media screen and (max-width: 999px) {
   #mw-panel {
-    width: 189px !important;
-    margin: 0;
+    width: 150px !important;
   }
-  @media screen and (max-width: 999px) {
-    #mw-panel {
-      width: 150px !important;
-    }
+}
+@media screen and (max-width: 999px) {
+  #mw-sidebar-checkbox:checked ~ .vector-sidebar-container  {
+    border: 1px lightgray solid
   }
-  @media screen and (max-width: 999px) {
-    #mw-sidebar-checkbox:checked ~ .vector-sidebar-container  {
-      border: 1px lightgray solid
-    }
-  }
-  .vector-menu-portal, .vector-menu-portal .vector-menu-content {
-      margin-left: 2px
-    }
-    
+}
+.vector-menu-portal, 
+.vector-menu-portal .vector-menu-content {
+  margin-left: 2px
+}
+  
 /* Remove whitespace at edges */
-  .mw-page-container {
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-  .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
-    margin-left: 5px;
-  }
-  .vector-sticky-header {
-    padding: 0;
-  }
-  
+.mw-page-container {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
+  margin-left: 5px;
+}
+.vector-sticky-header {
+  padding: 0;
+}
+
 /* Reduce gap above Page-title */
-  .vector-layout-grid .mw-page-container-inner, .mw-page-container-inner {
-    row-gap: 0 !important;
-  }
-  
+.vector-layout-grid .mw-page-container-inner, 
+.mw-page-container-inner {
+  row-gap: 0;
+}
+
 /* Reduce the grid gutter, and header height */
-  @media screen and ( min-width: 1000px ) {
-    .mw-page-container-inner {
-      grid-template: 55px min-content min-content 1fr min-content / 220px 15px minmax(0, 1fr);
-      grid-template-areas: 'header header header' 
-        'sitenotice sitenotice sitenotice'
-        'sidebar gutter content' 
-        'toc gutter content' 
-        'footer footer footer';		
-    }
+@media screen and ( min-width: 1000px ) {
+  .mw-page-container-inner {  
+    grid-template: 55px min-content min-content 1fr min-content / 220px 15px minmax(0, 1fr);
+    grid-template-areas: 'header header header'
+      'sitenotice sitenotice sitenotice'
+      'sidebar gutter content'
+      'toc gutter content'
+      'footer footer footer';
   }
+}
   
 /* Reduce page-toolbar height */
-  .vector-menu-tabs .mw-list-item > a, .mw-article-toolbar-container .vector-menu-dropdown > a, .vector-menu-tabs .mw-list-item .vector-menu-heading, .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .vector-article-toolbar {
-    max-height: 35px;
-  }
-  .mw-article-toolbar-container {
-    border-bottom: none;
-  }
-  .skin-vector-2022 #coordinates {
-    top: -1.4em;
-  }
+.vector-menu-tabs .mw-list-item > a, 
+.mw-article-toolbar-container .vector-menu-dropdown > a, 
+.vector-menu-tabs .mw-list-item .vector-menu-heading, 
+.mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading {
+  padding-bottom: 5px;
+}
+.vector-article-toolbar {
+  max-height: 35px;
+}
+.mw-article-toolbar-container {
+  border-bottom: none;
+}
+.skin-vector-2022 #coordinates {
+  top: -1.4em;
+}
 
 /* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
-  /* Content nudge */
-  @media screen and (550px <= width < 999px) {
-    #mw-sidebar-checkbox:checked ~ .mw-content-container {
-      padding-left: 150px
-    }
+/* Content nudge */
+@media screen and (max-width: 999px) and (min-width:550px) {
+  #mw-sidebar-checkbox:checked ~ .mw-content-container {
+    padding-left: 155px
   }
-
-  /* STILL BROKEN, IDK WHY ?!?!  Is it a hierarchy issue?? */
-  /* ToC-button nudge */
-  @media screen and (max-width: 999px) {
-    .vector-below-page-title #vector-toc-collapsed-button {
-      left: 150px !important;
-    }
-  } 
-  /* ToC nudge */
-  @media screen and (550px <= width < 999px) {
-    #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, #mw-panel-toc {
-      left: 150px;
-    }
-  } 
-
-  /* Remove gap in larger windows, when sidebar and ToC are collapsed -- NO LONGER WORKS
-  @media screen and (min-width:1000px) {
-    .vector-toc-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container {
-      margin-left: -200px !important;
-    }
-  }
-  @media screen and (min-width:1200px) {
-    .vector-toc-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container {
-      margin-left: -200px !important;
-    }
-  }    */ 
-    
-  /* fix toc in >1000px when collapsed*/
+}
+  
+/* STILL BROKEN, IDK WHY ?!?! Is it a hierarchy issue?? */
+/* ToC-button nudge */
+@media screen and (max-width: 999px) {
   .vector-below-page-title #vector-toc-collapsed-button {
-    position: fixed
+    left: 150px !important;
   }
-  @media screen and (min-width: 1000px) {
-    .client-js .vector-toc-collapsed .vector-layout-grid .sidebar-toc {
-      left: 4em;
-      top:55px !important;
-      position: fixed
-    }
+} 
+/* ToC nudge */
+@media screen and (max-width: 999px) and (min-width:550px) {
+  #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, 
+  #mw-panel-toc {
+    left: 150px;
   }
+}
+
+/* Remove gap in larger windows, when sidebar and ToC are collapsed -- NO LONGER WORKS
+@media screen and (min-width:1000px) {
+  .vector-toc-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container {
+    margin-left: -200px !important;
+  }
+}
+@media screen and (min-width:1200px) {
+  .vector-toc-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container {
+    margin-left: -200px !important;
+  }
+} */ 
+    
+/* fix toc in >1000px when collapsed*/
+.vector-below-page-title #vector-toc-collapsed-button {
+  position: fixed
+}
+@media screen and (min-width: 1000px) {
+  #vector-toc-collapsed-checkbox:checked ~ .mw-table-of-contents-container .sidebar-toc {
+    left: 4em;
+    top:55px !important;
+    position: fixed;
+  }
+}
   
 /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
-  @media screen and (max-width: 999px) {
-    #mw-sidebar-checkbox:checked ~ .vector-sidebar-container  {
-      top: 54px;
-      position: fixed;
-      z-index: 4;
-      border: 1px lightgray solid;
-      max-height: 90%;
-      overflow: auto !important;
-    }
+@media screen and (max-width: 999px) {
+  #mw-sidebar-checkbox:checked ~ .vector-sidebar-container {
+    top: 54px;
+    position: fixed;
+    z-index: 4;
+    border: 1px lightgray solid;
+    max-height: 90%;
+    overflow: auto !important;
+    overflow-x: hidden !important;
   }
+}
   
 /* Force search-bar to show in site-header at smaller sizes */
-  .vector-search-box-collapses > div {
+.vector-search-box-collapses > div {
+  display: block;
+}
+.vector-search-box > div {
+  max-width: none;
+}
+.search-toggle {
+  display: none;
+}
+.mw-logo {
+  min-width: 0;
+  margin-right: 10px;
+}
+.cdx-typeahead-search .cdx-typeahead-search--show-thumbnail .cdx-typeahead-search--auto-expand-width {
+  padding-left: 20px;
+  margin-left: 20px;
+}
+/* Use logo instead of wordmark at small sizes */
+@media (min-width: 300px) {
+  .mw-logo-icon {
     display: block;
   }
-  .vector-search-box > div {
-    max-width: none;
-  }
-  .search-toggle {
-    display: none;
-  }
-  .mw-logo {
-    min-width: 0;
-    margin-right: 10px;
-  }
-  .cdx-typeahead-search .cdx-typeahead-search--show-thumbnail .cdx-typeahead-search--auto-expand-width {
-    padding-left: 20px;
-      margin-left: 20px;
-  }
-  /* Use logo instead of wordmark at small sizes */
-  @media (min-width: 300px) {
-    .mw-logo-icon {
-      display: block;
-    }
-  }
+}
+.mw-logo-container {
+  display: none;
+}
+@media (min-width: 999px) {
   .mw-logo-container {
-      display: none;
-    }
-  @media (min-width: 999px) {
-    .mw-logo-container {
-      display: block;
-    }
+    display: block;
   }
+}
 
 /* Fix search-results flyout at small widths */
-  #cdx-typeahead-search-menu-0 {
-    min-width: 250px
-  }
-  
+#cdx-typeahead-search-menu-0 {
+  min-width: 250px;
+}
+
 /* Shorten the inter-languages buttons to just show the number of languages, not the word "languages" -- HACKISH! */
-  /* 1. Sticky-header button */
-  #p-lang-btn-sticky-header > span:not(.mw-ui-icon){
-    max-width: 30px; 
-    overflow: clip; 
-    margin-right: 25px;
-    max-height: 20px
-  }
-  #p-lang-btn-sticky-header::after {
-    display: none;
-  }
-  /* 2. Page-top button */
-  #p-lang-btn .vector-menu-heading-label{
-    max-width: 35px !important; 
-    overflow: clip;
-    height: 25px
-  }
-  
+/* 1. Sticky-header button */
+#p-lang-btn-sticky-header > span:not(.mw-ui-icon){
+  max-width: 30px;
+  overflow: hidden;
+  margin-right: 25px;
+  max-height: 20px;
+}
+#p-lang-btn-sticky-header::after {
+  display: none;
+}
+/* 2. Page-top button */
+#p-lang-btn .vector-menu-heading-label{
+  max-width: 35px !important;
+  overflow: hidden;
+  height: 25px;
+}
+
 /* Remove empty space at page-bottom */
-  .mw-footer-container {
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;   
-  }
+.mw-footer-container {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+  
+/* Try to fix layering of User-tools popup menu with sticky page-tools */
+/* BROKEN ?????
+.vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item {
+  z-index:6 !important;
+} 
+.vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item, a.mw-list-item {
+  z-index:6 !important;
+} 
+#vector-sticky-header, .vector-sticky-header, .vector-sticky-header-start, .vector-sticky-header-end, .vector-sticky-header-icons, .mw-ui-button .mw-ui-quiet .mw-ui-icon .mw-ui-icon-element .mw-ui-icon-wikimedia-speechBubbles .sticky-header-icon, .sticky-header-icon:before {
+  z-index:1 !important;
+}
+*/
 }
