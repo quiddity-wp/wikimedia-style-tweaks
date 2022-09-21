@@ -131,219 +131,220 @@ domain("wikifunctions.org") {
     display: none;
   }
   
-/* Also in Gadget-version, below */
+/* 
+  ALSO IN GADGET VERSION, BELOW 
+  */
   
-  /* Replace section-edit links with icons */
-  .mw-editsection-visualeditor {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
-    background-size: 12px;
-    display: inline-block;
-    padding:  4px 0 0 0;
-    width: 12px;
-	  font-size: 1px;
-    text-decoration: none;
-  }
-  .mw-editsection > a:not(.mw-editsection-visualeditor) {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
-    background-size: 15px;
-    display: inline-block;
-    padding: 4px;
-    width: 12px;
-	  font-size: 1px;
-    text-decoration: none;
-  }
-  .mw-editsection-bracket {
-    font-size: 10px;
-    display: none;
-  }
-  .mw-editsection-divider {
-    font-size: 10px;
-    padding-right: 2px;
-  }
-  
+/* Replace section-edit links with icons */
+.mw-editsection-visualeditor {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
+  background-size: 12px;
+  display: inline-block;
+  padding: 4px 0 0 0;
+  width: 12px;
+  font-size: 1px;
+  text-decoration: none;
+}
+
+.mw-editsection > a:not(.mw-editsection-visualeditor) {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 4px;
+  width: 12px;
+  font-size: 1px;
+  text-decoration: none;
+}
+
+.mw-editsection-bracket {
+  font-size: 10px;
+  display: none;
+}
+
+.mw-editsection-divider {
+  font-size: 10px;
+  padding-right: 2px;
+}
+
 /* Smaller margin for RecentChanges pages */
-  .client-js .mw-changeslist table.mw-enhanced-rc {
-    margin-left: 15px
-  }
-  
+.client-js .mw-changeslist table.mw-enhanced-rc {
+  margin-left: 15px
+}
+
 /* Hide the edit-icon for Wikidata sidebar link */
-  .wb-langlinks-link .wbc-editpage:before {
-    display: none
-  }
-  
+.wb-langlinks-link .wbc-editpage:before {
+  display: none
+}
+
 /* smaller ULS icon on multilingual wikis */
-  .uls-trigger.mw-ui-button.mw-ui-quiet > span {
-    font-size: 0.6em;
-  }
-  
+.uls-trigger.mw-ui-button.mw-ui-quiet > span {
+  font-size: 0.6em;
+}
+
 /* Hide the Vector-2022 "switch back" link in sidebar */
-  .mw-sidebar-action {
-    display: none;
-  }
-  
+.mw-sidebar-action {
+  display: none;
+}
+
 /* ToC tweaks */
-  /* Change "Beginning" to an Up-arrow */
-  #toc-mw-content-text div{
-    visibility: hidden;
-  }
-  #toc-mw-content-text div::after {
-    visibility: visible;
-    content: "🠕";
-    display: block;
-    position: absolute;
-    top: 2px;
-  }
-  /* Auto-expand sections, and hide the H2-arrows */
-  .client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
-    display: block;
-  }
-  .sidebar-toc-toggle {
-    visibility: hidden;
-  }
-  .sidebar-toc {
-    padding-left: 5px !important; 
-  }
-  /* Bold the H1s */
-  .sidebar-toc-level-1 {
-    font-weight: 600;
-  }
-  .sidebar-toc-level-2 {
-    font-weight: normal;
-  }  
-  /* Smaller "Contents" */
-  .sidebar-toc-title {
+/* Change "Beginning" to an Up-arrow */
+#toc-mw-content-text div {
+  visibility: hidden;
+}
+#toc-mw-content-text div::after {
+  visibility: visible;
+  content: "🠕";
+  display: block;
+  position: absolute;
+  top: 2px;
+}
+
+/* Auto-expand sections, and hide the H2-arrows */
+.client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
+  display: block;
+}
+.sidebar-toc-toggle {
+  visibility: hidden;
+}
+.sidebar-toc {
+  padding-left: 5px !important; 
+}
+
+/* Bold the H1s */
+.sidebar-toc-level-1 {
+  font-weight: 600;
+}
+.sidebar-toc-level-2 {
+  font-weight: normal;
+}
+
+/* Smaller "Contents" */
+.sidebar-toc-title {
   font-size: 12px !important;
+}
+/* Add border */
+@media screen and (min-width: 1000px) {
+  .sidebar-toc {
+    border-right: 1px lightgray solid;
+    border-bottom: 1px lightgray solid;
+    border-top: 1px lightgray solid;
   }
-  /* Add border */
-  @media screen and (min-width: 1000px) {
-    .sidebar-toc {
-      border-right: 1px lightgray solid;
-      border-bottom: 1px lightgray solid;
-      border-top: 1px lightgray solid;
-    }
-  }
-  .sidebar-toc:after {
-    display: none;
-  }
-  
-/* Force sticky header in smaller windows */
-  @media screen and (min-width: 450px) {
-    .vector-sticky-header {
-      height: 55px;
-      display: flex;
-    }
-  }
-  /* Move button for ToC-collapsed down below the sticky-header, and add border */
-  .vector-below-page-title #vector-toc-collapsed-button {
-    top: 55px;
-    border: lightgray 1px solid;
-  }
+}
+.sidebar-toc:after {
+  display: none;
+}
+
+/* Move button for ToC-collapsed down below the sticky-header, and add border */
+.vector-below-page-title #vector-toc-collapsed-button {
+  top: 55px;
+  border: lightgray 1px solid;
+}
 
 /* Fix the jumping TOC upon first appearance when scrolling */
-  .mw-table-of-contents-container.mw-sticky-header-element {
-    top: 56px !important;
-    margin-top:0 !important;
+.mw-table-of-contents-container.mw-sticky-header-element {
+  top: 80px !important;
+  margin-top:0 !important;
+}
+.mw-sticky-header-element {
+  top: 80px !important;
+}
+.vector-toc-not-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container .vector-sticky-toc-container {
+  margin-top: 0;
+}
+.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .mw-sticky-header-element {
+  top: 80px !important;
+}
+/* Hide the word "Contents" in that case */
+@media screen and (max-width: 999px) {
+  .sidebar-toc-title {
+    visibility: hidden;
   }
-  .client-js .vector-sticky-header-visible .mw-sticky-header-element {
-    top: 56px !important;
+  .vector-below-page-title .sidebar-toc {
+    top: 55px !important;
+    left: 1px
   }
-  /* Hide the word "Contents" in that case */
-  @media screen and (max-width: 999px) {
-    .sidebar-toc-title {
-      visibility: hidden;
-    }
-    .vector-below-page-title .sidebar-toc {
-      top: 55px !important;
-      left: 1px
-    }
-  }
-   
-/* 
-Reduces original sticky header to article links (talk, history, watch, edit).
- orce mw-header to be sticky, plus show the page-tool-sticky-buttons below */   
+}
+
+/* Reduces original sticky header to article links (talk, history, watch, edit).
+   Force mw-header to be sticky, plus show the page-tool-sticky-buttons below */   
 /* Much of this is copied then adapted from 
    https://userstyles.world/style/5789/wikipedia-fixed-top-and-sidebars */
-  .mw-header {
-    position: fixed; 
-    background: white; 
-    width: 100%;
-    top: 0;
-    left:0;
-    padding: 0;
+.mw-header {
+  position: fixed; 
+  background: white; 
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+/* Nudge content down to account for no-default gap */
+@media screen and (max-width: 999px) {
+  .mw-content-container {
+    padding-top: 55px;
   }
-  /* Nudge content down to account for no-default gap */
-  @media screen and (max-width: 999px) {
-    .mw-content-container {
-      padding-top: 55px;
-    }
-  }
-  /* move the new page-tool-sticky-header down, and limit size */
-  @media (min-width: 300px) {
-    #vector-sticky-header {
+}
+/* move the new page-tool-sticky-header down, and limit size */
+@media (min-width: 300px) {
+  #vector-sticky-header {
     max-width: min-content;
-    top: 50px;
+    top: 50px !important;
     left: auto;
     padding: 0 !important;
     height: 40px;
     transition: none;
+    transform: translateY(0)
   }
+}
+/* reduce padding for the icons*/
+.sticky-header-icon {
+  padding: 8px;
+  border: none;
+}
+/* remove extraneous buttons */
+#p-lang-btn-sticky-header,
+#p-personal-sticky-header,
+#vector-sticky-header .vector-sticky-header-start {
+  display: none;
+}
+/* Fix for VE edit toolbar */
+body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
+  top: 50px;
+}
+/* Fix for anchor navi */
+html {
+  scroll-padding-top: 65px !important;
+}
+.oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
+  top: 100px;
+}
+/* Still show it in smaller windows */
+@media screen and (min-width: 450px) {
+  .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header {
+    opacity:1;
+    top:50px;
+    height: 55px;
+    display: flex;
   }
-  /* reduce padding for the icons*/
-  .sticky-header-icon {
-    padding: 8px;
-    border: none;
-  }
-  /* remove extraneous buttons */
-  #p-lang-btn-sticky-header,
-  #p-personal-sticky-header,
-  #vector-sticky-header .vector-sticky-header-start {
-    display:none;
-  }
-  /* Fix for VE edit toolbar */
-  body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
-    top: 50px;
-  }
-  /* Fix for anchor navi */
-  html {
-    scroll-padding-top: 100px !important;
-  }
-  .oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
-    top: 100px;
-  }
-    
-  /* Gap above the log-out button */
-  #pt-logout {
-    margin-top: 20px
-  }
+}
+
+/* Gap above the log-out button */
+#pt-logout {
+  margin-top: 20px
+}
 
 /* Fix font-size oddities with User-tools's "translations" and "Uploaded media" */
-  .mw-ui-icon {
-    font-size: unset;
-  }
-  
-/* Personal-tools, indent the sub-items */
-  #pt-betafeatures span:not(.mw-ui-icon-labFlask):before, 
-  #pt-darkmode span:before, 
-  #cx-language span:before, 
-  #cx-imageGallery span:before {
-     content: "↳ ";
-     color: black;
-   }
-
-  
-/* Try to fix layering of User-tools popup menu with sticky page-tools */
-  /* BROKEN ?????
-  .vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item {
-      z-index:6 !important;
-  } 
-  .vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item, a.mw-list-item {
-    z-index:6 !important;
-  } 
-  #vector-sticky-header, .vector-sticky-header, .vector-sticky-header-start, .vector-sticky-header-end, .vector-sticky-header-icons, .mw-ui-button .mw-ui-quiet .mw-ui-icon .mw-ui-icon-element .mw-ui-icon-wikimedia-speechBubbles .sticky-header-icon, .sticky-header-icon:before {
-    z-index:1 !important;
+.mw-ui-icon {
+  font-size: unset;
 }
-  */
 
+/* Personal-tools, indent the sub-items */
+#pt-betafeatures span:not(.mw-ui-icon-labFlask):before, 
+#pt-darkmode span:before, 
+#cx-language span:before, 
+#cx-imageGallery span:before {
+  content: "↳ ";
+  color: black;
+}
   
   
 /* OLDER TESTS and IDEAS BELOW */
