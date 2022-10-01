@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wiki DARK
 @namespace   StylishThemes
-@version     1.0.3
+@version     1.0.4
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css
 @license     CC-BY-SA-4.0
@@ -28,7 +28,7 @@ domain("beta.wmflabs.org"),
 domain("wikifunctions.org") { 
 /* COPIED from https://en.wikipedia.org/wiki/MediaWiki:Gadget-dark-mode.css
     
- /* WikimediaUI Dark Mode
+/* WikimediaUI Dark Mode
  *
  * Wikimedia Design Team 2019-2021
  * Original authors:
@@ -74,6 +74,7 @@ html .mwe-math-element,
 html .wvui-typeahead-suggestion__thumbnail,
 html .skin-minerva .mw-notification-visible .mw-notification-content,
 /* Extensions */
+html .cdx-menu-item__thumbnail, /* T311835 */
 html .cx-slitem__image,
 html .mw-mmv-overlay,
 html .mw-mmv-pre-image,
@@ -126,7 +127,9 @@ html .toc,
 html .thumbinner,
 html #mw-head,
 html #mw-panel,
-html #content.mw-body,
+/* Vector 2022 uses a transparent border for margin collapsing
+(T312822) so don't apply this rule there */
+.skin-vector-legacy #content.mw-body,
 html #simpleSearch,
 html #simpleSearch #searchInput,
 html #siteNotice #centralNotice .cnotice {
