@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.69
+@version     1.0.70
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -131,11 +131,16 @@ domain("wikifunctions.org") {
     display: none;
   }
   
+  /* Tweak background color of "New Translations" in Special:PageTranslation */
+  .mw-tpt-sp-section-type-new {
+    background-color: lightgreen;
+  }
+  
 /* 
   ALSO IN GADGET VERSION, BELOW 
   */
   
-/* Replace section-edit links with icons */
+/* Replace section-edit links with icons
 .mw-editsection-visualeditor {
   background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
   background-size: 12px;
@@ -145,7 +150,6 @@ domain("wikifunctions.org") {
   font-size: 1px;
   text-decoration: none;
 }
-
 .mw-editsection > a:not(.mw-editsection-visualeditor) {
   background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
   background-size: 15px;
@@ -155,16 +159,27 @@ domain("wikifunctions.org") {
   font-size: 1px;
   text-decoration: none;
 }
-
 .mw-editsection-bracket {
   font-size: 10px;
   display: none;
 }
-
 .mw-editsection-divider {
   font-size: 10px;
   padding-right: 2px;
+} */
+
+/* Shorten the "edit source" to just "source" */
+.mw-editsection > a:not(.mw-editsection-visualeditor)  {
+  font-size: 0px;
 }
+.mw-editsection > a:not(.mw-editsection-visualeditor)::after  {
+  content: 'source';
+  font-size: 0.8rem;
+  visibility: visible;
+  color: #3366cc;
+  width: 10px !important;
+}
+
 
 /* Smaller margin for RecentChanges pages */
 .client-js .mw-changeslist table.mw-enhanced-rc {
@@ -292,7 +307,8 @@ domain("wikifunctions.org") {
     padding: 0 !important;
     height: 40px;
     transition: none;
-    transform: translateY(0)
+    transform: translateY(0);
+    z-index: 1;
   }
 }
 /* reduce padding for the icons*/
@@ -325,6 +341,9 @@ html {
     height: 55px;
     display: flex;
   }
+}
+.vector-sticky-header {
+  opacity: 1;
 }
 
 /* Gap above the log-out button */
