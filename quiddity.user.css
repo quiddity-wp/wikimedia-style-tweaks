@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.73
+@version     1.0.74
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -180,7 +180,6 @@ domain("wikifunctions.org") {
   width: 10px !important;
 }
 
-
 /* Smaller margin for RecentChanges pages */
 .client-js .mw-changeslist table.mw-enhanced-rc {
   margin-left: 15px
@@ -231,7 +230,7 @@ domain("wikifunctions.org") {
 .sidebar-toc-level-2 {
   font-weight: normal;
 }
-.sidebar-toc .sidebar-toc-list-item-active > .sidebar-toc-link .sidebar-toc-text {
+.sidebar-toc .sidebar-toc-list-item-active > .sidebar-toc-link {
   font-weight: unset;
   width: unset;
 }
