@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.75
+@version     1.0.76
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -364,9 +364,9 @@ html {
 
 /* Personal-tools, indent the sub-items */
 #pt-betafeatures span:not(.mw-ui-icon-labFlask):before, 
-#pt-darkmode span:before, 
-#cx-language span:before, 
-#cx-imageGallery span:before {
+#pt-darkmode span:not(.mw-ui-icon-vector-gadget-pt-darkmode):before, 
+#cx-language span:not(.mw-ui-icon-vector-gadget-cx-language):before, 
+#cx-imageGallery span:not(.mw-ui-icon-vector-gadget-cx-imageGallery):before {
   content: "↳ ";
   color: black;
 }
