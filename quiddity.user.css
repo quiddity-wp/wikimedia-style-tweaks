@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.76
+@version     1.0.77
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -270,8 +270,8 @@ domain("wikifunctions.org") {
 .vector-toc-not-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container .vector-sticky-toc-container {
   margin-top: 0;
 }
-.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .mw-sticky-header-element {
-  top: 80px !important;
+.client-js.vector-sticky-header-enabled .vector-toc-not-collapsed .vector-sticky-toc-container {
+  top: 60px !important;
 }
 /* Hide the word "Contents" in that case */
 @media screen and (max-width: 999px) {
