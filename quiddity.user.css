@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.72
+@version     1.0.73
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -282,6 +282,7 @@ domain("wikifunctions.org") {
   }
 }
 
+/* CUSTOM PAGE TOOLS */
 /* Reduces original sticky header to article links (talk, history, watch, edit).
    Force mw-header to be sticky, plus show the page-tool-sticky-buttons below */   
 /* Much of this is copied then adapted from 
@@ -344,9 +345,9 @@ html {
     display: flex;
   }
 }
-/* Always show the sub-menu, to prevent misclicks */
-.vector-sticky-header {
-  opacity: 1;
+/* Properly hide the sub-menu at page-top, to prevent misclicks */
+.vector-sticky-header:not(.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header) {
+  display: none !important;
 }
 
 /* Gap above the log-out button */
