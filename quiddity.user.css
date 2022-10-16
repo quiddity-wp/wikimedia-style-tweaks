@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.71
+@version     1.0.72
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -213,7 +213,6 @@ domain("wikifunctions.org") {
   position: absolute;
   top: 2px;
 }
-
 /* Auto-expand sections, and hide the H2-arrows */
 .client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
   display: block;
@@ -224,15 +223,18 @@ domain("wikifunctions.org") {
 .sidebar-toc {
   padding-left: 5px !important; 
 }
-
 /* Bold the H1s */
 .sidebar-toc-level-1 {
   font-weight: 600;
 }
+/* Don't bold the H2/3/4 or change the widths */
 .sidebar-toc-level-2 {
   font-weight: normal;
 }
-
+.sidebar-toc .sidebar-toc-list-item-active > .sidebar-toc-link .sidebar-toc-text {
+  font-weight: unset;
+  width: unset;
+}
 /* Smaller "Contents" */
 .sidebar-toc-title {
   font-size: 12px !important;
