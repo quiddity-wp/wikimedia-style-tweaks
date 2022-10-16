@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.65
+@version     1.0.66
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -90,8 +90,8 @@ domain("vrt-wiki.wikimedia.org") {
   
 /* Remove whitespace at edges */
 .mw-page-container {
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
   margin-left: 5px;
