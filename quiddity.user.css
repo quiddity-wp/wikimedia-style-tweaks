@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.74
+@version     1.0.75
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -232,6 +232,9 @@ domain("wikifunctions.org") {
 }
 .sidebar-toc .sidebar-toc-list-item-active > .sidebar-toc-link {
   font-weight: unset;
+  width: unset;
+}
+.sidebar-toc .sidebar-toc-level-1-active:not(.sidebar-toc-list-item-expanded) > .sidebar-toc-link .sidebar-toc-text {
   width: unset;
 }
 /* Smaller "Contents" */
