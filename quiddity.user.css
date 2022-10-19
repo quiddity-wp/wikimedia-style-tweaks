@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.77
+@version     1.0.78
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -369,6 +369,13 @@ html {
 #cx-imageGallery span:not(.mw-ui-icon-vector-gadget-cx-imageGallery):before {
   content: "↳ ";
   color: black;
+}
+
+/* Fix for banners in small windows */
+@media screen and (max-width: 999px) {
+  #siteNotice {
+    top: 60px;
+  }
 }
   
   
