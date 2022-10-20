@@ -141,6 +141,9 @@ domain("vrt-wiki.wikimedia.org") {
 .skin-vector-2022 #coordinates {
   top: -0.9em;
 }
+.vector-feature-visual-enhancement-next-disabled #ca-wikilove.icon a {
+  padding: 8px 5px 0;
+}
 
 /* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
 /* Content nudge */
