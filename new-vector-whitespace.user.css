@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.66
+@version     1.0.67
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -109,12 +109,12 @@ domain("vrt-wiki.wikimedia.org") {
 /* Reduce the grid gutter, and header height */
 @media screen and ( min-width: 1000px ) {
   .mw-page-container-inner {  
-    grid-template: 55px min-content min-content 1fr min-content / 220px 15px minmax(0, 1fr);
-    grid-template-areas: 'header header header'
-      'sitenotice sitenotice sitenotice'
-      'sidebar gutter content'
-      'toc gutter content'
-      'footer footer footer';
+    grid-template: min-content min-content min-content 1fr min-content / 220px minmax(0, 1fr);
+    grid-template-areas: 'header header'
+      'siteNotice siteNotice'
+      'mainMenu pageContent'
+      'toc pageContent'
+      'footer footer';
   }
 }
 
