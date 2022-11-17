@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.68
+@version     1.0.69
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -27,7 +27,8 @@ domain("wikiquote.org"),
 domain("wikidata.org"),
 domain("beta.wmflabs.org"),
 domain("wikifunctions.org"),
-domain("vrt-wiki.wikimedia.org") {
+domain("vrt-wiki.wikimedia.org"),
+domain("patchdemo.wmflabs.org") {
   /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]] beta) */
   
 /* Remove header whitespace */
