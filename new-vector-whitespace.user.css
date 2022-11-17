@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.67
+@version     1.0.68
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -40,7 +40,7 @@ domain("vrt-wiki.wikimedia.org") {
 /* Nudge sidebar-button up into corner */
 #mw-sidebar-button {
   margin-left: -1px;
-  margin-top: -11px;
+  margin-top: -13px;
   border: none;
 }
 
@@ -79,7 +79,7 @@ domain("vrt-wiki.wikimedia.org") {
   }
 }
 @media screen and (max-width: 999px) {
-  #mw-sidebar-checkbox:checked ~ .vector-sidebar-container  {
+  #mw-sidebar-checkbox:checked ~ .mw-page-container-inner  {
     border: 1px lightgray solid
   }
 }
@@ -109,7 +109,7 @@ domain("vrt-wiki.wikimedia.org") {
 /* Reduce the grid gutter, and header height */
 @media screen and ( min-width: 1000px ) {
   .mw-page-container-inner {  
-    grid-template: min-content min-content min-content 1fr min-content / 220px minmax(0, 1fr);
+    grid-template: 55px min-content min-content 1fr min-content / 220px minmax(0, 1fr);
     grid-template-areas: 'header header'
       'siteNotice siteNotice'
       'mainMenu pageContent'
@@ -131,7 +131,7 @@ domain("vrt-wiki.wikimedia.org") {
 .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading {
   padding: 5px 0 5px 0;
 }
-.vector-article-toolbar {
+.vector-page-toolbar {
   max-height: 30px;
 }
 .mw-article-toolbar-container {
@@ -194,8 +194,9 @@ domain("vrt-wiki.wikimedia.org") {
   
 /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
 @media screen and (max-width: 999px) {
-  #mw-sidebar-checkbox:checked ~ .vector-sidebar-container {
+  #mw-sidebar-checkbox:checked ~ .vector-sidebar-container, .vector-main-menu-container  {
     top: 54px;
+    left: 0px;
     position: fixed;
     z-index: 4;
     border: 1px lightgray solid;
