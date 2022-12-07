@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.69
+@version     1.0.70
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -64,7 +64,7 @@ domain("patchdemo.wmflabs.org") {
 .mw-sidebar, 
 .sidebar-toc, 
 .sidebar-toc::after {
-  width: 14em;
+  width: 220px !important;
   margin-left: 0.75em;
 }
 
