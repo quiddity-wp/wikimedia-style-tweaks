@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.80
+@version     1.0.81
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -198,7 +198,11 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* Hide the Vector-2022 "switch back" link in sidebar */
-.mw-sidebar-action {
+.vector-main-menu-action-opt-out {
+  display: none;
+}
+/* Hide Vector-2022 "languages list moved" message in sidebar */
+.vector-language-sidebar-alert {
   display: none;
 }
 
