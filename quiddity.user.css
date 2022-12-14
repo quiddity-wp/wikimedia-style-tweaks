@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.81
+@version     1.0.82
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -247,7 +247,7 @@ domain("patchdemo.wmflabs.org") {
 .sidebar-toc-title {
   font-size: 12px !important;
 }
-/* Add border */
+/* Add border  --- TEST REMOVAL
 @media screen and (min-width: 1000px) {
   .sidebar-toc {
     border-right: 1px lightgray solid;
@@ -257,27 +257,12 @@ domain("patchdemo.wmflabs.org") {
 }
 .sidebar-toc:after {
   display: none;
-}
+} */
 
 /* Move button for ToC-collapsed down below the sticky-header, and add border */
 .vector-below-page-title #vector-toc-collapsed-button {
   top: 55px;
   border: lightgray 1px solid;
-}
-
-/* Fix the jumping TOC upon first appearance when scrolling */
-.mw-table-of-contents-container.mw-sticky-header-element {
-  top: 80px !important;
-  margin-top:0 !important;
-}
-.mw-sticky-header-element {
-  top: 80px !important;
-}
-.vector-toc-not-collapsed #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container .vector-sticky-toc-container {
-  margin-top: 0 !important;
-}
-.client-js.vector-sticky-header-enabled .vector-feature-page-tools-disabled.vector-toc-not-collapsed .vector-sticky-toc-container {
-  top: 60px !important;
 }
 /* Hide the word "Contents" in that case */
 @media screen and (max-width: 999px) {
@@ -288,6 +273,17 @@ domain("patchdemo.wmflabs.org") {
     top: 55px !important;
     left: 1px
   }
+}
+
+/* Fix the jumping TOC upon first appearance when scrolling */
+.client-js.vector-sticky-header-enabled .vector-toc-pinned #vector-toc-pinned-container {
+  top: 70px !important;
+}
+.vector-toc-pinned #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container #vector-toc-pinned-container {
+  margin-top: 0;
+}
+.vector-toc-pinned #vector-toc-pinned-container {
+  padding-top: 0;
 }
 
 /* CUSTOM PAGE TOOLS */
