@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.83
+@version     1.0.84
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -31,6 +31,8 @@ domain("vrt-wiki.wikimedia.org"),
 domain("patchdemo.wmflabs.org") {
   /* Stop Menus jumping on page load */
   @import url('https://meta.wikimedia.org/w/index.php?title=MediaWiki:Gadget-MoreMenu-pagestyles.en.css&action=raw&ctype=text/css'); 
+  /* also prevent that from moving the bottom border */
+  .vector-page-toolbar-container {max-height: 27px;}
   
   /* hide the Vector-legacy ToC's annoying "[hide]" links */
   .toctogglespan {
