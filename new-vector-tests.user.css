@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.22
+@version     1.0.23
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -29,7 +29,23 @@ domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
   /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
 
- 
+.vector-body {
+font-size:1em;
+}
+
+.vector-layout-grid .mw-content-container {
+max-width: 65em;
+}
+
+a:visited {color: #7f3ebf;}
+a:link {color: #24478F;}
+a:visited { text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #DCDCDC ;}
+a:link {text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #DCDCDC ;}
+  
+/* notes
+  grid-template-columns: 0px 0px minmax(0,1fr);
+  
+  */
    
 
 }
