@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 min/max-widths
 @namespace   StylishThemes
-@version     1.0.40
+@version     1.0.41
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css
 @license     CC-BY-SA-4.0
@@ -41,10 +41,10 @@ domain("patchdemo.wmflabs.org") {
     max-width: none !important;
   }
   .mw-content-container {
-    max-width: none !important;
+    max-width: 99% !important;
   }
   .mw-page-container {
-    max-width: none;
+    max-width: 98%;
   }
 
 /* Reduce sidebar width
