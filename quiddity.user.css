@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.86
+@version     1.0.87
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -221,43 +221,46 @@ domain("patchdemo.wmflabs.org") {
   top: 2px;
 }
 /* Auto-expand sections, and hide the H2-arrows */
-.client-js .sidebar-toc .sidebar-toc-level-1 .sidebar-toc-list-item {
+.client-js .vector-toc .vector-toc-level-1 .vector-toc-list-item {
   display: block;
 }
-.sidebar-toc-toggle {
+.vector-toc-toggle {
   visibility: hidden;
 }
-.sidebar-toc {
-  padding-left: 5px !important; 
+.vector-toc {
+  padding-left: 15px !important; 
 }
 /* Bold the H1s */
-.sidebar-toc-level-1 {
+.vector-toc-level-1 {
   font-weight: 600;
 }
 /* Don't bold the H2/3/4 or change the widths */
-.sidebar-toc-level-2 {
+.vector-toc-level-2 {
   font-weight: normal;
 }
-.sidebar-toc .sidebar-toc-list-item-active > .sidebar-toc-link {
+.vector-toc .vector-toc-list-item-active > .vector-toc-link {
   font-weight: unset;
   width: unset;
 }
-.sidebar-toc .sidebar-toc-level-1-active:not(.sidebar-toc-list-item-expanded) > .sidebar-toc-link .sidebar-toc-text {
+.vector-toc .vector-toc-level-1-active:not(.vector-toc-list-item-expanded) > .vector-toc-link .vector-toc-text {
   width: unset;
 }
 /* Smaller "Contents" */
-.sidebar-toc-title {
+.vector-pinnable-header-label {
   font-size: 12px !important;
+}
+  .vector-pinnable-header-toggle-button {
+  font-size: 11px !important;
 }
 /* Add border  --- TEST REMOVAL
 @media screen and (min-width: 1000px) {
-  .sidebar-toc {
+  .vector-toc {
     border-right: 1px lightgray solid;
     border-bottom: 1px lightgray solid;
     border-top: 1px lightgray solid;
   }
 }
-.sidebar-toc:after {
+.vector-toc:after {
   display: none;
 } */
 
@@ -268,7 +271,7 @@ domain("patchdemo.wmflabs.org") {
 }
 /* Hide the word "Contents" in that case */
 @media screen and (max-width: 999px) {
-  .sidebar-toc .vector-toc-pinnable-header {
+  .vector-toc .vector-toc-pinnable-header {
     display: none;
   }
 }
@@ -384,7 +387,7 @@ html {
   
   /* Force ToC at smaller width   -- BROKEN
   @media screen and (min-width: 500px) {
-    .sidebar-toc {
+    .vector-toc {
       display: block !important;
       position: absolute
     }
