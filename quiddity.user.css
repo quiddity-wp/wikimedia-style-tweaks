@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.85
+@version     1.0.86
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -275,9 +275,9 @@ domain("patchdemo.wmflabs.org") {
 
 /* Fix the jumping TOC upon first appearance when scrolling */
 .client-js.vector-sticky-header-enabled .vector-toc-pinned #vector-toc-pinned-container {
-  top: 70px !important;
+  top: 60px !important;
 }
-.vector-toc-pinned #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container #vector-toc-pinned-container {
+.vector-feature-page-tools-disabled.vector-toc-pinned #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container #vector-toc-pinned-container {
   margin-top: 0;
 }
 .vector-toc-pinned #vector-toc-pinned-container {
