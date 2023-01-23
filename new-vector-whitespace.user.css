@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.72
+@version     1.0.73
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -46,26 +46,36 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* ToC tweaks*/
-.sidebar-toc {
-  padding-left: 17px;
+.vector-toc {
+  padding-left: 5px !important;
   margin: 0 !important;
-  max-height: 85vh;
+  max-height: 95vh;
 }
 .vector-toc-enabled .mw-sidebar, 
 .vector-toc-enabled .sidebar-toc {
   width: 14em !important;
 }
-.sidebar-toc .sidebar-toc-text {
+.vector-toc .vector-toc-text {
   padding-right: 0;
 }
-.sidebar-toc-contents {
+.vector-toc-contents {
   width: 12.5em;
 }
-.mw-sidebar, 
-.sidebar-toc, 
-.sidebar-toc::after {
-  width: 220px !important;
+.mw-vector, 
+.vector-toc, 
+.vector-toc::after {
+  width: 260px !important;
   margin-left: 0.75em;
+}
+.vector-feature-page-tools-disabled .vector-main-menu {
+  padding: 10px !important;
+}
+.vector-feature-page-tools-disabled .vector-main-menu-group {
+  margin: 0;
+}
+/* Oversize ToC experiment */
+.vector-feature-page-tools-disabled #vector-toc-pinned-container .vector-toc {
+  min-width: 260px !important;
 }
 
 /* Sidebar tweaks */
@@ -158,7 +168,7 @@ domain("patchdemo.wmflabs.org") {
 /* STILL BROKEN, IDK WHY ?!?! Is it a hierarchy issue?? */
 /* ToC-button nudge */
 @media screen and (max-width: 999px) {
-  .vector-below-page-title #vector-toc-collapsed-button {
+  .client-js .vector-below-page-title .vector-page-titlebar-toc {
     left: 150px !important;
   }
 } 
@@ -187,7 +197,7 @@ domain("patchdemo.wmflabs.org") {
   position: fixed
 }
 @media screen and (min-width: 1000px) {
-  #vector-toc-collapsed-checkbox:checked ~ .mw-table-of-contents-container .sidebar-toc {
+  #vector-toc-collapsed-checkbox:checked ~ .mw-table-of-contents-container .vector-toc {
     left: 4em;
     top:55px !important;
     position: fixed;
@@ -201,7 +211,7 @@ domain("patchdemo.wmflabs.org") {
     left: 0px;
     position: fixed;
     z-index: 4;
-    border: 1px lightgray solid;
+    border-right: 1px lightgray solid;
     max-height: 90%;
     overflow: auto !important;
     overflow-x: hidden !important;
@@ -226,6 +236,7 @@ domain("patchdemo.wmflabs.org") {
   padding-left: 20px;
   margin-left: 20px;
 }
+
 /* Use logo instead of wordmark at small sizes */
 @media (min-width: 300px) {
   .mw-logo-icon {
