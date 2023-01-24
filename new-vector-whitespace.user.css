@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.74
+@version     1.0.75
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -64,7 +64,7 @@ domain("patchdemo.wmflabs.org") {
 .mw-vector, 
 .vector-toc, 
 .vector-toc::after {
-  width: 260px !important;
+  width: 250px !important;
   margin-left: 0.75em;
 }
 .vector-feature-page-tools-disabled .vector-main-menu {
@@ -75,7 +75,7 @@ domain("patchdemo.wmflabs.org") {
 }
 /* Oversize ToC experiment */
 .vector-feature-page-tools-disabled #vector-toc-pinned-container .vector-toc {
-  min-width: 260px !important;
+  min-width: 250px !important;
 }
 
 /* Sidebar tweaks */
