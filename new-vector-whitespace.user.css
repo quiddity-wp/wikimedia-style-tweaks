@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace
 @namespace   StylishThemes
-@version     1.0.73
+@version     1.0.74
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -47,7 +47,7 @@ domain("patchdemo.wmflabs.org") {
 
 /* ToC tweaks*/
 .vector-toc {
-  padding-left: 5px !important;
+  padding-left: 15px !important;
   margin: 0 !important;
   max-height: 95vh;
 }
