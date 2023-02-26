@@ -243,11 +243,15 @@ domain("patchdemo.wmflabs.org") {
 .vector-toc-level-2 {
   font-weight: normal;
 }
+/* Fix the bouncing from bold */
 .vector-toc .vector-toc-list-item-active > .vector-toc-link {
   font-weight: unset;
   width: unset;
 }
 .vector-toc .vector-toc-level-1-active:not(.vector-toc-list-item-expanded) > .vector-toc-link .vector-toc-text {
+  width: unset;
+}
+.vector-toc .vector-toc-list-item-active > .vector-toc-link .vector-toc-text, .vector-toc .vector-toc-level-1-active:not(.vector-toc-list-item-expanded) > .vector-toc-link .vector-toc-text, .vector-toc .vector-toc-list-item-active.vector-toc-level-1-active > .vector-toc-link .vector-toc-text {
   width: unset;
 }
 /* Smaller "Contents" */
