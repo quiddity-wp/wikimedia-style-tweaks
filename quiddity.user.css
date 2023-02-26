@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.89
+@version     1.0.90
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -294,6 +294,13 @@ domain("patchdemo.wmflabs.org") {
 }
 .vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-disabled .vector-toc-pinned #vector-toc-pinned-container {
   margin-top: 0;
+}
+/* Same in logged-out view */
+.vector-feature-page-tools-disabled .vector-toc-pinned #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container #vector-toc-pinned-container {
+  margin-top: 0;
+}
+.vector-toc-pinned #vector-toc-pinned-container {
+  top: 60px !important;
 }
 
 /* CUSTOM PAGE TOOLS */
