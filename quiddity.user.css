@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.91
+@version     1.0.92
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -347,7 +347,8 @@ domain("patchdemo.wmflabs.org") {
 /* remove extraneous buttons */
 #p-lang-btn-sticky-header,
 #p-personal-sticky-header,
-#vector-sticky-header .vector-sticky-header-start {
+#vector-sticky-header .vector-sticky-header-start,
+#vector-user-links-dropdown-sticky-header {
   display: none;
 }
 /* Fix for VE edit toolbar */
