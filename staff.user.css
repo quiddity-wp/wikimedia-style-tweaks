@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wikimedia staff account reminder
 @namespace   StylishThemes
-@version     1.0.8
+@version     1.0.9
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/staff.user.css
 @license     CC-BY-SA-4.0
@@ -30,12 +30,11 @@
 /* NOTE: VECTOR SKIN is assumed. */
 /* Staff account, pink sidebar */
   #mw-panel, 
-  .editOptions, 
-  .vector-menu-content, 
-  .vector-dropdown-content, 
+  .editOptions,
+  .ve-ui-mwSaveDialog-savePanel, 
+  .vector-menu-content .vector-dropdown-content, 
   .vector-unpinned-container, 
-  .vector-pinned-container,
-  .ve-ui-mwSaveDialog-savePanel {
+  .vector-pinned-container {
     background-color: #F7D7D7; background-image:none
     }
 } 
