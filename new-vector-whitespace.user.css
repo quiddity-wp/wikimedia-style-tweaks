@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.76
+@version     1.0.77
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -175,7 +175,7 @@ domain("patchdemo.wmflabs.org") {
 /* Fix the jumping TOC upon first appearance when scrolling */
 
 .client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
-  top:60px !important;
+  top: 60px !important;
 }
 .vector-feature-page-tools-enabled #vector-toc-pinned-container .vector-toc {
   padding-top: 0 !important;
@@ -184,10 +184,7 @@ domain("patchdemo.wmflabs.org") {
   margin-top: 0;
 }
 /* Same in logged-out view */
-.vector-feature-page-tools-disabled .vector-toc-pinned #mw-sidebar-checkbox:not(:checked) ~ .mw-table-of-contents-container #vector-toc-pinned-container {
-  margin-top: 0;
-}
-.vector-toc-pinned #vector-toc-pinned-container {
+.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
   top: 60px !important;
 }
 
