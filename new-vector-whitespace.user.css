@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.77
+@version     1.0.78
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -324,9 +324,8 @@ html {
   width: 12.5em;
 } 
 */
-.mw-vector, 
-.vector-toc, 
-.vector-toc::after {
+.vector-feature-limited-width-disabled .mw-table-of-contents-container, 
+.vector-toc-pinned-container {
   width: 250px !important;
   margin-left: 0.75em;
 }
