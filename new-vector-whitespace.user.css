@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.78
+@version     1.0.79
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -209,16 +209,21 @@ domain("patchdemo.wmflabs.org") {
 }
 /* move the new page-tool-sticky-header down, and limit size */
 @media (min-width: 300px) {
-  #vector-sticky-header {
+  .vector-sticky-header-end {
+    position: fixed;
     max-width: min-content;
     top: 50px !important;
-    left: auto;
+    right: 5px;
     padding:  0 10px 0 0 !important;
     height: 40px;
     transition: none;
     transform: translateY(0);
+    background: white;
     z-index: 1;
   }
+}
+.client-js.vector-sticky-header-enabled .vector-sticky-header-container {
+  display: contents;
 }
 /* reduce padding for the icons*/
 .sticky-header-icon {
