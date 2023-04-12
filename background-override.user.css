@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM background reset for screenshots
 @namespace   StylishThemes
-@version     1.0.5
+@version     1.0.6
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/background-override.user.css
 @license     CC-BY-SA-4.0
@@ -27,5 +27,5 @@
   domain("wikidata.org"), 
   domain("beta.wmflabs.org"), 
   domain("wikifunctions.org") { 
-body, #mw-panel {background-color: #FFFFFF !important; background-image:none}
+body, #mw-panel, .editOptions, .ve-ui-mwSaveDialog-savePanel, .vector-menu-content .vector-dropdown-content, .vector-unpinned-container, .vector-pinned-container {background-color: #FFFFFF !important; background-image:none}
 }
