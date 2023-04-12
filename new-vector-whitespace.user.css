@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.79
+@version     1.0.80
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -96,7 +96,7 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* Reduce gap in sidebar list */
-.vector-feature-page-tools-enabled .vector-pinnable-element .mw-list-item a {
+.vector-pinnable-element .mw-list-item a{
   padding: 3px 8px;
 }
 
