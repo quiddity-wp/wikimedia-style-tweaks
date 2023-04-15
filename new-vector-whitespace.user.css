@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.80
+@version     1.0.81
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -173,19 +173,15 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* Fix the jumping TOC upon first appearance when scrolling */
-
-.client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
+.client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container,
+.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
   top: 60px !important;
 }
 .vector-feature-page-tools-enabled #vector-toc-pinned-container .vector-toc {
   padding-top: 0 !important;
 }
-.vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-disabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
+.vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-disabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container, .vector-feature-toc-pinned-enabled #vector-toc-pinned-container, .vector-feature-main-menu-pinned-disabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
   margin-top: 0;
-}
-/* Same in logged-out view */
-.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
-  top: 60px !important;
 }
 
 /* CUSTOM PAGE TOOLS */
