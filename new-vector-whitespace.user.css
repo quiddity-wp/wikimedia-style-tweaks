@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.81
+@version     1.0.82
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -256,6 +256,10 @@ html {
 /* Properly hide the sub-menu at page-top, to prevent misclicks */
 .vector-sticky-header:not(.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header) {
   display: none !important;
+}
+/* Nudge the personal bar inwards */
+#vector-user-links-dropdown {
+  margin-right: 1em;
 }
 
 /* Gap above the log-out button */
