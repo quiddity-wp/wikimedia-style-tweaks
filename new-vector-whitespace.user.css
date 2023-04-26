@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.82
+@version     1.0.83
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -181,7 +181,7 @@ domain("patchdemo.wmflabs.org") {
   padding-top: 0 !important;
 }
 .vector-feature-page-tools-enabled.vector-feature-main-menu-pinned-disabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container, .vector-feature-toc-pinned-enabled #vector-toc-pinned-container, .vector-feature-main-menu-pinned-disabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 /* CUSTOM PAGE TOOLS */
@@ -190,12 +190,13 @@ domain("patchdemo.wmflabs.org") {
 /* Much of this is copied then adapted from 
    https://userstyles.world/style/5789/wikipedia-fixed-top-and-sidebars */
 .mw-header {
-  position: fixed; 
+  position: fixed !important; 
   background: white; 
   width: 98%;
   top: 0;
   left: 12px;
   padding: 0;
+  z-index: 400 !important;
 }
 /* Nudge content down to account for no-default gap */
 @media screen and (max-width: 999px) {
