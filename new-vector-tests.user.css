@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.23
+@version     1.0.24
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -29,23 +29,164 @@ domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
   /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
 
-.vector-body {
-font-size:1em;
+  /* contribs icon */
+  #pt-contribs > a {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/userContributions-ltr.svg) no-repeat;
+  background-size: 18px;
+  display: inline-block;
+  padding: 10px;
+  max-width: 22px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+  
+  .vector-sticky-header-end {
+    display: none !important;
+  }
+  
+  .vector-page-toolbar {
+    position: fixed;
+    right: 10px;
+    top: 55px;
+    background-color: white;
+    z-index: 400;
+  }
+  
+  #left-navigation {
+    padding-right: 10px
+  }
+ 
+  @media screen {
+    #bodyContent {
+    margin-top: 25px !important;
+    }
+  }
+
+/* nudge content further */
+html {
+  scroll-padding-top: 90px !important;
 }
 
-.vector-layout-grid .mw-content-container {
-max-width: 65em;
+/* Always show it */  
+@media screen and (min-width: 300px) {
+  .vector-page-toolbar-container .mw-portlet-views:not(.emptyPortlet) {
+  display: block;
+ }
 }
 
-a:visited {color: #7f3ebf;}
-a:link {color: #24478F;}
-a:visited { text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #DCDCDC ;}
-a:link {text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #DCDCDC ;}
-  
-/* notes
-  grid-template-columns: 0px 0px minmax(0,1fr);
-  
-  */
-   
+/* Shorten it */
+#right-navigation {
+  height: 22px;
+}
+.vector-page-toolbar-container {
+  font-size: 0.8em
+}
+.vector-page-tools-landmark, .vector-menu-dropdown-noicon, #p-page, #p-user {
+  margin-top: -3px !important;
+}
+.mw-ui-icon-small.mw-ui-icon-element {
+  padding: 0;
+}
 
+/* Hack to reduce visibility of languages button */
+.mw-ui-icon-wikimedia-language-progressive, #p-lang-btn-label > .vector-menu-heading-label {
+  opacity: 0.3 !important;
+  }
+
+#bodyContent {
+  margin-top: 15px !important;
+}
+
+/* Replace toolbar text with icons */
+#ca-nstab-main > a, #ca-nstab-user > a, #ca-nstab-media > a, #ca-nstab-special > a, #ca-nstab-project > a, #ca-nstab-image > a, #ca-nstab-mediawiki > a, #ca-nstab-template > a, #ca-nstab-help > a, #ca-nstab-category > a, #ca-nstab-manual > a, #ca-nstab-extension > a {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/article-ltr.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px;
+  width: 12px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+  
+#ca-talk > a {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/OOjs_UI_icon_ongoingConversation-rtl.svg/20px-OOjs_UI_icon_ongoingConversation-rtl.svg.png) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px;
+  width: 12px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+#ca-talk.empty a {
+  border: #ff8000 2px solid;
+}
+#ca-talk.new a {
+  border: #dd3333 2px solid;
+}
+
+#ca-addsection {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/speechBubbleAdd-ltr.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;  
+}
+#ca-view > a {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/eye.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px;
+  width: 10px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+  
+#ca-ve-edit > a {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/edit.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px;
+  width: 12px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+#ca-edit > a {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/wikiText.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px 10px;
+  width: 15px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+  
+#ca-viewsource > a {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/editLock.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px;
+  width: 12px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+  
+#ca-history > a {
+  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/history.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 10px;
+  width: 12px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
 }
