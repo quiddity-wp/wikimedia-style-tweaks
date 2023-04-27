@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.83
+@version     1.0.84
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -95,9 +95,9 @@ domain("patchdemo.wmflabs.org") {
   display: none;
 }
 
-/* Reduce gap in sidebar list */
+/* Reduce gap in sidebar lists */
 .vector-pinnable-element .mw-list-item a{
-  padding: 3px 8px;
+  padding: 3px 8px !important;
 }
 
 /* ToC tweaks */
@@ -173,6 +173,7 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* Fix the jumping TOC upon first appearance when scrolling */
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container, 
 .client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container,
 .vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
   top: 60px !important;
@@ -213,11 +214,14 @@ domain("patchdemo.wmflabs.org") {
     right: 5px;
     padding:  0 10px 0 0 !important;
     height: 40px;
-    transition: none;
+    transition: none !important;
     transform: translateY(0);
     background: white;
     z-index: 1;
   }
+}
+.vector-header-container {
+  transition: none !important;
 }
 .client-js.vector-sticky-header-enabled .vector-sticky-header-container {
   display: contents;
@@ -240,7 +244,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 }
 /* Fix for anchor navi */
 html {
-  scroll-padding-top: 65px !important;
+  scroll-padding-top: 65px;
 }
 .oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
   top: 100px;
