@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.24
+@version     1.0.25
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -31,15 +31,16 @@ domain("wikifunctions.org") {
 
   /* contribs icon */
   #pt-contribs > a {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/userContributions-ltr.svg) no-repeat;
-  background-size: 18px;
-  display: inline-block;
+  background: url(/w/load.php?modules=oojs-ui.styles.icons-user&image=userContributions&format=original) no-repeat;
+  background-size: 17px;
   padding: 10px;
   max-width: 22px;
   font-size: 1px;
   color: white;
   text-decoration: none;
 }
+  
+  #pt-contribs {margin-top: -5px;}
   
   .vector-sticky-header-end {
     display: none !important;
@@ -100,20 +101,23 @@ html {
 
 /* Replace toolbar text with icons */
 #ca-nstab-main > a, #ca-nstab-user > a, #ca-nstab-media > a, #ca-nstab-special > a, #ca-nstab-project > a, #ca-nstab-image > a, #ca-nstab-mediawiki > a, #ca-nstab-template > a, #ca-nstab-help > a, #ca-nstab-category > a, #ca-nstab-manual > a, #ca-nstab-extension > a {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/article-ltr.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=article&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=article&format=original) no-repeat 0 0/15px;
+  background-color: black;
   padding: 10px;
   width: 12px;
   font-size: 1px;
   color: white;
   text-decoration: none;
 }
+#ca-nstab-main.new > a, #ca-nstab-user.new > a, #ca-nstab-media.new > a, #ca-nstab-project.new > a, #ca-nstab-image.new > a, #ca-nstab-mediawiki.new > a, #ca-nstab-template.new > a, #ca-nstab-help.new > a, #ca-nstab-category.new > a, #ca-nstab-manual.new > a, #ca-nstab-extension.new > a  {
+  background-color: #f77f7f !important;
+}
   
 #ca-talk > a {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/OOjs_UI_icon_ongoingConversation-rtl.svg/20px-OOjs_UI_icon_ongoingConversation-rtl.svg.png) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-moderation&image=ongoingConversation&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-moderation&image=ongoingConversation&format=original) no-repeat 0 0/15px;
+  background-color: black;
   padding: 10px;
   width: 12px;
   font-size: 1px;
@@ -121,25 +125,37 @@ html {
   text-decoration: none;
 }
 #ca-talk.empty a {
-  border: #ff8000 2px solid;
+  background-color: #ff8000 !important;
 }
 #ca-talk.new a {
-  border: #dd3333 2px solid;
+  background-color: #f77f7f !important;
 }
 
 #ca-addsection {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/speechBubbleAdd-ltr.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px;
+  background-color: black;
   padding: 10px;
   font-size: 1px;
   color: white;
   text-decoration: none;  
 }
+
 #ca-view > a {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/eye.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-accessibility&image=eye&format=original)  no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-accessibility&image=eye&format=original) no-repeat 0 0/15px;
+  background-color: black;
+  padding: 10px;
+  width: 10px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+
+#ca-view-foreign > a {
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original)  no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original) no-repeat 0 0/15px;
+  background-color: #26ae45;
   padding: 10px;
   width: 10px;
   font-size: 1px;
@@ -148,9 +164,9 @@ html {
 }
   
 #ca-ve-edit > a {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/edit.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px;
+  background-color: black;
   padding: 10px;
   width: 12px;
   font-size: 1px;
@@ -158,9 +174,9 @@ html {
   text-decoration: none;
 }
 #ca-edit > a {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/wikiText.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(g/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px;
+  background-color: black;
   padding: 10px 10px;
   width: 15px;
   font-size: 1px;
@@ -169,9 +185,9 @@ html {
 }
   
 #ca-viewsource > a {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/editLock.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px;
+  background-color: black;
   padding: 10px;
   width: 12px;
   font-size: 1px;
@@ -180,9 +196,9 @@ html {
 }
   
 #ca-history > a {
-  background: url(https://doc.wikimedia.org/oojs-ui/master/demos/dist/themes/wikimediaui/images/icons/history.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px;
+  background-color: black;
   padding: 10px;
   width: 12px;
   font-size: 1px;
