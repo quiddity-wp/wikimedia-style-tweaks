@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.84
+@version     1.0.85
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -336,8 +336,7 @@ html {
 */
 .vector-feature-limited-width-disabled .mw-table-of-contents-container, 
 .vector-toc-pinned-container {
-  width: 250px !important;
-  margin-left: 0.75em;
+  margin-left: -2.5em !important;
 }
 .vector-feature-page-tools-disabled .vector-main-menu {
   padding: 10px !important;
@@ -398,6 +397,7 @@ html {
       'mainMenu pageContent'
       'toc pageContent'
       'footer footer';
+    column-gap: 2px !important;
   }
 }
 
