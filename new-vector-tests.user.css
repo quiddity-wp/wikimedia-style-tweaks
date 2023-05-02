@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.27
+@version     1.0.28
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -92,7 +92,7 @@ html {
 
 /* Hack to reduce visibility of languages button */
 .mw-ui-icon-wikimedia-language-progressive, #p-lang-btn-label > .vector-menu-heading-label {
-  opacity: 0.3 !important;
+  opacity: 0.8 !important;
   }
 
 #bodyContent {
@@ -111,7 +111,7 @@ html {
   text-decoration: none;
 }
 #ca-nstab-main.new > a, #ca-nstab-user.new > a, #ca-nstab-media.new > a, #ca-nstab-project.new > a, #ca-nstab-image.new > a, #ca-nstab-mediawiki.new > a, #ca-nstab-template.new > a, #ca-nstab-help.new > a, #ca-nstab-category.new > a, #ca-nstab-manual.new > a, #ca-nstab-extension.new > a  {
-  background-color: #f77f7f !important;
+  background-color: #f4b8b8 !important;
 }
   
 #ca-talk > a {
@@ -128,7 +128,7 @@ html {
   background-color: #ff8000 !important;
 }
 #ca-talk.new a {
-  background-color: #f77f7f !important;
+  background-color: #f4b8b8 !important;
 }
   
 #p-views {
@@ -201,5 +201,17 @@ html {
   font-size: 1px;
   color: white;
   text-decoration: none;
+}
+
+#ca-wikilove {
+  padding: 0 5px 0 0;
+}
+
+.vector-menu-content-list > li {
+  margin: 0 5px !important;
+}
+
+.vector-page-toolbar-container {
+  padding-left: 5px;
 }
 }
