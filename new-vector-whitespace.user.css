@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.86
+@version     1.0.87
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -70,7 +70,7 @@ domain("patchdemo.wmflabs.org") {
 
 /* Reduce gap in sidebar lists */
 .vector-pinnable-element .mw-list-item a{
-  padding: 3px 0 !important;
+  padding: 3px 5px !important;
 }
 
 /* Remove empty space at page-bottom */
@@ -80,7 +80,7 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* Shorten the inter-languages buttons to just show the number of languages, not the word "languages" -- HACKISH! */
-/* 1. Sticky-header button */
+/* Sticky-header button */
 #p-lang-btn-sticky-header > span:not(.mw-ui-icon){
   max-width: 30px;
   overflow: hidden;
@@ -90,7 +90,7 @@ domain("patchdemo.wmflabs.org") {
 #p-lang-btn-sticky-header::after {
   display: none;
 }
-/* 2. Page-top button */
+/* Page-top button */
 #p-lang-btn .vector-menu-heading-label{
   max-width: 35px !important;
   overflow: hidden;
@@ -154,7 +154,7 @@ domain("patchdemo.wmflabs.org") {
 body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
   top: 50px;
 }
-/* Fix for anchor navigation */
+/* Fix for anchor navigation -- BROKEN ? */
 html {
   scroll-padding-top: 90px !important;
 }
@@ -430,6 +430,15 @@ html {
 .vector-sticky-header {
   padding: 0;
 }
+
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled.vector-feature-page-tools-pinned-enabled .vector-page-tools-landmark {
+  top: 70px !important;
+  margin-top: 0;
+}
+
+#vector-page-tools-pinned-container {
+  width: 160px;
+}
   
 /* 5. General whitespace reductions */
 
@@ -539,9 +548,7 @@ html {
   min-width: 250px;
 }
 
-  
 
-  
 /* Replace section-edit links with icons
 .mw-editsection-visualeditor {
   background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
