@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.85
+@version     1.0.86
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -30,35 +30,8 @@ domain("wikifunctions.org"),
 domain("vrt-wiki.wikimedia.org"),
 domain("patchdemo.wmflabs.org") {
 /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]]) */
-  
-/* Replace section-edit links with icons
-.mw-editsection-visualeditor {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
-  background-size: 12px;
-  display: inline-block;
-  padding: 4px 0 0 0;
-  width: 12px;
-  font-size: 1px;
-  text-decoration: none;
-}
-.mw-editsection > a:not(.mw-editsection-visualeditor) {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
-  padding: 4px;
-  width: 12px;
-  font-size: 1px;
-  text-decoration: none;
-}
-.mw-editsection-bracket {
-  font-size: 10px;
-  display: none;
-}
-.mw-editsection-divider {
-  font-size: 10px;
-  padding-right: 2px;
-} */
 
+/* 1. Misc Tweaks */
 /* Shorten the "edit source" to just "source" */
 .mw-editsection > a:not(.mw-editsection-visualeditor)  {
   font-size: 0px;
@@ -83,7 +56,7 @@ domain("patchdemo.wmflabs.org") {
 
 /* smaller ULS icon on multilingual wikis */
 .uls-trigger.mw-ui-button.mw-ui-quiet > span {
-  font-size: 0.6em;
+  font-size: 0.5em;
 }
 
 /* Hide the Vector-2022 "switch back" link in sidebar */
@@ -97,10 +70,173 @@ domain("patchdemo.wmflabs.org") {
 
 /* Reduce gap in sidebar lists */
 .vector-pinnable-element .mw-list-item a{
-  padding: 3px 8px !important;
+  padding: 3px 0 !important;
 }
 
-/* ToC tweaks */
+/* Remove empty space at page-bottom */
+.mw-footer-container {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Shorten the inter-languages buttons to just show the number of languages, not the word "languages" -- HACKISH! */
+/* 1. Sticky-header button */
+#p-lang-btn-sticky-header > span:not(.mw-ui-icon){
+  max-width: 30px;
+  overflow: hidden;
+  margin-right: 25px;
+  max-height: 20px;
+}
+#p-lang-btn-sticky-header::after {
+  display: none;
+}
+/* 2. Page-top button */
+#p-lang-btn .vector-menu-heading-label{
+  max-width: 35px !important;
+  overflow: hidden;
+  height: 25px;
+}
+
+/* 2. Custom Sticky Header and Page Tools */
+/* Reduces original sticky header to article links (talk, history, watch, edit).
+   Force mw-header to be sticky, plus show the page-tool-sticky-buttons below */   
+/* Much of this is copied then adapted from 
+   https://userstyles.world/style/5789/wikipedia-fixed-top-and-sidebars */
+.mw-header {
+  position: fixed !important; 
+  background: white; 
+  width: 98%;
+  top: 0;
+  left: 12px;
+  padding: 0;
+  z-index: 400 !important;
+}
+/* Nudge content down to account for no-default gap */
+@media screen and (max-width: 999px) {
+  .mw-content-container {
+    padding-top: 55px;
+  }
+}
+/* move the new page-tool-sticky-header down, and limit size */
+@media (min-width: 300px) {
+  .vector-sticky-header-end {
+    position: fixed;
+    max-width: min-content;
+    top: 50px !important;
+    right: 5px;
+    padding:  0 10px 0 0 !important;
+    height: 40px;
+    transition: none !important;
+    transform: translateY(0);
+    background: white;
+    z-index: 1;
+  }
+}
+.vector-header-container {
+  transition: none !important;
+}
+.client-js.vector-sticky-header-enabled .vector-sticky-header-container {
+  display: contents;
+}
+/* reduce padding for the icons*/
+.sticky-header-icon {
+  padding: 8px;
+  border: none;
+}
+/* remove extraneous buttons */
+#p-lang-btn-sticky-header,
+#p-personal-sticky-header,
+#vector-sticky-header .vector-sticky-header-start,
+#vector-user-links-dropdown-sticky-header {
+  display: none;
+}
+/* Fix for VE edit toolbar */
+body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
+  top: 50px;
+}
+/* Fix for anchor navigation */
+html {
+  scroll-padding-top: 90px !important;
+}
+.oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
+  top: 100px;
+}
+/* Still show it in smaller windows */
+@media screen and (min-width: 450px) {
+  .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header {
+    opacity:1;
+    top:50px;
+    height: 55px;
+    display: flex;
+  }
+}
+/* Properly hide the sub-menu at page-top, to prevent misclicks */
+.vector-sticky-header:not(.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header) {
+  display: none !important;
+}
+/* Nudge the personal bar inwards */
+#vector-user-links-dropdown {
+  margin-right: 1em;
+}
+
+/* Gap above the log-out button */
+#pt-logout {
+  margin-top: 20px
+}
+
+/* Fix font-size oddities with User-tools's "translations" and "Uploaded media" */
+.mw-ui-icon {
+  font-size: unset;
+}
+
+/* Personal-tools, indent the sub-items */
+#pt-betafeatures span:not(.mw-ui-icon-labFlask):before, 
+#pt-darkmode span:not(.mw-ui-icon-vector-gadget-pt-darkmode):before, 
+#cx-language span:not(.mw-ui-icon-vector-gadget-cx-language):before, 
+#cx-imageGallery span:not(.mw-ui-icon-vector-gadget-cx-imageGallery):before {
+  content: "↳ ";
+  color: black;
+}
+  
+/* Remove header whitespace */
+.mw-header {
+  margin: 0 !important;
+  padding-top: 0;
+  height: 55px !important;
+}
+  
+/* Nudge sidebar-button up into corner */
+#mw-sidebar-button {
+  margin-left: -1px;
+  margin-top: -13px;
+  border: none;
+}
+  
+/* Reduce page-toolbar height */
+.vector-menu-tabs .mw-list-item.vector-tab-noicon > a, 
+.mw-article-toolbar-container .vector-menu-dropdown.vector-tab-noicon > a, 
+.vector-menu-tabs .mw-list-item > a:not(.mw-ui-icon), 
+.mw-article-toolbar-container .vector-menu-dropdown > a:not(.mw-ui-icon), 
+.vector-menu-tabs .mw-list-item .vector-menu-heading, 
+.mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
+.vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
+  padding: 5px 0 5px 0;
+}
+.vector-page-toolbar {
+  max-height: 30px;
+}
+.mw-article-toolbar-container {
+  border-bottom: none;
+  box-shadow: none
+}
+.skin-vector-2022 #coordinates {
+  top: -0.9em;
+}
+.vector-menu-tabs .mw-list-item .mw-ui-icon {
+  margin: 0;
+}
+
+/* 3. ToC tweaks */
 /* Change "Beginning" to an Up-arrow */
 #toc-mw-content-text div {
   visibility: hidden;
@@ -162,7 +298,7 @@ domain("patchdemo.wmflabs.org") {
 
 /* Move button for ToC-collapsed down below the sticky-header, and add border */
 .client-js .vector-below-page-title .vector-page-titlebar-toc {
-  top: 55px;
+  top: 55px !important;
   border: lightgray 1px solid;
 }
 /* Hide the word "Contents" in that case */
@@ -185,142 +321,9 @@ domain("patchdemo.wmflabs.org") {
   margin-top: 0 !important;
 }
 
-/* CUSTOM PAGE TOOLS */
-/* Reduces original sticky header to article links (talk, history, watch, edit).
-   Force mw-header to be sticky, plus show the page-tool-sticky-buttons below */   
-/* Much of this is copied then adapted from 
-   https://userstyles.world/style/5789/wikipedia-fixed-top-and-sidebars */
-.mw-header {
-  position: fixed !important; 
-  background: white; 
-  width: 98%;
-  top: 0;
-  left: 12px;
-  padding: 0;
-  z-index: 400 !important;
-}
-/* Nudge content down to account for no-default gap */
-@media screen and (max-width: 999px) {
-  .mw-content-container {
-    padding-top: 55px;
-  }
-}
-/* move the new page-tool-sticky-header down, and limit size */
-@media (min-width: 300px) {
-  .vector-sticky-header-end {
-    position: fixed;
-    max-width: min-content;
-    top: 50px !important;
-    right: 5px;
-    padding:  0 10px 0 0 !important;
-    height: 40px;
-    transition: none !important;
-    transform: translateY(0);
-    background: white;
-    z-index: 1;
-  }
-}
-.vector-header-container {
-  transition: none !important;
-}
-.client-js.vector-sticky-header-enabled .vector-sticky-header-container {
-  display: contents;
-}
-/* reduce padding for the icons*/
-.sticky-header-icon {
-  padding: 8px;
-  border: none;
-}
-/* remove extraneous buttons */
-#p-lang-btn-sticky-header,
-#p-personal-sticky-header,
-#vector-sticky-header .vector-sticky-header-start,
-#vector-user-links-dropdown-sticky-header {
-  display: none;
-}
-/* Fix for VE edit toolbar */
-body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
-  top: 50px;
-}
-/* Fix for anchor navi */
-html {
-  scroll-padding-top: 65px;
-}
-.oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
-  top: 100px;
-}
-/* Still show it in smaller windows */
-@media screen and (min-width: 450px) {
-  .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header {
-    opacity:1;
-    top:50px;
-    height: 55px;
-    display: flex;
-  }
-}
-/* Properly hide the sub-menu at page-top, to prevent misclicks */
-.vector-sticky-header:not(.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header) {
-  display: none !important;
-}
-/* Nudge the personal bar inwards */
-#vector-user-links-dropdown {
-  margin-right: 1em;
-}
-
-/* Gap above the log-out button */
-#pt-logout {
-  margin-top: 20px
-}
-
-/* Fix font-size oddities with User-tools's "translations" and "Uploaded media" */
-.mw-ui-icon {
-  font-size: unset;
-}
-
-/* Personal-tools, indent the sub-items */
-#pt-betafeatures span:not(.mw-ui-icon-labFlask):before, 
-#pt-darkmode span:not(.mw-ui-icon-vector-gadget-pt-darkmode):before, 
-#cx-language span:not(.mw-ui-icon-vector-gadget-cx-language):before, 
-#cx-imageGallery span:not(.mw-ui-icon-vector-gadget-cx-imageGallery):before {
-  content: "↳ ";
-  color: black;
-}
-
-/* Fix for banners in small windows */
-@media screen and (max-width: 999px) {
-  #siteNotice {
-    top: 60px;
-  }
-}
-  
-  
-/* Force ToC at smaller width   -- BROKEN
-@media screen and (min-width: 500px) {
-  .vector-toc {
-    display: block !important;
-    position: absolute
-  }
-}  
-*/
-  
-/* Remove header whitespace */
-.mw-header {
-  margin: 0 !important;
-  padding-top: 0;
-  height: 55px !important;
-}
-  
-/* Nudge sidebar-button up into corner */
-#mw-sidebar-button {
-  margin-left: -1px;
-  margin-top: -13px;
-  border: none;
-}
-
-/* ToC tweaks*/
+/* ToC other?? */
 .vector-toc {
-  padding-left: 15px !important;
-  margin: 0 !important;
+  padding: 0 5px !important;
 }
 .vector-toc-enabled .mw-sidebar, 
 .vector-toc-enabled .sidebar-toc {
@@ -345,11 +348,57 @@ html {
   margin: 0;
 }
 /* Oversize ToC experiment */
-.vector-feature-page-tools-disabled #vector-toc-pinned-container .vector-toc {
+.vector-feature-page-tools-disabled #vector-toc-pinned-container .vector-toc, .vector-feature-limited-width-disabled .mw-table-of-contents-container {
   min-width: 250px !important;
 }
+/* Remove the gradient fade */
+.vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc::after {background: none;}
 
-/* Sidebar tweaks */
+/* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
+/* Content nudge */
+@media screen and (max-width: 999px) and (min-width:550px) {
+  #mw-sidebar-checkbox:checked ~ .mw-content-container {
+    padding-left: 155px
+  }
+}
+  
+/* ToC-button shrink */
+#vector-page-titlebar-toc-label {
+  padding: 0.4em
+}
+
+@media screen and (max-width: 999px) {
+  .vector-feature-zebra-design-disabled.client-js .vector-below-page-title .vector-page-titlebar-toc {
+  left: 1px;
+  }
+}
+
+/* TOC-button nudge
+@media screen and (max-width: 999px) {
+  #vector-page-titlebar-toc {
+    left: 150px !important;
+  }
+}
+*/
+/* ToC nudge -- OLD
+@media screen and (max-width: 999px) and (min-width:550px) {
+  #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, 
+  #mw-panel-toc {
+    left: 150px;
+  }
+} 
+*/
+  
+/* Force ToC at smaller width -- BROKEN
+@media screen and (min-width: 500px) {
+  .vector-toc {
+    display: block !important;
+    position: absolute
+  }
+}  
+*/
+
+/* 4. Sidebar tweaks */
 #mw-panel {
   padding: 0;
   width: 189px !important;
@@ -381,6 +430,8 @@ html {
 .vector-sticky-header {
   padding: 0;
 }
+  
+/* 5. General whitespace reductions */
 
 /* Reduce gap above Page-title */
 .vector-layout-grid .mw-page-container-inner, 
@@ -390,65 +441,25 @@ html {
 
 /* Reduce the grid gutter, and header height */
 @media screen and ( min-width: 1000px ) {
-  .mw-page-container-inner {  
-    grid-template: 55px min-content min-content 1fr min-content / 228px minmax(0, 1fr);
+  .vector-feature-zebra-design-disabled .mw-page-container-inner {  
+    grid-template: 55px min-content min-content 1fr min-content / 220px minmax(0, 1fr) !important;
     grid-template-areas: 'header header'
       'siteNotice siteNotice'
       'mainMenu pageContent'
       'toc pageContent'
-      'footer footer';
-    column-gap: 2px !important;
+      'footer footer' !important;
+    column-gap: 10px !important;
   }
 }
 
 #siteNotice {
   margin: 5px
 }
-  
-/* Reduce page-toolbar height */
-.vector-menu-tabs .mw-list-item.vector-tab-noicon > a, 
-.mw-article-toolbar-container .vector-menu-dropdown.vector-tab-noicon > a, 
-.vector-menu-tabs .mw-list-item > a:not(.mw-ui-icon), 
-.mw-article-toolbar-container .vector-menu-dropdown > a:not(.mw-ui-icon), 
-.vector-menu-tabs .mw-list-item .vector-menu-heading, 
-.mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
-.vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
-  padding: 5px 0 5px 0;
-}
-.vector-page-toolbar {
-  max-height: 30px;
-}
-.mw-article-toolbar-container {
-  border-bottom: none;
-  box-shadow: none
-}
-.skin-vector-2022 #coordinates {
-  top: -0.9em;
-}
-.vector-menu-tabs .mw-list-item .mw-ui-icon {
-  margin: 0;
-}
 
-/* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
-/* Content nudge */
-@media screen and (max-width: 999px) and (min-width:550px) {
-  #mw-sidebar-checkbox:checked ~ .mw-content-container {
-    padding-left: 155px
-  }
-}
-  
-/* STILL BROKEN, IDK WHY ?!?! Is it a hierarchy issue?? */
-/* ToC-button nudge */
+/* Fix for banners in small windows */
 @media screen and (max-width: 999px) {
-  .client-js .vector-below-page-title .vector-page-titlebar-toc {
-    left: 150px !important;
-  }
-} 
-/* ToC nudge */
-@media screen and (max-width: 999px) and (min-width:550px) {
-  #mw-sidebar-checkbox:not(:checked) ~ .mw-content-container, 
-  #mw-panel-toc {
-    left: 150px;
+  #siteNotice {
+    top: 60px;
   }
 }
 
@@ -488,6 +499,21 @@ html {
     overflow-x: hidden !important;
   }
 }
+
+/* Use logo instead of wordmark at small sizes */
+@media (min-width: 300px) {
+  .mw-logo-icon {
+    display: block;
+  }
+}
+.mw-logo-container {
+  display: none;
+}
+@media (min-width: 999px) {
+  .mw-logo-container {
+    display: block;
+  }
+}
   
 /* Force search-bar to show in site-header at smaller sizes */
 .vector-search-box-collapses > div {
@@ -508,52 +534,44 @@ html {
   margin-left: 20px;
 }
 
-/* Use logo instead of wordmark at small sizes */
-@media (min-width: 300px) {
-  .mw-logo-icon {
-    display: block;
-  }
-}
-.mw-logo-container {
-  display: none;
-}
-@media (min-width: 999px) {
-  .mw-logo-container {
-    display: block;
-  }
-}
-
 /* Fix search-results flyout at small widths */
 #cdx-typeahead-search-menu-0 {
   min-width: 250px;
 }
 
-/* Shorten the inter-languages buttons to just show the number of languages, not the word "languages" -- HACKISH! */
-/* 1. Sticky-header button */
-#p-lang-btn-sticky-header > span:not(.mw-ui-icon){
-  max-width: 30px;
-  overflow: hidden;
-  margin-right: 25px;
-  max-height: 20px;
+  
+
+  
+/* Replace section-edit links with icons
+.mw-editsection-visualeditor {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
+  background-size: 12px;
+  display: inline-block;
+  padding: 4px 0 0 0;
+  width: 12px;
+  font-size: 1px;
+  text-decoration: none;
 }
-#p-lang-btn-sticky-header::after {
+.mw-editsection > a:not(.mw-editsection-visualeditor) {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 4px;
+  width: 12px;
+  font-size: 1px;
+  text-decoration: none;
+}
+.mw-editsection-bracket {
+  font-size: 10px;
   display: none;
 }
-/* 2. Page-top button */
-#p-lang-btn .vector-menu-heading-label{
-  max-width: 35px !important;
-  overflow: hidden;
-  height: 25px;
-}
-
-/* Remove empty space at page-bottom */
-.mw-footer-container {
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-}
+.mw-editsection-divider {
+  font-size: 10px;
+  padding-right: 2px;
+} 
+*/
   
-/* Try to fix layering of User-tools popup menu with sticky page-tools */
-/* BROKEN ?????
+/* Try to fix layering of User-tools popup menu with sticky page-tools -- BROKEN ?????
 .vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item {
   z-index:6 !important;
 } 
