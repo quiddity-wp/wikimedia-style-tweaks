@@ -437,7 +437,10 @@ html {
 }
 
 #vector-page-tools-pinned-container {
-  width: 160px;
+  width: 170px;
+}
+.vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools {
+  width: 170px;
 }
   
 /* 5. General whitespace reductions */
