@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.28
+@version     1.0.29
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -27,53 +27,20 @@ domain("wikiquote.org"),
 domain("wikidata.org"),
 domain("beta.wmflabs.org"),
 domain("wikifunctions.org") {
-  /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
+/* NOTE: this assumes you are using my Whitespace CSS, and using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
 
-  /* contribs icon */
-  #pt-contribs > a {
-  background: url(/w/load.php?modules=oojs-ui.styles.icons-user&image=userContributions&format=original) no-repeat;
-  background-size: 17px;
-  padding: 10px;
-  max-width: 22px;
-  font-size: 1px;
-  color: white;
-  text-decoration: none;
-}
-  
-  #pt-contribs {margin-top: -5px;}
-  
-  .vector-sticky-header-end {
-    display: none !important;
-  }
-  
-  .vector-page-toolbar {
-    position: fixed;
-    right: 10px;
-    top: 55px;
-    background-color: white;
-    z-index: 400;
-  }
-  
-  #left-navigation {
-    padding-right: 10px
-  }
- 
-  @media screen {
-    #bodyContent {
-    margin-top: 25px !important;
-    }
-  }
-
-/* nudge content further */
-html {
-  scroll-padding-top: 90px !important;
+/* Hide the custom page-toolbar from my Whitespace CSS */
+.vector-sticky-header-end {
+  display: none !important;
 }
 
-/* Always show it */  
-@media screen and (min-width: 300px) {
-  .vector-page-toolbar-container .mw-portlet-views:not(.emptyPortlet) {
-  display: block;
- }
+/* Use the default page-toolbar as the sticky toolbar */  
+.vector-page-toolbar {
+  position: fixed;
+  right: 10px;
+  top: 55px;
+  background-color: white;
+  z-index: 400;
 }
 
 /* Shorten it */
@@ -125,10 +92,15 @@ html {
   text-decoration: none;
 }
 #ca-talk.empty a {
-  background-color: #ff8000 !important;
+  background-color: #ffcf9f !important;
 }
 #ca-talk.new a {
   background-color: #f4b8b8 !important;
+}
+
+/* Add padding after the page+talkpage icons */  
+#left-navigation {
+  padding-right: 10px
 }
   
 #p-views {
@@ -214,4 +186,13 @@ html {
 .vector-page-toolbar-container {
   padding-left: 5px;
 }
+
+/* Old? and not needed? 
+  @media screen {
+    #bodyContent {
+    margin-top: 25px !important;
+    }
+  }
+*/
+  
 }
