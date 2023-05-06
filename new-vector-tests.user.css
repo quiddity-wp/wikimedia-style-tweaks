@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.32
+@version     1.0.33
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -42,10 +42,10 @@ domain("wikifunctions.org") {
   max-height: 20px;
   background-color: white;
   z-index: 100 !important;
-}
-
-.mw-header {
-  border-bottom: 1px solid #b9bec4 !important;
+} 
+/* Fix overlap of personal-tools */
+#vector-user-links-dropdown .vector-menu-content  {
+  top:53px;
 }
 /* Compact it */
 .vector-page-toolbar-container {
@@ -75,6 +75,11 @@ nav.vector-user-links {
   .vector-page-toolbar-container .mw-portlet-views:not(.emptyPortlet) {
     display: block;
   }
+}
+
+/* Add a border for the whole header */
+.mw-header {
+  border-bottom: 1px solid #b9bec4 !important;
 }
 
 /* Replace toolbar text with icons */
