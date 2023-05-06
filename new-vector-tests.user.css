@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.31
+@version     1.0.32
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -44,6 +44,9 @@ domain("wikifunctions.org") {
   z-index: 100 !important;
 }
 
+.mw-header {
+  border-bottom: 1px solid #b9bec4 !important;
+}
 /* Compact it */
 .vector-page-toolbar-container {
   font-size: 0.8em
@@ -67,15 +70,11 @@ nav.vector-user-links {
   margin-top: -5px !important;
 }
   
-/* -- more Failed attempts below 
-.vector-page-toolbar {
-  margin-top: -15px;
-}
-.vector-header-end, .vector-header .mw-header, #p-vector-user-menu-overflow {
-  z-index: -1 !important;
-}
-.vector-page-toolbar, .vector-page-toolbar-container, #left-navigation, #p-associated-pages, .vector-menu-content, .vector-menu-content-list, #ca-nstab-user {
-  z-index: 99999 !important;
+/* Show it at thinner windows */
+@media screen and (min-width: 500px) {
+  .vector-page-toolbar-container .mw-portlet-views:not(.emptyPortlet) {
+    display: block;
+  }
 }
 
 /* Replace toolbar text with icons */
