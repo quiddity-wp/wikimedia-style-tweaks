@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 tests
 @namespace   StylishThemes
-@version     1.0.29
+@version     1.0.30
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-tests.user.css
 @license     CC-BY-SA-4.0
@@ -35,18 +35,16 @@ domain("wikifunctions.org") {
 }
 
 /* Use the default page-toolbar as the sticky toolbar */  
-.vector-page-toolbar {
-  position: fixed;
+#right-navigation {
+  position: fixed !important;
   right: 10px;
-  top: 55px;
+  top: 35px;
+  max-height: 20px;
   background-color: white;
-  z-index: 400;
+  z-index: 100 !important;
 }
 
-/* Shorten it */
-#right-navigation {
-  height: 22px;
-}
+/* Compact it */
 .vector-page-toolbar-container {
   font-size: 0.8em
 }
@@ -57,61 +55,32 @@ domain("wikifunctions.org") {
   padding: 0;
 }
 
-/* Hack to reduce visibility of languages button */
-.mw-ui-icon-wikimedia-language-progressive, #p-lang-btn-label > .vector-menu-heading-label {
-  opacity: 0.8 !important;
-  }
-
-#bodyContent {
-  margin-top: 15px !important;
+/* Nudge both bars upwards */
+nav.vector-user-links {
+  margin-top: -20px;
+}
+.mw-page-container {
+  z-index: unset !important;
+}
+  
+/* -- more Failed attempts below 
+.vector-page-toolbar {
+  margin-top: -15px;
+}
+.vector-header-end, .vector-header .mw-header, #p-vector-user-menu-overflow {
+  z-index: -1 !important;
+}
+.vector-page-toolbar, .vector-page-toolbar-container, #left-navigation, #p-associated-pages, .vector-menu-content, .vector-menu-content-list, #ca-nstab-user {
+  z-index: 99999 !important;
 }
 
 /* Replace toolbar text with icons */
-#ca-nstab-main > a, #ca-nstab-user > a, #ca-nstab-media > a, #ca-nstab-special > a, #ca-nstab-project > a, #ca-nstab-image > a, #ca-nstab-mediawiki > a, #ca-nstab-template > a, #ca-nstab-help > a, #ca-nstab-category > a, #ca-nstab-manual > a, #ca-nstab-extension > a {
-  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=article&format=original) no-repeat 0 0/15px;
-  mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=article&format=original) no-repeat 0 0/15px;
-  background-color: black;
-  padding: 10px;
-  width: 12px;
-  font-size: 1px;
-  color: white;
-  text-decoration: none;
-}
-#ca-nstab-main.new > a, #ca-nstab-user.new > a, #ca-nstab-media.new > a, #ca-nstab-project.new > a, #ca-nstab-image.new > a, #ca-nstab-mediawiki.new > a, #ca-nstab-template.new > a, #ca-nstab-help.new > a, #ca-nstab-category.new > a, #ca-nstab-manual.new > a, #ca-nstab-extension.new > a  {
-  background-color: #f4b8b8 !important;
-}
-  
-#ca-talk > a {
-  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-moderation&image=ongoingConversation&format=original) no-repeat 0 0/15px;
-  mask: url(/w/load.php?modules=oojs-ui.styles.icons-moderation&image=ongoingConversation&format=original) no-repeat 0 0/15px;
-  background-color: black;
-  padding: 10px;
-  width: 12px;
-  font-size: 1px;
-  color: white;
-  text-decoration: none;
-}
-#ca-talk.empty a {
-  background-color: #ffcf9f !important;
-}
-#ca-talk.new a {
-  background-color: #f4b8b8 !important;
-}
-
-/* Add padding after the page+talkpage icons */  
-#left-navigation {
-  padding-right: 10px
-}
-  
-#p-views {
-  max-height: 25px
-}
-
 #ca-addsection {
   -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px;
   mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px;
   background-color: black;
   padding: 10px;
+  width: 10px;
   font-size: 1px;
   color: white;
   text-decoration: none;  
@@ -179,20 +148,52 @@ domain("wikifunctions.org") {
   padding: 0 5px 0 0;
 }
 
+/* Reduce gaps between icons */
 .vector-menu-content-list > li {
   margin: 0 5px !important;
 }
 
-.vector-page-toolbar-container {
-  padding-left: 5px;
+/* Reduce visibility of languages button ... and nudge it downwards */
+.mw-ui-icon-wikimedia-language-progressive, #p-lang-btn-label > .vector-menu-heading-label {
+  opacity: 0.6 !important;
 }
-
-/* Old? and not needed? 
-  @media screen {
-    #bodyContent {
-    margin-top: 25px !important;
-    }
-  }
-*/
+#p-lang-btn {
+  top: 0.5em;
+}
   
+
+/* OLD, from when it moved the page/talk links and made icons, when it was using the entire .vector-page-toolbar instead of #right-navigation:
+
+#ca-nstab-main > a, #ca-nstab-user > a, #ca-nstab-media > a, #ca-nstab-special > a, #ca-nstab-project > a, #ca-nstab-image > a, #ca-nstab-mediawiki > a, #ca-nstab-template > a, #ca-nstab-help > a, #ca-nstab-category > a, #ca-nstab-manual > a, #ca-nstab-extension > a, #ca-nstab-module > a {
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=article&format=original) no-repeat 0 0/20px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=article&format=original) no-repeat 0 0/20px;
+  background-color: black;
+  padding: 10px;
+  width: 12px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+#ca-nstab-main.new > a, #ca-nstab-user.new > a, #ca-nstab-media.new > a, #ca-nstab-project.new > a, #ca-nstab-image.new > a, #ca-nstab-mediawiki.new > a, #ca-nstab-template.new > a, #ca-nstab-help.new > a, #ca-nstab-category.new > a, #ca-nstab-manual.new > a, #ca-nstab-extension.new > a, #ca-nstab-module.new > a {
+  background-color: #f4b8b8 !important;
+}
+  
+#ca-talk > a {
+  -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-moderation&image=ongoingConversation&format=original) no-repeat 0 0/15px;
+  mask: url(/w/load.php?modules=oojs-ui.styles.icons-moderation&image=ongoingConversation&format=original) no-repeat 0 0/15px;
+  background-color: black;
+  padding: 10px;
+  width: 12px;
+  font-size: 1px;
+  color: white;
+  text-decoration: none;
+}
+#ca-talk.empty a {
+  background-color: #ffcf9f !important;
+}
+#ca-talk.new a {
+  background-color: #f4b8b8 !important;
+}
+*/
+
 }
