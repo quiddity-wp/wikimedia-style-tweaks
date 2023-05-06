@@ -6,26 +6,18 @@
 
 ### General
 
-* **minimal-vector** (remove design-cruft)
-  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/minimal-vector.user.css)
+* **Compact-vector-2022** (compact the whitespace and tools, use the pre-scroll-header as sticky-header)
+  * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-whitespace.user.css)
+* **Further compact Vector-2022** (compact the tools more)
+  * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-tests.user.css)
 * **quiddity** (many powereditor tweaks - see code comments for details)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css)
 * **dark** (dark mode)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css)
 
-
-### Tweaks to the [Desktop Improvements](https://www.mediawiki.org/wiki/Reading/Web/Desktop_Improvements)
-* **new-vector-max-width** (remove the max-width)
-  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-max-width.user.css)
-* **new-vector-whitespace** (remove whitespace in top-bar, remove language name in ULS)
-  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css)
-  
 ### In testing...
-
 * **tables_vertical-align_top_test** (for testing a [proposed change](https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Tables#Vertical_alignment))
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/tables_vertical-align_top_test.user.css)
-* **thinner-sidebar** (for half-width browser windows on a laptop)
-  * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/thinner-sidebar.user.css)
 
 ## Wikimedia JavaScript tweaks
 
@@ -34,10 +26,11 @@
 
 ## Before / After
 
-Default -- vs -- showing "minimal-vector" and "thinner-sidebar" and bits of "quiddity"
+Default (while scrolled) -- vs -- showing "Compact-vector-2022" and "thinner-sidebar" and "Further compact Vector-2022"
 
-![Before](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss1.png)
-![After](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss2.png)
+![Before](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss11.jpg)
+![After](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss12.jpg)
+![After-test](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss13.jpg)
 
 ## see also
 https://github.com/quiddity-wp/style-tweaks
