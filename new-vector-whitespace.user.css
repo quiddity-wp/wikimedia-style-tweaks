@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.88
+@version     1.0.89
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -96,6 +96,21 @@ domain("patchdemo.wmflabs.org") {
   overflow: hidden;
   height: 25px;
 }
+  
+/* Fix min-width */
+.vector-feature-zebra-design-disabled .mw-page-container {
+  min-width: unset;
+}
+  
+/* Fix watchstar which got misaligned */
+#ca-unwatch, #ca-watch {
+  margin-top: -5px !important;
+}
+
+/* Remove whitespace beside Search box */
+.mw-logo {
+  min-width: unset !important;
+}
 
 /* 2. Custom Sticky Header and Page Tools */
 /* Reduces original sticky header to article links (talk, history, watch, edit).
@@ -162,7 +177,7 @@ html {
   top: 100px;
 }
 /* Still show it in smaller windows */
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 400px) {
   .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header {
     opacity:1;
     top:50px;
@@ -251,7 +266,7 @@ html {
 }
 /* Auto-expand sections, and hide the H2-arrows */
 .client-js .vector-toc .vector-toc-level-1 .vector-toc-list-item {
-  display: block;
+  display: block !important;
 }
 .vector-toc-toggle {
   visibility: hidden;
@@ -353,7 +368,9 @@ html {
   min-width: 250px !important;
 }
 /* Remove the gradient fade */
-.vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc::after {background: none;}
+.vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc::after {
+  background: none;
+}
 
 /* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
 /* Content nudge */
@@ -372,6 +389,11 @@ html {
   .vector-feature-zebra-design-disabled.client-js .vector-below-page-title .vector-page-titlebar-toc {
   left: 1px;
   }
+}
+
+/* Reduce ToC height for logged-out view */
+#vector-toc {
+  height: 90vh;
 }
 
 /* TOC-button nudge
@@ -398,6 +420,7 @@ html {
   }
 }  
 */
+
 
 /* 4. Sidebar tweaks */
 #mw-panel {
@@ -488,7 +511,7 @@ html {
   }
 } */ 
     
-/* fix toc in >1000px when collapsed*/
+/* fix toc in >1000px when collapsed */
 .vector-below-page-title #vector-toc-collapsed-button {
   position: fixed
 }
@@ -593,4 +616,5 @@ html {
   z-index:1 !important;
 }
 */
+
 }
