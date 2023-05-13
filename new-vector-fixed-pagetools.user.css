@@ -1,0 +1,160 @@
+/* ==UserStyle==
+@name        Wikim V.2022 Fixed Page Toolbar
+@namespace   StylishThemes
+@version     1.0.01
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
+@license     CC-BY-SA-4.0
+@author      quiddity-wp
+
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"),
+domain("meta.wikimedia.org"),
+domain("office.wikimedia.org"),
+domain("commons.wikimedia.org"),
+domain("species.wikimedia.org"),
+domain("outreach.wikimedia.org"),
+domain("wikimania.wikimedia.org"),
+domain("foundation.wikimedia.org"),
+domain("wikitech.wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org"),
+domain("wikifunctions.org") {
+/* NOTE: this assumes you are using my Whitespace CSS, and using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
+  
+/* Hide the custom page-toolbar from my Whitespace CSS */
+.vector-sticky-header-end {
+  display: none !important;
+}
+  
+/* Fix the page-toolbar */
+.vector-page-toolbar {
+  position: fixed !important; top: 50px; background-color: white !important; z-index: 1 !important;
+}
+@media screen and (min-width: 1000px) {
+  .vector-page-toolbar {
+    width: 72vw;
+  }
+}
+@media screen and (max-width: 999px) and (min-width: 300px) {
+  .vector-page-toolbar {
+    width: 95vw; left: 10px;
+  }
+}
+  
+/* Still show it in thinner windows */
+@media screen and (min-width: 300px) {
+  .vector-page-toolbar .mw-portlet-views:not(.emptyPortlet) {
+    display: block;
+  }
+}
+  
+/* Move button for ToC-collapsed down below the sticky-header */
+.client-js .vector-below-page-title .vector-page-titlebar-toc {
+  top: 78px !important;
+}
+  
+/*fix for overlapping hidden div, otherwise interferes w/ VE */
+#p-views,
+#p-views .vector-menu-content {
+  max-height: 20px;
+}
+  
+/* Nudge content down to account for no-default gap */
+.vector-feature-zebra-design-disabled .mw-content-container,
+.mw-content-container {
+  padding-top: 20px !important;
+}
+@media screen and (max-width: 999px) {
+  .vector-feature-zebra-design-disabled .mw-page-container {
+    padding-top: 50px;
+  }
+  #pt-talk-alert {
+    margin-top: 10px !important;
+  }
+}
+  
+/* Fix overlap of personal-tools */
+#vector-user-links-dropdown .vector-menu-content {
+  top: 70px;
+}
+.mw-page-container {
+  z-index: unset !important;
+}
+  
+/* Nudge "new talk" down */
+#pt-talk-alert {
+  top: 65px !important;
+}
+  
+/* Remove bottom-border */
+.vector-feature-zebra-design-disabled .vector-sticky-header-container {
+  border-bottom: unset;
+}
+  
+/*Fix mislaigned wikilove icon */
+#ca-wikilove > .mw-ui-button {
+  margin-top: 1px !important;
+}
+
+/* Shorten the "view history" to just "history" */
+#ca-history > a {
+  font-size: 0px;
+}
+#ca-history > a::after {
+  content: 'History';
+  font-size: 0.8rem;
+  visibility: visible;
+  color: #3366cc;
+  margin-top: -6px;
+}
+#ca-history >  a {
+  border-bottom: unset !important;
+}
+  
+/* Replace toolbar text with icons at small widths */
+@media screen and (max-width: 600px) {
+  #ca-addsection {
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px; width: 10px; font-size: 1px; color: white; text-decoration: none;
+  }
+  #ca-view {
+    display: none;
+  }
+  #ca-view-foreign > a {
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original) no-repeat 0 0/15px; background-color: #26ae45; padding: 10px; width: 10px; font-size: 1px; color: white; text-decoration: none;
+  }
+  #ca-ve-edit > a {
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+  }
+  #ca-edit > a {
+    -webkit-mask: url(g/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px 10px; font-size: 1px; color: white; text-decoration: none;
+  }
+  #ca-edit > a:before {
+    content: "Hello"
+  }
+  #ca-viewsource > a {
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+  }
+  #ca-history > a {
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+  }
+  #ca-wikilove {
+    padding: 0 5px 0 0;
+  }
+  /* Fix icons which got misaligned */
+  #ca-ve-edit,
+  #ca-edit,
+  #ca-history {
+    margin-top: 5px !important;
+  }
+}
+
+}
