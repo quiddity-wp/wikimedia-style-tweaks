@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.01
+@version     1.0.02
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -100,9 +100,21 @@ domain("wikifunctions.org") {
   border-bottom: unset;
 }
   
-/*Fix mislaigned wikilove icon */
+/* Fix mislaigned wikilove icon */
 #ca-wikilove > .mw-ui-button {
   margin-top: 1px !important;
+}
+
+/* Fix sitenotice margin */
+@media screen and (min-width: 1000px) {
+  #siteNotice {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 999px) {
+  #siteNotice {
+    top: 25px !important;
+  }
 }
 
 /* Shorten the "view history" to just "history" */
