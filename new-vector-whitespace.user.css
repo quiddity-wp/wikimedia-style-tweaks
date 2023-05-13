@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.89
+@version     1.0.90
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -56,7 +56,7 @@ domain("patchdemo.wmflabs.org") {
 
 /* smaller ULS icon on multilingual wikis */
 .uls-trigger.mw-ui-button.mw-ui-quiet > span {
-  font-size: 0.5em;
+  font-size: 0.6em;
 }
 
 /* Hide the Vector-2022 "switch back" link in sidebar */
