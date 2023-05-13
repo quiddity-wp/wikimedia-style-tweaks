@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.03
+@version     1.0.04
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -62,7 +62,12 @@ domain("wikifunctions.org") {
   top: 78px !important;
 }
   
-/*fix for overlapping hidden div, otherwise interferes w/ VE */
+/* Fix for VE toolbar */
+body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
+  top: 76px;
+}
+  
+/* Fix for overlapping hidden div, otherwise interferes w/ VE */
 #p-views,
 #p-views .vector-menu-content {
   max-height: 20px;
