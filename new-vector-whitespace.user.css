@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.91
+@version     1.0.92
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -32,7 +32,7 @@ domain("patchdemo.wmflabs.org") {
 /* NOTE: this assumes you are using NEW VECTOR ([[mw:Desktop Improvements]]) */
 
 /* 1. Misc Tweaks */
-/* Shorten the "edit source" to just "source" */
+/* Shorten the inline links for "edit source" to just "source" */
 .mw-editsection > a:not(.mw-editsection-visualeditor)  {
   font-size: 0px;
 }
@@ -563,6 +563,11 @@ html {
 }
 
 /* Use logo instead of wordmark at small sizes */
+@media (min-width: 999px) {
+  .mw-logo-container {
+    display: block;
+  }
+}
 @media (min-width: 300px) {
   .mw-logo-icon {
     display: block;
@@ -570,11 +575,6 @@ html {
 }
 .mw-logo-container {
   display: none;
-}
-@media (min-width: 999px) {
-  .mw-logo-container {
-    display: block;
-  }
 }
   
 /* Force search-bar to show in site-header at smaller sizes */
