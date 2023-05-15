@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.96
+@version     1.0.97
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -155,19 +155,20 @@ domain("patchdemo.wmflabs.org") {
     bottom: 50px;
   }
   
-  /* grey header */
+  /* Grey Sticky Headers - Duplicated in Grey-test/Quiddity  */
   .mw-header {
     background-color: #eaecf0 !important;
     border-bottom: 1px solid #a2a9b1 !important;
   }
   .vector-page-toolbar, 
   .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
-    background-color: #eaecf0 !important;
+    background-color: #f8f9fa !important;
     border-bottom: 1px solid #a2a9b1 !important;
   }
   #p-associated-pages {
-    background-color: #eaecf0 !important;
+    background-color: #f8f9fa !important;
     border: 1px solid #a2a9b1 !important;
+    border-right: unset !important;
   }
   
   /* Hide "View" link in page-toolbar */
@@ -175,7 +176,8 @@ domain("patchdemo.wmflabs.org") {
     display: none;
   }
   
-  /* Auto-open menus
+  /* Hover to Auto-open all UI dropdown menus */
+  /*
   .vector-menu-dropdown:hover > .vector-menu-content {
 	  opacity: 1;
 	  visibility: visible;
