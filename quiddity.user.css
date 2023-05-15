@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.94
+@version     1.0.95
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -42,7 +42,7 @@ domain("patchdemo.wmflabs.org") {
   /* Float the section-header links "[edit] [edit source]" to right, where they're less distracting  */
   .mw-editsection {
     float: right;
-    padding-top: 5px
+    padding-top: 5px;
   }
   
   /* Bigger text in NavPopups gadget */
@@ -89,6 +89,11 @@ domain("patchdemo.wmflabs.org") {
   /* Make disambig links orange */
   a.mw-disambig {
     color: #ff8921;
+  }
+  
+  /* Make redirect links purple */
+  a.mw-redirect {
+    color: #c364ef;
   }
   
   /* Bold the sidebar's interwiki links to Enwiki/Simple, and interproject links to Commons/WikiVoyage/Wikisource */
@@ -142,6 +147,64 @@ domain("patchdemo.wmflabs.org") {
 
   /* Highlight RC in sidebar cos wikis keep moving it */
   #n-recentchanges {
-    background-color: #d3f2d3
+    background-color: #d3f2d3;
   }
+  
+  /* Bump Proveit above max-wdth toggle *? */
+  #proveit {
+    bottom: 50px;
+  }
+  
+  /* grey header */
+  .mw-header {
+    background-color: #eaecf0 !important;
+    border-bottom: 1px solid #a2a9b1 !important;
+  }
+  .vector-page-toolbar, 
+  .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
+    background-color: #eaecf0 !important;
+    border-bottom: 1px solid #a2a9b1 !important;
+  }
+  #p-associated-pages {
+    background-color: #eaecf0 !important;
+    border: 1px solid #a2a9b1 !important;
+  }
+  
+  /* Hide "View" link in page-toolbar */
+  #ca-view {
+    display: none;
+  }
+  
+  /* Auto-open menus
+  .vector-menu-dropdown:hover > .vector-menu-content {
+	  opacity: 1;
+	  visibility: visible;
+	  height: auto;
+    transition-delay: 100ms;
+  }
+  */
+  
+  /* Distinct End-matter sections */
+  #toc-See_also, 
+  #toc-References, 
+  #toc-Notes, 
+  #toc-Citations, 
+  #toc-Bibliography, 
+  #toc-Sources, 
+  #toc-Further_reading, 
+  #toc-External_links {
+    font-size: 0.9em;
+/*    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #a2a9b1 */
+  }
+
+  .mw-logo-icon {
+    display: block;
+    background: white;
+    padding: 2px 4px;
+    border: 1px solid gray;
+    border-top: unset;
+  }
+
 }
