@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.03
+@version     1.1.04
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -209,7 +209,7 @@ domain("patchdemo.wmflabs.org") {
     display: block;
     background: white;
     padding: 2px 4px;
-    border: 1px solid gray;
+    border: 1px solid #a2a9b1;
     border-top: unset;
     margin-left: -5px;
   }
