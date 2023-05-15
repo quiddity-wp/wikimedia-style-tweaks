@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.0.97
+@version     1.0.98
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -169,6 +169,10 @@ domain("patchdemo.wmflabs.org") {
     background-color: #f8f9fa !important;
     border: 1px solid #a2a9b1 !important;
     border-right: unset !important;
+    border-top: unset !important;
+  }
+  .vector-page-toolbar-container {
+    box-shadow: unset;
   }
   
   /* Hide "View" link in page-toolbar */
