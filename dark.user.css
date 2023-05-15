@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wiki DARK
 @namespace   StylishThemes
-@version     1.0.6
+@version     1.0.7
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css
 @license     CC-BY-SA-4.0
@@ -95,7 +95,9 @@ html .ext-related-articles-card-list .ext-related-articles-card-thumb {
 html .skin-vector .mw-logo-wordmark,
 html .skin-vector .mw-logo-tagline,
 html .skin-timeless .mw-wiki-title > img,
-html .wvui-icon svg {
+html .wvui-icon svg,
+html .mw-ext-score img,
+html .mw-hiero-table img {
 	filter: none;
 }
 
