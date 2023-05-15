@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.04
+@version     1.0.05
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -35,9 +35,14 @@ domain("wikifunctions.org") {
   display: none !important;
 }
   
-/* Fix the page-toolbar */
-.vector-page-toolbar {
-  position: fixed !important; top: 50px; background-color: white !important; z-index: 1 !important;
+/* Sticky the page-toolbar, and adjust its width (TODO: Fix imperfect width...) */
+.vector-page-toolbar, .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar  {
+  position: fixed !important; 
+  top: 52px; 
+  background-color: white; 
+  z-index: 1 !important;
+  padding-right: 300px;
+  margin-left: -2px
 }
 @media screen and (min-width: 1000px) {
   .vector-page-toolbar {
@@ -59,7 +64,10 @@ domain("wikifunctions.org") {
   
 /* Move button for ToC-collapsed down below the sticky-header */
 .client-js .vector-below-page-title .vector-page-titlebar-toc {
-  top: 78px !important;
+  top: 81px !important;
+}
+html {
+  scroll-padding-top: 120px !important;
 }
   
 /* Fix for VE toolbar */
@@ -76,11 +84,11 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 /* Nudge content down to account for no-default gap */
 .vector-feature-zebra-design-disabled .mw-content-container,
 .mw-content-container {
-  padding-top: 20px !important;
+  padding-top: 25px !important;
 }
 @media screen and (max-width: 999px) {
   .vector-feature-zebra-design-disabled .mw-page-container {
-    padding-top: 50px;
+    padding-top: 55px;
   }
   #pt-talk-alert {
     margin-top: 10px !important;
@@ -89,7 +97,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   
 /* Fix overlap of personal-tools */
 #vector-user-links-dropdown .vector-menu-content {
-  top: 70px;
+  top: 40px;
 }
 .mw-page-container {
   z-index: unset !important;
@@ -104,34 +112,19 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 .vector-feature-zebra-design-disabled .vector-sticky-header-container {
   border-bottom: unset;
 }
-  
-/* Fix mislaigned wikilove icon */
-#ca-wikilove > .mw-ui-button {
-  margin-top: 1px !important;
-}
 
 /* Fix sitenotice margin */
 #siteNotice {
   top: 25px;
 }
 
-/* Shorten the "view history" to just "history" */
-#ca-history > a {
-  font-size: 0px;
-}
-#ca-history > a::after {
-  content: 'History';
-  font-size: 0.8rem;
-  visibility: visible;
-  color: #3366cc;
-  margin-top: -6px;
-}
-#ca-history >  a {
-  border-bottom: unset !important;
+/* Fix sticky table-headers */
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .mw-sticky-header-element {
+  top: 80px !important;
 }
   
 /* Replace toolbar text with icons at small widths */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 725px) {
   #ca-addsection {
     -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-alerts&image=speechBubbleAdd&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px; width: 10px; font-size: 1px; color: white; text-decoration: none;
   }
@@ -147,9 +140,6 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #ca-edit > a {
     -webkit-mask: url(g/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px 10px; font-size: 1px; color: white; text-decoration: none;
   }
-  #ca-edit > a:before {
-    content: "Hello"
-  }
   #ca-viewsource > a {
     -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
   }
@@ -159,12 +149,36 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #ca-wikilove {
     padding: 0 5px 0 0;
   }
-  /* Fix icons which got misaligned */
+/* Fix mislaigned icons */
+  #ca-wikilove > .mw-ui-button {
+    margin-top: 1px !important;
+  }
+  #ca-view-foreign,
   #ca-ve-edit,
   #ca-edit,
+  #ca-viewsource,
   #ca-history {
     margin-top: 5px !important;
   }
+  #ca-addsection {
+    margin-top: 8px;
+  }
+  #ca-watch,
+  #ca-unwatch {
+    margin-top: -3px !important;
+  }
 }
+  
+  /* Color borders */
+  .mw-header {
+    border-bottom: 1px solid #a2a9b1 !important;
+  }
+  .vector-page-toolbar, 
+  .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
+    border-bottom: 1px solid #a2a9b1 !important;
+  }
 
+  .vector-page-toolbar-container {
+    box-shadow: unset;
+  }
 }
