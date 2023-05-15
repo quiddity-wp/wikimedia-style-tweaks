@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.93
+@version     1.0.94
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -241,7 +241,7 @@ html {
   padding: 5px 0 5px 0;
 }
 .vector-page-toolbar {
-  max-height: 30px;
+  max-height: 27px;
 }
 .mw-article-toolbar-container {
   border-bottom: none;
