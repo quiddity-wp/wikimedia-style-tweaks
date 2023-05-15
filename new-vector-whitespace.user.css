@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.92
+@version     1.0.93
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -563,6 +563,9 @@ html {
 }
 
 /* Use logo instead of wordmark at small sizes */
+.mw-logo-container {
+  display: none;
+}
 @media (min-width: 999px) {
   .mw-logo-container {
     display: block;
@@ -572,9 +575,6 @@ html {
   .mw-logo-icon {
     display: block;
   }
-}
-.mw-logo-container {
-  display: none;
 }
   
 /* Force search-bar to show in site-header at smaller sizes */
