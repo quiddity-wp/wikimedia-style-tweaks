@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.94
+@version     1.0.95
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -10,6 +10,7 @@
 @-moz-document domain("wikipedia.org"),
 domain("meta.wikimedia.org"),
 domain("office.wikimedia.org"),
+domain("collab.wikimedia.org"),
 domain("commons.wikimedia.org"),
 domain("species.wikimedia.org"),
 domain("outreach.wikimedia.org"),
@@ -111,6 +112,16 @@ domain("patchdemo.wmflabs.org") {
 .mw-logo {
   min-width: unset !important;
 }
+  
+/* Nudge the personal bar inwards */
+#vector-user-links-dropdown {
+  margin-right: 1em;
+}
+
+/* Gap above the log-out button */
+#pt-logout {
+  margin-top: 20px
+}
 
   /* ------------------------------------------------------------------ */
   /* ------------------------------------------------------------------ */
@@ -129,44 +140,15 @@ domain("patchdemo.wmflabs.org") {
   z-index: 10 !important;
   padding-left: 16px;
 }
+/* Hide the default sticky header */
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
+  display: none;
+}
 /* Nudge content down to account for no-default gap */
 @media screen and (max-width: 999px) {
   .mw-content-container {
     padding-top: 55px;
   }
-}
-/* move the new page-tool-sticky-header down, and limit size */
-@media (min-width: 300px) {
-  .vector-sticky-header-end {
-    position: fixed;
-    max-width: min-content;
-    top: 50px !important;
-    right: 5px;
-    padding:  0 10px 0 0 !important;
-    height: 40px;
-    transition: none !important;
-    transform: translateY(0);
-    background: white;
-    z-index: 1;
-  }
-}
-.vector-header-container {
-  transition: none !important;
-}
-.client-js.vector-sticky-header-enabled .vector-sticky-header-container {
-  display: contents;
-}
-/* reduce padding for the icons*/
-.sticky-header-icon {
-  padding: 8px;
-  border: none;
-}
-/* remove extraneous buttons */
-#p-lang-btn-sticky-header,
-#p-personal-sticky-header,
-#vector-sticky-header .vector-sticky-header-start,
-#vector-user-links-dropdown-sticky-header {
-  display: none;
 }
 /* Fix for VE edit toolbar */
 body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
@@ -179,27 +161,9 @@ html {
 .oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
   top: 100px;
 }
-/* Still show it in smaller windows */
-@media screen and (min-width: 400px) {
-  .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header {
-    opacity:1;
-    top:50px;
-    height: 55px;
-    display: flex;
-  }
-}
 /* Properly hide the sub-menu at page-top, to prevent misclicks */
 .vector-sticky-header:not(.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header) {
   display: none !important;
-}
-/* Nudge the personal bar inwards */
-#vector-user-links-dropdown {
-  margin-right: 1em;
-}
-
-/* Gap above the log-out button */
-#pt-logout {
-  margin-top: 20px
 }
 
 /* Fix font-size oddities with User-tools's "translations" and "Uploaded media" */
@@ -222,14 +186,7 @@ html {
   padding-top: 0;
   height: 54px !important;
 }
-  
-/* Nudge sidebar-button up into corner */
-#mw-sidebar-button {
-  margin-left: -1px;
-  margin-top: -13px;
-  border: none;
-}
-  
+
 /* Reduce page-toolbar height */
 .vector-menu-tabs .mw-list-item.vector-tab-noicon > a, 
 .mw-article-toolbar-container .vector-menu-dropdown.vector-tab-noicon > a, 
@@ -259,6 +216,8 @@ html {
   /* ------------------------------------------------------------------ */
 /* 3. ToC tweaks */
 
+/* 3.1 Change the contents */ 
+  
 /* Smaller "Contents" and "hide" */
 .vector-pinnable-header-label {
   font-size: 11px !important;
@@ -285,12 +244,6 @@ html {
 .vector-toc-toggle {
   visibility: hidden;
 }
-
-/* ?! 
-.vector-toc {
-  padding-left: 15px !important; 
-} 
-*/
 
 /* Don't bold the H2/3/4 or change the widths */
 .vector-toc-level-2, 
@@ -331,6 +284,8 @@ html {
 .vector-toc:after {
   display: none;
 } */
+  
+/* 3.2 Move the boxes around */
 
 /* Move button for ToC-collapsed down below the sticky-header, and add border */
 .client-js .vector-below-page-title .vector-page-titlebar-toc {
@@ -343,6 +298,18 @@ html {
     display: none;
   }
 }
+#vector-sticky-header-toc {
+  background: white !important;
+  border: lightgray 1px solid;
+  left: 5px !important;
+}
+
+/* Test ToC Button in full-width -- Currently broken
+.vector-feature-zebra-design-disabled.vector-feature-toc-pinned-disabled body:not(.vector-sticky-header-visible) .vector-page-titlebar .vector-toc-landmark {
+  position: fixed !important;
+  top: 55px;
+}
+*/
 
 /* Fix the jumping TOC upon first appearance when scrolling */
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container, 
@@ -391,6 +358,34 @@ html {
 /* Remove the gradient fade */
 .vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc::after {
   background: none;
+}
+
+/* Move the collapsed ToC down */
+#vector-sticky-header-toc {
+  top: 48px !important;
+  left: 0px !important;
+  margin-top: 0;
+  margin-left: -120px !important;
+  margin-right: 100px !important;
+}
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
+  transition: unset;
+}
+@media screen and (min-width: 999px) {
+  #vector-page-titlebar-toc {
+    position: fixed;
+    top: 56px;
+    left: 11px;
+    border: 1px solid #eaecf0;
+    background: white !important;
+    z-index: 1;
+  }
+  #vector-page-titlebar-toc-label {
+    padding: 0.3em !important;
+  }
+}
+.vector-dropdown > .vector-menu-content {
+  padding: 0 !important;
 }
 
 /* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
@@ -442,6 +437,14 @@ html {
   }
 }  
 */
+  
+/* Stop the current tab from changing color to black
+  .vector-feature-zebra-design-disabled .vector-toc .vector-toc-level-1-active:not(.vector-toc-list-item-active) > .vector-toc-link,
+  .vector-feature-zebra-design-disabled .vector-toc .vector-toc-level-1-active:not(.vector-toc-list-item-expanded) > .vector-toc-link,
+  .vector-feature-zebra-design-disabled .vector-toc .vector-toc-list-item-active > .vector-toc-link {
+    color: #3366cc !important;
+  } 
+*/
 
 
   /* ------------------------------------------------------------------ */
@@ -479,11 +482,6 @@ html {
   padding: 0;
 }
 
-.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled.vector-feature-page-tools-pinned-enabled .vector-page-tools-landmark {
-  top: 70px !important;
-  margin-top: 0;
-}
-
 #vector-page-tools-pinned-container {
   width: 170px;
 }
@@ -506,7 +504,7 @@ html {
   .vector-feature-zebra-design-disabled .mw-page-container-inner {  
     grid-template: 55px min-content min-content 1fr min-content / 220px minmax(0, 1fr) !important;
     grid-template-areas: 'header header'
-      'siteNotice siteNotice'
+      'mainMenu siteNotice'
       'mainMenu pageContent'
       'toc pageContent'
       'footer footer' !important;
