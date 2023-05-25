@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.07
+@version     1.0.08
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -11,6 +11,7 @@
 @-moz-document domain("wikipedia.org"),
 domain("meta.wikimedia.org"),
 domain("office.wikimedia.org"),
+domain("collab.wikimedia.org"),
 domain("commons.wikimedia.org"),
 domain("species.wikimedia.org"),
 domain("outreach.wikimedia.org"),
@@ -48,6 +49,10 @@ domain("wikifunctions.org") {
 @media screen and (min-width: 1000px) {
   .vector-page-toolbar {
     width: 72vw;
+  }
+  .vector-page-toolbar, 
+  .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
+    margin-left: 10px;
   }
 }
 @media screen and (max-width: 999px) and (min-width: 300px) {
@@ -140,17 +145,37 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   top: 85px !important;
   margin-top: -10px;
 }
-
-/* Color borders */
+  
+/* Grey Sticky Headers  */
 .mw-header {
-  border-bottom: 1px solid #a2a9b1 !important;
+  background-color: #f8f9fa !important; /* or a bit darker: #eaecf0 */
+  border-bottom: 1px solid #eaecf0 !important;
 }
 .vector-page-toolbar, 
 .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #a2a9b1 !important;
+  border-right: 1px solid #a2a9b1 !important;
+}
+#p-associated-pages {
+  background-color: #f8f9fa !important;
+  border-left: 1px solid #a2a9b1 !important;
+  padding-bottom: 0;
   border-bottom: 1px solid #a2a9b1 !important;
 }
 .vector-page-toolbar-container {
   box-shadow: unset;
+}
+
+/* Tweak Site-logo design */
+.mw-logo-icon {
+  display: block;
+  background: white !important;
+  padding: 2px 4px;
+  border-left: 1px solid #eaecf0;
+  border-right: 1px solid #eaecf0;
+  border-top: unset;
+  margin-left: -5px;
 }
 
 /* Replace toolbar text with icons at small widths */
