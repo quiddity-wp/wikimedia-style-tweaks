@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.95
+@version     1.0.96
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -335,7 +335,7 @@ html {
 .vector-toc-enabled .sidebar-toc {
   width: 14em !important;
 }
-/*
+/* ???
 .vector-toc-contents {
   width: 12.5em;
 } 
@@ -343,7 +343,8 @@ html {
 .vector-feature-limited-width-disabled .mw-table-of-contents-container, 
 .vector-toc-pinned-container {
   margin-left: -2.5em !important;
-}*/
+}
+*/
 .vector-feature-page-tools-disabled .vector-main-menu {
   padding: 10px !important;
 }
@@ -373,8 +374,8 @@ html {
 }
 @media screen and (min-width: 999px) {
   #vector-page-titlebar-toc {
-    position: fixed;
-    top: 56px;
+    position: fixed !important;
+    top: 56px !important;
     left: 11px;
     border: 1px solid #eaecf0;
     background: white !important;
@@ -384,6 +385,7 @@ html {
     padding: 0.3em !important;
   }
 }
+  
 .vector-dropdown > .vector-menu-content {
   padding: 0 !important;
 }
@@ -409,7 +411,6 @@ html {
 
 /* Reduce ToC height for logged-out view */
 #vector-toc {
-  height: 89vh !important;
   max-height: 89vh !important;
 }
 
@@ -652,5 +653,18 @@ html {
   z-index:1 !important;
 }
 */
-
+  
+/* Zebra fixes */
+@media screen {
+html.vector-feature-zebra-design-enabled {
+  --padding-vertical-content: 58px;
+  --padding-horizontal-content: 2px;
+  }
+}
+.vector-feature-zebra-design-enabled .vector-header-container .vector-sticky-header {
+  display:none;
+}
+.vector-feature-zebra-design-enabled .vector-page-toolbar {
+  top: 54px;
+}
 }
