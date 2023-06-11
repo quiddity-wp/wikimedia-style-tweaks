@@ -150,10 +150,12 @@ domain("patchdemo.wmflabs.org") {
     padding-top: 55px;
   }
 }
+
 /* Fix for VE edit toolbar */
 body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
   top: 50px;
 }
+
 /* Fix for anchor navigation -- BROKEN ? */
 html {
   scroll-padding-top: 90px !important;
@@ -161,6 +163,7 @@ html {
 .oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active {
   top: 100px;
 }
+
 /* Properly hide the sub-menu at page-top, to prevent misclicks */
 .vector-sticky-header:not(.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header) {
   display: none !important;
@@ -195,7 +198,7 @@ html {
 .vector-menu-tabs .mw-list-item .vector-menu-heading, 
 .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
 .vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
-  padding: 5px 0 5px 0;
+  padding: 5px 0 4px 0;
 }
 .vector-page-toolbar {
   max-height: 27px;
