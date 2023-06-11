@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.96
+@version     1.0.97
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -502,7 +502,8 @@ html {
 
 /* Reduce the grid gutter, and header height */
 @media screen and ( min-width: 1000px ) {
-  .vector-feature-zebra-design-disabled .mw-page-container-inner {  
+  .vector-feature-zebra-design-disabled .mw-page-container-inner,
+  .vector-feature-zebra-design-enabled .mw-page-container-inner {  
     grid-template: 55px min-content min-content 1fr min-content / 220px minmax(0, 1fr) !important;
     grid-template-areas: 'header header'
       'mainMenu siteNotice'
