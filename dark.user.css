@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wiki DARK
 @namespace   StylishThemes
-@version     1.0.7
+@version     1.0.8
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css
 @license     CC-BY-SA-4.0
@@ -10,6 +10,7 @@
 @-moz-document domain("wikipedia.org"), 
 domain("meta.wikimedia.org"), 
 domain("office.wikimedia.org"), 
+domain("collab.wikimedia.org"),
 domain("commons.wikimedia.org"), 
 domain("species.wikimedia.org"), 
 domain("outreach.wikimedia.org"), 
@@ -242,7 +243,7 @@ html .branding-box img {
 
 @-moz-document url-prefix() {
     body {
-        background: #000;
+        background: #363636 !important;
     }
 }
 
@@ -254,9 +255,13 @@ html .branding-box img {
 	}
 }
 
-/* Quiddity's extra background override */
-html #content {
-  background-color: #eee
-  }
+/* Quiddity's extra background overrides */
+.mw-logo-icon {
+  background: black;
+}
+.mw-page-container {
+  background: #e1e1e1 !important;
+}
+body {background: #e1e1e1 !important;}
 
 }
