@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.0.98
+@version     1.0.99
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -55,9 +55,13 @@ domain("patchdemo.wmflabs.org") {
   display: none
 }
 
-/* smaller ULS icon on multilingual wikis */
-.uls-trigger.mw-ui-button.mw-ui-quiet > span {
+/* smaller ULS icon and text on multilingual wikis */
+.uls-trigger > span {
   font-size: 0.6em;
+}
+.mw-ui-icon-wikimedia-language {
+  background-size: 12px;
+  margin-right: 2px !important;
 }
 
 /* Hide the Vector-2022 "switch back" link in sidebar */
@@ -199,6 +203,9 @@ html {
 .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
 .vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
   padding: 5px 0 4px 0;
+}
+#vector-page-tools-dropdown-label {
+  padding: 0 0 1px 0
 }
 .vector-page-toolbar {
   max-height: 27px;
@@ -581,14 +588,24 @@ html {
 }
   
 /* Force search-bar to show in site-header at smaller sizes */
+@media screen and (min-width: 500px) {
+  .mw-header .vector-typeahead-search-container {
+  display: block;
+  }
+}
+@media screen and (min-width: 499px) {
+  .search-toggle {
+    display: none !important;
+  }
+}
 .vector-search-box-collapses > div {
   display: block;
 }
 .vector-search-box > div {
   max-width: none;
 }
-.search-toggle {
-  display: none;
+.cdx-text-input__input {
+  min-width:50px;
 }
 .mw-logo {
   min-width: 0;
