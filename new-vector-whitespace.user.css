@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.1.01
+@version     1.1.02
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -690,7 +690,7 @@ html.vector-feature-zebra-design-enabled {
 }
 
 /* Fixes for mobile-size */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .vector-feature-zebra-design-disabled .mw-page-container {
     padding: 0 12px 0 2px;
   }
