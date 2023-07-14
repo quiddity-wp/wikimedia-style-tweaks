@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.06
+@version     1.1.07
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -146,6 +146,9 @@ domain("patchdemo.wmflabs.org") {
   .mw-tpt-sp-section-type-new {
     background-color: lightgreen;
   }
+  .diff-contentalign-left {
+    border: 2px solid green !important;
+  }
 
   /* Highlight RC in sidebar cos wikis keep moving it */
   #n-recentchanges {
@@ -192,5 +195,7 @@ domain("patchdemo.wmflabs.org") {
   .timeline-wrapper {max-width: none;} */
   .vector-feature-zebra-design-disabled .mw-page-container {margin: 0;}
   
- .CategoryTreeItem > span[title="Contains 0 subcategories, 0 pages, and 0 files"] {opacity: 0.2;}
+ .CategoryTreeItem > span[title="Contains 0 subcategories, 0 pages, and 0 files"] {
+   opacity: 0.2;
+  }
 }
