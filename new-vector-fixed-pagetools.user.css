@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.09
+@version     1.0.10
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -43,22 +43,31 @@ domain("wikifunctions.org") {
   top: 55px; 
   background-color: white; 
   z-index: 1 !important;
-  padding-right: 300px;
+  right: 1px;
   margin-left: -2px
 }
 @media screen and (min-width: 1000px) {
   .vector-page-toolbar {
-    width: 72vw;
+    width: calc(100% - 285px);
   }
   .vector-page-toolbar, 
   .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
-    margin-left: 10px;
+    margin: 0 5px 0 10px;
   }
 }
 @media screen and (max-width: 999px) and (min-width: 300px) {
   .vector-page-toolbar {
     width: 95vw; left: 10px;
   }
+}
+.vector-feature-zebra-design-disabled .vector-dropdown .vector-dropdown-content {
+  padding: 0 !important;
+}
+.vector-page-toolbar-container .vector-dropdown {
+  height: 27px;
+}
+input:focus:not(:active) + .cdx-button:not(.cdx-button--action-progressive) {
+  box-shadow: unset;
 }
 
 /* Still show it in thinner windows */
@@ -155,7 +164,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
   background-color: #f8f9fa !important;
   border-bottom: 1px solid #a2a9b1 !important;
-  border-right: 1px solid #a2a9b1 !important;
+/*  border-right: 1px solid #a2a9b1 !important; */
 }
 #p-associated-pages {
   background-color: #f8f9fa !important;
