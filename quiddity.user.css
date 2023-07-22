@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.07
+@version     1.1.08
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -144,7 +144,7 @@ domain("patchdemo.wmflabs.org") {
   
   /* Tweak background color of "New Translations" in Special:PageTranslation */
   .mw-tpt-sp-section-type-new {
-    background-color: lightgreen;
+    background-color: #defdde;
   }
   .diff-contentalign-left {
     border: 2px solid green !important;
