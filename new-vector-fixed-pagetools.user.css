@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.10
+@version     1.0.11
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -170,7 +170,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   background-color: #f8f9fa !important;
   border-left: 1px solid #a2a9b1 !important;
   padding-bottom: 0;
-  border-bottom: 1px solid #a2a9b1 !important;
+/*  border-bottom: 1px solid #a2a9b1 !important; */
   max-height: 27px;
 }
 .vector-page-toolbar-container {
