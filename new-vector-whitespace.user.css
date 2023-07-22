@@ -202,13 +202,13 @@ html {
 .vector-menu-tabs .mw-list-item .vector-menu-heading, 
 .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
 .vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
-  padding: 5px 0 4px 0;
+  padding: 5px 0 5px 0;
 }
 #vector-page-tools-dropdown-label {
   padding: 0 0 1px 0
 }
 .vector-page-toolbar {
-  max-height: 27px;
+  max-height: 24px;
 }
 .mw-article-toolbar-container {
   border-bottom: none;
@@ -415,7 +415,7 @@ html {
 
 @media screen and (max-width: 999px) {
   .vector-feature-zebra-design-disabled.client-js .vector-below-page-title .vector-page-titlebar-toc {
-  left: 1px;
+  left: 0;
   }
 }
 
