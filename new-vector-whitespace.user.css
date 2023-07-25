@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.1.04
+@version     1.1.05
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -205,7 +205,7 @@ html {
   padding: 5px 0 5px 0;
 }
 #vector-page-tools-dropdown-label {
-  padding: 0 0 1px 0
+  padding: 0 0 5px 0
 }
 .vector-page-toolbar {
   max-height: 24px;
@@ -588,12 +588,12 @@ html {
 }
   
 /* Force search-bar to show in site-header at smaller sizes */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   .mw-header .vector-typeahead-search-container {
   display: block;
   }
 }
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 599px) {
   .search-toggle {
     display: none !important;
   }
@@ -610,6 +610,9 @@ html {
 .mw-logo {
   min-width: 0;
   margin-right: 10px;
+}
+.cdx-menu {
+  min-width: 270px !important;
 }
 
 /* Reduce gap beside searchbox */
