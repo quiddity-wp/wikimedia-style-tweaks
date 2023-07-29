@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.12
+@version     1.0.13
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -52,7 +52,7 @@ domain("wikifunctions.org") {
   }
   .vector-page-toolbar, 
   .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
-    margin: 0 5px 0 10px;
+    margin: 0 5px 0 0;
   }
 }
 @media screen and (max-width: 999px) and (min-width: 300px) {
@@ -79,7 +79,7 @@ input:focus:not(:active) + .cdx-button:not(.cdx-button--action-progressive) {
 
 /* Move button for ToC-collapsed down below the sticky-header */
 .client-js .vector-below-page-title .vector-page-titlebar-toc {
-  top: 81px !important;
+  top: 80px !important;
 }
 html {
   scroll-padding-top: 120px !important;
@@ -164,10 +164,12 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
   background-color: #f8f9fa !important;
   border-bottom: 1px solid #a2a9b1 !important;
+  border-left: 1px solid #a2a9b1 !important;
 /*  border-right: 1px solid #a2a9b1 !important; */
 }
 #p-associated-pages {
   background-color: #f8f9fa !important;
+  border-bottom: 1px solid #a2a9b1 !important;
   border-left: 1px solid #a2a9b1 !important;
   padding-bottom: 0;
 /*  border-bottom: 1px solid #a2a9b1 !important; */
@@ -197,25 +199,25 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
     display: none;
   }
   #ca-view-foreign > a {
-    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original) no-repeat 0 0/15px; background-color: #26ae45; padding: 10px; width: 10px; font-size: 1px; color: white; text-decoration: none;
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-wikimedia&image=logoMetaWiki&format=original) no-repeat 0 0/15px; background-color: #26ae45; padding: 15px 10px 5px 10px; width: 10px; font-size: 1px; color: white; text-decoration: none;
   }
   #ca-ve-edit > a {
-    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 10px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=edit&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 5px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
   }
   #ca-edit > a {
-    -webkit-mask: url(g/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 10px 10px; font-size: 1px; color: white; text-decoration: none;
+    -webkit-mask: url(g/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-advanced&image=wikiText&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 5px 10px; font-size: 1px; color: white; text-decoration: none;
   }
   #ca-viewsource > a {
-    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 10px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-editing-core&image=editLock&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 5px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
   }
   #ca-history > a {
-    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 10px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-content&image=history&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 5px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
   }
   #pt-userpage-2 > a, #pt-createaccount-2 > a {
-    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-user&image=userAvatarOutline&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-user&image=userAvatarOutline&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 10px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-user&image=userAvatarOutline&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-user&image=userAvatarOutline&format=original) no-repeat 0 0/15px; background-color: black; padding: 10px 10px 10px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none; margin: 0 0 0 15px;
   }
   #pt-login-2 > a {
-    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=logIn&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=logIn&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 10px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=logIn&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=logIn&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 5px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
   }
   /* hide the language-selector at small sizes [FIXME] */
   .uls-trigger > span:not(.vector-icon) {
@@ -243,6 +245,30 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
     margin-top: -5px !important;
   }
 }
+/* Fix mislaigned icons in wide windows */
+  #ca-wikilove > a {
+    margin-top: -4px !important;
+    padding: 0 5px 0 0 !important;
+  }
+  #ca-watch,
+  #ca-unwatch {
+    margin-top: -6px !important;
+  }
+  .vector-icon.mw-ui-icon-wikimedia-heart, 
+  .vector-icon.mw-ui-icon-wikimedia-star, 
+  .vector-icon.mw-ui-icon-wikimedia-unStar {
+    padding-right: 10px;
+  }
+/* Hide text for wikilove and watch */
+  #ca-watch > a > span:not(.vector-icon) {
+    display: none;
+  }
+  #ca-unwatch > a > span:not(.vector-icon) {
+    display: none;
+  }
+  #ca-wikilove > a > span:not(.vector-icon) {
+    display: none;
+  }
 /* Keep sticky icons visible at small sizes */
 @media screen and (max-width: 719px) {
   .vector-user-links .mw-portlet-vector-user-menu-overflow .user-links-collapsible-item {
