@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.09
+@version     1.1.10
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -200,13 +200,60 @@ domain("patchdemo.wmflabs.org") {
    opacity: 0.2;
   }
 
-  /* More obvious multi-change indicators in Enhanced RC (grouped changes) */
+/* More obvious multi-change indicators in Enhanced RC (grouped changes) */
   .mw-enhancedchanges-arrow, .mw-changeslist-groupdiff {
     background: #e5fde0;
   }
-  
-  /* Smol the sub-text in Enchanced RC */
+/* Smol the sub-text in Enchanced RC */
   .mw-rcfilters-ui-highlights-enhanced-nested {
     font-size: 0.9em;
   }
+/* Bigger banner-close icons */
+  #cnotice-toggle-box > a > img {
+    display: none;
+  }
+ #cnotice-toggle-box > a { 
+   background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/CloseWindow.svg');
+   background-size:cover; 
+   width:40px; 
+   height: 40px;
+   display: block
+  }
+  #cnotice-toggle-icon > a > img {
+    width: 40px;
+    height: 40px;
+  } 
+  #cnotice-toggle-icon > a {
+   background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/CloseWindow.svg');
+   background-size:cover; 
+   width:40px; 
+   height: 40px;
+   display: block
+  }
+  #cn-toggle-box > a > img {
+    width: 30px;
+    height: 30px;
+  } 
+  #cn-toggle-box > a {
+   background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/CloseWindow.svg');
+   background-size:cover; 
+   width: 30px; 
+   height: 30px;
+   display: block
+  }
+  .frb-icon-btn.frb-close {
+   background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/CloseWindow.svg');
+   background-size:cover; 
+   width: 30px; 
+   height: 30px;
+   display: block
+  }
+  
+/* troubleshoot interrupted lists -- 
+https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Accessibility#Another_LISTGAP_solution? 
+*/
+ul + ul {
+  border-top: 2px dashed #ccc;
+}
+  
 }
