@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.14
+@version     1.0.15
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -223,8 +223,9 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   .cdx-search-input > .cdx-button {
     -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=search&format=original) no-repeat 3px 3px/2px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=search&format=original) no-repeat 3px 3px/25px; background-color: black; width: 12px; font-size: 1px; color: white; text-decoration: none;
   }
-  .cdx-text-input__start-icon {
+  .cdx-text-input__start-icon, .cdx-search-input .cdx-text-input__icon.cdx-text-input__start-icon {
     display:none;
+    background-image: unset;
   }
   .cdx-typeahead-search .cdx-text-input--has-start-icon .cdx-text-input__input {
   padding-left: 5px;
@@ -239,7 +240,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #ca-wikilove {
     padding: 0 5px 0 0;
   }
-/* Fix mislaigned icons */
+  /* Fix mislaigned icons */
   #ca-wikilove > .mw-ui-button {
     margin-top: 1px !important;
   }
@@ -289,4 +290,5 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
     display: unset;
   }
 }
+
 }
