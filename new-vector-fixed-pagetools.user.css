@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.13
+@version     1.0.14
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -219,6 +219,19 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #pt-login-2 > a {
     -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=logIn&format=original) no-repeat 0 0/15px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=logIn&format=original) no-repeat 0 0/15px; background-color: black; padding: 15px 10px 5px 10px; width: 12px; font-size: 1px; color: white; text-decoration: none;
   }
+  /* Search bar fixes for small screens */
+  .cdx-search-input > .cdx-button {
+    -webkit-mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=search&format=original) no-repeat 3px 3px/2px; mask: url(/w/load.php?modules=oojs-ui.styles.icons-interactions&image=search&format=original) no-repeat 3px 3px/25px; background-color: black; width: 12px; font-size: 1px; color: white; text-decoration: none;
+  }
+  .cdx-text-input__start-icon {
+    display:none;
+  }
+  .cdx-typeahead-search .cdx-text-input--has-start-icon .cdx-text-input__input {
+  padding-left: 5px;
+  }
+  .cdx-typeahead-search--show-thumbnail.cdx-typeahead-search--auto-expand-width.cdx-typeahead-search--expanded .cdx-text-input__input{
+    padding-left:5px !important;
+  }
   /* hide the language-selector at small sizes [FIXME] */
   .uls-trigger > span:not(.vector-icon) {
     display: none;
@@ -244,6 +257,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #ca-unwatch {
     margin-top: -5px !important;
   }
+  
 }
 /* Fix mislaigned icons in wide windows */
   #ca-wikilove > a {
