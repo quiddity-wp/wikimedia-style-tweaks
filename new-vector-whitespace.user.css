@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.1.06
+@version     1.1.07
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -488,11 +488,11 @@ html {
 /* Remove whitespace at edges */
 .mw-page-container {
   padding-left: 25px;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 .vector-feature-zebra-design-disabled .mw-page-container {
   padding-left: 25px;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
   margin-left: 5px;
