@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 whitespace and tweaks
 @namespace   StylishThemes
-@version     1.1.05
+@version     1.1.06
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-whitespace.user.css
 @license     CC-BY-SA-4.0
@@ -202,7 +202,7 @@ html {
 .vector-menu-tabs .mw-list-item .vector-menu-heading, 
 .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
 .vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
-  padding: 5px 0 5px 0;
+  padding: 5px 0 1px 0;
 }
 #vector-page-tools-dropdown-label {
   padding: 0 0 5px 0
@@ -395,6 +395,10 @@ html {
     padding: 0.3em !important;
   }
 }
+  #vector-page-titlebar-toc-label {
+    background-color: white !important;
+    opacity: 1;
+  }
   
 .vector-dropdown > .vector-menu-content {
   padding: 0 !important;
@@ -483,8 +487,12 @@ html {
   
 /* Remove whitespace at edges */
 .mw-page-container {
-  padding-left: 20px;
-  padding-right: 25px;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+.vector-feature-zebra-design-disabled .mw-page-container {
+  padding-left: 25px;
+  padding-right: 10px;
 }
 .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
   margin-left: 5px;
@@ -523,7 +531,20 @@ html {
     column-gap: 10px !important;
   }
 }
-
+@media screen and (min-width: 1000px) {
+  .vector-feature-zebra-design-disabled .mw-body {
+    display: grid;
+    grid-template: min-content min-content min-content 1fr / minmax(0,60em) min-content;
+    grid-template-areas:
+      'titlebar-cx .    ' 
+      'titlebar  columnEnd' 
+      'toolbar   columnEnd' 
+      'content   columnEnd';
+  }
+}
+.vector-feature-page-tools-pinned-enabled .mw-body {
+  column-gap: 20px !important;
+}
 #siteNotice {
   margin: 5px
 }
