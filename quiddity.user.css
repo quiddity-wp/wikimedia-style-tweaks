@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.11
+@version     1.1.12
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -223,7 +223,7 @@ domain("patchdemo.wmflabs.org") {
     width: 40px;
     height: 40px;
   } 
-  #cnotice-toggle-icon > a {
+  #cnotice-toggle-icon, #cnotice-toggle-icon > a {
    background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/CloseWindow.svg');
    background-size:cover; 
    width:40px; 
@@ -231,21 +231,21 @@ domain("patchdemo.wmflabs.org") {
    display: block
   }
   #cn-toggle-box > a > img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   } 
   #cn-toggle-box > a {
    background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/CloseWindow.svg');
    background-size:cover; 
-   width: 30px; 
-   height: 30px;
+   width: 40px; 
+   height: 40px;
    display: block
   }
   .frb-icon-btn.frb-close {
    background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/CloseWindow.svg');
    background-size:cover; 
-   width: 30px; 
-   height: 30px;
+   width: 40px; 
+   height: 40px;
    display: block
   }
   
@@ -259,6 +259,14 @@ ul + ul {
 /* Hide VE's undo/redo */
 .ve-ui-toolbar-group-history {
   display:none;
+}
+  
+#ps-gender-male, 
+#ps-gender-female, 
+#ps-gender-unknown {
+  font-size: 50% !important;
+  user-select: none;
+  opacity:50%
 }
   
 }
