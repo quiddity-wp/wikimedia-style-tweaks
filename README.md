@@ -9,7 +9,7 @@
 * **Compact-vector-2022** (compact the whitespace and tools, use the pre-scroll-header as sticky-header)
   * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-whitespace.user.css)
 * **Further compact Vector-2022** (compact the tools more)
-  * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-tests.user.css)
+  * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-compressed-toolbar.user.css)
 * **quiddity** (many powereditor tweaks - see code comments for details)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css)
 * **dark** (dark mode)
@@ -26,11 +26,10 @@
 
 ## Before / After
 
-Default (while scrolled) -- vs -- showing "Compact-vector-2022" and "thinner-sidebar" and "Further compact Vector-2022"
+Default (while scrolled) -- vs -- showing "Compact-vector-2022"
 
 ![Before](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss11.jpg)
 ![After](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss12.jpg)
-![After-test](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss13.jpg)
 
 ## see also
 https://github.com/quiddity-wp/style-tweaks
