@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Fixed Page Toolbar
 @namespace   StylishThemes
-@version     1.0.16
+@version     1.0.17
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-fixed-pagetools.user.css
 @license     CC-BY-SA-4.0
@@ -48,7 +48,7 @@ domain("wikifunctions.org") {
 }
 @media screen and (min-width: 1000px) {
   .vector-page-toolbar {
-    width: calc(100% - 285px);
+    width: calc(100% - 270px);
   }
   .vector-page-toolbar, 
   .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
