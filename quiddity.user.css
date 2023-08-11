@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.12
+@version     1.1.13
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -202,7 +202,7 @@ domain("patchdemo.wmflabs.org") {
 
 /* More obvious multi-change indicators in Enhanced RC (grouped changes) */
   .mw-enhancedchanges-arrow, .mw-changeslist-groupdiff {
-    background: #e5fde0;
+    background: #bbf2b0;
   }
 /* Smol the sub-text in Enchanced RC */
   .mw-rcfilters-ui-highlights-enhanced-nested {
@@ -267,6 +267,10 @@ ul + ul {
   font-size: 50% !important;
   user-select: none;
   opacity:50%
+}
+  
+.popupPreview > table {
+  width:100%;
 }
   
 }
