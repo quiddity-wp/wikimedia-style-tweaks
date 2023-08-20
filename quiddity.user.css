@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.13
+@version     1.1.14
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -271,6 +271,21 @@ ul + ul {
   
 .popupPreview > table {
   width:100%;
+}
+  
+/* More compact [[Special:PageTranslation]] */
+body.mw-special-PageTranslation #mw-content-text li > div {
+  display: inline; 
+  float: right;
+  font-size: 0.8em;
+}
+body.mw-special-PageTranslation #mw-content-text li > div::before {
+  display: inline;
+  content: "(";
+}
+body.mw-special-PageTranslation #mw-content-text li > div::after {
+  display: inline;
+  content: ")";
 }
   
 }
