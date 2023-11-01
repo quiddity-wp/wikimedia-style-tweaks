@@ -6,10 +6,8 @@
 
 ### General
 
-* **Compact-vector-2022** (compact the whitespace and tools, use the pre-scroll-header as sticky-header)
-  * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-whitespace.user.css)
-* **Further compact Vector-2022** (compact the tools more)
-  * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-compressed-toolbar.user.css)
+* **Enhanced Vector-2022** (compact the whitespace and tools, use the pre-scroll-header as sticky-header)
+  * [Install directly with Stylus](https://github.com/quiddity-wp/wikimedia-style-tweaks/raw/master/new-vector-enhanced.user.css )
 * **quiddity** (many powereditor tweaks - see code comments for details)
   * [Install directly with Stylus](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css)
 * **dark** (dark mode)
