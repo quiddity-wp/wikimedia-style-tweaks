@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.04
+@version     1.0.05
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -106,6 +106,9 @@ domain("patchdemo.wmflabs.org") {
 /* Fix min-width */
 .vector-feature-zebra-design-disabled .mw-page-container {
   min-width: unset;
+}
+.vector-feature-zebra-design-enabled .mw-page-container {
+  margin: 0;
 }
   
 /* Fix watchstar which got misaligned */
@@ -232,7 +235,7 @@ html {
   font-size: 9px !important;
 }
 
-/* Change "Beginning" to an Up-arrow */
+/* Change "Beginning" or "(Top)" to an Up-arrow */
 #toc-mw-content-text div {
   visibility: hidden;
 }
@@ -243,6 +246,7 @@ html {
   position: absolute;
   top: 6px;
 }
+
 /* Auto-expand sections, and hide the H2-arrows */
 .client-js .vector-toc .vector-toc-level-1 .vector-toc-list-item {
   display: block !important;
@@ -290,39 +294,26 @@ html {
 .vector-toc:after {
   display: none;
 } */
-  
+
+
 /* 3.2 Move the boxes around */
 
-/* Move button for ToC-collapsed down below the sticky-header, and add border */
+/* Move button for collapsed ToC down below the sticky-header, and add border */
 .client-js .vector-below-page-title .vector-page-titlebar-toc {
   top: 55px !important;
-  border: lightgray 1px solid;
-}
-/* Hide the word "Contents" in that case */
-@media screen and (max-width: 999px) {
-  .vector-toc .vector-toc-pinnable-header {
-    display: none;
-  }
-}
-#vector-sticky-header-toc {
-  background: white !important;
-  border: lightgray 1px solid;
-  left: 5px !important;
+  display: block
 }
 
-/* Test ToC Button in full-width -- Currently broken
-.vector-feature-zebra-design-disabled.vector-feature-toc-pinned-disabled body:not(.vector-sticky-header-visible) .vector-page-titlebar .vector-toc-landmark {
-  position: fixed !important;
-  top: 55px;
-}
-*/
-
-/* Fix the jumping TOC upon first appearance when scrolling */
+/* Fix the jumping sticky-TOC when scrolling */
 .vector-feature-zebra-design-disabled.vector-feature-main-menu-pinned-disabled.vector-feature-toc-pinned-clientpref-1 #vector-toc-pinned-container,    
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container, 
 .client-js.vector-sticky-header-enabled.vector-feature-toc-pinned-enabled #vector-toc-pinned-container,
-.vector-feature-toc-pinned-enabled #vector-toc-pinned-container {
-  top: 55px !important;
+.vector-feature-toc-pinned-enabled #vector-toc-pinned-container, 
+.vector-feature-zebra-design-enabled .vector-pinned-container,
+.vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled .vector-sticky-pinned-container,
+.vector-feature-zebra-design-enabled.vector-feature-toc-pinned-clientpref-1 .vector-column-start > .vector-toc-landmark {
+  top: 85px !important;
+  position: sticky !important;
 }
 /* .vector-feature-page-tools-enabled #vector-toc-pinned-container .vector-toc {
   padding-top: 0 !important;
@@ -330,11 +321,10 @@ html {
 #mw-panel-toc {
   margin-top: -40px !important;
 }
+ .vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled .vector-pinned-container {
+ max-height: none
+ }
 
-/* ToC whitespace reduction */
-.vector-toc {
-  padding: 0 5px !important;
-}
 /* ???
 .vector-toc-contents {
   width: 12.5em;
@@ -343,23 +333,20 @@ html {
 .vector-feature-limited-width-disabled .mw-table-of-contents-container, 
 .vector-toc-pinned-container {
   margin-left: -2.5em !important;
-}
-*/
+} */
+
+/* ??? */
 .vector-feature-page-tools-disabled .vector-main-menu {
   padding: 10px !important;
 }
 .vector-feature-page-tools-disabled .vector-main-menu-group {
   margin: 0;
 }
-/* Oversize ToC experiment */
+
+/* Oversize ToC experiment
 .vector-feature-page-tools-disabled #vector-toc-pinned-container .vector-toc, .vector-feature-limited-width-disabled .mw-table-of-contents-container {
   min-width: 242px !important;
-}
-
-/* Remove the gradient fade */
-.vector-feature-zebra-design-disabled #vector-toc-pinned-container .vector-toc::after {
-  background: none;
-}
+} */
 
 /* Move the collapsed ToC down */
 #vector-sticky-header-toc {
@@ -476,13 +463,10 @@ html {
 }
   
 /* Remove whitespace at edges */
-.mw-page-container {
-  padding-left: 25px;
-  padding-right: 15px;
-}
-.vector-feature-zebra-design-disabled .mw-page-container {
-  padding-left: 25px;
-  padding-right: 15px;
+.mw-page-container,
+.vector-feature-zebra-design-disabled .mw-page-container  {
+  padding-left: 5px !important;
+  padding-right: 15px !important;
 }
 .mw-portlet .mw-portlet-navigation .vector-menu .vector-menu-portal .portal {
   margin-left: 5px;
@@ -491,11 +475,11 @@ html {
   padding: 0;
 }
 
-#vector-page-tools-pinned-container {
-  width: 170px;
-}
-.vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools {
-  width: 170px;
+/* fix page-tools min-width */
+#vector-page-tools-pinned-container,
+.vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools,
+.vector-feature-zebra-design-enabled #vector-page-tools-pinned-container .vector-page-tools {
+  min-width: 190px;
 }
   
   /* ------------------------------------------------------------------ */
@@ -510,11 +494,10 @@ html {
 
 /* Reduce the grid gutter, and header height */
 @media screen and ( min-width: 1000px ) {
-  .vector-feature-zebra-design-disabled .mw-page-container-inner,
-  .vector-feature-zebra-design-enabled .mw-page-container-inner {  
-    grid-template: 55px min-content min-content 1fr min-content / 220px minmax(0, 1fr) !important;
-    grid-template-areas: 'header header'
-      'mainMenu siteNotice'
+  .vector-feature-zebra-design-disabled .mw-page-container-inner {  
+    grid-template: min-content min-content 1fr min-content / 220px !important;
+    grid-template-areas: 
+      'siteNotice siteNotice'
       'mainMenu pageContent'
       'toc pageContent'
       'footer footer' !important;
@@ -534,9 +517,6 @@ html {
 }
 .vector-feature-page-tools-pinned-enabled .mw-body {
   column-gap: 20px !important;
-}
-#siteNotice {
-  margin: 5px
 }
 
 /* Fix for banners in small windows */
@@ -696,8 +676,10 @@ html.vector-feature-zebra-design-enabled {
   --padding-horizontal-content: 2px;
   }
 }
-.vector-feature-zebra-design-enabled .vector-header-container .vector-sticky-header {
-  display:none;
+.vector-feature-zebra-design-enabled .vector-header-container .mw-header {
+  max-width: unset !important;
+  padding-right: 0;
+  padding-left: 15px;
 }
 .vector-feature-zebra-design-enabled .vector-page-toolbar {
   top: 54px;
@@ -716,12 +698,6 @@ html.vector-feature-zebra-design-enabled {
 /* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ */
 /* 6. Sticky the page-toolbar */
-
-
-/* Hide the custom page-toolbar from my Whitespace CSS */
-.vector-sticky-header-end {
-  display: none !important;
-}
 
 /* Sticky the page-toolbar, and adjust its width (TODO: Fix imperfect width...) */
 .vector-page-toolbar, 
@@ -774,8 +750,8 @@ html {
 
 /* Nudge content down to account for no-default gap */
 .vector-feature-zebra-design-disabled .mw-content-container,
-.mw-content-container {
-  padding-top: 25px !important;
+.vector-feature-zebra-design-enabled .mw-page-container {
+  padding-top: 55px !important;
 }
 @media screen and (max-width: 999px) {
   .vector-feature-zebra-design-disabled .mw-page-container {
@@ -823,10 +799,13 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   border-bottom: unset;
 }
 
-/* Fix sitenotice margin */
+/* Fix sitenotice margin
 #siteNotice {
   top: 25px;
 }
+#siteNotice {
+  margin-top: 55px
+} */
 
 /* Fix sticky table-headers */
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .mw-sticky-header-element {
@@ -837,7 +816,12 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 .vector-feature-zebra-design-disabled #vector-page-tools-pinned-container .vector-page-tools {
   padding-top: unset;
 }
-.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled.vector-feature-page-tools-pinned-enabled .vector-page-tools-landmark {
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled.vector-feature-page-tools-pinned-enabled .vector-page-tools-landmark,
+.vector-feature-zebra-design-disabled .vector-column-end .vector-page-tools-landmark,
+.vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled.vector-feature-page-tools-pinned-enabled .vector-page-tools-landmark,
+.vector-feature-zebra-design-enabled .vector-column-end .vector-page-tools-landmark,
+.vector-feature-zebra-design-disabled .vector-column-end,
+.vector-feature-zebra-design-enabled .vector-column-end {
   top: 85px !important;
   margin-top: -10px;
 }
