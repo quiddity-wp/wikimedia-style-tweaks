@@ -55,6 +55,11 @@ domain("patchdemo.wmflabs.org") {
   .popup_menu {
     margin-top: 1.1em;
   }
+
+  /* tweak popups */
+  .popupPreview > table {
+    width:100%;
+  }
   
   /* Change the color of the highlightmyname script */
   span.ais523hmn {
@@ -204,10 +209,12 @@ domain("patchdemo.wmflabs.org") {
   .mw-enhancedchanges-arrow, .mw-changeslist-groupdiff {
     background: #b0f2e8;
   }
+
 /* Smol the sub-text in Enchanced RC */
   .mw-rcfilters-ui-highlights-enhanced-nested {
     font-size: 0.9em;
   }
+
 /* Bigger banner-close icons */
   #cnotice-toggle-box > a > img {
     display: none;
@@ -268,11 +275,6 @@ ul + ul {
   font-size: 50% !important;
   user-select: none;
   opacity:50%
-}
-
-/* tweak popups */
-.popupPreview > table {
-  width:100%;
 }
   
 /* More compact [[Special:PageTranslation]] */
