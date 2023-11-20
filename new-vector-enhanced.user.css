@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.05
+@version     1.0.06
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -711,7 +711,7 @@ html.vector-feature-zebra-design-enabled {
 }
 @media screen and (min-width: 1000px) {
   .vector-page-toolbar {
-    width: calc(100% - 270px);
+    width: calc(100% - 245px);
   }
   .vector-page-toolbar, 
   .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
