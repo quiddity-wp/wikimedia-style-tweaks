@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.06
+@version     1.0.07
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -32,6 +32,16 @@ domain("wikifunctions.org"),
 domain("vrt-wiki.wikimedia.org"),
 domain("patchdemo.wmflabs.org") {
 /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
+
+/* undergoing cleanup... 
+1. Tweaks
+2. sticky site-header and page-tabs 
+3. toc 
+4. page-tools
+5. main menu 
+6. custom additions - top icons and similar. 
+*/
+
 
 /* 1. Misc Tweaks */
 /* Shorten the inline links for "edit source" to just "source" */
@@ -151,12 +161,6 @@ domain("patchdemo.wmflabs.org") {
 /* Hide the default sticky header */
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
   display: none;
-}
-/* Nudge content down to account for no-default gap */
-@media screen and (max-width: 999px) {
-  .mw-content-container {
-    padding-top: 55px;
-  }
 }
 
 /* Fix for anchor navigation -- BROKEN ? */
@@ -549,6 +553,11 @@ html {
     position: fixed;
   }
 }
+
+/* Main menu nudge */
+.vector-main-menu-container {
+  padding-top: 20px;
+}
   
 /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
 @media screen and (max-width: 999px) {
@@ -754,8 +763,9 @@ html {
   padding-top: 55px !important;
 }
 @media screen and (max-width: 999px) {
-  .vector-feature-zebra-design-disabled .mw-page-container {
-    padding-top: 55px;
+  .vector-feature-zebra-design-disabled .mw-page-container,
+  .mw-content-container {
+    padding-top: 5px;
   }
   #pt-talk-alert {
     margin-top: 10px !important;
