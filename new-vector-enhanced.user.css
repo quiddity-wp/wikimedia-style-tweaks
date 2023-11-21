@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.07
+@version     1.0.08
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -497,9 +497,20 @@ html {
 }
 
 /* Reduce the grid gutter, and header height */
-@media screen and ( min-width: 1000px ) {
+@media screen and ( min-width: 1200px ) {
   .vector-feature-zebra-design-disabled .mw-page-container-inner {  
-    grid-template: min-content min-content 1fr min-content / 220px !important;
+    grid-template: min-content min-content 1fr min-content / 290px !important;
+    grid-template-areas: 
+      'siteNotice siteNotice'
+      'mainMenu pageContent'
+      'toc pageContent'
+      'footer footer' !important;
+    column-gap: 10px !important;
+  }
+}
+@media screen and ( max-width: 1199px ) and ( min-width: 1000px ) {
+  .vector-feature-zebra-design-disabled .mw-page-container-inner {  
+    grid-template: min-content min-content 1fr min-content / 250px !important;
     grid-template-areas: 
       'siteNotice siteNotice'
       'mainMenu pageContent'
@@ -718,9 +729,18 @@ html.vector-feature-zebra-design-enabled {
   right: 1px;
   margin-left: -2px
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .vector-page-toolbar {
-    width: calc(100% - 245px);
+    width: calc(100% - 310px);
+  }
+  .vector-page-toolbar, 
+  .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
+    margin: 0 5px 0 0;
+  }
+}
+@media screen and (max-width:1199px) and (min-width: 1000px) {
+  .vector-page-toolbar {
+    width: calc(100% - 280px);
   }
   .vector-page-toolbar, 
   .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
@@ -729,7 +749,8 @@ html.vector-feature-zebra-design-enabled {
 }
 @media screen and (max-width: 999px) and (min-width: 300px) {
   .vector-page-toolbar {
-    width: 95vw; left: 10px;
+    width: 95vw; 
+    left: 10px;
   }
 }
 .vector-feature-zebra-design-disabled .vector-dropdown .vector-dropdown-content {
@@ -770,6 +791,9 @@ html {
   #pt-talk-alert {
     margin-top: 10px !important;
   }
+  #siteSub {
+    padding-top: 5px;
+  }
 }
 
 /* Fix for VE toolbar */
@@ -809,13 +833,10 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   border-bottom: unset;
 }
 
-/* Fix sitenotice margin
+/* Fix sitenotice margin */
 #siteNotice {
-  top: 25px;
+  top: 65px;
 }
-#siteNotice {
-  margin-top: 55px
-} */
 
 /* Fix sticky table-headers */
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .mw-sticky-header-element {
