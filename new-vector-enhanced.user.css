@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.11
+@version     1.0.12
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -358,12 +358,13 @@ html {
 
 /* Move the collapsed ToC down */
 #vector-sticky-header-toc {
-  top: 48px !important;
+  top: 46px !important;
   left: 0px !important;
   margin-top: 0;
-  margin-left: -120px !important;
+  margin-left: -131px !important;
   margin-right: 100px !important;
   background: white;
+  border: #e4e4e4 1px solid;
 }
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
   transition: unset;
@@ -386,7 +387,7 @@ html {
     opacity: 1;
   }
 .vector-feature-zebra-design-disabled .vector-dropdown .vector-dropdown-checkbox {
-  left:4px
+  left: 0;
 }
 .vector-dropdown > .vector-menu-content {
   padding: 0 !important;
