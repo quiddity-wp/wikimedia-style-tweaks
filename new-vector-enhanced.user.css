@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.10
+@version     1.0.11
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -305,7 +305,6 @@ html {
 /* Move button for collapsed ToC down below the sticky-header, and add border */
 .client-js .vector-below-page-title .vector-page-titlebar-toc {
   top: 55px !important;
-  display: block
 }
 @media screen {
   .vector-feature-zebra-design-disabled .vector-toc-landmark {
@@ -322,13 +321,13 @@ html {
 .vector-feature-zebra-design-enabled .vector-pinned-container,
 .vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled .vector-sticky-pinned-container,
 .vector-feature-zebra-design-enabled.vector-feature-toc-pinned-clientpref-1 .vector-column-start > .vector-toc-landmark {
-  top: 85px !important;
+  top: 95px !important;
 }
 /* .vector-feature-page-tools-enabled #vector-toc-pinned-container .vector-toc {
   padding-top: 0 !important;
 } */
 #mw-panel-toc {
-  margin-top: -40px !important;
+  margin-top: -50px !important;
 }
  .vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled .vector-pinned-container {
  max-height: none
@@ -364,6 +363,7 @@ html {
   margin-top: 0;
   margin-left: -120px !important;
   margin-right: 100px !important;
+  background: white;
 }
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
   transition: unset;
@@ -710,6 +710,16 @@ html.vector-feature-zebra-design-enabled {
 .vector-feature-zebra-design-enabled .vector-page-toolbar {
   top: 54px;
 }
+.vector-feature-zebra-design-enabled .vector-sticky-pinned-container {
+  overflow: unset;
+  background-color: unset;
+}
+.vector-feature-zebra-design-enabled .vector-sticky-pinned-container::after {
+  background: unset;
+}
+.vector-feature-zebra-design-enabled .vector-pinned-container {
+  background-color: unset;
+}
 
 /* Fixes for mobile-size */
 @media screen and (max-width: 550px) {
@@ -763,7 +773,7 @@ html.vector-feature-zebra-design-enabled {
   padding: 0 !important;
 }
 .vector-page-toolbar-container .vector-dropdown {
-  height: 27px;
+  height: 25px;
 }
 input:focus:not(:active) + .cdx-button:not(.cdx-button--action-progressive) {
   box-shadow: unset;
@@ -776,10 +786,7 @@ input:focus:not(:active) + .cdx-button:not(.cdx-button--action-progressive) {
   }
 }
 
-/* Move button for ToC-collapsed down below the sticky-header */
-.client-js .vector-below-page-title .vector-page-titlebar-toc {
-  top: 80px !important;
-}
+/* Move scroll below the sticky-header */
 html {
   scroll-padding-top: 120px !important;
 }
@@ -787,7 +794,7 @@ html {
 /* Nudge content down to account for no-default gap */
 .vector-feature-zebra-design-disabled .mw-content-container,
 .vector-feature-zebra-design-enabled .mw-page-container {
-  padding-top: 55px !important;
+  padding-top: 65px !important;
 }
 @media screen and (max-width: 999px) {
   .vector-feature-zebra-design-disabled .mw-page-container,
@@ -999,6 +1006,15 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 /* remove TOC bottom border gradient background */
 .vector-feature-zebra-design-disabled .vector-sticky-pinned-container::after {
 background: unset
+}
+
+/* test toc fixes */
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
+  display: block !important;
+}
+
+#p-twinkle-dropdown-label {
+  padding-top: 5px;
 }
 
 }
