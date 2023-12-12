@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.13
+@version     1.0.14
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -406,6 +406,9 @@ html {
   .vector-feature-zebra-design-disabled.client-js .vector-below-page-title .vector-page-titlebar-toc {
   left: 0;
   }
+  .client-js .vector-below-page-title .vector-page-titlebar-toc {
+    top: 82px !important;
+  }
 }
 
 /* Reduce ToC height for logged-out view 
@@ -797,7 +800,7 @@ html {
 @media screen and (max-width: 999px) {
   .vector-feature-zebra-design-disabled .mw-page-container,
   .mw-content-container {
-    padding-top: 5px;
+    padding-top: 28px;
   }
   #pt-talk-alert {
     margin-top: 10px !important;
