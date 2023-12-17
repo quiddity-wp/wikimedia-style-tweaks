@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.14
+@version     1.0.15
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -540,10 +540,10 @@ html {
   column-gap: 20px !important;
 }
 
-/* Fix sitenotice margin */
+/* Fix sitenotice margin
 #siteNotice {
   top: 60px;
-}
+} */
 
 /* Fix for banners in small windows */
 @media screen and (max-width: 999px) {
