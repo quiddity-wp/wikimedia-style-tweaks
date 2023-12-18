@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wiki DARK
 @namespace   StylishThemes
-@version     1.0.10
+@version     1.0.11
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css
 @license     CC-BY-SA-4.0
@@ -256,45 +256,5 @@ html .branding-box img {
 	}
 }
 
-
-/* Quiddity's extra background overrides */
-.mw-logo-icon {
-  background: black;
-}
-.mw-page-container {
-  background: #e1e1e1 !important;
-}
-body {background: #e1e1e1 !important;}
-  
-  /* Grey background for main areas */
-  body, 
-  .vector-feature-zebra-design-disabled body, 
-  .mw-page-container,
-  #vector-toc,
-  .hatnote {
-    background: #e3e3e5 !important;
-  }
-  
-  /* Grey Sticky Headers */
-  .mw-header {
-    background-color: #eaecf0 !important;
-    border-bottom: 1px solid #a2a9b1 !important;
-  }
-  .vector-page-toolbar, 
-  .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar {
-    background-color: #f8f9fa !important;
-  }
-  
-  /* Grey tables */
-  table.wikitable > * > tr > td {
-    background-color: unset;
-  }
-  table.wikitable > * > tr > th {
-    background-color: unset;
-  }
-  html table,
-  div.infobox_v3{
-    background-color: unset;
-  }
 
 }
