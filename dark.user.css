@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wiki DARK
 @namespace   StylishThemes
-@version     1.0.9
+@version     1.0.10
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css
 @license     CC-BY-SA-4.0
@@ -270,7 +270,8 @@ body {background: #e1e1e1 !important;}
   body, 
   .vector-feature-zebra-design-disabled body, 
   .mw-page-container,
-  #vector-toc {
+  #vector-toc,
+  .hatnote {
     background: #e3e3e5 !important;
   }
   
@@ -286,10 +287,14 @@ body {background: #e1e1e1 !important;}
   
   /* Grey tables */
   table.wikitable > * > tr > td {
-    background-color: #e9e9e9;
+    background-color: unset;
   }
   table.wikitable > * > tr > th {
-    background-color: #cdcdcd;
+    background-color: unset;
+  }
+  html table,
+  div.infobox_v3{
+    background-color: unset;
   }
 
 }
