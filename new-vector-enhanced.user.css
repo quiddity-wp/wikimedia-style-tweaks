@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.17
+@version     1.0.18
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -730,6 +730,7 @@ html.vector-feature-zebra-design-enabled {
 }
 .vector-feature-zebra-design-enabled .vector-sticky-pinned-container {
   background-color: unset;
+  top: 90px;
 }
 .vector-feature-zebra-design-enabled .vector-pinned-container {
   background-color: unset;
@@ -1063,6 +1064,13 @@ background: unset
 
 .cdx-text-input {
   min-width: unset;
+}
+
+/* fix for long usernames */
+@media screen {
+  #pt-userpage-2 {
+    max-width: 17em;
+  }
 }
 
 }
