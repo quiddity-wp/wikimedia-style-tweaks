@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.18
+@version     1.0.19
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -227,6 +227,16 @@ html {
 }
 .vector-menu-tabs .mw-list-item .mw-ui-icon {
   margin: 0;
+}
+@media screen and (min-width:1200px) {
+  #left-navigation {
+    margin-left: -12px;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width:999px) {
+  #left-navigation {
+    margin-left: -38px !important;
+  }
 }
 
   /* ------------------------------------------------------------------ */
