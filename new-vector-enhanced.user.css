@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.19
+@version     1.0.20
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -564,12 +564,12 @@ html {
   top: 60px;
 } */
 
-/* Fix for banners in small windows */
+/* Fix for banners in small windows - no longer needed?
 @media screen and (max-width: 999px) {
   #siteNotice {
     top: 60px;
   }
-}
+} */
 
 /* Remove gap in larger windows, when sidebar and ToC are collapsed -- NO LONGER WORKS
 @media screen and (min-width:1000px) {
@@ -730,7 +730,7 @@ html.vector-feature-zebra-design-enabled {
   }
 }
 .vector-feature-zebra-design-enabled .vector-header-container .mw-header {
-  max-width: unset;
+  max-width: 100vw;
   min-width: unset;
   padding-right: 0;
   padding-left: 15px;
@@ -915,6 +915,11 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 /*  border-bottom: 1px solid #a2a9b1 !important; */
   max-height: 24px;
 }
+@media screen and (max-width: 999px) {
+  #p-associated-pages {
+    border-left: unset !important;
+  }
+}
 .vector-page-toolbar-container {
   box-shadow: unset;
 }
@@ -1080,6 +1085,25 @@ background: unset
 @media screen {
   #pt-userpage-2 {
     max-width: 17em;
+  }
+}
+
+/* fix sticky header icon size */
+@media screen and (max-width: 999px) {
+  .vector-header .cdx-button.cdx-button--icon-only {
+    min-width: unset;
+    min-height: unset;
+  }
+  .vector-main-menu-container {
+    border-right: unset;
+  }
+}
+
+/* fullwidth infoboxes on phone-size widths */
+@media screen and (max-width: 550px) {
+  .infobox {
+    width:100% !important;
+    max-width: 100% !important;
   }
 }
 
