@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.20
+@version     1.0.21
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -335,7 +335,7 @@ html {
 .vector-feature-zebra-design-enabled .vector-pinned-container,
 .vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled .vector-sticky-pinned-container,
 .vector-feature-zebra-design-enabled.vector-feature-toc-pinned-clientpref-1 .vector-column-start > .vector-toc-landmark {
-  top: 95px !important;
+  top: 85px !important;
 }
 /* .vector-feature-page-tools-enabled #vector-toc-pinned-container .vector-toc {
   padding-top: 0 !important;
@@ -373,34 +373,46 @@ html {
 
 /* Move the collapsed ToC down */
 #vector-sticky-header-toc {
-  top: 46px !important;
-  left: 0px !important;
+  top: 48px !important;
+  left: 0 !important;
   margin-top: 0;
   margin-left: -131px !important;
   margin-right: 100px !important;
   background: white;
   border: #e4e4e4 1px solid;
 }
-.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
+#vector-sticky-header-toc-label,
+#vector-page-titlebar-toc-label {
+  padding: 8px 10px !important;
+}
+.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container,
+.vector-feature-zebra-design-enabled .vector-sticky-header-container {
   transition: unset;
 }
 @media screen and (min-width: 999px) {
   #vector-page-titlebar-toc {
     position: fixed !important;
-    top: 56px !important;
-    left: 3px;
+    top: 54px !important;
+    left: 3px !important;
     border: 1px solid #eaecf0;
     background: white !important;
     z-index: 1;
   }
-  #vector-page-titlebar-toc-label {
-    padding: 0.3em !important;
+}
+@media screen and (min-width: 1000px) {
+  .vector-feature-zebra-design-enabled.client-js.vector-feature-toc-pinned-clientpref-0 body:not(.vector-sticky-header-visible).vector-below-page-title .vector-page-titlebar-toc {
+    margin-left: -6px !important;
   }
 }
-  #vector-page-titlebar-toc-label {
-    background-color: white !important;
-    opacity: 1;
+@media screen and (min-width: 1199px) {
+  #vector-page-titlebar-toc {
+    left: 11px !important;
   }
+}
+#vector-page-titlebar-toc-label {
+  background-color: white !important;
+  opacity: 1;
+}
 .vector-feature-zebra-design-disabled .vector-dropdown .vector-dropdown-checkbox {
   left: 0;
 }
@@ -417,11 +429,12 @@ html {
 }
 
 @media screen and (max-width: 999px) {
-  .vector-feature-zebra-design-disabled.client-js .vector-below-page-title .vector-page-titlebar-toc {
+  .vector-feature-zebra-design-disabled.client-js .vector-below-page-title .vector-page-titlebar-toc,
+  .vector-feature-zebra-design-enabled.client-js .vector-below-page-title .vector-page-titlebar-toc {
   left: 0;
   }
   .client-js .vector-below-page-title .vector-page-titlebar-toc {
-    top: 82px !important;
+    top: 78px !important;
   }
 /* Nudge title down if no TOC exists */
   .vector-toc-not-available .firstHeading {
@@ -515,10 +528,13 @@ html {
   /* ------------------------------------------------------------------ */
 /* 5. General whitespace reductions */
 
-/* Reduce gap above Page-title */
+/* Reduce gap around Page-title */
 .vector-layout-grid .mw-page-container-inner, 
 .mw-page-container-inner {
-  row-gap: 0;
+  row-gap: 2px;
+}
+.vector-feature-zebra-design-enabled #siteSub {
+  margin-top: unset;
 }
 
 /* Reduce the grid gutter, and header height */
@@ -607,7 +623,6 @@ html {
     left: 0;
     position: fixed;
     z-index: 4;
-    border-right: 1px lightgray solid;
     overflow: auto !important;
     overflow-x: hidden !important;
   }
@@ -830,9 +845,11 @@ html {
   #pt-talk-alert {
     margin-top: 10px !important;
   }
-  #siteSub {
+/* test remove
+#siteSub {
     padding-top: 5px;
   }
+  */
 }
 
 /* Fix for VE toolbar */
@@ -1093,9 +1110,6 @@ background: unset
   .vector-header .cdx-button.cdx-button--icon-only {
     min-width: unset;
     min-height: unset;
-  }
-  .vector-main-menu-container {
-    border-right: unset;
   }
 }
 
