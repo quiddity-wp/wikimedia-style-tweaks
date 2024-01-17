@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.21
+@version     1.0.22
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -92,7 +92,7 @@ domain("patchdemo.wmflabs.org") {
 /* Remove empty space at page-bottom */
 .mw-footer-container {
   padding-bottom: 0 !important;
-  padding-top: 0 !important;
+  padding-top: 100px !important;
 }
 
 /* Shorten the inter-languages buttons to just show the number of languages, not the word "languages" -- HACKISH! */
@@ -140,7 +140,7 @@ domain("patchdemo.wmflabs.org") {
   margin-right: 1px;
 }
 
-/* Gap above the log-out button */
+/* Add gap above the log-out button */
 #pt-logout {
   margin-top: 20px
 }
@@ -441,6 +441,9 @@ html {
     padding-top: 20px !important;
   }
 }
+#firstHeading {
+padding-top: 10px;
+}
 
 
 /* Reduce ToC height for logged-out view 
@@ -539,29 +542,31 @@ html {
 
 /* Reduce the grid gutter, and header height */
 @media screen and ( min-width: 1200px ) {
-  .vector-feature-zebra-design-disabled .mw-page-container-inner {  
-    grid-template: min-content min-content 1fr min-content / 290px !important;
+  .vector-feature-zebra-design-disabled .mw-page-container-inner,
+  .vector-feature-zebra-design-enabled .mw-page-container-inner {  
+    grid-template: min-content 1fr min-content / 290px !important;
     grid-template-areas: 
       'siteNotice siteNotice'
-      'mainMenu pageContent'
-      'toc pageContent'
+      'columnStart pageContent'
       'footer footer' !important;
     column-gap: 10px !important;
   }
 }
 @media screen and ( max-width: 1199px ) and ( min-width: 1000px ) {
-  .vector-feature-zebra-design-disabled .mw-page-container-inner {  
-    grid-template: min-content min-content 1fr min-content / 250px !important;
+  .vector-feature-zebra-design-disabled .mw-page-container-inner,
+  .vector-feature-zebra-design-enabled .mw-page-container-inner {  
+    grid-template: min-content 1fr min-content / 250px !important;
     grid-template-areas: 
       'siteNotice siteNotice'
-      'mainMenu pageContent'
-      'toc pageContent'
+      'columnStart pageContent'
       'footer footer' !important;
     column-gap: 10px !important;
   }
 }
 @media screen and (min-width: 1000px) {
-  .vector-feature-zebra-design-disabled .mw-body {
+  .vector-feature-zebra-design-disabled .mw-body,
+  .vector-feature-zebra-design-enabled .mw-body,
+  .mw-body {
     display: grid;
     grid-template: min-content min-content min-content 1fr / minmax(0,60em) min-content;
     grid-template-areas:
@@ -615,7 +620,17 @@ html {
 .vector-main-menu-container {
   padding-top: 20px;
 }
-  
+#vector-main-menu-dropdown-label {
+  padding: 10px;
+}
+#vector-main-menu-dropdown > .vector-dropdown-content {
+  top: 50px;
+}
+@media screen and (max-width: 999px) {
+  #vector-main-menu-dropdown > .vector-dropdown-content {
+    top: 72px;
+  }
+}  
 /* Force Main Menu to show when scrolled, if TOC is only at pop-out widths  */
 @media screen and (max-width: 999px) {
   #mw-sidebar-checkbox:checked ~ .vector-sidebar-container, .vector-main-menu-container  {
@@ -644,12 +659,12 @@ html {
 }
   
 /* Force search-bar to show in site-header at smaller sizes */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
   .mw-header .vector-typeahead-search-container {
   display: block;
   }
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 399px) {
   .search-toggle {
     display: none !important;
   }
@@ -780,7 +795,7 @@ html.vector-feature-zebra-design-enabled {
 .vector-page-toolbar, 
 .vector-feature-zebra-design-disabled .mw-body .vector-page-toolbar  {
   position: fixed !important; 
-  top: 55px; 
+  top: 54px; 
   background-color: white; 
   z-index: 1 !important;
   right: 1px;
@@ -834,7 +849,8 @@ html {
 
 /* Nudge content down to account for no-default gap */
 .vector-feature-zebra-design-disabled .mw-content-container,
-.vector-feature-zebra-design-enabled .mw-page-container {
+.vector-feature-zebra-design-enabled .mw-page-container,
+.mw-page-container {
   padding-top: 65px !important;
 }
 @media screen and (max-width: 999px) {
@@ -929,7 +945,6 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   border-bottom: 1px solid #a2a9b1 !important;
   border-left: 1px solid #a2a9b1 !important;
   padding-bottom: 0;
-/*  border-bottom: 1px solid #a2a9b1 !important; */
   max-height: 24px;
 }
 @media screen and (max-width: 999px) {
