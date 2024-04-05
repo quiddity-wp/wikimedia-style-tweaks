@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.18
+@version     1.1.19
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -306,5 +306,18 @@ a[href="/wiki/User:FuzzyBot"] {
   overflow: hidden;
   display: inline-block;
 }
+
+/* fix gadget for sticky table headers */
+.mw-sticky-header > thead,
+.vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled .mw-sticky-header-element{
+  top: 77px !important;
+}
+
+/* 
+.vector-feature-zebra-design-enabled .vector-header-container .mw-header,
+.vector-feature-zebra-design-enabled .vector-page-toolbar,
+#p-associated-pages {
+  background: #d8d7d7 !important;
+} */
   
 }
