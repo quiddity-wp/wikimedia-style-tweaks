@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        wiki DARK
 @namespace   StylishThemes
-@version     1.0.11
+@version     1.0.12
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/dark.user.css
 @license     CC-BY-SA-4.0
@@ -88,7 +88,8 @@ html .mw-kartographer-map,
 html .mw-kartographer-mapDialog-map,
 html .oo-ui-searchWidget-results .oo-ui-iconElement-icon,
 html .list-thumb,
-html .ext-related-articles-card-list .ext-related-articles-card-thumb {
+html .ext-related-articles-card-list .ext-related-articles-card-thumb,
+#centralNotice {
 	filter: invert( 1 ) hue-rotate( 180deg );
 }
 
