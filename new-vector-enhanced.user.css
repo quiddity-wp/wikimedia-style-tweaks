@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.22
+@version     1.0.23
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -299,7 +299,13 @@ html {
   width: unset;
 }
 
-/* Add border  --- TEST REMOVAL
+/* Add ToC-item underlines, for whitespace reduction and alignment indicators  */
+.vector-toc-text {
+border-bottom: 1px #eaecf0 solid !important;
+padding-bottom: 2px !important;
+}
+
+/* Add full-TOC border  --- TEST REMOVAL
 @media screen and (min-width: 1000px) {
   .vector-toc {
     border-right: 1px lightgray solid;
