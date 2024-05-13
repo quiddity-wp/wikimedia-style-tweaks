@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.20
+@version     1.1.21
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -156,7 +156,7 @@ domain("patchdemo.wmflabs.org") {
   }
 
   /* Highlight RC in sidebar cos wikis keep moving it */
-  #n-recentchanges {
+  #n-recentchanges > a {
     background-color: #d3f2d3;
   }
   
@@ -308,9 +308,11 @@ a[href="/wiki/User:FuzzyBot"] {
 }
 
 /* fix gadget for sticky table headers */
-.mw-sticky-header > thead,
-.vector-feature-zebra-design-enabled.client-js.vector-sticky-header-enabled .mw-sticky-header-element{
-  top: 77px !important;
+@media screen and (min-width: 1000px) {
+	.skin-vector-2022.vector-sticky-header-visible .jquery-tablesorter > thead,
+	.skin-vector-2022.vector-sticky-header-visible .mw-sticky-header > thead {
+		top: 4.5rem !important;
+	}
 }
 
 /* 
@@ -319,5 +321,14 @@ a[href="/wiki/User:FuzzyBot"] {
 #p-associated-pages {
   background: #d8d7d7 !important;
 } */
-  
+
+/* test smaller ToC text */
+.vector-toc-text {
+font-size: 90% !important;
+}
+
+/* lighter numbers for Vector-classic text */
+.tocnumber {
+color: grey;
+}
 }
