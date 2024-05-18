@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.25
+@version     1.0.26
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -303,7 +303,7 @@ html {
 
 /* Add ToC-item underlines, for whitespace reduction and alignment indicators  */
 .vector-toc-text {
-border-bottom: 1px var(--border-color-muted) solid !important;
+border-bottom: 1px var(--background-color-interactive,#eaecf0) solid !important;
 padding-bottom: 2px !important;
 }
 
@@ -810,7 +810,6 @@ html.vector-feature-zebra-design-enabled {
 .mw-body .vector-page-toolbar  {
   position: fixed !important; 
   top: 54px; 
-  /* background-color: white; */
   z-index: 1 !important;
   right: 1px;
   margin-left: -2px
@@ -840,7 +839,8 @@ html.vector-feature-zebra-design-enabled {
   }
 }
 .vector-dropdown .vector-dropdown-content {
-  padding: 0 !important;
+  padding: 5px;
+  border: 1px solid var(--border-color-subtle);
 }
 .vector-page-toolbar-container .vector-dropdown {
   height: 25px;
@@ -942,19 +942,17 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   
 /* Grey Sticky Headers  */
 .mw-header {
-  background-color: var(--color-inverted); /* or a bit darker: #eaecf0 */
-  border-bottom: 1px solid var(--border-color-base);
+  background-color: var(--color-inverted);
+  border-bottom: 1px solid var(--border-color-subtle);
 }
 .vector-page-toolbar {
   background-color: var(--color-inverted);
-  border-bottom: 1px solid var(--border-color-base);
-  border-left: 1px solid var(--border-color-base);
-/*  border-right: 1px solid #a2a9b1 !important; */
+  border-bottom: 1px solid var(--border-color-subtle);
 }
 #p-associated-pages {
   background-color: var(--color-inverted);
-  border-bottom: 1px solid var(--border-color-base);
-  border-left: 1px solid var(--border-color-base);
+  border-bottom: 1px solid var(--border-color-subtle);
+  border-left: 1px solid var(--border-color-subtle);
   padding-bottom: 0;
   max-height: 24px;
 }
