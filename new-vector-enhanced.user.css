@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.28
+@version     1.0.29
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -45,6 +45,13 @@ domain("patchdemo.wmflabs.org") {
 
 
 /* 1. Misc Tweaks */
+/* background color override */
+@media screen {
+  body {
+    background-color: var(--background-color-base,#f8f9fa) !important;
+  }
+}
+
 /* Shorten the inline links for "edit source" to just "source" */
 .mw-editsection > a:not(.mw-editsection-visualeditor)  {
   font-size: 0px;
