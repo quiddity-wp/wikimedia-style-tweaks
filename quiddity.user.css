@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.23
+@version     1.1.24
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -329,11 +329,14 @@ table.wikitable > * > tr > td {
   display: block
 }
 
-/* troubleshoot interrupted lists -- 
+/* troubleshoot interrupted lists, and exceptions -- 
 https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Accessibility#Another_LISTGAP_solution? 
 */
 ul + ul {
   border-top: 2px dashed #ccc;
+}
+#footer-places, #footer-icons {
+  border-top: none;
 }
   
 /* Hide VE's undo/redo */
@@ -410,6 +413,12 @@ color: grey;
 .mw-anon-preview-warning {
 background: #f47087;
 border: green 10px solid;
+}
+
+/* prematter */
+.vector-body-before-content,
+#siteSub {
+opacity: 0.65;
 }
 
 }
