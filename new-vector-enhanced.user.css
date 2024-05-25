@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.29
+@version     1.0.30
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -194,7 +194,7 @@ html {
 #cx-language span:not(.mw-ui-icon-vector-gadget-cx-language):before, 
 #cx-imageGallery span:not(.mw-ui-icon-vector-gadget-cx-imageGallery):before {
   content: "↳ ";
-  color: black;
+  color: var(--color-base);
 }
   
 /* Remove header whitespace */
