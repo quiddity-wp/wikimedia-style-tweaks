@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.24
+@version     1.1.25
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -332,7 +332,7 @@ table.wikitable > * > tr > td {
 /* troubleshoot interrupted lists, and exceptions -- 
 https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Accessibility#Another_LISTGAP_solution? 
 */
-ul + ul {
+ul:not(.noprint) + ul {
   border-top: 2px dashed #ccc;
 }
 #footer-places, #footer-icons {
