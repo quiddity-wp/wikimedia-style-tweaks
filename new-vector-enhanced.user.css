@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.30
+@version     1.0.31
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -440,7 +440,7 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
 
 @media screen and (max-width: 999px) {
   .vector-below-page-title .vector-page-titlebar-toc {
-  left: 0;
+  left: 1px !important;
   }
   .client-js .vector-below-page-title .vector-page-titlebar-toc {
     top: 78px !important;
