@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.26
+@version     1.1.27
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -78,58 +78,6 @@ domain("patchdemo.wmflabs.org") {
   height: 5px;
   margin-top: -5px;
   margin-bottom: 5px;
-}
-/* Dark mode in navpopups - TESTING */
-ins.popupDiff {
-  background: #8fa6f9;
-  color: var(--color-base);
-}
-del.popupDiff {
-  background: #e0b96c;
-  color: var(--color-base);
-}
-.navpopup {
-  background-color: var(--color-inverted);
-}
-.popup_mainlink a {
-  color: var(--color-base);
-}
-.navpopup hr {
-  color: #aaa !important;
-  background-color: #aaa !important;
-}
-.popup_menu {
-  background: var(--color-inverted);
-}
-.popup_menu a {
-  color: #555;
-}
-.popup_menu_row {
-  color: #aaa;
-}
-.popup_drop a,
-.popup_drop a:visited {
-  color: #0645ad;
-}
-.popup_drop:hover .popup_menu,
-.popup_drop .popup_menu:hover {
-  background: var(--color-inverted);
-  color: #555;
-}
-.popup_drop:hover {
-  background: #ccf;
-  color: #44f;
-}
-/* other colours, styles and so on */
-.popup_menu a:hover {
-  background: grey;
-  color: var(--color-inverted);
-}
-a.popup_change_title_link {
-  color: #152;
-}
-.popup_history_row_even {
-  background: var(--color-inverted);
 }
 
 /* Change the color of the highlightmyname script */
