@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.32
+@version     1.0.33
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -389,7 +389,7 @@ padding-bottom: 2px !important;
   margin-left: -131px !important;
   margin-right: 100px !important;
   background: var(--color-inverted);
-  border: var(--border-color-base) 1px solid;
+  border: var(--border-color-subtle) 1px solid;
 }
 #vector-sticky-header-toc-label,
 #vector-page-titlebar-toc-label {
@@ -404,7 +404,7 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
     position: fixed !important;
     top: 54px !important;
     left: 4px !important;
-    border: 1px solid var(--border-color-base);
+    border: 1px solid var(--border-color-subtle);
     background: var(--color-inverted);
     z-index: 1;
   }
@@ -429,7 +429,9 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
 .vector-dropdown > .vector-menu-content {
   padding: 0 !important;
 }
-
+#vector-page-titlebar-toc-label:not(.cdx-button--weight-quiet) {
+  border: 1px solid var(--border-color-subtle) !important;
+}
 /* Nudge the Content and ToC inwards, if site-sidebar is uncollapsed */
 /* Content nudge */
 @media screen and (max-width: 999px) and (min-width:550px) {
@@ -898,8 +900,8 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 }
 
 /* Fix for sticky table-header gadgets */
-.skin-vector-2022.vector-sticky-header-visible .jquery-tablesorter > thead,
-	.skin-vector-2022.vector-sticky-header-visible .mw-sticky-header > thead {
+.jquery-tablesorter > thead,
+.mw-sticky-header > thead {
     position: -webkit-sticky;
     position: sticky;
     top: 78px !important;
@@ -1149,6 +1151,11 @@ background: unset
   }
 }
 
-
+/* Fix the patch tommorow */
+@media screen and (max-width: 719px) {
+  .vector-header {
+    flex-flow: unset;
+  }
+}
 
 }
