@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.25
+@version     1.1.26
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -375,20 +375,12 @@ a[href="/wiki/User:FuzzyBot"] {
   opacity: 0.6;
 }
 
-/* fix navpop's meta-menu size */
+/* restrict navpop's meta-menu size */
 .popup_drop > a {
   width: 17px;
   height: 17px;
   overflow: hidden;
   display: inline-block;
-}
-
-/* fix gadget for sticky table headers */
-@media screen and (min-width: 1000px) {
-	.skin-vector-2022.vector-sticky-header-visible .jquery-tablesorter > thead,
-	.skin-vector-2022.vector-sticky-header-visible .mw-sticky-header > thead {
-		top: 4.5rem !important;
-	}
 }
 
 /* 
