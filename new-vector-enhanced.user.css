@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.34
+@version     1.0.35
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -168,6 +168,13 @@ domain("patchdemo.wmflabs.org") {
 .vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container,
 .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
   display: none;
+}
+
+/* fix for new oversize header-start */
+@media screen and (max-width: 719px) {
+  .vector-header-start, .vector-header-end {
+    width: unset;
+  }
 }
 
 /* Fix for anchor navigation -- BROKEN ? */
@@ -986,6 +993,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   margin-left: -5px;
   max-width: 50px;
   max-height: 50px;
+  min-width: 50px;
 }
 
 /* Replace toolbar text with icons at small widths */
