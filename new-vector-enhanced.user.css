@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.35
+@version     1.0.36
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -115,10 +115,12 @@ domain("patchdemo.wmflabs.org") {
   display: none;
 }
 /* Page-top button */
-#p-lang-btn .vector-dropdown-label-text {
-  max-width: 35px !important;
-  overflow: hidden;
-  height: 25px;
+@media screen and (max-width: 719px) {
+  #p-lang-btn .vector-dropdown-label-text {
+    max-width: 35px !important;
+    overflow: hidden;
+    height: 25px;
+  }
 }
   
 /* Fix min-width */
@@ -1090,7 +1092,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   }
 }
 
-/* Fix mislaigned icons in wide windows */
+/* Fix misaligned icons in wide windows */
   #ca-wikilove > a {
     margin-top: -4px !important;
     padding: 0 5px 0 0 !important;
