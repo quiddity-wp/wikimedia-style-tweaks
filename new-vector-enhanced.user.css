@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.37
+@version     1.0.38
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -113,7 +113,7 @@ domain("patchdemo.wmflabs.org") {
   display: none;
 }
 /* Page-top button */
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 600px) {
   #p-lang-btn .vector-dropdown-label-text {
     max-width: 35px !important;
     overflow: hidden;
