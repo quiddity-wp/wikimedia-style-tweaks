@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.29
+@version     1.1.30
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -50,7 +50,7 @@ domain("patchdemo.wmflabs.org") {
 
 /* NAVPOP FIXES */
 /* ------------ */
-/* Bigger text in NavPopups gadget */
+/* Bigger text */
 .navpopup {
   font-size: 0.875em; 
   line-height: 140%;
@@ -58,7 +58,7 @@ domain("patchdemo.wmflabs.org") {
 .popup_menu {
   margin-top: 1.1em;
 }
-/* tweak popups */
+/* wider */
 .popupPreview > table {
    width:100%;
 }
@@ -79,6 +79,13 @@ domain("patchdemo.wmflabs.org") {
   margin-top: -5px;
   margin-bottom: 5px;
 }
+/* restrict meta-menu size */
+.popup_drop > a {
+  width: 17px;
+  height: 17px;
+  overflow: hidden;
+  display: inline-block;
+}
 
 /* Change the color of the highlightmyname script */
 span.ais523hmn {
@@ -96,6 +103,10 @@ span.ais523hmn {
 .mw-tag-mw-reverted {
   opacity: 0.2;
 }
+/* Ignore fuzzybot in history pages */
+a[href="/wiki/User:FuzzyBot"] {
+  opacity: 0.4;
+}
 
 /* Test ooui tweaks, smaller menu rows */
 .oo-ui-menuOptionWidget {
@@ -112,17 +123,18 @@ span.ais523hmn {
   display: none;
 }
 
+/* Change link colors */
 /* Make disambig links orange */
 a.mw-disambig {
   color: #ff8921;
 }
-
-/* Make redirect links purple */
+/* Make redirect links purple
 a.mw-redirect {
   color: #c364ef;
-}
+} */
 
-/* Bold the sidebar's interwiki links to Enwiki/Simple, and interproject links to Commons/WikiVoyage/Wikisource */
+/* Bold the interwiki links to Enwiki/Simple, and 
+interproject links to Commons/WikiVoyage/Wikisource */
 .interwiki-en,
 .interwiki-simple,
 .wb-otherproject-commons,
@@ -134,7 +146,7 @@ a.mw-redirect {
 
 /* Force reduced # of rows in editing window */
 #wpTextbox1 {
-  height: 25em;
+  height: 30em;
 }
 
 /* Global Font tweaks, better typography */
@@ -161,64 +173,113 @@ table.wikitable > * > tr > td {
   vertical-align: top;
 }
 
+/* TRANSLATION STUFF */
+/* More compact [[Special:PageTranslation]] */
+body.mw-special-PageTranslation #mw-content-text li > div {
+  float: right;
+  font-size: 0.8em;
+}
+body.mw-special-PageTranslation #mw-content-text li > div::before {
+  content: "(";
+}
+body.mw-special-PageTranslation #mw-content-text li > div::after {
+  content: ")";
+}
+/* Reduce visibility of translation indicators */
+.mw-pt-progress:after {
+  opacity: 0.6;
+}
+/* Tweak background color of "New Translations" in Special:PageTranslation */
+.mw-tpt-sp-section-type-new {
+  background-color: var(--background-color-success-subtle);
+}
+.diff-contentalign-left {
+  border: 2px solid green !important;
+}
+
+/* RECENT CHANGES */
+/* Highlight RC in sidebar 'cos wikis keep moving it */
+#n-recentchanges > a {
+  background-color: var(--background-color-success-subtle);
+}
+/* Smol the sub-items in Enchanced RC */
+.mw-rcfilters-ui-highlights-enhanced-nested {
+  font-size: 0.9em;
+}
+
+/* Bump Proveit above max-width toggle *? */
+#proveit {
+  bottom: 50px;
+}
+
+/* VECTOR-2022 TWEAKS */
+/* Hide "View" link in page-toolbar */
+#ca-view {
+  display: none;
+}
+/* prematter less prominent */
+.vector-body-before-content,
+#siteSub {
+opacity: 0.65;
+}
 /* Hide the "print/export" sidebar navbox */
 #p-coll-print_export {
   display: none;
 }
 
-/* Tweak background color of "New Translations" in Special:PageTranslation */
-.mw-tpt-sp-section-type-new {
-  background-color: #defdde;
-}
-.diff-contentalign-left {
-  border: 2px solid green !important;
- }
- /* Highlight RC in sidebar cos wikis keep moving it */
-#n-recentchanges > a {
-  background-color: #d3f2d3;
-}
-
-/* Bump Proveit above max-wdth toggle *? */
-#proveit {
-  bottom: 50px;
-}
-
-/* Hide "View" link in page-toolbar */
-#ca-view {
-  display: none;
-}
-
-/* Hover to Auto-open all UI dropdown menus */
-/*
-.vector-menu-dropdown:hover > .vector-menu-content {
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-  transition-delay: 100ms;
-}
-*/
-
 /* Distinct End-matter sections */
 #toc-See_also, 
 #toc-References, 
 #toc-Notes, 
+#toc-Footnotes, 
 #toc-Citations, 
 #toc-Bibliography, 
 #toc-Sources, 
 #toc-Further_reading, 
 #toc-External_links {
   font-size: 0.85em;
-/*  margin-left: 15px;
-  padding-left: 15px;
-  border-left: 1px solid #a2a9b1 */
+}
+#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-References:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Notes:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Footnotes:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Citations:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Bibliography:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Sources:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Further_reading:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-External_links:not(.vector-toc-list-item-active) .vector-toc-link {
+  color: var(--background-color-progressive--active);
 }
 
-/* TESTS
-.timeline-wrapper, 
-.wikitable {width: calc(100vw - 350px) !important;}
-.timeline-wrapper {max-width: none;} */
-.vector-feature-zebra-design-disabled .mw-page-container {
-  margin: 0;
+/* Anon preview warning */
+.mw-anon-edit-warning, 
+.mw-anon-preview-warning {
+background: #f47087;
+border: green 10px solid;
+}
+  
+/* Hide VE's undo/redo */
+.ve-ui-toolbar-group-history {
+  display:none;
+}
+
+/* tweak gender indicators */
+#ps-gender-male, 
+#ps-gender-female, 
+#ps-gender-unknown {
+  font-size: 50% !important;
+  user-select: none;
+  opacity:50%
+}
+
+/* troubleshoot interrupted lists, and exceptions -- 
+https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Accessibility#Another_LISTGAP_solution? 
+*/
+ul:not(.noprint) + ul {
+  border-top: 2px dashed #ccc;
+}
+#footer-places, #footer-icons {
+  border-top: none;
 }
 
 /* Semi-hide the empty summary for Category Trees */
@@ -226,17 +287,23 @@ table.wikitable > * > tr > td {
   opacity: 0.4;
 }
 
-/* More obvious multi-change indicators in Enhanced RC (grouped changes) */
-.mw-enhancedchanges-arrow, .mw-changeslist-groupdiff {
-  background: #b0f2e8;
+/* lighter numbers for Vector-classic text */
+.tocnumber {
+color: grey;
 }
 
-/* Smol the sub-text in Enchanced RC */
-.mw-rcfilters-ui-highlights-enhanced-nested {
-  font-size: 0.9em;
+
+/* ----- TEMPORARY ----- */
+
+/* Smaller parsoid tag */
+#mw-indicator-parsoid .cdx-info-chip--text {
+font-size: 8px !important;
+}
+#mw-indicator-parsoid {
+margin-top: -15px
 }
 
-/* Bigger banner-close icons */
+/* Bigger CENT banner-close icons */
 #cnotice-toggle-box > a > img {
   display: none;
 }
@@ -277,61 +344,33 @@ table.wikitable > * > tr > td {
   display: block
 }
 
-/* troubleshoot interrupted lists, and exceptions -- 
-https://en.wikipedia.org/wiki/Wikipedia_talk:Manual_of_Style/Accessibility#Another_LISTGAP_solution? 
-*/
-ul:not(.noprint) + ul {
-  border-top: 2px dashed #ccc;
-}
-#footer-places, #footer-icons {
-  border-top: none;
-}
-  
-/* Hide VE's undo/redo */
-.ve-ui-toolbar-group-history {
-  display:none;
+
+/* ----- TESTS ----- */
+
+/* Hover to Auto-open all UI dropdown menus */
+/*.vector-menu-dropdown:hover > .vector-menu-content {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  transition-delay: 100ms;
+}*/
+
+/* ??? */
+/*.timeline-wrapper, 
+.wikitable {width: calc(100vw - 350px) !important;}
+.timeline-wrapper {max-width: none;} */
+
+/* ???? */
+.vector-feature-zebra-design-disabled .mw-page-container {
+  margin: 0;
 }
 
-/* tweak gender indicators */
-#ps-gender-male, 
-#ps-gender-female, 
-#ps-gender-unknown {
-  font-size: 50% !important;
-  user-select: none;
-  opacity:50%
-}
-  
-/* More compact [[Special:PageTranslation]] */
-body.mw-special-PageTranslation #mw-content-text li > div {
-  float: right;
-  font-size: 0.8em;
-}
-body.mw-special-PageTranslation #mw-content-text li > div::before {
-  content: "(";
-}
-body.mw-special-PageTranslation #mw-content-text li > div::after {
-  content: ")";
+/* More obvious multi-change indicators in Enhanced RC (grouped changes) */
+.mw-enhancedchanges-arrow, .mw-changeslist-groupdiff {
+  background: #b0f2e8;
 }
 
-/* Ignore fuzzybot in history pages */
-a[href="/wiki/User:FuzzyBot"] {
-  opacity: 0.4;
-}
-
-/* Reduce visibility of translation indicators */
-.mw-pt-progress:after {
-  opacity: 0.6;
-}
-
-/* restrict navpop's meta-menu size */
-.popup_drop > a {
-  width: 17px;
-  height: 17px;
-  overflow: hidden;
-  display: inline-block;
-}
-
-/* 
+/* ???
 .vector-feature-zebra-design-enabled .vector-header-container .mw-header,
 .vector-feature-zebra-design-enabled .vector-page-toolbar,
 #p-associated-pages {
@@ -342,31 +381,5 @@ a[href="/wiki/User:FuzzyBot"] {
 .vector-toc-text {
 font-size: 90% !important;
 } */
-
-/* lighter numbers for Vector-classic text */
-.tocnumber {
-color: grey;
-}
-
-/* Anon preview warning */
-.mw-anon-edit-warning, 
-.mw-anon-preview-warning {
-background: #f47087;
-border: green 10px solid;
-}
-
-/* prematter */
-.vector-body-before-content,
-#siteSub {
-opacity: 0.65;
-}
-
-/* Smaller parsoid tag */
-#mw-indicator-parsoid .cdx-info-chip--text {
-font-size: 8px !important;
-}
-#mw-indicator-parsoid {
-margin-top: -15px
-}
 
 }
