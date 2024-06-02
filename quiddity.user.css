@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.30
+@version     1.1.31
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -228,27 +228,36 @@ opacity: 0.65;
 }
 
 /* Distinct End-matter sections */
-#toc-See_also, 
-#toc-References, 
-#toc-Notes, 
-#toc-Footnotes, 
-#toc-Citations, 
-#toc-Bibliography, 
-#toc-Sources, 
-#toc-Further_reading, 
+#toc-See_also:not(.vector-toc-level-2), 
+#toc-References:not(.vector-toc-level-2), 
+#toc-Notes:not(.vector-toc-level-2), 
+#toc-Notes_2:not(.vector-toc-level-2), 
+#toc-Notes_and_references:not(.vector-toc-level-2),
+#toc-Footnotes:not(.vector-toc-level-2), 
+#toc-Citations:not(.vector-toc-level-2), 
+#toc-Bibliography:not(.vector-toc-level-2), 
+#toc-Sources:not(.vector-toc-level-2), 
+#toc-Further_reading:not(.vector-toc-level-2), 
+#toc-Further_information:not(.vector-toc-level-2),
 #toc-External_links {
   font-size: 0.85em;
 }
 #toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-References:not(.vector-toc-list-item-active) .vector-toc-link, 
-#toc-Notes:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Notes:not(.vector-toc-list-item-active) .vector-toc-link,  
+#toc-Notes_2:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Notes_and_references:not(.vector-toc-list-item-active) .vector-toc-link,
 #toc-Footnotes:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Citations:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Bibliography:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Sources:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Further_reading:not(.vector-toc-list-item-active) .vector-toc-link, 
+#toc-Further_information:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-External_links:not(.vector-toc-list-item-active) .vector-toc-link {
   color: var(--background-color-progressive--active);
+}
+.vector-toc-list-item-active > a {
+color: var(--color-base) !important;
 }
 
 /* Anon preview warning */
