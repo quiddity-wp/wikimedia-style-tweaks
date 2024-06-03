@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.41
+@version     1.0.42
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -43,8 +43,8 @@ domain("patchdemo.wmflabs.org") {
 6. custom additions - top icons and similar. 
 */
 
-/* 0. Just Vector-2022... */
-body.skin-vector-2022 {
+/* 0. Just Vector-2022... hmm, that breaks full-width stuff... 
+body.skin-vector-2022 { */
 
 /* 1. Misc Tweaks */
 /* background color override */
@@ -157,7 +157,6 @@ body.skin-vector-2022 {
   padding-left: 16px;
 }
 /* Hide the default sticky header */
-.vector-feature-zebra-design-disabled.client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container,
 .client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sticky-header-container {
   display: none;
 }
@@ -780,10 +779,11 @@ html.vector-feature-zebra-design-enabled {
   --padding-horizontal-content: 2px;
   }
 }
+.vector-header-container .mw-header,
 .vector-feature-zebra-design-enabled .vector-header-container .mw-header,
-.vector-header-container .mw-header {
-  max-width: 100vw;
-  min-width: unset;
+.vector-feature-zebra-design-disabled .vector-header-container .mw-header {
+  max-width: 100vw;   
+  min-width: 99vw;
   padding-right: 0;
   padding-left: 15px;
 }
@@ -1163,5 +1163,7 @@ background: unset
   }
 }
 	
-}/* Just Vector-2022 ender */
+/* Just Vector-2022 ender 
+} */
+
 }
