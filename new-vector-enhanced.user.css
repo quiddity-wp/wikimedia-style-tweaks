@@ -43,7 +43,7 @@ domain("patchdemo.wmflabs.org") {
 6. custom additions - top icons and similar. 
 */
 
-/* 0. Just 2022 */
+/* 0. Just Vector-2022... */
 body.skin-vector-2022 {
 
 /* 1. Misc Tweaks */
@@ -1162,5 +1162,6 @@ background: unset
     flex-flow: unset;
   }
 }
-}
+	
+}/* Just Vector-2022 ender */
 }
