@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.35
+@version     1.1.36
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -231,6 +231,7 @@ opacity: 0.5;
 #toc-See_also:not(.vector-toc-level-2), 
 #toc-References:not(.vector-toc-level-2), 
 #toc-Notes:not(.vector-toc-level-2), 
+#toc-Endnotes:not(.vector-toc-level-2), 
 #toc-Notes_2:not(.vector-toc-level-2), 
 #toc-Notes_and_references:not(.vector-toc-level-2),
 #toc-Footnotes:not(.vector-toc-level-2), 
@@ -245,6 +246,7 @@ opacity: 0.5;
 #toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-References:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Notes:not(.vector-toc-list-item-active) .vector-toc-link,  
+#toc-Endnotes:not(.vector-toc-list-item-active) .vector-toc-link,  
 #toc-Notes_2:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Notes_and_references:not(.vector-toc-list-item-active) .vector-toc-link,
 #toc-Footnotes:not(.vector-toc-list-item-active) .vector-toc-link, 
