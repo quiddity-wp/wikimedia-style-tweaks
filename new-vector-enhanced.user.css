@@ -1159,7 +1159,16 @@ background: unset
   }
 }
 	
+/* Test smaller title H1s in small width windows */
+@media screen and (max-width: 719px) {
+  .mw-body .firstHeading {
+    font-size: 1.4em;
+  }
+}
+
+
 /* Just Vector-2022 ender 
 } */
+
 
 }
