@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.47
+@version     1.0.48
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -449,7 +449,11 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
 #firstHeading {
 padding-top: 15px;
 }
-
+@media screen and (max-width: 1119px) and (min-width:999px) {
+#firstHeading {
+padding-top: 30px !important;
+}
+}
 
 /* Reduce ToC height for logged-out view 
 #vector-toc {
