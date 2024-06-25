@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.48
+@version     1.0.49
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -277,14 +277,15 @@ html {
 /* Don't bold the H2/3/4 or change the widths */
 .vector-toc-level-2, 
 .vector-toc-level-3,
-.vector-toc-level-4 {
-  font-weight: normal !important;
+.vector-toc-level-4,
+.vector-toc-level-5 {
+  font-weight: normal;
 }
 /* Bold the H1s */
 .vector-toc-level-1,
 .vector-toc-list-item .vector-toc-level-1 .vector-toc-list-item-expanded .vector-toc-level-1-active > .vector-toc-link,
 .vector-toc-list-item .vector-toc-level-1 .vector-toc-list-item-expanded .vector-toc-level-1-active .vector-toc-list-item-active {
-  font-weight: 600 !important;
+  font-weight: 600;
 }
 
 /* Fix the bouncing from bold */
@@ -451,7 +452,7 @@ padding-top: 15px;
 }
 @media screen and (max-width: 1119px) and (min-width:999px) {
 #firstHeading {
-padding-top: 30px !important;
+padding-top: 40px !important;
 }
 }
 
