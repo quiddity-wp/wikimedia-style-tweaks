@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.39
+@version     1.1.40
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -403,11 +403,6 @@ font-size: 90% !important;
   font-size: 0.9rem;
   visibility: visible;
   color: var(--color-progressive,#36c);
-}
-
-/* tweak logo+wordmark edge */
-.vector-header-start {
-padding-right: 10px;
 }
 
 /* Reduce xtools visibility */
