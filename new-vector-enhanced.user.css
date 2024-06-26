@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.49
+@version     1.0.50
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -303,11 +303,11 @@ html {
   width: unset;
 }
 
-/* Add ToC-item underlines, for whitespace reduction and alignment indicators  */
+/* Add ToC-item underlines, for whitespace reduction and alignment indicators
 .vector-toc-text {
 border-bottom: 1px var(--background-color-interactive,#eaecf0) solid !important;
 padding-bottom: 2px !important;
-}
+}  */
 
 /* Add full-TOC border  --- TEST REMOVAL
 @media screen and (min-width: 1000px) {
@@ -678,6 +678,11 @@ padding-top: 40px !important;
     width: unset;
   }
 }
+
+/* tweak logo+wordmark edge */
+.vector-header-start {
+padding-right: 10px;
+}
   
 /* Force search-bar to show in site-header at smaller sizes */
 @media screen and (min-width: 400px) {
@@ -965,7 +970,6 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 /* Grey Sticky Headers  */
 .mw-header {
   background-color: var(--color-inverted);
-  border-bottom: 1px solid var(--border-color-subtle);
 }
 .vector-page-toolbar {
   background-color: var(--color-inverted);
@@ -974,7 +978,6 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 #p-associated-pages {
   background-color: var(--color-inverted);
   border-bottom: 1px solid var(--border-color-subtle);
-  border-left: 1px solid var(--border-color-subtle);
   padding-bottom: 0;
   max-height: 24px;
 }
