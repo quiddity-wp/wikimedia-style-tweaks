@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.40
+@version     1.1.41
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -218,10 +218,16 @@ body.mw-special-PageTranslation #mw-content-text li > div::after {
 #ca-view {
   display: none;
 }
+    
 /* prematter less prominent */
 #siteSub {
-opacity: 0.5;
+opacity: 0.6;
 }
+/* xtools less prominent */
+#xtools {
+opacity: 0.6;
+}
+    
 /* Hide the "print/export" sidebar navbox + wikitech */
 #p-coll-print_export,
 #p-electronpdfservice-sidebar-portlet-heading {
@@ -405,14 +411,10 @@ font-size: 90% !important;
   color: var(--color-progressive,#36c);
 }
 
-/* Reduce xtools visibility */
-#xtools {
-opacity: 0.5;
-}
 
 /* hide toc hide button */
 button[data-event-name="pinnable-header.vector-toc.unpin"] {
-  color: var(--background-color-base) !important;
+  color: var(--color-placeholder);
 }
 
 /* darkmode fixes */
