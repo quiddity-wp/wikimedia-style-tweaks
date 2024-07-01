@@ -253,6 +253,9 @@ html {
 .vector-pinnable-header-toggle-button {
   font-size: 9px !important;
 }
+.vector-pinnable-header {
+border-bottom: unset;
+}
 
 /* Change "Beginning" or "(Top)" to an Up-arrow */
 #toc-mw-content-text div {
@@ -714,7 +717,7 @@ padding-right: 10px;
 
 /* Reduce gap beside searchbox */
 #p-search {
-  margin-left: -5px;
+  margin-left: 5px;
 }
 .cdx-typeahead-search--show-thumbnail.cdx-typeahead-search--auto-expand-width:not(.cdx-typeahead-search--expanded) {
   margin-left: 0;
@@ -981,11 +984,6 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   padding-bottom: 0;
   max-height: 24px;
 }
-@media screen and (max-width: 999px) {
-  #p-associated-pages {
-    border-left: unset !important;
-  }
-}
 .vector-page-toolbar-container {
   box-shadow: unset;
 }
@@ -1089,6 +1087,15 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   }
 }
 
+/* lighter-gray search borders  */
+.cdx-text-input__input:enabled {
+  border-color: var(--border-color-disabled,#54595d);
+}
+/* and placeholder text */
+::placeholder {
+  color: var(--border-color-disabled,#54595d) !important;
+}
+
 /* Fix misaligned icons in wide windows */
   #ca-wikilove > a {
     margin-top: -4px !important;
@@ -1128,6 +1135,12 @@ background: unset
   display: block !important;
 }
 
+
+/* fix enwiki's More Menu and Twinkle gadgets */
+#p-page-dropdown,
+#p-user-dropdown{
+  margin-top:-7px;
+}
 #p-twinkle-dropdown-label {
   padding-top: 5px;
 }
