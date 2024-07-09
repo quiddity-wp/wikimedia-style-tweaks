@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.41
+@version     1.1.42
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -301,6 +301,7 @@ ul:not(.noprint) + ul {
 }
 
 /* Semi-hide the empty Category Trees */
+.CategoryTreeNotice,
 .CategoryTreeItem:has(span[title="Contains 0 subcategories, 0 pages, and 0 files"]) {
   opacity: 0.55;
 }
@@ -417,7 +418,7 @@ button[data-event-name="pinnable-header.vector-toc.unpin"] {
   color: var(--color-placeholder);
 }
 
-/* darkmode fixes */
+/* darkmode fixes
 .wikiEditor-ui-toolbar,
 #pagehistory li.selected {color: unset; background: unset;}
 .editOptions {background: unset; color:unset;}
@@ -429,10 +430,15 @@ button[data-event-name="pinnable-header.vector-toc.unpin"] {
 .wikiEditor-ui-toolbar .group .tool-select .label {color: unset}
 .wikiEditor-ui-toolbar .tabs span.tab a {color:unset}
 .mw-parser-output tr + tr > .navbox-list {border-top: unset;}
-.mw-parser-output .navbox-list-with-group {border-left: unset;}
+.mw-parser-output .navbox-list-with-group {border-left: unset;} 
+*/
 
-
-
-
+/* Fix wider-tables not fully showing in fixed-width layout */
+@media screen {
+  .noresize {
+    /* max-width: unset;  NOT NEEDED? */
+    overflow-x: unset;
+  }
+}
 
 }
