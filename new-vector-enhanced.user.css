@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.52
+@version     1.0.53
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -646,7 +646,7 @@ padding-top: 40px !important;
 
 /* Main menu nudge */
 .vector-main-menu-container {
-  padding-top: 20px;
+  padding-top: 23px;
 }
 #vector-main-menu-dropdown-label {
   padding: 10px;
