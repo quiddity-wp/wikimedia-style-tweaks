@@ -1,0 +1,19 @@
+/* ==UserStyle==
+@name        gerrit tweaks
+@namespace   StylishThemes
+@version     1.0.1
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/gerrit.user.css
+@license     CC-0
+@author      quiddity-wp
+==/UserStyle== */
+@-moz-document domain("gerrit.wikimedia.org") {
+    
+/* low opacity bots */
+.CommitLog-item:has(span[title="jenkins-bot@gerrit.wikimedia.org"]), 
+.CommitLog-item:has(span[title="l10n-bot@translatewiki.net"]),
+.CommitLog-item:has(span[title="tools.libraryupgrader@tools.wmflabs.org"]) {
+  opacity: 0.2 !important;
+}
+
+}
