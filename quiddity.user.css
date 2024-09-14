@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.44
+@version     1.1.45
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -444,6 +444,14 @@ button[data-event-name="pinnable-header.vector-toc.unpin"] {
     /* max-width: unset;  NOT NEEDED? */
     overflow-x: unset;
   }
+}
+
+/* Codex, widen the form label click-area */
+.cdx-radio__label {
+  min-width: 120px;
+}
+label .cdx-radio__label  {
+  background: var(--background-color-interactive-subtle);
 }
 
 }
