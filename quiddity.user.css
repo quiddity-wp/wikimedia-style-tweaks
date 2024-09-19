@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.45
+@version     1.1.46
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -452,6 +452,15 @@ button[data-event-name="pinnable-header.vector-toc.unpin"] {
 }
 label .cdx-radio__label  {
   background: var(--background-color-interactive-subtle);
+}
+
+/* wiktionary layout and skimmability */
+.usage-label-sense::after{
+    content: "\a";
+    white-space: pre;
+}
+.usage-label-sense{
+opacity: 0.6;
 }
 
 }
