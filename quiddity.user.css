@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.48
+@version     1.1.49
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -471,5 +471,18 @@ font-size: unset !important;
 /* hide the collapsed menu reminders */
 .vector-appearance-landmark > .vector-popup-notification {display: none;}
 .vector-page-tools-landmark > .vector-popup-notification {display: none;}
+
+/* Appearance menu enhancements */
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-custom-font-size-value-1"]) {font-size: 130% !important}
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-custom-font-size-value-2"]) {font-size: 160% !important}
+
+.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,#222 40%,#eaecf0 80%); color: white}
+.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: #eaecf0; color: black}
+.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: #383838; color: #eaecf0}
+
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-limited-width-value-1"]) label,
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-limited-width-value-0"]) label {text-align: center; display: unset;}
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-limited-width-value-0"]) label:before {content:'← ';}
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-limited-width-value-0"]) label:after {content:' →';}
 
 }
