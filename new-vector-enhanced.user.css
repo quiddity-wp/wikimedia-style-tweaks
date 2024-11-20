@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.54
+@version     1.0.55
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1191,6 +1191,22 @@ background: unset
   }
 }
 
+/* top page-name and language sticky
+@media screen and (max-width: 719px) {
+.vector-page-titlebar {
+position: sticky !important;
+top:75px !important;
+background: var(--background-color-base,#f8f9fa);
+padding-top: 12px;
+z-index: 1;
+}
+#firstHeading {
+padding-top: 12px;
+margin-top: -23px;
+background: var(--background-color-base,#f8f9fa);
+}
+.vector-sitenotice-container {background: var(--background-color-base,#f8f9fa);}
+} */
 
 /* Just Vector-2022 ender 
 } */
