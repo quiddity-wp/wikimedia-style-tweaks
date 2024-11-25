@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.56
+@version     1.0.57
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -206,7 +206,7 @@ html {
 .vector-menu-tabs .mw-list-item .vector-menu-heading, 
 .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
 .vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
-  padding: 3px 0 0 0;
+  padding: 5px 0 0 0;
 }
 #vector-page-tools-dropdown-label {
   padding: 0 0 5px 0
@@ -985,8 +985,6 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 }
 #p-associated-pages {
   background-color: var(--color-inverted);
-  border-bottom: 1px solid var(--border-color-subtle);
-  padding-bottom: 0;
   max-height: 24px;
 }
 .vector-page-toolbar-container {
