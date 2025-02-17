@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.57
+@version     1.0.58
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -926,11 +926,12 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 }
 
 /* Fix for sticky table-header gadgets */
-/* Breaking on mw.o ? Or only when it's a globally-imported script?? */
+/* Breaking on mw.o ? Or only when it's a globally-imported script?? Ah, or only when the table isn't specifically designated as "sortable"??? */
 .jquery-tablesorter > thead,
 .mw-sticky-header > thead, 
 .client-js.vector-sticky-header-enabled .mw-sticky-header-element {
     top: 78px !important;
+    position: sticky;
 }
 
 /* Fix overlap of personal-tools */
