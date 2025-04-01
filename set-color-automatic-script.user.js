@@ -1,16 +1,14 @@
 // ==UserScript==
 // @name        Set color Automatic on Wikimedia
-// @version     0.1.9
+// @version     0.1.10
 // @namespace   github.com/quiddity-wp/wikimedia-style-tweaks
 // @include *meta.wikimedia.org/*
-// @include *office.wikimedia.org/*
 // @include *commons.wikimedia.org/*
 // @include *species.wikimedia.org/*
 // @include *outreach.wikimedia.org/*
 // @include *wikimania.wikimedia.org/*
 // @include *foundation.wikimedia.org/*
 // @include *wikitech.wikimedia.org/*
-// @include *vrt-wiki.wikimedia.org/*
 // @include *.mediawiki.org/*
 // @include *.wikipedia.org/*
 // @include *.wikisource.org/*
@@ -23,11 +21,9 @@
 // @include *.wikidata.org/*
 // @include *.beta.wmflabs.org/*
 // @include *.wikifunctions.org/*
-// @include *.wiki.gg/*
 // @grant       none
-// @version     1.0
-// @author      Nick
-// @description Automatically selects the Automatic color of Wikimedia pages.
+// @author      Nick and Rose in https://greasyfork.org/en/scripts/501217-always-small-font-on-wikimedia-websites 
+// @description Selects the 'Automatic' color of Wikimedia pages.
 // ==/UserScript==
 
 (function() {
