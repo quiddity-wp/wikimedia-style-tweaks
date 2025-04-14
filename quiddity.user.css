@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.53
+@version     1.1.54
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -96,6 +96,11 @@ span.ais523hmn {
 /* Opacity in RC/Watchlist for users with 500+ edits */
 .mw-changeslist-user-experienced {
   opacity: 0.7;
+}
+
+/* Opacity in RC/Watchlist for bot edits */
+.mw-changeslist-bot {
+  opacity: 0.4;
 }
 
 /* Opacity for revert/ed-edits in history pages */
@@ -500,10 +505,14 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: black; color: white}
 }
 
-
 /* bigger max dropdown */
 @media screen {
   .vector-dropdown .vector-dropdown-content {max-height: 83vh;}
+}
+
+/* highlight centralauth links in contribs pages */
+.mw-contributions-link-centralauth {
+  font-weight: bold; background:lightgrey
 }
 
 }
