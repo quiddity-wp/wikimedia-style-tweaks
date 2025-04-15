@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.54
+@version     1.1.55
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -102,7 +102,6 @@ span.ais523hmn {
 .mw-changeslist-bot {
   opacity: 0.4;
 }
-
 /* Opacity for revert/ed-edits in history pages */
 .mw-tag-mw-undo,
 .mw-tag-mw-rollback,
@@ -306,7 +305,7 @@ ul:not(.noprint) + ul {
 /* Semi-hide the empty Category Trees */
 .CategoryTreeNotice,
 .CategoryTreeItem:has(span[title="Contains 0 subcategories, 0 pages, and 0 files"]) {
-  opacity: 0.55;
+  opacity: 0.35;
 }
 
 /* lighter color for Vector-classic ToC numbers */
@@ -512,7 +511,12 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 
 /* highlight centralauth links in contribs pages */
 .mw-contributions-link-centralauth {
-  font-weight: bold; background:lightgrey
+  background-color: var(--background-color-success-subtle);
+}
+
+/* wikifunctions */
+.ext-wikilambda-app-about-language-block__unavailable {
+	opacity: 0.4
 }
 
 }
