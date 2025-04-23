@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.57
+@version     1.1.58
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -487,9 +487,9 @@ font-size: unset !important;
 .cdx-radio:has(label[for="skin-client-pref-vector-feature-limited-width-value-0"]) label:before {content:'← ← ';}
 .cdx-radio:has(label[for="skin-client-pref-vector-feature-limited-width-value-0"]) label:after {content:' → →';}
 
-.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,#eaecf0 80%,black 99%); color: black}
-.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: #eaecf0; color: black}
-.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: linear-gradient(to right,#eaecf0 80%,black 80%); color: black}
+.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,#f9f9f9 80%,black 99%); color: black}
+.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: #f9f9f9; color: black}
+.cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: linear-gradient(to right,#f9f9f9 80%,black 80%); color: black}
 /* forced night mode */
 /* Note: If using a CSS variable, there is no need to make use of `@media screen` */
 @media screen {
@@ -497,7 +497,6 @@ font-size: unset !important;
 html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: linear-gradient(to right,black 80%,#eaecf0 80%); color: #eaecf0}
 html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: black; color: white}
 }
-
 /* automatic mode */
 @media screen and (prefers-color-scheme: dark) {
 	html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,black 80%,#eaecf0 96%); color: white}
