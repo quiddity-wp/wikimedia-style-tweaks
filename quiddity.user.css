@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.58
+@version     1.1.59
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -237,6 +237,10 @@ opacity: 0.6;
 #p-electronpdfservice-sidebar-portlet-heading {
   display: none;
 }
+/* Hide more Tools box links */
+#t-urlshortener-qrcode {display: none}
+#t-collapsible-toggle-all {display: none}
+#wbc-editpage {display: none}
 
 /* Distinct End-matter sections */
 #toc-See_also:not(.vector-toc-level-2), 
