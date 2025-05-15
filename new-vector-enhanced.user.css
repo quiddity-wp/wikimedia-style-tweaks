@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.62
+@version     1.0.63
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -227,12 +227,12 @@ html {
 }
 @media screen and (min-width:1200px) {
   #left-navigation {
-    margin-left: -12px;
+    margin-left: -48px;
   }
 }
 @media screen and (max-width: 1199px) and (min-width:999px) {
   #left-navigation {
-    margin-left: -38px !important;
+    margin-left: -32px;
   }
 }
 
@@ -566,7 +566,7 @@ padding-top: 40px !important;
 /* Reduce the grid gutter, and header height */
 @media screen and ( min-width: 1200px ) {
   .mw-page-container-inner {  
-    grid-template: min-content 1fr min-content / 290px;
+    grid-template: min-content 1fr min-content / 250px;
     grid-template-areas: 
       'siteNotice siteNotice'
       'columnStart pageContent'
