@@ -35,6 +35,7 @@ To use these, get [ViolentMonkey](https://violentmonkey.github.io/) for your bro
 Default (while scrolled) -- vs -- showing "Compact-vector-2022" -- (both logged-out)
 
 ![Before/after](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss14.png)
+![Before/after](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss15.png)
 
 ## see also
 https://github.com/quiddity-wp/style-tweaks
