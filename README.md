@@ -32,9 +32,12 @@ To use these, get [ViolentMonkey](https://violentmonkey.github.io/) for your bro
 
 ## Before / After
 
-Default (while scrolled) -- vs -- showing "Compact-vector-2022" -- (both logged-out)
+Default (while scrolled) -- vs -- showing "Compact-vector-2022" -- (both logged-out, and showing the [Earth](https://en.wikipedia.org/wiki/Earth#Size_and_shape) article.)
 
+* average window
 ![Before/after](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss14.png)
+
+* narrow window
 ![Before/after](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/usercss15.png)
 
 ## see also
