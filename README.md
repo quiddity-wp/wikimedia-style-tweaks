@@ -23,8 +23,10 @@
 
 ## Wikimedia JavaScript tweaks
 
+To use these, get [ViolentMonkey](https://violentmonkey.github.io/) for your browser, or another trusted JavaScript augmentation extension
+
 * **linkify-header-script** -- (adds links that float next to subheadings. Only needed until [phab:T18691](https://phabricator.wikimedia.org/T18691) is implemented!)
-  * [Install directly with GreaseMonkey (etc)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/linkify-header-script.user.js) (Get [ViolentMonkey](https://violentmonkey.github.io/) for your browser)
+  * [Install directly with GreaseMonkey (etc)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/linkify-header-script.user.js) 
 * **set-color-automatic-script** -- (change the color in the Appearance menu to "automatic", for a default dark-at-nighttime in private windows)
   * [Install directly with GreaseMonkey (etc)](https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/set-color-automatic-script.user.js)
 
