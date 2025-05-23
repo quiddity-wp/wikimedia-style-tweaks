@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.61
+@version     1.1.62
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -483,8 +483,8 @@ font-size: unset !important;
 .vector-page-tools-landmark > .vector-popup-notification {display: none;}
 
 /* Appearance menu enhancements */
-.cdx-radio:has(label[for="skin-client-pref-vector-feature-custom-font-size-value-1"]) {font-size: 120% !important}
-.cdx-radio:has(label[for="skin-client-pref-vector-feature-custom-font-size-value-2"]) {font-size: 140% !important}
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-custom-font-size-value-1"]) label {font-size: 120% !important}
+.cdx-radio:has(label[for="skin-client-pref-vector-feature-custom-font-size-value-2"]) label {font-size: 140% !important}
 .cdx-radio__label, .cdx-radio__label.cdx-label {line-height: 1.32}
 
 .cdx-radio:has(label[for="skin-client-pref-vector-feature-limited-width-value-1"]) label,
