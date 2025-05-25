@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
-@namespace   StylishThemes
-@version     1.1.63
-@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@namespace   https://github.com/quiddity-wp/wikimedia-style-tweaks
+@version     1.1.64
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
@@ -527,5 +527,14 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 
 /* hide sidebar "Vector opt-out" main-menu entry - still exists on wikitech */
 .vector-main-menu-action-opt-out {display: none}
+
+/* test moving the page-title from under my new stickyheadertext-anchor */
+@media screen and (min-width: 1120px) {
+  .vector-sticky-header-context-bar-primary {
+    position: absolute;
+    top:46px;
+    left:450px;
+  }
+}
 
 }
