@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.65
+@version     1.0.66
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -696,7 +696,7 @@ padding-top: 40px !important;
 
 /* tweak logo+wordmark edge */
 .vector-header-start {
-padding-right: 10px;
+padding-right: 2px;
 }
   
 /* Force search-bar to show in site-header at smaller sizes */
@@ -721,7 +721,7 @@ padding-right: 10px;
 }
 .mw-logo {
   min-width: 0;
-  margin-right: 10px;
+  margin-right: 0;
 }
 .cdx-menu {
   min-width: 270px !important;
@@ -729,9 +729,9 @@ padding-right: 10px;
 
 /* Reduce gap beside searchbox */
 #p-search {
-  margin-left: 5px;
+  margin-left: 0;
 }
-.cdx-typeahead-search--show-thumbnail.cdx-typeahead-search--auto-expand-width:not(.cdx-typeahead-search--expanded) {
+.vector-search-box .cdx-typeahead-search--show-thumbnail.cdx-typeahead-search--auto-expand-width:not(.cdx-typeahead-search--expanded) {
   margin-left: 0;
 }
 /* Old attempt */
