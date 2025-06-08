@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM background reset for screenshots
 @namespace   StylishThemes
-@version     1.0.11
+@version     1.0.12
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/background-override.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/background-override.user.css
 @license     CC-BY-SA-4.0
@@ -35,7 +35,8 @@ body,
 .vector-menu-content .vector-dropdown-content, 
 .vector-unpinned-container, 
 .vector-pinned-container, 
-#editform {
+#editform,
+.ais523hmn {
   background-color: unset !important; 
   background-image:none; 
   color:unset !important;
