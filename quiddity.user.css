@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.68
+@version     1.1.69
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -536,5 +536,8 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
     left:360px;
   }
 }*/
+
+/* fix inline diffs not scaling with text-size options */
+.diff-addedline, .diff-deletedline, .diff-context, .mw-diff-inline-added, .mw-diff-inline-deleted, .mw-diff-inline-moved, .mw-diff-inline-changed, .mw-diff-inline-context {font-size: unset}
 
 }
