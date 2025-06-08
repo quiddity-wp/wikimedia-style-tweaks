@@ -1,0 +1,56 @@
+/* ==UserStyle==
+@name        Wikim quiddity's tweaks
+@namespace   StylishThemes
+@version     1.1.68
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
+@license     CC-BY-SA-4.0
+@author      quiddity-wp
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"),
+domain("meta.wikimedia.org"),
+domain("office.wikimedia.org"),
+domain("collab.wikimedia.org"),
+domain("commons.wikimedia.org"),
+domain("species.wikimedia.org"),
+domain("outreach.wikimedia.org"),
+domain("wikimania.wikimedia.org"),
+domain("foundation.wikimedia.org"),
+domain("wikitech.wikimedia.org"),
+domain("incubator.wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org"),
+domain("wikifunctions.org"),
+domain("vrt-wiki.wikimedia.org"),
+domain("patchdemo.wmflabs.org") {
+
+:root {
+    --color-content-added: #177860;
+    --color-content-removed: #bf3c2c;
+    --background-color-content-added: #80cdb3;
+    --background-color-content-removed: #fea898;
+    --background-color-content-changed: #b0c1f0;
+    --border-color-content-added: #80cdb3;
+    --border-color-content-removed: #fea898;
+    --border-color-content-changed: #b0c1f0;
+}
+.skin-theme-clientpref-night:root {
+    --color-content-added: #2cb491;
+    --color-content-removed: #fd7865;
+    --background-color-content-added: #196551;
+    --background-color-content-removed: #9f3526;
+    --background-color-content-changed: #3056a9;
+    --border-color-content-added: #196551;
+    --border-color-content-removed: #9f3526;
+    --border-color-content-changed: #3056a9;
+}
+
+}
