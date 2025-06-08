@@ -1,0 +1,100 @@
+/* ==UserStyle==
+@name        WM diff color2 
+@namespace   StylishThemes
+@version     1.1.1
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color2.user.css
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color2.user.css
+@license     CC-BY-SA-4.0
+@author      quiddity-wp
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"),
+domain("meta.wikimedia.org"),
+domain("office.wikimedia.org"),
+domain("collab.wikimedia.org"),
+domain("commons.wikimedia.org"),
+domain("species.wikimedia.org"),
+domain("outreach.wikimedia.org"),
+domain("wikimania.wikimedia.org"),
+domain("foundation.wikimedia.org"),
+domain("wikitech.wikimedia.org"),
+domain("incubator.wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org"),
+domain("wikifunctions.org"),
+domain("vrt-wiki.wikimedia.org"),
+domain("patchdemo.wmflabs.org") {
+  
+:root {
+    --color-content-added: #a3d3ff;
+    --color-content-removed: #ffe49c;
+    --background-color-content-added: #a3d3ff;
+    --background-color-content-removed: #ffe49c;
+    --background-color-content-changed: #b0c1f0;
+    --border-color-content-added: #a3d3ff;
+    --border-color-content-removed: #ffe49c;
+    --border-color-content-changed: #b0c1f0;
+}
+.skin-theme-clientpref-night:root,
+.skin-theme-clientpref-os:root {
+    --color-content-added: #233566;
+    --color-content-removed: #453217;
+    --background-color-content-added: #233566;
+    --background-color-content-removed: #453217;
+    --background-color-content-changed: #3056a9;
+    --border-color-content-added: #233566;
+    --border-color-content-removed: #453217;
+    --border-color-content-changed: #3056a9;
+}
+
+/* NavPopups fixes */
+ins.popupDiff {
+  background: var(--background-color-content-added); /* default: #afe */
+}
+del.popupDiff {
+  background: var(--background-color-content-removed); /* default: #afe */
+}
+/* Night/Automatic fixes */
+html.skin-theme-clientpref-night ins.popupDiff {
+  background: #233566 !important; /* default: #026c5f */
+}
+html.skin-theme-clientpref-night del.popupDiff {
+  background: #453217 !important; /* default: #89474b */
+}
+@media (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os ins.popupDiff {
+    background: #233566 !important; /* default: #026c5f */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os del.popupDiff {
+    background: #453217 !important; /* default: #89474b */
+  }
+}
+
+/* Visual diff fixes */
+[data-diff-action="insert"],
+.ve-ui-diffElement-attributeChange ins {
+  background-color: var(--background-color-content-added) !important
+}
+[data-diff-action="remove"],
+.ve-ui-diffElement-attributeChange del {
+  background-color: var(--background-color-content-removed) !important
+}
+[data-diff-action="change"], 
+[data-diff-action="change-insert"] {
+  background-color: var(--background-color-content-changed) !important;
+}
+/* Night/Automatic fixes */
+[data-diff-action="insert"] > *, [data-diff-action="remove"] > *, [data-diff-action="change"] > *, [data-diff-action="change-insert"] > *, [data-diff-action="change-remove"] > *, [data-diff-move] > * {
+  mix-blend-mode: unset;
+}
+
+}
