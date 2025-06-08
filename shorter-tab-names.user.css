@@ -1,0 +1,172 @@
+/* ==UserStyle==
+@name        Wikim shorter-tab-names 
+@namespace   StylishThemes
+@version     1.1.1
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/shorter-tab-names.user.css
+@updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/shorter-tab-names.user.css
+@license     CC-BY-SA-4.0
+@author      quiddity-wp
+==/UserStyle== */
+@-moz-document domain("wikipedia.org"),
+domain("meta.wikimedia.org"),
+domain("office.wikimedia.org"),
+domain("collab.wikimedia.org"),
+domain("commons.wikimedia.org"),
+domain("species.wikimedia.org"),
+domain("outreach.wikimedia.org"),
+domain("wikimania.wikimedia.org"),
+domain("foundation.wikimedia.org"),
+domain("wikitech.wikimedia.org"),
+domain("incubator.wikimedia.org"),
+domain("wiktionary.org"),
+domain("mediawiki.org"),
+domain("wikisource.org"),
+domain("wikivoyage.org"),
+domain("wikibooks.org"),
+domain("wikinews.org"),
+domain("wikiversity.org"),
+domain("wikiquote.org"),
+domain("wikidata.org"),
+domain("beta.wmflabs.org"),
+domain("wikifunctions.org"),
+domain("vrt-wiki.wikimedia.org"),
+domain("patchdemo.wmflabs.org") {
+
+/* Localize and shorten core page-meta-tabs */
+@media screen and (min-width: 700px) {  
+
+#ca-viewsource > a {
+  font-size: 0px;
+}
+#ca-viewsource > a::after {
+  content: 'View_Source';
+  font-size: 0.85rem;
+  visibility: visible;
+  margin-top: -9px;
+}
+
+#ca-ve-edit > a {
+  font-size: 0px;
+}
+#ca-ve-edit > a::after {
+  content: 'Edit';
+  font-size: 0.85rem;
+  visibility: visible;
+  margin-top: -9px;
+}
+  
+#ca-edit > a {
+  font-size: 0px;
+}
+#ca-edit > a::after {
+  content: 'Edit source';
+  font-size: 0.85rem;
+  visibility: visible;
+  margin-top: -9px;
+}
+  
+#ca-history > a {
+  font-size: 0px;
+}
+#ca-history > a::after {
+  content: 'History';
+  font-size: 0.85rem;
+  visibility: visible;
+  margin-top: -9px;
+}
+
+#ca-nearby > a {
+  font-size: 0px;
+}
+#ca-nearby > a::after {
+  content: 'Nearby';
+  font-size: 0.85rem;
+  visibility: visible;
+  margin-top: -9px;
+}
+
+}
+
+/* watchlist navbar */
+@media screen {
+#ca-special-specialAssociatedNavigationLinks-link-0 > a {
+  font-size: 0px;
+}
+#ca-special-specialAssociatedNavigationLinks-link-0 > a::after {
+  content: 'Watchlist';
+  font-size: 0.8rem;
+  visibility: visible;
+  margin-top: -8px;
+}
+#ca-special-specialAssociatedNavigationLinks-link-1 > a {
+  font-size: 0px;
+}
+#ca-special-specialAssociatedNavigationLinks-link-1 > a::after {
+  content: 'View & edit';
+  font-size: 0.8rem;
+  visibility: visible;
+  margin-top: -8px;
+}
+#ca-special-specialAssociatedNavigationLinks-link-2 > a {
+  font-size: 0px;
+}
+#ca-special-specialAssociatedNavigationLinks-link-2 > a::after {
+  content: 'Raw';
+  font-size: 0.8rem;
+  visibility: visible;
+  margin-top: -8px;
+}
+#ca-special-specialAssociatedNavigationLinks-link-3 > a {
+  font-size: 0px;
+}
+#ca-special-specialAssociatedNavigationLinks-link-3 > a::after {
+  content: 'Clear';
+  font-size: 0.6rem;
+  visibility: visible;
+  margin-top: -6px;
+}
+
+/* Main page tabs */
+#ca-nstab > a,
+#ca-nstab-main > a,
+#ca-nstab-user > a,
+#ca-user > a,
+#ca-nstab-media > a,
+#ca-nstab-project > a,
+#ca-nstab-mediawiki > a,
+#ca-nstab-template > a,
+#ca-nstab-help > a,
+#ca-nstab-category > a,
+#ca-nstab-manual > a {
+  font-size: 0px;
+}
+#ca-nstab > a::after,
+#ca-nstab-main > a::after,
+#ca-nstab-user > a::after,
+#ca-user > a::after,
+#ca-nstab-media > a::after,
+#ca-nstab-project > a::after,
+#ca-nstab-mediawiki > a::after,
+#ca-nstab-template > a::after,
+#ca-nstab-help > a::after,
+#ca-nstab-category > a::after,
+#ca-nstab-manual > a::after {
+  content: 'Page';
+  font-size: 0.85rem;
+  visibility: visible;
+  margin-top: -9px;
+}
+
+#ca-talk > a {
+  font-size: 0px;
+}
+#ca-talk > a::after {
+  content: 'Talk';
+  font-size: 0.85rem;
+  visibility: visible;
+  margin-top: -9px;
+}
+
+}
+
+}
