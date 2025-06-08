@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color 
 @namespace   StylishThemes
-@version     1.1.3
+@version     1.1.4
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color.user.css
 @license     CC-BY-SA-4.0
@@ -52,5 +52,40 @@ domain("patchdemo.wmflabs.org") {
     --border-color-content-removed: #9f3526;
     --border-color-content-changed: #3056a9;
 }
+.skin-theme-clientpref-os:root {
+    --color-content-added: #2cb491;
+    --color-content-removed: #fd7865;
+    --background-color-content-added: #196551;
+    --background-color-content-removed: #9f3526;
+    --background-color-content-changed: #3056a9;
+    --border-color-content-added: #196551;
+    --border-color-content-removed: #9f3526;
+    --border-color-content-changed: #3056a9;
+}
+
+/* NavPopups fixes */
+ins.popupDiff {
+  background: #80cdb3; /* default: #afe */
+}
+del.popupDiff {
+  background: #fea898; /* default: #afe */
+}
+html.skin-theme-clientpref-night ins.popupDiff {
+  background: #196551; /* default: #026c5f */
+}
+html.skin-theme-clientpref-night del.popupDiff {
+  background: #9f3526; /* default: #89474b */
+}
+@media (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os ins.popupDiff {
+    background: #196551; /* default: #026c5f */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os del.popupDiff {
+    background: #9f3526; /* default: #89474b */
+  }
+}
+
 
 }
