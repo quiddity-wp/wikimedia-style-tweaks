@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color2 
 @namespace   StylishThemes
-@version     1.1.2
+@version     1.1.3
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color2.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color2.user.css
 @license     CC-BY-SA-4.0
@@ -107,5 +107,7 @@ html.skin-theme-clientpref-night del.popupDiff {
 [data-diff-action="insert"] > *, [data-diff-action="remove"] > *, [data-diff-action="change"] > *, [data-diff-action="change-insert"] > *, [data-diff-action="change-remove"] > *, [data-diff-move] > * {
   mix-blend-mode: unset;
 }
+/* Less obtrusive "newline" messages */
+.mw-diff-empty-line {opacity: 50%;}
 
 }
