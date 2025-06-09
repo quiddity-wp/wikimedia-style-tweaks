@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color2 
 @namespace   StylishThemes
-@version     1.1.4
+@version     1.1.5
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color2.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color2.user.css
 @license     CC-BY-SA-4.0
@@ -66,31 +66,32 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* NavPopups fixes */
+/* Light mode */
 ins.popupDiff {
   background: var(--background-color-content-added); /* default: #afe */
 }
 del.popupDiff {
   background: var(--background-color-content-removed); /* default: #afe */
 }
-/* Night/Automatic fixes */
+/* Dark mode */
 html.skin-theme-clientpref-night ins.popupDiff {
   background: #233566 !important; /* default: #026c5f */
 }
 html.skin-theme-clientpref-night del.popupDiff {
   background: #453217 !important; /* default: #89474b */
 }
+/* Automatic-dark mode */
 @media (prefers-color-scheme: dark) {
   html.skin-theme-clientpref-os ins.popupDiff {
     background: #233566 !important; /* default: #026c5f */
   }
-}
-@media (prefers-color-scheme: dark) {
   html.skin-theme-clientpref-os del.popupDiff {
     background: #453217 !important; /* default: #89474b */
   }
 }
 
 /* Visual diff fixes */
+/* Light mode */
 [data-diff-action="insert"],
 .ve-ui-diffElement-attributeChange ins {
   background-color: var(--background-color-content-added) !important
@@ -103,15 +104,20 @@ html.skin-theme-clientpref-night del.popupDiff {
 [data-diff-action="change-insert"] {
   background-color: var(--background-color-content-changed) !important;
 }
-/* Night/Automatic fixes */
+
+/* Visualdiff Dark/Automatic-dark fixes */
 [data-diff-action="insert"] > *, [data-diff-action="remove"] > *, [data-diff-action="change"] > *, [data-diff-action="change-insert"] > *, [data-diff-action="change-remove"] > *, [data-diff-move] > * {
   mix-blend-mode: unset;
 }
-/* Less obtrusive "newline" messages */
+
+/* Visualdiff - Less obtrusive "newline" messages */
 .mw-diff-empty-line {opacity: 50%;}
 
-/* Less obtrusive contextual lines surrounding the actual diff */
+/* Wikitext diffs - Less obtrusive contextual lines surrounding the actual diff */
 .diff-context, 
 .mw-diff-inline-context {opacity: 50%;}
+
+/* Fix Visualdiffs sidebar color to be more visible */
+.ve-ui-diffElement-attributeChange {color: unset !important}
 
 }
