@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.69
+@version     1.1.70
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -496,18 +496,18 @@ font-size: unset !important;
 .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,#f9f9f9 80%,black 99%); color: black}
 .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: #f9f9f9; color: black}
 .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: linear-gradient(to right,#f9f9f9 80%,black 80%); color: black}
-/* forced night mode */
+/* dark mode */
 /* Note: If using a CSS variable, there is no need to make use of `@media screen` */
 @media screen {
-	html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,black 80%,#eaecf0 96%); color: white}
-html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: linear-gradient(to right,black 80%,#eaecf0 80%); color: #eaecf0}
-html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: black; color: white}
+	html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,#101418 80%,#eaecf0 96%); color: white}
+html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: linear-gradient(to right,#101418 80%,#eaecf0 80%); color: #eaecf0}
+html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: #101418; color: white}
 }
-/* automatic mode */
+/* automatic dark mode */
 @media screen and (prefers-color-scheme: dark) {
-	html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,black 80%,#eaecf0 96%); color: white}
-html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: linear-gradient(to right,black 80%,#eaecf0 80%); color: #eaecf0}
-html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: black; color: white}
+	html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-os"]) {background:linear-gradient(to right,#101418 80%,#eaecf0 96%); color: white}
+html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: linear-gradient(to right,#101418 80%,#eaecf0 80%); color: #eaecf0}
+html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: #101418; color: white}
 }
 
 /* bigger max dropdown */
