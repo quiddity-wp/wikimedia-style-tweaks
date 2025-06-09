@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color2 
 @namespace   StylishThemes
-@version     1.1.6
+@version     1.1.7
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color2.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color2.user.css
 @license     CC-BY-SA-4.0
@@ -33,8 +33,6 @@ domain("vrt-wiki.wikimedia.org"),
 domain("patchdemo.wmflabs.org") {
   
 :root {
-    --color-content-added: #a3d3ff;
-    --color-content-removed: #ffe49c;
     --background-color-content-added: #a3d3ff;
     --background-color-content-removed: #ffe49c;
     --background-color-content-changed: #b0c1f0;
@@ -43,8 +41,6 @@ domain("patchdemo.wmflabs.org") {
     --border-color-content-changed: #b0c1f0;
 }
 .skin-theme-clientpref-night:root {
-    --color-content-added: #233566;
-    --color-content-removed: #453217;
     --background-color-content-added: #233566;
     --background-color-content-removed: #453217;
     --background-color-content-changed: #3056a9;
@@ -54,8 +50,6 @@ domain("patchdemo.wmflabs.org") {
 }
 @media (prefers-color-scheme: dark) {
   .skin-theme-clientpref-os:root {
-    --color-content-added: #233566;
-    --color-content-removed: #453217;
     --background-color-content-added: #233566;
     --background-color-content-removed: #453217;
     --background-color-content-changed: #3056a9;
