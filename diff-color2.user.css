@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color2 
 @namespace   StylishThemes
-@version     1.1.3
+@version     1.1.4
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color2.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color2.user.css
 @license     CC-BY-SA-4.0
@@ -109,5 +109,9 @@ html.skin-theme-clientpref-night del.popupDiff {
 }
 /* Less obtrusive "newline" messages */
 .mw-diff-empty-line {opacity: 50%;}
+
+/* Less obtrusive contextual lines surrounding the actual diff */
+.diff-context, 
+.mw-diff-inline-context {opacity: 50%;}
 
 }
