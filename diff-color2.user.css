@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color2 
 @namespace   StylishThemes
-@version     1.1.1
+@version     1.1.2
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color2.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color2.user.css
 @license     CC-BY-SA-4.0
@@ -42,8 +42,7 @@ domain("patchdemo.wmflabs.org") {
     --border-color-content-removed: #ffe49c;
     --border-color-content-changed: #b0c1f0;
 }
-.skin-theme-clientpref-night:root,
-.skin-theme-clientpref-os:root {
+.skin-theme-clientpref-night:root {
     --color-content-added: #233566;
     --color-content-removed: #453217;
     --background-color-content-added: #233566;
@@ -52,6 +51,18 @@ domain("patchdemo.wmflabs.org") {
     --border-color-content-added: #233566;
     --border-color-content-removed: #453217;
     --border-color-content-changed: #3056a9;
+}
+@media (prefers-color-scheme: dark) {
+  .skin-theme-clientpref-os:root {
+    --color-content-added: #233566;
+    --color-content-removed: #453217;
+    --background-color-content-added: #233566;
+    --background-color-content-removed: #453217;
+    --background-color-content-changed: #3056a9;
+    --border-color-content-added: #233566;
+    --border-color-content-removed: #453217;
+    --border-color-content-changed: #3056a9;
+  }
 }
 
 /* NavPopups fixes */
