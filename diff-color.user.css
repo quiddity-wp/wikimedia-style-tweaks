@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color (red/green)
 @namespace   StylishThemes
-@version     1.1.14
+@version     1.1.15
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color.user.css
 @license     CC-BY-SA-4.0
@@ -92,17 +92,17 @@ html.skin-theme-clientpref-night del.popupDiff {
 
 /* Visual diff fixes */
 /* Light mode */
-[data-diff-action="insert"],
-.ve-ui-diffElement-attributeChange ins {
+[data-diff-action='insert'], [data-diff-action='insert'] > caption, [data-diff-action='insert'] > figcaption, .ve-ui-diffElement-attributeChange ins {
   background-color: var(--background-color-content-added) !important;
+  box-shadow: 0 0 0 1px var(--border-color-content-added);
 }
-[data-diff-action="remove"],
-.ve-ui-diffElement-attributeChange del {
+[data-diff-action='remove'], [data-diff-action='remove'] > caption, [data-diff-action='remove'] > figcaption, .ve-ui-diffElement-attributeChange del {
   background-color: var(--background-color-content-removed) !important;
+  box-shadow: 0 0 0 1px var(--border-color-content-removed);
 }
-[data-diff-action="change"], 
-[data-diff-action="change-insert"] {
+[data-diff-action="change"], [data-diff-action="change-insert"] {
   background-color: var(--background-color-content-changed) !important;
+  box-shadow: 0 0 0 1px var(--border-color-content-changed);
 }
 
 /* Visualdiff clarifier */
@@ -119,7 +119,8 @@ html.skin-theme-clientpref-night del.popupDiff {
 
 /* Fix Visualdiffs sidebar color to match and make more visible */
 .ve-ui-diffElement-attributeChange {color: unset !important; opacity: 0.9}
-/* Dark mode fixes */
+
+/* Visualdiff dark mode fixes */
 html.skin-theme-clientpref-night .ve-ui-diffElement-attributeChange ins {
   background: #196551; /* default: #026c5f */
 }
@@ -135,30 +136,17 @@ html.skin-theme-clientpref-night .ve-ui-diffElement-attributeChange del {
   }
 }
 
-/* More tweaks - notes from Derek */
+/* Strikethough for removed content */
 .mw-diff-inline-deleted del, .mw-diff-inline-changed del, .mw-diff-inline-moved del { 
 	  text-decoration: line-through;
 }
 
+/* Bold and gap for changed & added content */
 .mw-diff-inline-added ins, .mw-diff-inline-changed ins, .mw-diff-inline-moved ins {
   font-weight: bold;
   margin-left: 2px;
 }
 
-[data-diff-action='change'], [data-diff-action='change-insert'] {
-  background-color: var(--background-color-content-changed) !important;
-  box-shadow: 0 0 0 1px var(--border-color-content-changed);
-}
-
-[data-diff-action='insert'], [data-diff-action='insert'] > caption, [data-diff-action='insert'] > figcaption {
-  background-color: var(--background-color-content-added) !important;
-  box-shadow: 0 0 0 1px var(--border-color-content-added);
-}
-
-[data-diff-action='remove'], [data-diff-action='remove'] > caption, [data-diff-action='remove'] > figcaption {
-  background-color: var(--background-color-content-removed) !important;
-  box-shadow: 0 0 0 1px var(--border-color-content-removed);
-}
 
 
 }
