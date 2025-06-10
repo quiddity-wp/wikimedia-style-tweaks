@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color2 (yellow/blue)
 @namespace   StylishThemes
-@version     1.1.9
+@version     1.1.10
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color2.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color2.user.css
 @license     CC-BY-SA-4.0
@@ -103,7 +103,7 @@ html.skin-theme-clientpref-night del.popupDiff {
 
 /* Visualdiff Dark/Automatic-dark fixes */
 [data-diff-action="insert"] > *, [data-diff-action="remove"] > *, [data-diff-action="change"] > *, [data-diff-action="change-insert"] > *, [data-diff-action="change-remove"] > *, [data-diff-move] > * {
-  mix-blend-mode: unset;
+  mix-blend-mode: normal;
 }
 
 /* Visualdiff - Less obtrusive "newline" messages */
@@ -115,5 +115,30 @@ html.skin-theme-clientpref-night del.popupDiff {
 
 /* Fix Visualdiffs sidebar colors to be more visible */
 .ve-ui-diffElement-attributeChange {color: unset !important; opacity: 0.9}
+
+/* More tweaks - notes from Derek */
+.mw-diff-inline-deleted del, .mw-diff-inline-changed del, .mw-diff-inline-moved del { 
+  text-decoration: line-through;
+}
+
+.mw-diff-inline-added ins, .mw-diff-inline-changed ins, .mw-diff-inline-moved ins {
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+[data-diff-action='change'], [data-diff-action='change-insert'] {
+  background-color: var(--background-color-content-changed) !important;
+  box-shadow: 0 0 0 1px var(--border-color-content-changed);
+}
+
+[data-diff-action='insert'], [data-diff-action='insert'] > caption, [data-diff-action='insert'] > figcaption {
+  background-color: var(--background-color-content-added) !important;
+  box-shadow: 0 0 0 1px var(--border-color-content-added);
+}
+
+[data-diff-action='remove'], [data-diff-action='remove'] > caption, [data-diff-action='remove'] > figcaption {
+  background-color: var(--background-color-content-removed) !important;
+  box-shadow: 0 0 0 1px var(--border-color-content-removed);
+}
 
 }
