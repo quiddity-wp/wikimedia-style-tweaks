@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color (red/green)
 @namespace   StylishThemes
-@version     1.1.15
+@version     1.1.16
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color.user.css
 @license     CC-BY-SA-4.0
@@ -137,8 +137,9 @@ html.skin-theme-clientpref-night .ve-ui-diffElement-attributeChange del {
 }
 
 /* Strikethough for removed content */
-.mw-diff-inline-deleted del, .mw-diff-inline-changed del, .mw-diff-inline-moved del { 
-	  text-decoration: line-through;
+.mw-diff-inline-deleted del, .mw-diff-inline-changed del, .mw-diff-inline-moved del {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-subtle);
 }
 
 /* Bold and gap for changed & added content */
