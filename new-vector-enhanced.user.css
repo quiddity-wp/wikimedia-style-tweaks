@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.69
+@version     1.0.70
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -564,11 +564,13 @@ padding-top: 40px !important;
 }
 
 /* Reduce the grid gutter, and header height */
+/* try for wider toc earlier - -but buggy on non-articles--
 @media screen and (min-width: 1580px) {
   .mw-page-container-inner {
     grid-template-columns: 320px !important;
   }
-}
+} 
+*/
 @media screen and ( min-width: 1200px ) {
   .mw-page-container-inner {  
     grid-template: min-content 1fr min-content / 250px;
