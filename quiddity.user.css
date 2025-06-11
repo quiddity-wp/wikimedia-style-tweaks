@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.70
+@version     1.1.71
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -92,7 +92,14 @@ domain("patchdemo.wmflabs.org") {
 span.ais523hmn {
   background-color: #fbe498 !important;
 }
-
+html.skin-theme-clientpref-night span.ais523hmn {
+  background-color: #453217 !important;
+}
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os span.ais523hmn {
+    background-color: #453217 !important;
+  }
+}
 /* Opacity in RC/Watchlist for users with 500+ edits */
 .mw-changeslist-user-experienced {
   opacity: 0.7;
