@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.73
+@version     1.1.74
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -550,13 +550,18 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 /* add gap above categories box */
 #catlinks {margin-top: 50px;}
 
-/* list cats */
-.catlinks li {display: block}
+/* list cats
+.catlinks li {display: block} */
 
 /* bold catbox heading */
 #mw-normal-catlinks > a:first-of-type {font-size: 110% }
 
 /* mute hidden cats */
 #mw-hidden-catlinks {opacity: 60%}
+	
+/* Highlight contact list */
+#n-Contact-list > a {
+  background-color: var(--background-color-success-subtle);
+}
  
 }
