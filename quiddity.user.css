@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.75
+@version     1.1.76
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -44,10 +44,34 @@ domain("patchdemo.wmflabs.org") {
 }
 
 /* Float the section-header links "[edit] [edit source]" to right, where they're less distracting  */
-.mw-editsection {
+/* .mw-editsection {
   float: right;
-  padding-top: 5px;
+  padding-top: 15px;
+} */
+/* this chunk copied from [[w:en:MediaWiki:Gadget-righteditlinks.css]] */
+/* Move section [edit] links to the right side of the screen. */
+.mw-editsection,
+.mw-editsection-like {
+    float: right;
+    line-height: inherit;
 }
+#firstHeading .mw-editsection,
+#firstHeading .mw-editsection-like {
+    margin-right: 0.5em;
+}
+.skin-modern #firstHeading .mw-editsection,
+.skin-modern #firstHeading .mw-editsection-like {
+    margin-top: 0.5em;
+}
+.skin-vector .mw-editsection,
+.skin-vector .mw-editsection-like {
+	margin-top: 0.7em;
+}
+.skin-vector #firstHeading .mw-editsection,
+.skin-vector #firstHeading .mw-editsection-like {
+    margin-top: 1em;
+}
+
 
 /* NAVPOP FIXES */
 /* ------------ */
@@ -424,7 +448,7 @@ font-size: 90% !important;
 }
 .mw-editsection > a:not(.mw-editsection-visualeditor, #ca-addsection, .copysectlink, .copy-section-link-pilcrow)::after  {
   content: 'source';
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   visibility: visible;
   color: var(--color-progressive,#36c);
 }
