@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM shorter-tab-names 
 @namespace   StylishThemes
-@version     1.1.2
+@version     1.1.3
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/shorter-tab-names.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/shorter-tab-names.user.css
 @license     CC-BY-SA-4.0
@@ -39,7 +39,7 @@ domain("patchdemo.wmflabs.org") {
   font-size: 0px;
 }
 #ca-viewsource > a::after {
-  content: 'View_Source';
+  content: 'View-Source';
   font-size: 0.85rem;
   visibility: visible;
   margin-top: -9px;
