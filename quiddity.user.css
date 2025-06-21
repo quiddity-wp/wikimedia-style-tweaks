@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.77
+@version     1.1.78
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -595,5 +595,6 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 /* test wider toc */
 .vector-toc .vector-toc-list-item {padding-left: 0px }
 .vector-toc-level-2,.vector-toc-level-3,.vector-toc-level-4,.vector-toc-level-5 {padding-left: 15px !important; list-style:disc !important}
+#vector-toc-pinned-container {padding-right: 5px}
  
 }
