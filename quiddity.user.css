@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.76
+@version     1.1.77
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -240,6 +240,8 @@ body.mw-special-PageTranslation #mw-content-text li > div::after {
 #n-recentchanges > a {
   background-color: var(--background-color-success-subtle);
 }
+/* Embiggen for my eyes */
+.mw-changeslist-line  {font-size: 1.1rem;}
 /* Smol the sub-items in Enchanced RC */
 .mw-rcfilters-ui-highlights-enhanced-nested {
   font-size: 0.9em;
@@ -589,5 +591,9 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 #n-Contact-list > a {
   background-color: var(--background-color-success-subtle);
 }
+
+/* test wider toc */
+.vector-toc .vector-toc-list-item {padding-left: 0px }
+.vector-toc-level-2,.vector-toc-level-3,.vector-toc-level-4,.vector-toc-level-5 {padding-left: 15px !important; list-style:disc !important}
  
 }
