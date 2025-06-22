@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.78
+@version     1.1.79
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -461,7 +461,7 @@ font-size: 90% !important;
 } */
 
 
-/* hide toc hide button */
+/* Reduce visibility of ToC hide button */
 button[data-event-name="pinnable-header.vector-toc.unpin"] {
   color: var(--color-placeholder);
 }
@@ -582,10 +582,10 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 .catlinks li {display: block} */
 
 /* bold catbox heading */
-#mw-normal-catlinks > a:first-of-type {font-size: 110% }
+#mw-normal-catlinks > a:first-of-type {font-size: 110%;}
 
 /* mute hidden cats */
-#mw-hidden-catlinks {opacity: 60%}
+#mw-hidden-catlinks {opacity: 60%;}
 	
 /* Highlight contact list */
 #n-Contact-list > a {
@@ -593,8 +593,14 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 }
 
 /* test wider toc */
-.vector-toc .vector-toc-list-item {padding-left: 0px }
-.vector-toc-level-2,.vector-toc-level-3,.vector-toc-level-4,.vector-toc-level-5 {padding-left: 15px !important; list-style:disc !important}
-#vector-toc-pinned-container {padding-right: 5px}
+.vector-toc .vector-toc-list-item {
+  padding-left: 0px;
+}
+.vector-toc-level-2,.vector-toc-level-3,.vector-toc-level-4,.vector-toc-level-5 {
+  padding-left: 15px !important;
+}
+#vector-toc-pinned-container {
+  padding-right: 5px;
+}
  
 }
