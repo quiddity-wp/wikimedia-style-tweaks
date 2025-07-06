@@ -293,7 +293,7 @@ opacity: 0.6;
 #toc-External_links {
   font-size: 0.85em;
 }
-#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
+/*#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-References:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Notes:not(.vector-toc-list-item-active) .vector-toc-link,  
 #toc-Endnotes:not(.vector-toc-list-item-active) .vector-toc-link,  
@@ -307,7 +307,7 @@ opacity: 0.6;
 #toc-Further_information:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-External_links:not(.vector-toc-list-item-active) .vector-toc-link {
   color: var(--background-color-progressive--hover);
-}
+}*/
 .vector-toc-list-item-active > a {
 color: var(--color-base) !important;
 }
