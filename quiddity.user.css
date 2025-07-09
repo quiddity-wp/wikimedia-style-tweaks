@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.80
+@version     1.1.81
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -417,10 +417,20 @@ margin-top: -15px
   transition-delay: 100ms;
 }*/
 
-/* ??? */
-/*.timeline-wrapper, 
+/* Allow tables to overflow "standard" width
+@media screen and (min-width: 640px) {
+.timeline-wrapper, 
 .wikitable {width: calc(100vw - 350px) !important;}
-.timeline-wrapper {max-width: none;} */
+.timeline-wrapper {max-width: none;}
+} */
+
+/* Fix wider-tables not fully showing in fixed-width layout */
+@media screen {
+  .noresize {
+    /* max-width: unset;  NOT NEEDED? */
+    overflow-x: unset;
+  }
+}
 
 /* ???? */
 .vector-feature-zebra-design-disabled .mw-page-container {
@@ -480,14 +490,6 @@ button[data-event-name="pinnable-header.vector-toc.unpin"] {
 .mw-parser-output tr + tr > .navbox-list {border-top: unset;}
 .mw-parser-output .navbox-list-with-group {border-left: unset;} 
 */
-
-/* Fix wider-tables not fully showing in fixed-width layout */
-@media screen {
-  .noresize {
-    /* max-width: unset;  NOT NEEDED? */
-    overflow-x: unset;
-  }
-}
 
 /* Codex, widen the form label click-area */
 .cdx-radio__label {
@@ -602,5 +604,6 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 #vector-toc-pinned-container {
   padding-right: 5px;
 }
- 
+
+
 }
