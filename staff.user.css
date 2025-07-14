@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name        wikimedia staff account reminder
 @namespace   StylishThemes
-@version     1.0.9
-@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks
+@version     1.0.10
+@homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/staff.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/staff.user.css
 @license     CC-BY-SA-4.0
 @author      quiddity-wp
@@ -25,7 +25,7 @@
   domain("wikiversity.org"), 
   domain("wikiquote.org"), 
   domain("wikidata.org"), 
-  domain("beta.wmflabs.org"), 
+  domain("beta.wmcloud.org"), 
   domain("wikifunctions.org") { 
 /* NOTE: VECTOR SKIN is assumed. */
 /* Staff account, pink sidebar */
