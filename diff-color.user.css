@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM diff color (red/green)
 @namespace   StylishThemes
-@version     1.1.17
+@version     1.1.18
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/diff-color.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/diff-color.user.css
 @license     CC-BY-SA-4.0
@@ -27,10 +27,10 @@ domain("wikinews.org"),
 domain("wikiversity.org"),
 domain("wikiquote.org"),
 domain("wikidata.org"),
-domain("beta.wmflabs.org"),
+domain("beta.wmcloud.org"),
 domain("wikifunctions.org"),
 domain("vrt-wiki.wikimedia.org"),
-domain("patchdemo.wmflabs.org") {
+domain("patchdemo.wmcloud.org") {
 
 :root {
     --color-content-added: #177860;
