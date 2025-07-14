@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM reset background colors for screenshots
 @namespace   StylishThemes
-@version     1.0.15
+@version     1.0.16
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/background-override.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/background-override.user.css
 @license     CC-BY-SA-4.0
@@ -26,7 +26,7 @@
   domain("wikiversity.org"), 
   domain("wikiquote.org"), 
   domain("wikidata.org"), 
-  domain("beta.wmflabs.org"), 
+  domain("beta.wmcloud.org"), 
   domain("wikifunctions.org") { 
 body, 
 #mw-panel,
