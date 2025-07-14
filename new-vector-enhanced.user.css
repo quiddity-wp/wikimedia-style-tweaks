@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.72
+@version     1.0.73
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -28,10 +28,10 @@ domain("wikinews.org"),
 domain("wikiversity.org"),
 domain("wikiquote.org"),
 domain("wikidata.org"),
-domain("beta.wmflabs.org"),
+domain("beta.wmcloud.org"),
 domain("wikifunctions.org"),
 domain("vrt-wiki.wikimedia.org"),
-domain("patchdemo.wmflabs.org") {
+domain("patchdemo.wmcloud.org") {
 /* NOTE: this assumes you are using Left-to-Right languages in NEW VECTOR ([[mw:Desktop Improvements]] beta) */
 
 /* undergoing cleanup... 
