@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.82
+@version     1.1.83
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -241,7 +241,8 @@ body.mw-special-PageTranslation #mw-content-text li > div::after {
   background-color: var(--background-color-success-subtle);
 }
 /* Embiggen for my eyes */
-.mw-changeslist-line  {font-size: 1.1rem;}
+.mw-changeslist-line-inner  {font-size: 1.0rem;}
+.mw-rcfilters-ui-highlights-enhanced-nested {font-size: 0.9rem !important;}
 /* Smol the sub-items in Enchanced RC */
 .mw-rcfilters-ui-highlights-enhanced-nested {
   font-size: 0.9em;
