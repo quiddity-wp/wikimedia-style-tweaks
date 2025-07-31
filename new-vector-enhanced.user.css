@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.76
+@version     1.0.77
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -348,13 +348,13 @@ padding-bottom: 2px !important;
 .client-js.vector-sticky-header-enabled .vector-sticky-pinned-container,
 .vector-feature-zebra-design-enabled.vector-feature-toc-pinned-clientpref-1 .vector-column-start > .vector-toc-landmark,
 .vector-feature-toc-pinned-clientpref-1 .vector-column-start > .vector-toc-landmark {
-  top: 95px !important;
+  top: 115px;
 }
 /* .vector-feature-page-tools-enabled #vector-toc-pinned-container .vector-toc {
   padding-top: 0 !important;
 } */
 .vector-column-start {
-  margin-top: -20px !important;
+  margin-top: 0;
 }
 
 /* ???
