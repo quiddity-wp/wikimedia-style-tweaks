@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.77
+@version     1.0.78
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -465,11 +465,13 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
 #firstHeading {
 padding-top: 15px;
 }
+/*
 @media screen and (max-width: 1119px) and (min-width:999px) {
-#firstHeading {
-padding-top: 40px !important;
+  #firstHeading {
+  padding-top: 40px;
+  }
 }
-}
+*/
 
 /* Reduce ToC height for logged-out view 
 #vector-toc {
@@ -1159,6 +1161,7 @@ background: unset
   padding-top: 5px;
 }
 
+/* ??? */
 .cdx-text-input {
   min-width: unset;
 }
@@ -1186,13 +1189,6 @@ background: unset
   }
 }
 
-/* Fix the patch tommorow */
-@media screen {
-  .vector-header {
-    flex-flow: unset;
-  }
-}
-	
 /* Test smaller title H1s in small width windows */
 @media screen and (max-width: 719px) {
   .mw-body .firstHeading {
@@ -1205,7 +1201,7 @@ background: unset
   #pt-notifications-alert, 
   #pt-notifications-notice,
   #vector-appearance-dropdown-label {
-    margin: 0;
+    margin: 0 1px;
   }
   #vector-user-links-dropdown-label {
     margin: 0 4px 0 0
