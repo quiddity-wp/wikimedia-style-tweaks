@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.78
+@version     1.0.79
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -903,6 +903,7 @@ html {
 .mw-page-container {
   padding-top: 65px !important;
 }
+/* Maybe not neeeded anymore? 
 @media screen and (max-width: 999px) {
   .mw-content-container {
     padding-top: 32px;
@@ -910,12 +911,10 @@ html {
   #pt-talk-alert {
     margin-top: 10px !important;
   }
-/* test remove
-#siteSub {
-    padding-top: 5px;
-  }
-  */
-}
+/* test remove this, too...
+#siteSub {padding-top: 5px;}
+  
+} */
 /* nudge Tools right if expanded */
 @media screen and (max-width: 999px) {
   #right-navigation:has(.vector-page-tools-landmark) {
@@ -1010,7 +1009,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 }
 
 /* Replace toolbar text with icons at small widths */
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 799px) {
   #ca-addsection {
     margin: 2px;
   }
