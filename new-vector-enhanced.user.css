@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.82
+@version     1.0.83
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1217,6 +1217,15 @@ background: unset
 @media screen and (max-width: 723px) {
   #searchform{
     max-width:30vw}
+}
+
+/* fix search icon leaping */
+.cdx-text-input__start-icon {
+  left:5px !important
+}
+.cdx-typeahead-search--show-thumbnail:not(.cdx-typeahead-search--is-mobile-view):not(.cdx-typeahead-search--auto-expand-width) .cdx-text-input__input,
+.cdx-typeahead-search--show-thumbnail:not(.cdx-typeahead-search--is-mobile-view).cdx-typeahead-search--auto-expand-width.cdx-typeahead-search--expanded .cdx-text-input__input {
+  padding-left:35px
 }
 
 /* top page-name and language sticky
