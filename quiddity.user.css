@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.86
+@version     1.1.87
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -278,6 +278,12 @@ opacity: 0.6;
 #t-collapsible-toggle-all {display: none}
 #wbc-editpage {display: none}
 
+
+/* TOC */
+/* Embiggen headers for H2s within ToC */
+.vector-toc-level-1 > :first-child {font-size: 1.2em}
+#toc-mw-content-text > :first-child {font-size: 1em}
+
 /* Distinct End-matter sections */
 #toc-See_also:not(.vector-toc-level-2), 
 #toc-References:not(.vector-toc-level-2), 
@@ -292,7 +298,8 @@ opacity: 0.6;
 #toc-Further_reading:not(.vector-toc-level-2), 
 #toc-Further_information:not(.vector-toc-level-2),
 #toc-External_links {
-  font-size: 0.85em;
+  font-size: 0.75em !important;
+  font-weight: 500;
 }
 /*#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-References:not(.vector-toc-list-item-active) .vector-toc-link, 
@@ -312,6 +319,30 @@ opacity: 0.6;
 .vector-toc-list-item-active > a {
 color: var(--color-base) !important;
 }
+
+/* lighter color for Vector-classic ToC numbers */
+.tocnumber {
+color: grey;
+}
+
+/* Reduce visibility of ToC hide button */
+button[data-event-name="pinnable-header.vector-toc.unpin"] {
+  color: var(--color-placeholder);
+}
+
+/* test wider toc 
+.vector-toc .vector-toc-list-item {
+  padding-left: 5px;
+}
+.vector-toc-level-2,.vector-toc-level-3,.vector-toc-level-4,.vector-toc-level-5 {
+  padding-left: 15px !important;
+}
+#vector-toc-pinned-container {
+  padding-right: 5px;
+}
+*/
+
+/* MISCELLANEOUS */
 
 /* Anon preview warning */
 .mw-anon-edit-warning, 
@@ -348,11 +379,6 @@ ul:not(.noprint) + ul {
 .CategoryTreeNotice,
 .CategoryTreeItem:has(span[title="Contains 0 subcategories, 0 pages, and 0 files"]) {
   opacity: 0.35;
-}
-
-/* lighter color for Vector-classic ToC numbers */
-.tocnumber {
-color: grey;
 }
 
 
@@ -443,17 +469,6 @@ margin-top: -15px
   background: #b0f2e8;
 }
 
-/* ???
-.vector-feature-zebra-design-enabled .vector-header-container .mw-header,
-.vector-feature-zebra-design-enabled .vector-page-toolbar,
-#p-associated-pages {
-  background: #d8d7d7 !important;
-} */
-
-/* test smaller ToC text 
-.vector-toc-text {
-font-size: 90% !important;
-} */
 
 /* Shorten the inline links for "edit source" to just "source" */
 .mw-editsection > a:not(.mw-editsection-visualeditor, #ca-addsection, .copysectlink, .copy-section-link-pilcrow)  {
@@ -464,17 +479,6 @@ font-size: 90% !important;
   font-size: 0.8rem;
   visibility: visible;
   color: var(--color-progressive,#36c);
-}
-
-/* Hide the "copy" gadget's first header
-#firstHeading > .mw-editsection {
-  display: none;
-} */
-
-
-/* Reduce visibility of ToC hide button */
-button[data-event-name="pinnable-header.vector-toc.unpin"] {
-  color: var(--color-placeholder);
 }
 
 /* darkmode fixes
@@ -595,17 +599,6 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
   background-color: var(--background-color-success-subtle);
 }
 
-/* test wider toc */
-.vector-toc .vector-toc-list-item {
-  padding-left: 0px;
-}
-.vector-toc-level-2,.vector-toc-level-3,.vector-toc-level-4,.vector-toc-level-5 {
-  padding-left: 15px !important;
-}
-#vector-toc-pinned-container {
-  padding-right: 5px;
-}
-
 /* Bigger edit-box text */
 #wpTextbox1 {font-size: 1.0em}
 .cm-line {font-size: 1.1em}
@@ -615,6 +608,7 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 .cm-tooltip-fold {display: none}
 
 /* If default headerbar is showing, don't animate it */
-.vector-header-container {transition-duration: 0ms;}
+.vector-header-container {transition-duration: 0ms}
 
+/* END */
 }
