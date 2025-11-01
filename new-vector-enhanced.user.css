@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.84
+@version     1.0.85
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -994,15 +994,15 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   
 /* Grey Sticky Headers  */
 .mw-header {
-  background-color: var(--color-inverted);
+  background-color: var(--background-color-base);
 }
 .vector-page-toolbar {
-  background-color: var(--color-inverted);
+  background-color: var(--background-color-base);
   border-bottom: 1px solid var(--border-color-subtle);
   padding-bottom: 1px;
 }
 #p-associated-pages {
-  background-color: var(--color-inverted);
+  background-color: var(--background-color-base);
   max-height: 24px;
 }
 .vector-page-toolbar-container {
