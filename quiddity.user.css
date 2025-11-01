@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.87
+@version     1.1.88
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -328,6 +328,7 @@ color: grey;
 /* Reduce visibility of ToC hide button */
 button[data-event-name="pinnable-header.vector-toc.unpin"] {
   color: var(--color-placeholder);
+  background-color: unset;
 }
 
 /* test wider toc 
@@ -610,5 +611,90 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 /* If default headerbar is showing, don't animate it */
 .vector-header-container {transition-duration: 0ms}
 
+/* ideas taken/adapted from w:User:DTorsani-WMF/vector-2022.css */
+/* Image Reponsiveness in thin windows */
+@media only screen and (max-width: 639px) {
+  .mw-parser-output figure {
+  	width: 100%;
+  	margin: 8px 0;
+  }
+  .mw-parser-output figure img {
+  	width: 100%;
+  	height: auto;
+  }
+  .mw-parser-output .infobox {
+  	width: 100%;
+  }
+  .mw-parser-output .infobox img {
+  	width: 100%;
+  	height: auto;
+  	margin: 8px 0;
+  }
+  .mw-parser-output .tmulti .trow {
+    flex-direction: column;
+  }
+  .mw-parser-output .tmulti .multiimageinner {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .mw-parser-output .tmulti .tsingle {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .tsingle > div:first-child {
+    height: auto !important;
+  }
+}
+/* Ambox overrides */
+.mw-parser-output .ambox {
+    padding: 4px;
+    width: 100%;
+    margin: 16px 0 !important;
+    border-radius: 6px;
+    font-size: 90%;
+}
+.mw-parser-output .ambox .mbox-image {
+    display: none;
+}
+/* Infobox Templates */
+.mw-parser-output .ib-settlement th:first-child {
+	border-top: none;
+}
+.wmamapbutton {
+	width: 16px !important;
+	height: auto !important;
+}
+.flagicon img {
+	width: 24px !important;
+	height: auto !important;
+}
+/*Citations*/
+sup.reference {
+	    margin: 0 0 0 1px;
+    background-color: var(--background-color-interactive);
+    border-radius: 50%;
+    font-style: italic;
+}
+sup.reference:hover, sup.reference:active {
+    background-color: var(--color-progressive--hover);
+	    cursor: pointer;
+}
+sup.reference:hover a, sup.reference:active a {
+	    color: var(--color-inverted-fixed) !important;
+}
+/*Citations*/
+sup.reference {
+	    margin: 0 0 0 1px;
+    background-color: var(--background-color-interactive);
+    border-radius: 50%;
+    font-style: italic;
+}
+sup.reference:hover, sup.reference:active {
+    background-color: var(--color-progressive--hover);
+	    cursor: pointer;
+}
+sup.reference:hover a, sup.reference:active a {
+	    color: var(--color-inverted-fixed) !important;
+}
 /* END */
 }
