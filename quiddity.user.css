@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.88
+@version     1.1.89
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -59,13 +59,9 @@ domain("patchdemo.wmcloud.org") {
 #firstHeading .mw-editsection-like {
     margin-right: 0.5em;
 }
-.skin-modern #firstHeading .mw-editsection,
-.skin-modern #firstHeading .mw-editsection-like {
-    margin-top: 0.5em;
-}
 .skin-vector .mw-editsection,
 .skin-vector .mw-editsection-like {
-	margin-top: 0.7em;
+	margin-top: 0.5em;
 }
 .skin-vector #firstHeading .mw-editsection,
 .skin-vector #firstHeading .mw-editsection-like {
