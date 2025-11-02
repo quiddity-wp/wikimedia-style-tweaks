@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.90
+@version     1.1.91
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -327,6 +327,12 @@ button[data-event-name="pinnable-header.vector-toc.unpin"] {
   background-color: unset;
 }
 
+/* Change color of ToC scrollbar */
+#vector-toc, 
+.vector-sticky-pinned-container {
+  scrollbar-color: var(--background-color-interactive--hover) var(--background-color-base);
+}
+
 /* test wider toc 
 .vector-toc .vector-toc-list-item {
   padding-left: 5px;
@@ -548,6 +554,8 @@ html.skin-theme-clientpref-night .cdx-radio:has(label[for="skin-client-pref-skin
 html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-day"]) {background: linear-gradient(to right,#101418 80%,#eaecf0 80%); color: #eaecf0}
 html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-theme-value-night"]) {background: #101418; color: white}
 }
+/* Stop the beta-dark-mode warning from making the box bigger */
+#skin-theme-beta-notice {max-width: 150px;}
 
 /* bigger max dropdown */
 @media screen {
@@ -693,5 +701,6 @@ sup.reference:hover, sup.reference:active {
 sup.reference:hover a, sup.reference:active a {
 	    color: var(--color-inverted-fixed) !important;
 }
+
 /* END */
 }
