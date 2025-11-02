@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.91
+@version     1.1.92
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -328,7 +328,7 @@ button[data-event-name="pinnable-header.vector-toc.unpin"] {
 }
 
 /* Change color of ToC scrollbar */
-#vector-toc, 
+.vector-dropdown-content, 
 .vector-sticky-pinned-container {
   scrollbar-color: var(--background-color-interactive--hover) var(--background-color-base);
 }
