@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.89
+@version     1.1.90
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -644,10 +644,11 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 /* Ambox overrides */
 .mw-parser-output .ambox {
     padding: 4px;
-    width: 100%;
-    margin: 16px 0 !important;
     border-radius: 6px;
     font-size: 90%;
+}
+.hide-when-compact {
+  font-size: 90%
 }
 .mw-parser-output .ambox .mbox-image {
     display: none;
