@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.92
+@version     1.1.93
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -477,7 +477,7 @@ margin-top: -15px
 .mw-editsection > a:not(.mw-editsection-visualeditor, #ca-addsection, .copysectlink, .copy-section-link-pilcrow)  {
   font-size: 0px;
 }
-.mw-editsection > a:not(.mw-editsection-visualeditor, #ca-addsection, .copysectlink, .copy-section-link-pilcrow)::after  {
+.mw-editsection > a:not(.mw-editsection-visualeditor, #ca-addsection, .copysectlink, .copy-section-link-pilcrow, .cdx-button)::after  {
   content: 'source';
   font-size: 0.8rem;
   visibility: visible;
