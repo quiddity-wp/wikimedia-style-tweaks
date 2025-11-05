@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.93
+@version     1.1.94
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -616,39 +616,6 @@ html.skin-theme-clientpref-os .cdx-radio:has(label[for="skin-client-pref-skin-th
 .vector-header-container {transition-duration: 0ms}
 
 /* ideas taken/adapted from w:User:DTorsani-WMF/vector-2022.css */
-/* Image Reponsiveness in thin windows */
-@media only screen and (max-width: 639px) {
-  .mw-parser-output figure {
-  	width: 100%;
-  	margin: 8px 0;
-  }
-  .mw-parser-output figure img {
-  	width: 100%;
-  	height: auto;
-  }
-  .mw-parser-output .infobox {
-  	width: 100%;
-  }
-  .mw-parser-output .infobox img {
-  	width: 100%;
-  	height: auto;
-  	margin: 8px 0;
-  }
-  .mw-parser-output .tmulti .trow {
-    flex-direction: column;
-  }
-  .mw-parser-output .tmulti .multiimageinner {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .mw-parser-output .tmulti .tsingle {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .tsingle > div:first-child {
-    height: auto !important;
-  }
-}
 /* Ambox overrides */
 .mw-parser-output .ambox {
     padding: 4px;
