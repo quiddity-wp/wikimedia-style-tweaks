@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.86
+@version     1.0.87
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1226,6 +1226,11 @@ background: unset
 .cdx-typeahead-search--show-thumbnail:not(.cdx-typeahead-search--is-mobile-view):not(.cdx-typeahead-search--auto-expand-width) .cdx-text-input__input,
 .cdx-typeahead-search--show-thumbnail:not(.cdx-typeahead-search--is-mobile-view).cdx-typeahead-search--auto-expand-width.cdx-typeahead-search--expanded .cdx-text-input__input {
   padding-left:35px
+}
+
+/* reduce pinned toolbar padding */
+@media screen {
+  .vector-pinned-container {padding: 0 4px;}
 }
 
 /* top page-name and language sticky
