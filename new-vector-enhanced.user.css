@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.87
+@version     1.0.88
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -600,7 +600,7 @@ padding-top: 15px;
 @media screen and (min-width: 1000px) {
   .mw-body {
     display: grid;
-    grid-template: min-content min-content min-content 1fr / minmax(0,60em) min-content;
+    grid-template: min-content min-content min-content 1fr / minmax(0,90em) min-content;
     grid-template-areas:
       'titlebar-cx .    ' 
       'titlebar  columnEnd' 
@@ -988,8 +988,10 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   margin-top: -10px;
 }
 
-.vector-feature-zebra-design-enabled.vector-feature-page-tools-pinned-enabled .vector-column-end {
-  width: unset !important;
+@media screen {
+  .vector-feature-page-tools-pinned-enabled .vector-column-end {
+  width: 12.5em !important;
+  }
 }
   
 /* Grey Sticky Headers  */
