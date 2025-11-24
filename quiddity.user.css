@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.94
+@version     1.1.95
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -297,7 +297,8 @@ opacity: 0.6;
   font-size: 0.75em !important;
   font-weight: 500;
 }
-/*#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
+/* Tried also changing color, but too distracting, so commenting-out for now
+#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-References:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Notes:not(.vector-toc-list-item-active) .vector-toc-link,  
 #toc-Endnotes:not(.vector-toc-list-item-active) .vector-toc-link,  
@@ -473,7 +474,36 @@ margin-top: -15px
 }
 
 
+/* Replace section-edit links with icons */
+.mw-editsection-visualeditor {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
+  background-size: 12px;
+  display: inline-block;
+  padding: 12px 0 0 0;
+  width: 12px;
+  font-size: 1px;
+  text-decoration: none;
+}
+.mw-editsection:not(.cite-unseen-section) > a:not(.mw-editsection-visualeditor) {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
+  background-size: 15px;
+  display: inline-block;
+  padding: 12px;
+  width: 12px;
+  font-size: 1px;
+  text-decoration: none;
+}
+.mw-editsection-bracket {
+  font-size: 10px;
+  display: none;
+}
+.mw-editsection-divider {
+  font-size: 10px;
+  padding-right: 2px;
+} 
+
 /* Shorten the inline links for "edit source" to just "source" */
+/* REMOVED FOR NOW - conflicts with iconification (above)
 .mw-editsection > a:not(.mw-editsection-visualeditor, #ca-addsection, .copysectlink, .copy-section-link-pilcrow)  {
   font-size: 0px;
 }
@@ -482,7 +512,9 @@ margin-top: -15px
   font-size: 0.8rem;
   visibility: visible;
   color: var(--color-progressive,#36c);
-}
+} */
+
+
 
 /* darkmode fixes
 .wikiEditor-ui-toolbar,
