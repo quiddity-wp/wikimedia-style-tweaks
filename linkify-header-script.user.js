@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Wikimedia - Linkify headers
-// @version     0.1.11
+// @version     0.1.12
 // @namespace   github.com/quiddity-wp/wikimedia-style-tweaks
 // @description A userscript helping you get the url linking to specified section - forked from https://greasyfork.org/en/scripts/15930-wikipedia-linkify-headers
 // @include *meta.wikimedia.org/*
@@ -45,4 +45,4 @@ for (i = 0; i < nodes.length; i++) {
 	nodes[i].appendChild(link);
 }
 
-GM_addStyle(".mw-headline-link{font-size:70%;margin-left:.2em;display:none;user-select:none}.mw-heading:hover .mw-headline-link{display:inline;user-select:none}");
+GM_addStyle(".mw-headline-link{font-size:70%;margin-left:1em;display:none;user-select:none}.mw-heading .mw-headline-link{display:inline;user-select:none}");
