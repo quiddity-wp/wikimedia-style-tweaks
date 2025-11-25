@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.95
+@version     1.1.96
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -297,8 +297,7 @@ opacity: 0.6;
   font-size: 0.75em !important;
   font-weight: 500;
 }
-/* Tried also changing color, but too distracting, so commenting-out for now
-#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
+/*#toc-See_also:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-References:not(.vector-toc-list-item-active) .vector-toc-link, 
 #toc-Notes:not(.vector-toc-list-item-active) .vector-toc-link,  
 #toc-Endnotes:not(.vector-toc-list-item-active) .vector-toc-link,  
@@ -473,7 +472,6 @@ margin-top: -15px
   background: #b0f2e8;
 }
 
-
 /* Replace section-edit links with icons */
 .mw-editsection-visualeditor {
   background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
@@ -513,8 +511,6 @@ margin-top: -15px
   visibility: visible;
   color: var(--color-progressive,#36c);
 } */
-
-
 
 /* darkmode fixes
 .wikiEditor-ui-toolbar,
@@ -686,19 +682,13 @@ sup.reference:hover, sup.reference:active {
 sup.reference:hover a, sup.reference:active a {
 	    color: var(--color-inverted-fixed) !important;
 }
-/*Citations*/
-sup.reference {
-	    margin: 0 0 0 1px;
-    background-color: var(--background-color-interactive);
-    border-radius: 50%;
-    font-style: italic;
-}
-sup.reference:hover, sup.reference:active {
-    background-color: var(--color-progressive--hover);
-	    cursor: pointer;
-}
-sup.reference:hover a, sup.reference:active a {
-	    color: var(--color-inverted-fixed) !important;
+
+/* tweak admin background color */
+.userhighlighter_sysop.userhighlighter_sysop {background-color: var(--background-color-progressive--active) !important}
+
+/* ??? */
+.mw-gu-onwiki-en_wikipedia_org {
+  background-color: var(--background-color-progressive-subtle)
 }
 
 /* END */
