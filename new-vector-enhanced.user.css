@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.88
+@version     1.0.89
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -767,35 +767,6 @@ padding-right: 2px;
   padding-left: 5px;
 }
 
-/* Replace section-edit links with icons
-.mw-editsection-visualeditor {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
-  background-size: 12px;
-  display: inline-block;
-  padding: 4px 0 0 0;
-  width: 12px;
-  font-size: 1px;
-  text-decoration: none;
-}
-.mw-editsection > a:not(.mw-editsection-visualeditor) {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
-  background-size: 15px;
-  display: inline-block;
-  padding: 4px;
-  width: 12px;
-  font-size: 1px;
-  text-decoration: none;
-}
-.mw-editsection-bracket {
-  font-size: 10px;
-  display: none;
-}
-.mw-editsection-divider {
-  font-size: 10px;
-  padding-right: 2px;
-} 
-*/
-  
 /* Try to fix layering of User-tools popup menu with sticky page-tools -- BROKEN ?????
 .vector-menu-content, .vector-menu-content-list, .vector-user-links, .vector-user-menu, .mw-list-item {
   z-index:6 !important;
