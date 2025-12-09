@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.91
+@version     1.0.92
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -628,6 +628,10 @@ padding-top: 15px;
 	}
 }
 
+/* fix VE adding horizontal scrollbar */
+.ve-init-mw-desktopArticleTarget .ve-init-mw-target-surface {
+  margin: unset;
+}
 /* Fix sitenotice margin
 #siteNotice {
   top: 60px;
