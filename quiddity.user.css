@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.96
+@version     1.1.97
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -139,6 +139,10 @@ html.skin-theme-clientpref-night span.ais523hmn {
 }
 /* Ignore fuzzybot in history pages */
 a[href="/wiki/User:FuzzyBot"] {
+  opacity: 0.4;
+}
+/* Opacity for renames */
+.mw-changeslist-log-renameuser {
   opacity: 0.4;
 }
 
