@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.92
+@version     1.0.93
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -587,7 +587,7 @@ padding-top: 15px;
     column-gap: 10px !important;
   }
 }
-@media screen and ( max-width: 1509px ) and ( min-width: 1000px ) {
+@media screen and ( max-width: 1509px ) and ( min-width: 1120px ) {
   .mw-page-container-inner {  
     grid-template: min-content 1fr min-content / 250px ;
     grid-template-areas: 
@@ -597,7 +597,7 @@ padding-top: 15px;
     column-gap: 10px !important;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1120px) {
   .mw-body {
     display: grid;
     grid-template: min-content min-content min-content 1fr / minmax(0,90em) min-content;
