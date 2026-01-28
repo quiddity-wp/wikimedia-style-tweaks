@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.94
+@version     1.0.95
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1217,7 +1217,7 @@ background: unset
   top:85px;
 }
 
-/* */
+/* Logo fix for WP25 oversize */
 @media screen and (min-width: 1680px) {
   .client-js .vector-search-box.vector-search-box-auto-expand-width {
     margin-left: 25px;
