@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.99
+@version     1.1.101
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -388,7 +388,10 @@ ul:not(.noprint) + ul {
 /* Semi-hide the empty Category Trees */
 .CategoryTreeNotice,
 .CategoryTreeItem:has(span[title="Contains 0 subcategories, 0 pages, and 0 files"]) {
-  opacity: 0.35;
+  color:var(--color-disabled)
+}
+.CategoryTreeItem:has(span[title="Contains 0 subcategories, 0 pages, and 0 files"]) a {
+  opacity: 0.5
 }
 
 
@@ -697,6 +700,14 @@ sup.reference:hover a, sup.reference:active a {
 .mw-gu-onwiki-en_wikipedia_org {
   background-color: var(--background-color-progressive-subtle)
 }
+
+/* Compress edit checks at narrow sizes */
+@media screen and (max-width:1600px) {
+.ve-ui-sidebarDialog .ve-ui-editCheckDialog {width: 200px !important;}
+.ve-ui-sidebarDialog .oo-ui-window-frame {width: 200px !important;}
+.ve-editcheck-enabled .skin-vector-2022 .mw-body {padding-right: 200px !important;}
+}
+
 
 /* END */
 }
