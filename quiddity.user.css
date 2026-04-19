@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.102
+@version     1.1.103
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -393,7 +393,9 @@ ul:not(.noprint) + ul {
 .CategoryTreeItem:has(span[title="Contains 0 subcategories, 0 pages, and 0 files"]) a {
   opacity: 0.5
 }
-
+span[title="Contains 0 subcategories, 0 pages, and 0 files"] {
+  color:var(--color-placeholder)
+}
 
 /* ----- TEMPORARY ----- */
 
