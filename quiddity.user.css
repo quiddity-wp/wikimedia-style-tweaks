@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.104
+@version     1.1.105
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -780,6 +780,69 @@ html.skin-theme-clientpref-os .cite-highlighter-red .notheme,
         background-color: #2c1919 !important; 
         color: white !important; 
     }
+}
+
+/* Interproject link icons, copied from w:de:User:Hgzh/css/vectorSisterprojectIcons.css */
+li.wb-otherproject-link {
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background-position: left center
+}
+#p-wikibase-otherprojects li.wb-otherproject-link {
+	padding-left: 20px
+}
+li.wb-otherproject-commons {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/20px-Commons-logo.svg.png)
+}
+li.wb-otherproject-wiktionary {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Wiktionary_small.svg/20px-Wiktionary_small.svg.png)
+}
+li.wb-otherproject-wikibooks {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/20px-Wikibooks-logo.svg.png)
+}
+li.wb-otherproject-wikiquote {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/20px-Wikiquote-logo.svg.png)
+}
+li.wb-otherproject-wikisource,
+li.wb-otherproject-sources {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/20px-Wikisource-logo.svg.png)
+}
+li.wb-otherproject-wikinews {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Wikinews_waves_Left.svg/20px-Wikinews_waves_Left.svg.png)
+}
+li.wb-otherproject-species {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikispecies-logo.svg/20px-Wikispecies-logo.svg.png)
+}
+li.wb-otherproject-wikivoyage {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wikivoyage-logo.svg/20px-Wikivoyage-logo.svg.png)
+}
+li.wb-otherproject-wikiversity {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/20px-Wikiversity-logo.svg.png)
+}
+li.wb-otherproject-wikidata,
+li.wb-otherproject-wikibase-dataitem {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Wikidata-logo.svg/20px-Wikidata-logo.svg.png)
+}
+li.wb-otherproject-meta {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/20px-Wikimedia_Community_Logo.svg.png)
+}
+li.wb-otherproject-incubator {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Incubator-logo.svg/20px-Incubator-logo.svg.png)
+}
+li.wb-otherproject-mediawiki {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MediaWiki-2020-small-icon.svg/20px-MediaWiki-2020-small-icon.svg.png)
+}
+li.wb-otherproject-foundation {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/20px-Wikimedia-logo_black.svg.png)
+}
+li.wb-otherproject-outreach {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/20px-Wikimedia-logo.svg.png)
+}
+li.wb-otherproject-wikifunctions {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wikifunctions-logo.svg/20px-Wikifunctions-logo.svg.png)
+}
+li.wb-otherproject-abstract {
+	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Abstract-Wikipedia-favicon.svg/20px-Abstract-Wikipedia-favicon.svg.png)
 }
 
 
