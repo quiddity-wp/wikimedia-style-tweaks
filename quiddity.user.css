@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.106
+@version     1.1.107
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -696,7 +696,7 @@ sup.reference:hover a, sup.reference:active a {
 }
 
 /* tweak admin background color */
-.userhighlighter_sysop.userhighlighter_sysop {background-color: var(--background-color-progressive--active) !important}
+.userhighlighter_sysop.userhighlighter_sysop {background-color: var(--background-color-progressive-subtle--active) !important}
 
 /* ??? */
 .mw-gu-onwiki-en_wikipedia_org {
