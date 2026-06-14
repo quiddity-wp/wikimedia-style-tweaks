@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.97
+@version     1.0.98
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -120,10 +120,10 @@ body.skin-vector-2022 { */
   padding-right: 15px;
 }
   
-/* Fix watchstar which got misaligned */
+/* Fix watchstar which got misaligned
 #ca-unwatch, #ca-watch {
   margin-top: -5px !important;
-}
+} */
 
 /* Remove whitespace beside Search box */
 .mw-logo {
@@ -1081,10 +1081,10 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #ca-addsection {
     margin-top: 8px;
   }
-  #ca-watch,
+/*   #ca-watch,
   #ca-unwatch {
     margin-top: -8px !important;
-  }
+  } */
 }
 
 /* lighter-gray search borders  */
@@ -1101,14 +1101,12 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
     margin-top: -4px !important;
     padding: 0 5px 0 0 !important;
   }
-  #ca-watch,
+/*  #ca-watch,
   #ca-unwatch {
     margin-top: -8px !important;
-  }
+  } */
 /* Hide text for wikilove and watch */
-  #ca-watch > a > span:not(.vector-icon) {
-    display: none;
-  }
+  #ca-watch > a > span:not(.vector-icon),
   #ca-unwatch > a > span:not(.vector-icon) {
     display: none;
   }
@@ -1222,6 +1220,16 @@ background: unset
 @media screen and (min-width: 1680px) {
   .client-js .vector-search-box.vector-search-box-auto-expand-width {
     margin-left: 25px;
+  }
+}
+
+/* bigger gaps in wide windows */
+@media screen and (min-width: 1280px) {
+  #vector-appearance-dropdown,
+  #pt-sitesupport-2, 
+  #pt-createaccount-2,
+  #pt-login-2 {
+    margin: 0 20px;
   }
 }
 
