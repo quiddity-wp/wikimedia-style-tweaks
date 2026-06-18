@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.98
+@version     1.0.99
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1225,7 +1225,6 @@ background: unset
 
 /* bigger gaps in wide windows */
 @media screen and (min-width: 1280px) {
-  #vector-appearance-dropdown,
   #pt-sitesupport-2, 
   #pt-createaccount-2,
   #pt-login-2 {
