@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        WM reset background colors for screenshots
 @namespace   StylishThemes
-@version     1.0.16
+@version     1.0.17
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/background-override.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/background-override.user.css
 @license     CC-BY-SA-4.0
@@ -41,5 +41,32 @@ body,
   background-image:none; 
   color:unset !important;
 }
+
+/* full pages and buttons highlight background */
+#editform,
+#ca-delete,
+#ca-undelete,
+#ca-protect,
+#checkusersubmit,
+#ca-unprotect,
+.mw-special-DeletedContributions #mw-content-text,
+.mw-special-Userrights #mw-content-text,
+.mw-special-Oversight #mw-content-text,
+.mw-special-CheckUser #mw-content-text,
+.mw-special-CheckUserLog #mw-content-text,
+.mw-special-Import #mw-content-text,
+.mw-special-Nuke #mw-content-text,
+.mw-special-Undelete #mw-content-text,
+.mw-special-GlobalRenameUser #mw-content-text,
+.mw-history-revisiondelete-button,
+.mw-revdelundel-link,
+.mw-log-deleterevision-button,
+.mw-logevent-actionlink,
+.deleterevision-log-submit,
+.mw-special-AbuseLog.mw-htmlform,
+.action-delete #mw-content-text { 
+background-color: unset !important;
+}
+
 
 }
