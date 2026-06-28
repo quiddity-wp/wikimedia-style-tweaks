@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.108
+@version     1.1.109
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -498,7 +498,7 @@ margin-top: -15px
   background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
   background-size: 15px;
   display: inline-block;
-  padding: 12px;
+  padding: 12px 5px 0 0;
   width: 12px;
   font-size: 1px;
   text-decoration: none;
@@ -509,7 +509,8 @@ margin-top: -15px
 }
 .mw-editsection-divider {
   font-size: 10px;
-  padding-right: 2px;
+  padding-right: 12px;
+  display: unset;
 } 
 
 /* Shorten the inline links for "edit source" to just "source" */
