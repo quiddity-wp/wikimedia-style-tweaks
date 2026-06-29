@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.100
+@version     1.0.101
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -110,6 +110,12 @@ body.skin-vector-2022 { */
     max-width: 35px !important;
     overflow: hidden;
     height: 25px;
+  }
+}
+/* nudge the ULS down */
+@media screen {
+  .vector-page-titlebar > .cdx-button:last-child, .vector-page-titlebar > .mw-portlet-lang:last-child {
+  margin-bottom: -18px;
   }
 }
   
@@ -392,7 +398,7 @@ padding-bottom: 2px !important;
 /* Move the collapsed ToC down */
 #vector-sticky-header-toc {
   top: 49px !important;
-  left: 13px !important;
+  left: 27px !important;
   margin-top: 0;
   margin-left: -131px !important;
   margin-right: 100px !important;
@@ -415,10 +421,6 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
     border: 1px solid var(--border-color-subtle);
     background: var(--color-inverted);
     z-index: 1;
-  }
-  #vector-page-titlebar-toc .cdx-button--weight-quiet {
-  position: fixed;
-  left:4px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -469,6 +471,13 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
 }
 #firstHeading {
 padding-top: 15px;
+}
+/* Test for new collapsed TOC location fix */
+@media screen and (max-width: calc(1119px)) {
+  .client-js .vector-page-titlebar-toc {
+    margin-right: 8px;
+    margin-left: -2px;
+  }
 }
 /*
 @media screen and (max-width: 1119px) and (min-width:999px) {
@@ -1234,6 +1243,13 @@ background: unset
   #pt-createaccount-2,
   #pt-login-2 {
     margin: 0 20px;
+  }
+}
+
+/* fix linewrap for narrowest viewports */
+@media screen and (max-width: calc(639px)) {
+  .vector-page-titlebar .firstHeading {
+    flex-basis: unset;
   }
 }
 
