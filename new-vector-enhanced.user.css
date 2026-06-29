@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.99
+@version     1.0.100
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1186,7 +1186,12 @@ background: unset
     margin: 0 1px;
   }
   #vector-user-links-dropdown-label {
-    margin: 0 4px 0 0
+    margin: 0 4px 0 0;
+  }
+}
+@media (max-width: calc(1119px)) {
+#pt-notifications-alert .mw-echo-notifications-badge, #pt-notifications-notice .mw-echo-notifications-badge {
+    min-width: 32px;
   }
 }
 
