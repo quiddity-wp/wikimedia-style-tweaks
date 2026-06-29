@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.109
+@version     1.1.110
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -509,7 +509,7 @@ margin-top: -15px
 }
 .mw-editsection-divider {
   font-size: 10px;
-  padding-right: 12px;
+  padding-right: 2px;
   display: unset;
 } 
 
