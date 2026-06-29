@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.110
+@version     1.1.111
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -854,6 +854,21 @@ li.wb-otherproject-abstract {
 	background-image: url(//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Abstract-Wikipedia-favicon.svg/20px-Abstract-Wikipedia-favicon.svg.png)
 }
 
+/* Fix Tools menu label back */
+#vector-page-tools-dropdown {
+margin-left: 10px;
+}
+#vector-page-tools-dropdown::after {
+  visibility: visible;
+  content: "Tools";
+  display: block;
+  position: absolute;
+  top: 6px;
+  margin-left: 2px;
+}
+#vector-page-tools-dropdown-label {
+padding-left: 35px !important;
+}
 
 /* END */
 }
