@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.101
+@version     1.0.102
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -112,12 +112,12 @@ body.skin-vector-2022 { */
     height: 25px;
   }
 }
-/* nudge the ULS down */
+/* nudge the ULS down
 @media screen {
   .vector-page-titlebar > .cdx-button:last-child, .vector-page-titlebar > .mw-portlet-lang:last-child {
   margin-bottom: -18px;
   }
-}
+} */
   
 /* Fix min-width & un-center the content */
 .mw-page-container {
@@ -453,7 +453,6 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
     padding-left: 155px
   }
 }
-
 @media screen and (max-width: 999px) {
   .vector-page-titlebar-toc {
   left: 1px !important;
@@ -464,14 +463,18 @@ client-js.vector-sticky-header-enabled .vector-sticky-header-visible .vector-sti
   .client-js .vector-below-page-title .vector-page-titlebar-toc {
     top: 80px !important;
   }
+
 /* Nudge title down if no TOC exists */
   .vector-toc-not-available .firstHeading {
     padding-top: 20px !important;
   }
 }
+
+/* Try removing this
 #firstHeading {
 padding-top: 15px;
-}
+} */
+
 /* Test for new collapsed TOC location fix */
 @media screen and (max-width: calc(1119px)) {
   .client-js .vector-page-titlebar-toc {
@@ -869,7 +872,7 @@ html.vector-feature-zebra-design-enabled {
   }
 }
 .vector-dropdown .vector-dropdown-content {
-  padding: 5px;
+  padding: 2px 15px;
   border: 1px solid var(--border-color-subtle);
 }
 .vector-page-toolbar-container .vector-dropdown {
@@ -1143,14 +1146,14 @@ background: unset
 }
 
 
-/* fix enwiki's More Menu and Twinkle gadgets */
+/* fix enwiki's More Menu and Twinkle gadgets
 #p-page-dropdown,
 #p-user-dropdown{
   margin-top:-7px;
 }
 #p-twinkle-dropdown-label {
   padding-top: 5px;
-}
+} */
 
 /* ??? */
 .cdx-text-input {
@@ -1221,7 +1224,7 @@ background: unset
 
 /* reduce pinned toolbar padding */
 @media screen {
-  .vector-pinned-container {padding: 0 4px;}
+  .vector-pinned-container {padding: 0 14px;}
 }
 
 /* Move the temp-user banner below the sticky header */
