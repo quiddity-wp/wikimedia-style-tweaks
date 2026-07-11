@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.117
+@version     1.1.118
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -855,7 +855,7 @@ li.wb-otherproject-abstract {
 }
 
 /* Fix Tools menu label back */
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 799px) {
   #vector-page-tools-dropdown {
   margin-left: 10px;
   }
@@ -872,6 +872,7 @@ li.wb-otherproject-abstract {
   padding-left: 35px !important;
   }
 }
+
 /* Reduce opacity for distracting legend */
 #histlegend > p,
 .mw-history-legend > p {
@@ -879,20 +880,22 @@ opacity: 0.2;
 }
 
 /* Add icons for edit-buttons */
-#ca-ve-edit > a > span {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
-  background-size: 12px;
-  padding-left: 14px;
-}
-#ca-edit > a > span {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
-  background-size: 15px;
-  padding-left: 19px;
-}
-#ca-history > a > span {
-  background: url(https://upload.wikimedia.org/wikipedia/commons/0/04/OOjs_UI_icon_history-progressive.svg) no-repeat;
-  background-size: 15px;
-  padding-left: 18px;
+@media screen and (min-width: 799px) {
+  #ca-ve-edit > a > span {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
+    background-size: 12px;
+    padding-left: 14px;
+  }
+  #ca-edit > a > span {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/8/8f/OOjs_UI_icon_wikiText-progressive.svg) no-repeat;
+    background-size: 15px;
+    padding-left: 19px;
+  }
+  #ca-history > a > span {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/0/04/OOjs_UI_icon_history-progressive.svg) no-repeat;
+    background-size: 15px;
+    padding-left: 18px;
+  }
 }
 /* END */
 }
