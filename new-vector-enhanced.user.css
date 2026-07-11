@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.102
+@version     1.0.103
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1113,11 +1113,13 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
     margin-top: -4px !important;
     padding: 0 5px 0 0 !important;
   }
-/*  #ca-watch,
+  #ca-watch,
   #ca-unwatch {
-    margin-top: -8px !important;
-  } */
+    margin-top: -2px !important;
+  } 
+
 /* Hide text for wikilove and watch */
+@media screen and (max-width: 799px) {
   #ca-watch > a > span:not(.vector-icon),
   #ca-unwatch > a > span:not(.vector-icon) {
     display: none;
@@ -1125,6 +1127,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #ca-wikilove > a > span:not(.vector-icon) {
     display: none;
   }
+}
 /* Keep sticky icons visible at small sizes */
 @media screen and (max-width: 719px) {
   .vector-user-links .mw-portlet-vector-user-menu-overflow .user-links-collapsible-item {
