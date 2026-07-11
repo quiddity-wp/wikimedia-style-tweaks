@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.113
+@version     1.1.114
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -206,13 +206,13 @@ h6 {
   display: none;
 }
 
-/* Vertical-align content in Tables */
+/* Vertical-align content in Tables
 table.wikitable > tr > th,
 table.wikitable > tr > td,
 table.wikitable > * > tr > th,
 table.wikitable > * > tr > td {
   vertical-align: top;
-}
+} */
 
 /* TRANSLATION STUFF */
 /* More compact [[Special:PageTranslation]] */
@@ -240,7 +240,7 @@ body.mw-special-PageTranslation #mw-content-text li > div::after {
 
 /* RECENT CHANGES */
 /* Highlight RC in sidebar 'cos wikis keep moving it */
-#n-recentchanges > a {
+#n-recentchanges > a > span {
   background-color: var(--background-color-success-subtle);
 }
 /* Embiggen for my eyes */
@@ -704,12 +704,12 @@ sup.reference:hover a, sup.reference:active a {
   background-color: var(--background-color-progressive-subtle)
 }
 
-/* Compress edit checks at narrow sizes */
+/* Compress edit checks/suggestions at narrow sizes
 @media screen and (max-width:1600px) {
 .ve-ui-editCheckDialog {width: 200px !important;}
 .ve-ui-sidebarDialog .oo-ui-window-frame {width: 200px !important;}
 .ve-editcheck-enabled .skin-vector-2022 .mw-body {padding-right: 200px !important;}
-}
+} */
 /* Show experimental edit checks with distinct border color */
 .ve-ui-editCheckActionWidget-collapsed:has(.oo-ui-flaggedElement-error) {
 border: 1px solid #ffc862 !important;
