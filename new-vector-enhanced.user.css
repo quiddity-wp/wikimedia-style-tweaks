@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.104
+@version     1.0.105
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -1138,6 +1138,11 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   }
 }
 
+/* reduce padding for usermenu */
+@media screen and (max-width: calc(1119px)) {
+  .vector-user-menu-logged-in .vector-dropdown-label {padding: 0 8px;}
+}
+
 /* remove TOC bottom border gradient background */
 .vector-feature-zebra-design-enabled .vector-sticky-pinned-container::after,
 .vector-feature-zebra-design-disabled .vector-sticky-pinned-container::after,
@@ -1260,6 +1265,18 @@ background: unset
   .vector-page-titlebar .firstHeading {
     flex-basis: unset;
   }
+} 
+
+/* fix xtools in narrow windows on wikis without tagline */
+@media screen and (max-width: calc(1119px)) {
+#xtools {padding-top:10px;}
+}
+
+/* enlarge watchlist icon to match others */
+.mw-ui-icon-watchlist.vector-icon {
+  mask-size: 25px;
+  margin-top: 2px;
+  margin-left: 4px;
 }
 
 /* top page-name and language sticky
