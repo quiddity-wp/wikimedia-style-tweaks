@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.119
+@version     1.1.120
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -861,7 +861,7 @@ li.wb-otherproject-abstract {
 /* Fix Tools menu label back */
 @media screen and (min-width: 799px) {
   #vector-page-tools-dropdown {
-  margin-left: 10px;
+  margin-left: 5px;
   }
   #vector-page-tools-dropdown::after {
     visibility: visible;
