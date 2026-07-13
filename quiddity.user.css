@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.120
+@version     1.1.121
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -883,7 +883,7 @@ li.wb-otherproject-abstract {
 opacity: 0.2;
 }
 
-/* Add icons for edit-buttons */
+/* Add icons for edit-buttons
 @media screen and (min-width: 799px) {
   #ca-ve-edit > a > span {
     background: url(https://upload.wikimedia.org/wikipedia/commons/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg) no-repeat;
@@ -900,6 +900,8 @@ opacity: 0.2;
     background-size: 15px;
     padding-left: 18px;
   }
-}
+} */
+
+
 /* END */
 }
