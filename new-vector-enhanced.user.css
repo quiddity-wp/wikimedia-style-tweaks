@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.106
+@version     1.0.107
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -922,7 +922,7 @@ html {
 /* nudge Tools right if expanded */
 @media screen and (max-width: 999px) {
   #right-navigation:has(.vector-page-tools-landmark) {
-    right: 1px !important;
+    right: 9px !important;
     position: fixed;
     background: var(--background-color-base);
     border-bottom: 1px solid var(--border-color-subtle);
