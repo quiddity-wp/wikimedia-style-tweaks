@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim V.2022 Enhanced
 @namespace   StylishThemes
-@version     1.0.105
+@version     1.0.106
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/new-vector-enhanced.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/new-vector-enhanced.user.css
 @license     CC-BY-SA-4.0
@@ -210,7 +210,7 @@ html {
 }
 
 /* Reduce page-toolbar height */
-.vector-menu-tabs .mw-list-item.vector-tab-noicon > a, 
+/* .vector-menu-tabs .mw-list-item.vector-tab-noicon > a, 
 .mw-article-toolbar-container .vector-menu-dropdown.vector-tab-noicon > a, 
 .vector-menu-tabs .mw-list-item > a:not(.mw-ui-icon), 
 .mw-article-toolbar-container .vector-menu-dropdown > a:not(.mw-ui-icon), 
@@ -218,13 +218,13 @@ html {
 .mw-article-toolbar-container .vector-menu-dropdown .vector-menu-heading, 
 .vector-page-toolbar-container .vector-menu-dropdown > .vector-menu-heading {
   padding: 5px 0 0 0;
-}
+} */
 #vector-page-tools-dropdown-label {
   padding: 0 0 5px 0
 }
-.vector-page-toolbar {
+/* .vector-page-toolbar {
   max-height: 24px;
-}
+} */ 
 .mw-article-toolbar-container {
   border-bottom: none;
   box-shadow: none
@@ -247,9 +247,11 @@ html {
   }
 }
 
+/*
 .vector-menu-tabs .mw-list-item.selected a, .vector-menu-tabs .mw-list-item.selected a:visited {
   border-bottom: 2px solid;
 }
+*/
 
 /* Fix for language-variants dropdown */
 #vector-variants-dropdown {
@@ -841,7 +843,7 @@ html.vector-feature-zebra-design-enabled {
 .vector-page-toolbar, 
 .mw-body .vector-page-toolbar  {
   position: fixed !important; 
-  top: 54px; 
+  top: 50px; 
   z-index: 2 !important;
   right: 1px;
   margin-left: -2px
@@ -875,11 +877,18 @@ html.vector-feature-zebra-design-enabled {
   padding: 2px 15px;
   border: 1px solid var(--border-color-subtle);
 }
+/*
 .vector-page-toolbar-container .vector-dropdown {
   height: 25px;
 }
+*/
 input:focus:not(:active) + .cdx-button:not(.cdx-button--action-progressive) {
   box-shadow: unset;
+}
+@media screen {
+  .vector-page-toolbar-container {
+    margin-bottom: -1px;
+  }
 }
 
 /* Still show it in thinner windows */
@@ -926,14 +935,14 @@ html {
 
 /* Fix for VE toolbar */
 body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
-  top: 76px !important;
+  top: 78px !important;
 }
 
-/* Fix for overlapping hidden div, otherwise interferes w/ VE */
+/* Fix for overlapping hidden div, otherwise interferes w/ VE
 #p-views,
 #p-views .vector-menu-content {
   max-height: 20px;
-}
+} */
 
 /* Fix for sticky table-header gadgets */
 /* Breaking on mw.o ? Or only when it's a globally-imported script?? Ah, or only when the table isn't specifically designated as "sortable"??? */
@@ -950,6 +959,17 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 }
 .mw-page-container {
   z-index: unset !important;
+}
+
+/* fix for July 2026 */
+@media screen and (max-width: calc(639px)) {
+  .vector-page-toolbar-container .mw-portlet-views .vector-menu-item--collapsible {
+    display: unset;
+  }
+}
+.vector-menu-tabs .vector-menu-content-list {
+  align-items: unset;
+  max-height:32px !important;
 }
 
 /* Nudge "new talk" down */
@@ -994,7 +1014,6 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
 }
 #p-associated-pages {
   background-color: var(--background-color-base);
-  max-height: 24px;
 }
 .vector-page-toolbar-container {
   box-shadow: unset;
@@ -1111,7 +1130,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   color: var(--border-color-disabled,#54595d) !important;
 }
 
-/* Fix misaligned icons in wide windows */
+/* Fix misaligned icons in wide windows
   #ca-wikilove > a {
     margin-top: -4px !important;
     padding: 0 5px 0 0 !important;
@@ -1119,7 +1138,7 @@ body:not(.skin-contenttranslation) .ve-ui-toolbar-floating > .oo-ui-toolbar-bar 
   #ca-watch,
   #ca-unwatch {
     margin-top: -2px !important;
-  } 
+  }  */
 
 /* Hide text for wikilove and watch */
 @media screen and (max-width: 799px) {
@@ -1235,7 +1254,9 @@ background: unset
 
 /* reduce pinned toolbar padding */
 @media screen {
-  .vector-pinned-container {padding: 0 14px;}
+  .vector-pinned-container {
+    padding: 0 14px;
+  }
 }
 
 /* Move the temp-user banner below the sticky header */
