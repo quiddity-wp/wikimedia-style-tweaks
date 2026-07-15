@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Wikim quiddity's tweaks
 @namespace   StylishThemes
-@version     1.1.121
+@version     1.1.122
 @homepageURL https://github.com/quiddity-wp/wikimedia-style-tweaks/blob/master/quiddity.user.css
 @updateURL   https://raw.githubusercontent.com/quiddity-wp/wikimedia-style-tweaks/master/quiddity.user.css
 @license     CC-BY-SA-4.0
@@ -35,8 +35,8 @@ domain("patchdemo.wmcloud.org") {
 /* Stop Menus jumping on page load
 @import url('https://meta.wikimedia.org/w/index.php?title=MediaWiki:Gadget-MoreMenu-pagestyles.en.css&action=raw&ctype=text/css');  
 */
-/* also prevent that from moving the bottom border */
-.vector-page-toolbar-container {max-height: 27px;}
+/* also prevent that from moving the bottom border
+.vector-page-toolbar-container {max-height: 27px;} */
 
 /* hide the Vector-legacy ToC's annoying "[hide]" links */
 .toctogglespan {
@@ -859,9 +859,11 @@ li.wb-otherproject-abstract {
 }
 
 /* Fix Tools menu label back */
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 800px) {
   #vector-page-tools-dropdown {
   margin-left: 5px;
+  margin-bottom: -3px;
+  margin-right: 5px;
   }
   #vector-page-tools-dropdown::after {
     visibility: visible;
